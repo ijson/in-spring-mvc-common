@@ -38,13 +38,13 @@ public class JunitTestBuilder implements TemplateHanlder {
                 + config.get("package_name").replace(".", "/") + "/manager/";
         FileOperate.getInstance().newCreateFolder(fsPath + projectName + "/" + prefix + "/resources/");
         FileOperate.getInstance().newCreateFolder(fsPath + projectName + "/" + prefix + "/resources/autoconf/");
+        FileOperate.getInstance().newCreateFolder(fsPath + projectName + "/" + prefix + "/resources/spring/");
         //in-junit-base.xml
         FileOperate.getInstance().newCreateFile(fsPath + projectName + "/" + prefix + "/resources/in-junit-base.xml", getInJunitBaseXml(prefix,tables,config));
         FileOperate.getInstance().newCreateFile(fsPath + projectName + "/" + prefix + "/resources/ehcache.xml", getEhcacheBaseXml(prefix,tables,config));
         FileOperate.getInstance().newCreateFile(fsPath + projectName + "/" + prefix + "/resources/autoconf/in-cache", getInCacheBaseXml(prefix,tables,config));
         FileOperate.getInstance().newCreateFile(fsPath + projectName + "/" + prefix + "/resources/autoconf/in-db", getInDBBaseXml(prefix,tables,config));
-        FileOperate.getInstance()
-                .newCreateFile(fsPath + projectName + "/" + prefix + "/resources/spring/in-spring-database.xml", getInDatabaseXml(prefix,tables,config));
+        FileOperate.getInstance().newCreateFile(fsPath + projectName + "/" + prefix + "/resources/spring/in-spring-database.xml", getInDatabaseXml(prefix,tables,config));
 
 
         FileOperate.getInstance().newCreateFolder(managerPath);

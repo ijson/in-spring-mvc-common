@@ -17,12 +17,7 @@
     <name>in-spring-mvc-common</name>
     <url>http://maven.apache.org</url>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
     <description>简单的springmvc框架,用于快速开发</description>
-
 
     <licenses>
         <license>

@@ -52,7 +52,7 @@ public class FileOperate {
                 }
             }
         } catch (Exception e) {
-           log.error("新建目录操作出错ERROR KEY:" , e.getMessage());
+           log.error("newCreateFolder 新建目录操作出错ERROR KEY:" , e.getMessage());
         }
         return result;
     }
@@ -81,7 +81,7 @@ public class FileOperate {
                 result = true;
             }
         } catch (Exception e) {
-            log.error("新建文件操作出错ERROR KEY:" , e.getMessage());
+            log.error("newCreateFile 新建文件操作出错ERROR KEY:{}" ,filePathAndName, e.getMessage());
         }
         return result;
     }
@@ -110,7 +110,8 @@ public class FileOperate {
                 result = true;
             }
         } catch (Exception e) {
-            log.error("新建文件操作出错ERROR KEY:" , e.getMessage());
+
+            log.error("newCreateFile 新建文件操作出错ERROR KEY:{}" ,filePathAndName, e.getMessage());
         }
         return result;
     }

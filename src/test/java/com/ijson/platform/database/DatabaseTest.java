@@ -1,4 +1,4 @@
-package com.ijson.platform.cache;
+package com.ijson.platform.database;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
