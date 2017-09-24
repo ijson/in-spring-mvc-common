@@ -1,10 +1,10 @@
 package com.ijson.platform.generator;
 
 import com.ijson.config.ConfigFactory;
+import com.ijson.platform.api.model.ParamsVo;
 import com.ijson.platform.generator.dao.LoadDaoFactory;
 import com.ijson.platform.generator.manager.CodeGeneratorManager;
 import com.ijson.platform.generator.manager.LoadManagerFactory;
-import com.ijson.platform.generator.model.ParamsVo;
 import com.ijson.platform.generator.model.TableEntity;
 import org.junit.Test;
 

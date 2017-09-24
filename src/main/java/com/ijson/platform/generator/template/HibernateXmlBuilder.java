@@ -1,11 +1,11 @@
 package com.ijson.platform.generator.template;
 
+import com.ijson.platform.api.model.ParamsVo;
+import com.ijson.platform.common.util.FileOperate;
+import com.ijson.platform.common.util.Validator;
 import com.ijson.platform.generator.model.ColumnEntity;
-import com.ijson.platform.generator.model.ParamsVo;
 import com.ijson.platform.generator.model.TableEntity;
 import com.ijson.platform.generator.util.DataType;
-import com.ijson.platform.generator.util.FileOperate;
-import com.ijson.platform.generator.util.Validator;
 
 import java.util.List;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.ijson.platform.generator.util;
+package com.ijson.platform.common.util;
 
 
 import java.io.File;

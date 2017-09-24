@@ -1,10 +1,10 @@
 package com.ijson.platform.generator.manager.impl;
 
+import com.ijson.platform.api.model.ParamsVo;
+import com.ijson.platform.common.util.Validator;
 import com.ijson.platform.generator.manager.CodeGeneratorManager;
-import com.ijson.platform.generator.model.ParamsVo;
 import com.ijson.platform.generator.model.TableEntity;
 import com.ijson.platform.generator.template.TemplateHanlder;
-import com.ijson.platform.generator.util.Validator;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
