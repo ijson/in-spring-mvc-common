@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   ">
+
+    <!-- Hibernate配置 start -->
+    <bean id="hibernateSessionFactory"
+          class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="mappingLocations">
+            <list>
+                <value>classpath:hibernate/config/*.hbm.xml</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">${hibernate.dialect}</prop>
+                <prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+                <prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate"
+          p:sessionFactory-ref="hibernateSessionFactory"/>
+
+    <!-- Hibernate配置 end -->
+    <bean id="hibernateDao" class="com.ijson.platform.database.db.hibernate.DaoHibernateImpl"
+          p:hibernateTemplate-ref="hibernateTemplate"/>
+
+    <bean id="abstractDao" class="com.ijson.platform.database.db.DaoImpl" abstract="true"
+          p:hibernateDao-ref="hibernateDao"/>
+
+    <bean id="springContextLoader" class="com.ijson.platform.common.util.SpringContextHolder"/>
+
+    <bean id="resultCacheInterceptor" class="com.ijson.platform.database.interceptor.MethodCacheInterceptor"/>
+</beans>

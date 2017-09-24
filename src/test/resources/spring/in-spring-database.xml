@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd"
+       default-lazy-init="true">
+
+    <description>Spring公共配置</description>
+
+    <bean id="dataSource" class="com.ijson.platform.database.db.DataSource" init-method="initdb"/>
+
+    <!--  配置参与事务的类 -->
+    <aop:config>
+        <aop:pointcut id="transactionServiceMethod" expression="execution(* com.ijson..manager.*Manager.*(..))"/>
+        <aop:advisor pointcut-ref="transactionServiceMethod" advice-ref="txAdvice"/>
+    </aop:config>
+
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="save*" propagation="REQUIRED"
+                       rollback-for="com.ijson.platform.common.exception.MVCBusinessException"/>
+            <tx:method name="delete*" propagation="REQUIRED"
+                       rollback-for="com.ijson.platform.common.exception.MVCBusinessException"/>
+            <tx:method name="edit*" propagation="REQUIRED"
+                       rollback-for="com.ijson.platform.common.exception.MVCBusinessException"/>
+            <tx:method name="*" propagation="SUPPORTS"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <!-- myibatis config -->
+    <import resource="classpath*:spring/myibatis-database.xml"/>
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
+          p:dataSource-ref="dataSource"/>
+
+
+    <!--  <import resource="classpath*:spring/hibernate-database.xml"/>
+      <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager" p:dataSource-ref="dataSource" />-->
+
+</beans>
