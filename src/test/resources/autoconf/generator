@@ -9,3 +9,4 @@ jdbc.url=jdbc:mysql://localhost:3307/inauth?useUnicode=true&characterEncoding=ut
 jdbc.user=admin
 jdbc.password=MSCR7KPCJMR5
 
+-
