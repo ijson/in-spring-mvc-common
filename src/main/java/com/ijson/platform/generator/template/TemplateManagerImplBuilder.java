@@ -130,6 +130,7 @@ public class TemplateManagerImplBuilder implements TemplateHanlder {
                 "import com.ijson.platform.database.db.IDao;\n" +
                 "import com.ijson.platform.api.model.ParamsVo;\n" +
                 "import com.ijson.platform.common.util.Validator;\n" +
+                "import import org.springframework.beans.factory.annotation.Autowired;;\n" +
                 "import com.ijson.platform.api.manager.PluginConnector;\n" +
                 "import " + config.get("package_name") + ".entity." + tableName
                 + ";\n" +
@@ -148,6 +149,7 @@ public class TemplateManagerImplBuilder implements TemplateHanlder {
         StringBuilder result = new StringBuilder();
         String dao = beanIdName + "Dao";
         String jarPath = config.get("package_name");
+        result.append("    @Autowired\n");
         result.append("    protected IDao ").append(dao).append(";\n");
         result.append("    protected Map<String, PluginConnector" + "> plugins;\n");
 
