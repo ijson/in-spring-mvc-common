@@ -28,7 +28,6 @@ public class LoadManagerFactory {
      * description:  根据模板生成
      *
      * @author cuiyongxu
-     * @update Nov 17, 2015
      */
     public CodeGeneratorManager getCodeGeneratorManager() {
         if (null == codeGeneratorManager) {

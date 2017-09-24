@@ -28,7 +28,6 @@ public class Validator {
      *
      * @return 返回UUID32位字符串
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public synchronized static String generate() {
         return UUID.randomUUID().toString().replaceAll("-", "");
@@ -40,7 +39,6 @@ public class Validator {
      * @param object 对象数组
      * @return 如果object为空返回true，不为空返回false
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static boolean isNull(Object[] object) {
         return object == null || object.length == 0;
@@ -53,7 +51,6 @@ public class Validator {
      * @param defaultStr 默认字符串
      * @return 如果str为空返回defaultStr，不为空返回str
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static String isNull(String str, String defaultStr) {
         if (isNull(str))
@@ -67,7 +64,6 @@ public class Validator {
      * @param str 传入的字符串
      * @return 如果str为空返回true，不为空返回false
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static boolean isNull(String str) {
         if (str == null) {
@@ -83,7 +79,6 @@ public class Validator {
      * @param str 传入的字符串
      * @return 如果str不为空返回true，为空返回false
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static boolean isNotNull(String str) {
         return !isNull(str);
@@ -94,8 +89,8 @@ public class Validator {
      *
      * @param text       传入的字符串
      * @param defaultStr 给定的默认值
+     * @return value
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static String getDefaultStr(String text, String defaultStr) {
         if (Validator.isNull(text))
@@ -109,7 +104,6 @@ public class Validator {
      * @param obj 传入的对象
      * @return 如果obj为空返回true，不为空返回false
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static boolean isEmpty(Object obj) {
         return obj == null;
@@ -121,7 +115,6 @@ public class Validator {
      * @param list 传入的list
      * @return 如果list为空或者长度为0返回true，不为空返回false
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static boolean isEmpty(@SuppressWarnings("rawtypes") List list) { //
         return list == null || list.size() == 0;
@@ -133,7 +126,6 @@ public class Validator {
      * @param collection 传入的集合
      * @return 如果collection为空或者长度为0返回true，不为空返回false
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static boolean isEmpty(@SuppressWarnings("rawtypes") Collection collection) { //
         return collection == null || collection.isEmpty();
@@ -145,7 +137,6 @@ public class Validator {
      * @param str 传入的字符串
      * @return 如果字符串为空返回长度为0，否则返回字符串的字节长度
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static int getStrByteLength(String str) {
         if (isNull(str)) {
@@ -156,12 +147,11 @@ public class Validator {
     }
 
 
-
     /**
      * description:  返回classes的绝对路径
      *
+     * @return value
      * @author heppy1.com
-     * @update Jun 29, 2015
      */
     public static String getClassLoaderPath() {
         String path = "";
@@ -188,7 +178,6 @@ public class Validator {
      *
      * @return 返回操作系统类型
      * @author heppy1.com
-     * @update Jun 29, 2015
      */
     public static String getSystemType() {
         String result = "windows";
@@ -206,7 +195,6 @@ public class Validator {
      * @param o 待克隆对象
      * @return 返克隆后的新对象--由于common包升级,造成此方法暂时无法使用
      * @author heppy1.com
-     * @update Jun 29, 2015
      */
     //@Deprecated
     public static Object clone(Object o) {
@@ -237,9 +225,8 @@ public class Validator {
      * description:  对string进行md5加密
      *
      * @param s md5加密后的 数据值
-     * @return
+     * @return value
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public final static String makeMd5(String s) {
         char hexDigits[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
@@ -261,7 +248,7 @@ public class Validator {
             }
             return new String(str);
         } catch (Exception e) {
-            log.error("Validator MD5:",e);
+            log.error("Validator MD5:", e);
             return null;
         }
     }
@@ -272,7 +259,6 @@ public class Validator {
      *
      * @param object  the object to check
      * @param message the exception message to use if the assertion fails
-     * @throws IllegalArgumentException if the object is <code>null</code>
      */
     public static void notNull(Object object, String message) {
         if (object == null) {
@@ -285,7 +271,6 @@ public class Validator {
      * <pre class="code">Assert.notNull(clazz);</pre>
      *
      * @param object the object to check
-     * @throws IllegalArgumentException if the object is <code>null</code>
      */
     public static void notNull(Object object) {
         notNull(object, "[Assertion failed] - this argument is required; it must not be null");

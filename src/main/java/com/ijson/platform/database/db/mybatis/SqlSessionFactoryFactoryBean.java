@@ -42,7 +42,6 @@ public class SqlSessionFactoryFactoryBean implements FactoryBean, InitializingBe
      * description: 创建SqlSessionFactory
      *
      * @return 返回SqlSessionFactory实例
-     * @throws IOException
      */
     private SqlSessionFactory createSqlSessionFactory() throws IOException {
         try (Reader reader = new InputStreamReader(getConfigLocation().getInputStream())) {

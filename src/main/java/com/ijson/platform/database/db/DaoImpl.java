@@ -117,6 +117,7 @@ public abstract class DaoImpl implements IDao {
     /* (non-Javadoc)
      * @see com.persistenceLayer.core.db.IDao#selectSingle(com.persistenceLayer.core.model.MethodParam)
      */
+
     public Object selectSingle(MethodParam param) {
         if (isHibernateDao()) {
             return hibernateDao.selectSingle(param);
@@ -137,10 +138,9 @@ public abstract class DaoImpl implements IDao {
     /**
      * description:  列表查询,并转型为object
      *
-     * @param param
-     * @return
+     * @param param param
+     * @return value
      * @author cuiyongxu
-     * @update Dec 11, 2015
      */
     @Override
     public List selectByObject(MethodParam param) {
@@ -155,10 +155,9 @@ public abstract class DaoImpl implements IDao {
     /**
      * description:  获取唯一对象实例,主要转为vo等
      *
-     * @param param
-     * @return
+     * @param param param
+     * @return value
      * @author cuiyongxu
-     * @update Dec 11, 2015
      */
     @Override
     public Object selectSingleByObject(MethodParam param) {

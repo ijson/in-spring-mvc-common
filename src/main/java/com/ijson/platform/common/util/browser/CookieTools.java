@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * description:  专门对cookie进行操作
+ *   专门对cookie进行操作
  *
  * @author cuiyongxu 创建时间：2015-12-22
  */
@@ -46,14 +46,13 @@ public class CookieTools {
     }
 
     /**
-     * description:  删除cookie
+     *   删除cookie
      *
-     * @param request
-     * @param response
-     * @param cookieName
-     * @return
+     * @param request 请求
+     * @param response 响应
+     * @param cookieName  cookieName
+     * @return success or faild
      * @author cuiyongxu
-     * @update Jul 14, 2015
      */
     public boolean deleteCookie(HttpServletRequest request, HttpServletResponse response, String cookieName) {
         String domain = SystemUtil.getInstance().getConstant("domain");
@@ -74,13 +73,12 @@ public class CookieTools {
     }
 
     /**
-     * description:  获取cookie值
+     *   获取cookie值
      *
-     * @param request
-     * @param cookieName
-     * @return
+     * @param request 请求
+     * @param cookieName cookieName
+     * @return cookie
      * @author cuiyongxu
-     * @update Jul 14, 2015
      */
     public Cookie getCookie(HttpServletRequest request, String cookieName) {
         Cookie[] cookies = request.getCookies();

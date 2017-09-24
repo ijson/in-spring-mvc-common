@@ -48,7 +48,6 @@ public class EhcacheConfigurer {
      * @param storage 存储库名称
      * @return 返回一个cache对象
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public Cache getCache(String storage) {
         init();
@@ -66,7 +65,6 @@ public class EhcacheConfigurer {
      * description:    关闭ehcache缓存，每次调用完cache，需要关闭缓存。
      *
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public void shutdownCache() {
         manager.shutdown();

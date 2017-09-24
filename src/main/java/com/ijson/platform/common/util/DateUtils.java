@@ -13,7 +13,7 @@ import java.util.TimeZone;
 
 
 /**
- * description:  日期Util类
+ * 日期Util类
  *
  * @author cuiyongxu 创建时间：Oct 8, 2015
  */
@@ -35,11 +35,10 @@ public class DateUtils {
     }
 
     /**
-     * description: 获取毫秒数
+     * 获取毫秒数
      *
-     * @return
+     * @return now time
      * @author cuiyongxu
-     * @update Oct 27, 2015
      */
     public long getLongTime() {
         Date today = new Date();
@@ -47,11 +46,10 @@ public class DateUtils {
     }
 
     /**
-     * description: 返回预设Format的当前日期字符串
+     * 返回预设Format的当前日期字符串
      *
      * @return String 把当前日期格式化为"yyyy-MM-dd"形式的字符串
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public String getToday() {
         Date today = new Date();
@@ -59,10 +57,10 @@ public class DateUtils {
     }
 
     /**
-     * description:  获取当前时间,yyyy-MM-dd HH:mm:ss
+     * 获取当前时间,yyyy-MM-dd HH:mm:ss
      *
+     * @return now time
      * @author cuiyongxu
-     * @update Nov 12, 2015
      */
     public String getTodayTime() {
         Date today = new Date();
@@ -71,65 +69,60 @@ public class DateUtils {
     }
 
     /**
-     * description:使用预设Format格式化Date成字符串
+     * 使用预设Format格式化Date成字符串
      *
      * @param date 给定日期
      * @return String 将给定日期格式化为"yyyy-MM-dd"形式的字符串
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public String format(Date date) {
         return date == null ? "" : format(date, defaultDatePattern);
     }
 
     /**
-     * description:  使用参数Format格式化Date成字符串
+     * 使用参数Format格式化Date成字符串
      *
      * @param date    给定日期
      * @param pattern 给定的格式化字符串
      * @return String 将给定的日期按照pattern进行格式化，并返回格式化好的日期字符串。
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public String format(Date date, String pattern) {
         return date == null ? "" : new SimpleDateFormat(pattern).format(date);
     }
 
     /**
-     * description:  使用预设格式将字符串转为Date
+     * 使用预设格式将字符串转为Date
      *
      * @param strDate 给定的字符串
      * @return Date 将给定的字符串格式化为"yyyy-MM-dd"的日期类型返回
-     * @throws java.text.ParseException
-     * @author cuiyongxu
-     * @update Jul 3, 2015
+     * @throws ParseException 异常
      */
     public Date parse(String strDate) throws ParseException {
         return Strings.isNullOrEmpty(strDate) ? null : parse(strDate, defaultDatePattern);
     }
 
     /**
-     * description: 使用参数Format将字符串转为Date
+     * 使用参数Format将字符串转为Date
      *
      * @param strDate 给定的字符串
      * @param pattern 给定的格式化格式
      * @return Date   将给定的字符串按照给定的格式格式化成日期类型返回
      * @author cuiyongxu
-     * @update Jul 3, 2015
+     * @throws ParseException 异常
      */
     public Date parse(String strDate, String pattern) throws ParseException {
         return Strings.isNullOrEmpty(strDate) ? null : new SimpleDateFormat(pattern).parse(strDate);
     }
 
     /**
-     * description: 根据年月日获得指定的日期
+     * 根据年月日获得指定的日期
      *
      * @param year  给定的年份
      * @param month 给定的月份
      * @param day   给定的日期
      * @return Date 根据给定的年月日返回指定的日期
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public Date getDate(int year, int month, int day) {
         Calendar cal = Calendar.getInstance();
@@ -138,12 +131,11 @@ public class DateUtils {
     }
 
     /**
-     * description: 判断给定日期是否为当月的最后一天
+     * 判断给定日期是否为当月的最后一天
      *
      * @param date 给定日期
      * @return boolean 为true表示该日期为当月最后一天，为false表示该日期不是当月的最后一天。
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public boolean isEndOfTheMonth(Date date) {
         Calendar cal = Calendar.getInstance();
@@ -153,12 +145,11 @@ public class DateUtils {
     }
 
     /**
-     * description: 判断给定日期是否为当年的最后一天
+     * 判断给定日期是否为当年的最后一天
      *
      * @param date 给定的日期
      * @return boolean 为true表示该日期为当年最后一天，为false表示该日期不是当年最后一天
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public boolean isEndOfTheYear(Date date) {
         Calendar cal = Calendar.getInstance();
@@ -167,12 +158,11 @@ public class DateUtils {
     }
 
     /**
-     * description: 获得给定日期的月份的最后一天
+     * 获得给定日期的月份的最后一天
      *
      * @param date 给定的日期
      * @return int 给定日期月份的最后一天
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public int getLastDayOfTheMonth(Date date) {
         Calendar cal = Calendar.getInstance();
@@ -181,13 +171,12 @@ public class DateUtils {
     }
 
     /**
-     * description: 判断开始日期是否比结束日期早
+     * 判断开始日期是否比结束日期早
      *
      * @param startTime 给定的开始时间
      * @param endTime   给定的结束时间
      * @return boolean  为true表示开始时间比结束时间早，为false表示开始时间比结束时间晚。
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public boolean isStartBeforeEndTime(Date startTime, Date endTime) {
         Validator.notNull(startTime, "StartTime is null");
@@ -196,13 +185,13 @@ public class DateUtils {
     }
 
     /**
-     * description: 比较两个日期相差天数
+     * 比较两个日期相差天数
      *
      * @param startTime 给定的开始时间
      * @param endTime   给定的结束时间
      * @return long     给定的开始时间和给定的结束时间相差天数，返回long型值。
      * @author cuiyongxu
-     * @update Jul 3, 2015
+     * @throws ParseException 异常
      */
     public long comparisonDifferenceDays(Date startTime, Date endTime) throws ParseException {
         Validator.notNull(startTime, "StartTime is null");
@@ -216,12 +205,11 @@ public class DateUtils {
     }
 
     /**
-     * description: 判断给定日期是否为对应日期月份的第一天
+     * 判断给定日期是否为对应日期月份的第一天
      *
      * @param date 给定日期
      * @return boolean 为true表示给定日期是对应日期月份的第一天，为false表示给定日期不是对应日期的第一天。
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public boolean isStartOfTheMonth(Date date) {
         Validator.notNull(date);
@@ -231,12 +219,11 @@ public class DateUtils {
     }
 
     /**
-     * description: 判断给定日期是否为对应日期年份的第一天
+     * 判断给定日期是否为对应日期年份的第一天
      *
      * @param date 给定日期
      * @return boolean 为true表示给定日期是对应日期年份的第一天，为false表示给定日期不是对应日期年份的第一天。
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public boolean isStartOfTheYear(Date date) {
         Validator.notNull(date);
@@ -246,12 +233,11 @@ public class DateUtils {
     }
 
     /**
-     * description: 获取给定日期的月份
+     * 获取给定日期的月份
      *
      * @param date 给定日期
      * @return int  给定日期的月份
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public int getMonth(Date date) {
         Validator.notNull(date);
@@ -261,12 +247,11 @@ public class DateUtils {
     }
 
     /**
-     * description: 获取给定日期的年份
+     * 获取给定日期的年份
      *
      * @param date 给定日期
      * @return int  给定日期的年份
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public int getYear(Date date) {
         Validator.notNull(date);
@@ -276,11 +261,10 @@ public class DateUtils {
     }
 
     /**
-     * description: 获取不含不含小时分钟秒的系统日期
+     * 获取不含不含小时分钟秒的系统日期
      *
      * @return Date 系统当前日期，不含小时分钟秒。
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public Date getSystemDate() {
         Calendar cal = Calendar.getInstance();
@@ -292,11 +276,10 @@ public class DateUtils {
     }
 
     /**
-     * description: 获取系统的 Timestamp
+     * 获取系统的 Timestamp
      *
      * @return Timestamp 系统当前时间的时间戳
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public Timestamp getSystemTimestamp() {
         return new Timestamp(System.currentTimeMillis());
@@ -308,63 +291,58 @@ public class DateUtils {
     }
 
     /**
-     * description: 由某个日期，前推若干毫秒
+     * 由某个日期，前推若干毫秒
      *
      * @param date        给定的日期
      * @param millSeconds 给定前推的秒数
      * @return Date       将给定的日期前推给定的秒数后的日期
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public Date before(Date date, long millSeconds) {
         return fromLong(date.getTime() - millSeconds);
     }
 
     /**
-     * description: 由某个日期，后推若干毫秒
+     * 由某个日期，后推若干毫秒
      *
      * @param date        给定的日期
      * @param millSeconds 给定后推的秒数
      * @return Date       将给定的日期后推给定的秒数后的日期
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public Date after(Date date, long millSeconds) {
         return fromLong(date.getTime() + millSeconds);
     }
 
     /**
-     * description: 得到某个日期之后n天后的日期
+     * 得到某个日期之后n天后的日期
      *
      * @param date 给定日期
      * @param nday 给定天数
      * @return Date 给定日期n天后的日期
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public Date after(Date date, int nday) {
         return fromLong(date.getTime() + nday * oneDayMillSeconds);
     }
 
     /**
-     * description: 得到当前日期之后n天后的日期
+     * 得到当前日期之后n天后的日期
      *
      * @param n 给定天数
      * @return Date 当前日期n天后的日期
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public Date afterNDays(int n) {
         return after(getDate(), n * oneDayMillSeconds);
     }
 
     /**
-     * description: 得到当前日期n天前的日期
+     * 得到当前日期n天前的日期
      *
      * @param n 给定天数
      * @return Date 当前日期n天数的日期
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public Date beforeNDays(int n) {
         return beforeNDays(getDate(), n);
@@ -372,35 +350,32 @@ public class DateUtils {
     }
 
     /**
-     * description: 得到某个日期n天前的日期
+     * 得到某个日期n天前的日期
      *
      * @param date 给定日期
      * @param n    给定天数
      * @return Date 给定日期n天前的日期
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public Date beforeNDays(Date date, int n) {
         return fromLong(date.getTime() - n * oneDayMillSeconds);
     }
 
     /**
-     * description: 昨天
+     * 昨天
      *
      * @return Date 昨天
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public Date yesterday() {
         return before(getDate(), oneDayMillSeconds);
     }
 
     /**
-     * description: 明天
+     * 明天
      *
      * @return Date 明天
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public Date tomorrow() {
         return after(getDate(), oneDayMillSeconds);
@@ -411,35 +386,32 @@ public class DateUtils {
     }
 
     /**
-     * description: 获取当前系统时间
+     * 获取当前系统时间
      *
      * @return Date 当前系统时间
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public Date getDate() {
         return Calendar.getInstance().getTime();
     }
 
     /**
-     * description: 得到一个日期的毫秒表达
+     * 得到一个日期的毫秒表达
      *
      * @param date 给定日期
      * @return long 给定日期的毫秒表达值（Long型）
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public long toLong(Date date) {
         return date.getTime();
     }
 
     /**
-     * description:  将毫秒的日期数值转化为Date对象
+     * 将毫秒的日期数值转化为Date对象
      *
      * @param time 给定毫秒值
      * @return Date 把给定的time转换成日期类型
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public Date fromLong(long time) {
         Date date = getDate();
@@ -448,13 +420,12 @@ public class DateUtils {
     }
 
     /**
-     * description: 根据某个字符串得到日期对象
+     * 根据某个字符串得到日期对象
      *
      * @param dateStr 给定的日期字符串
      * @param fmtStr  给定的日期格式类
      * @return Date    根据日期格式类fmtStr把字符串dateStr转换成日期类型
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public Date strToDate(String dateStr, FmtStr fmtStr) {
         DateFormat df = new SimpleDateFormat(fmtStr.toString());
@@ -467,13 +438,12 @@ public class DateUtils {
     }
 
     /**
-     * description: 根据某个字符串得到日期对象
+     * 根据某个字符串得到日期对象
      *
      * @param dateStr 给定的日期字符串
      * @param fmtStr  给定的字符串格式
      * @return Date    把dateStr日期字符串格式成fmtStr的日期类型
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public Date strToDate(String dateStr, String fmtStr) {
         DateFormat df = new SimpleDateFormat(fmtStr);
@@ -486,13 +456,12 @@ public class DateUtils {
     }
 
     /**
-     * description: 将毫秒数值日期转化为字符串日期
+     * 将毫秒数值日期转化为字符串日期
      *
      * @param time   毫秒数
      * @param fmtStr 日期格式类
      * @return String 将参数time转换成格式为fmtStr的字符串日期
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public String longToStr(long time, FmtStr fmtStr) {
 
@@ -500,24 +469,22 @@ public class DateUtils {
     }
 
     /**
-     * description: 将字符串日期转化为毫秒的数值日期
+     * 将字符串日期转化为毫秒的数值日期
      *
      * @param dateStr 字符串日期
      * @param fmtStr  日期格式类
      * @return long   将字符串日期dateStr转换成毫秒的数值日期
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public long strToLong(String dateStr, FmtStr fmtStr) {
         return strToDate(dateStr, fmtStr).getTime();
     }
 
     /**
-     * description:得到环境变量中操作系统时区，即得到系统属性：user.timezone
+     * 得到环境变量中操作系统时区，即得到系统属性：user.timezone
      *
      * @return String 得到环境变量中操作系统时区，即得到系统属性：user.timezone
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public String getTimeZoneOfSystem() {
         Properties sysProp = new Properties(System.getProperties());
@@ -525,23 +492,21 @@ public class DateUtils {
     }
 
     /**
-     * description:得到jvm中系统时区
+     * 得到jvm中系统时区
      *
      * @return String 得到jvm中系统时区
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public String getTimeZoneOfJVM() {
         return TimeZone.getDefault().getID();
     }
 
     /**
-     * description:检验当前操作系统时区是否正确。<br>
+     * 检验当前操作系统时区是否正确。<br>
      * 判断依据：操作系统环境变量的时区和jvm得到的时区是否一致，一致则表明正确，否则错误。
      *
      * @return boolean true:正确；false:错误
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public boolean checkTimeZone() {
         String sysTimeZone = getTimeZoneOfSystem();
@@ -550,10 +515,10 @@ public class DateUtils {
     }
 
     /**
-     * description:初始化当前日期
+     * 初始化当前日期
      *
      * @author cuiyongxu
-     * @update Jul 3, 2015
+     * @return new date
      */
     public String getNow() {
         SimpleDateFormat simp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
@@ -561,10 +526,10 @@ public class DateUtils {
     }
 
     /**
-     * description:格式化日期yyyy-MM-dd
+     * 格式化日期yyyy-MM-dd
      *
+     * @param date new data
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public String getDate(String date) {
         String result = "";
@@ -575,11 +540,10 @@ public class DateUtils {
     }
 
     /**
-     * description:格式化日期yyyy-MM-dd HH:mm:ss
-     *
-     * @return
+     * 格式化日期yyyy-MM-dd HH:mm:ss
+     * @param date new data
+     * @return new data
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public String getTime(String date) {
         String result = "";
@@ -590,11 +554,11 @@ public class DateUtils {
     }
 
     /**
-     * description:格式化日期yyyy-MM
+     * 格式化日期yyyy-MM
      *
-     * @return
+     * @return month
+     * @param date now date
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public String getMonth(String date) {
         String result = "";
@@ -605,11 +569,10 @@ public class DateUtils {
     }
 
     /**
-     * description:查询当前年
+     * 查询当前年
      *
-     * @return
+     * @return year
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public int getCurrentYear() {
         Calendar cal = Calendar.getInstance();
@@ -617,11 +580,10 @@ public class DateUtils {
     }
 
     /**
-     * description:查询当前月份
+     * 查询当前月份
      *
-     * @return
+     * @return current month
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public int getCurrentMonth() {
         Calendar cal = Calendar.getInstance();
@@ -629,12 +591,11 @@ public class DateUtils {
     }
 
     /**
-     * description:格式化当前月份
+     * 格式化当前月份
      * yyyyMM
      *
-     * @return
+     * @return now month
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public String getNowMonth() {
         int month = getCurrentMonth();
@@ -647,11 +608,10 @@ public class DateUtils {
     }
 
     /**
-     * description:获取当前日期值
+     * 获取当前日期值
      *
-     * @return
+     * @return current day
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public int getCurrentDay() {
         Calendar cal = Calendar.getInstance();
@@ -671,10 +631,9 @@ public class DateUtils {
     }
 
     /**
-     * description: 日志格式类，包含常用的日期时间格式
+     * 日志格式类，包含常用的日期时间格式
      *
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static class FmtStr {
         private String fmtStr;

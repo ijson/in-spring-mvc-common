@@ -234,9 +234,8 @@ public class DaoIbatisImpl implements BaseDao {
     /**
      * description:  列表查询,并转型为object
      *
-     * @param param
+     * @param param param
      * @author cuiyongxu
-     * @update Dec 11, 2015
      */
     @Override
     public List selectByObject(MethodParam param) {
@@ -247,9 +246,8 @@ public class DaoIbatisImpl implements BaseDao {
     /**
      * description:  获取唯一对象实例,主要转为vo等
      *
-     * @param param
+     * @param param param
      * @author cuiyongxu
-     * @update Dec 11, 2015
      */
     @Override
     public Object selectSingleByObject(MethodParam param) {

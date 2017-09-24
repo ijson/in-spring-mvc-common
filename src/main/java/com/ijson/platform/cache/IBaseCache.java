@@ -11,7 +11,6 @@ public interface IBaseCache {
      *
      * @param cacheName 缓存空间名称
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public void setCacheName(String cacheName);
 }

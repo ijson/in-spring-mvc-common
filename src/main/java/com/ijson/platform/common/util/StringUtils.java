@@ -37,17 +37,17 @@ public class StringUtils {
     //---------------------------------------------------------------------
 
     /**
-     * Check that the given CharSequence is neither <code>null</code> nor of length 0.
-     * Note: Will return <code>true</code> for a CharSequence that purely consists of whitespace.
-     * <p><pre>
+     * Check that the given CharSequence is neither &lt;code&gt;null&lt;/code&gt; nor of length 0.
+     * Note: Will return &lt;code&gt;true&lt;/code&gt; for a CharSequence that purely consists of whitespace.
+     * &lt;p&gt;&lt;pre&gt;
      * StringUtils.hasLength(null) = false
      * StringUtils.hasLength("") = false
      * StringUtils.hasLength(" ") = true
      * StringUtils.hasLength("Hello") = true
-     * </pre>
+     * &lt;/pre&gt;
      *
-     * @param str the CharSequence to check (may be <code>null</code>)
-     * @return <code>true</code> if the CharSequence is not null and has length
+     * @param str the CharSequence to check (may be &lt;code&gt;null&lt;/code&gt;)
+     * @return &lt;code&gt;true&lt;/code&gt; if the CharSequence is not null and has length
      * @see #hasText(String)
      */
     public static boolean hasLength(CharSequence str) {
@@ -55,11 +55,11 @@ public class StringUtils {
     }
 
     /**
-     * Check that the given String is neither <code>null</code> nor of length 0.
-     * Note: Will return <code>true</code> for a String that purely consists of whitespace.
+     * Check that the given String is neither &lt;code&gt;null&lt;/code&gt; nor of length 0.
+     * Note: Will return &lt;code&gt;true&lt;/code&gt; for a String that purely consists of whitespace.
      *
-     * @param str the String to check (may be <code>null</code>)
-     * @return <code>true</code> if the String is not null and has length
+     * @param str the String to check (may be &lt;code&gt;null&lt;/code&gt;)
+     * @return &lt;code&gt;true&lt;/code&gt; if the String is not null and has length
      * @see #hasLength(CharSequence)
      */
     public static boolean hasLength(String str) {
@@ -68,18 +68,18 @@ public class StringUtils {
 
     /**
      * Check whether the given CharSequence has actual text.
-     * More specifically, returns <code>true</code> if the string not <code>null</code>,
+     * More specifically, returns &lt;code&gt;true&lt;/code&gt; if the string not &lt;code&gt;null&lt;/code&gt;,
      * its length is greater than 0, and it contains at least one non-whitespace character.
-     * <p><pre>
+     * &lt;p&gt;&lt;pre&gt;
      * StringUtils.hasText(null) = false
      * StringUtils.hasText("") = false
      * StringUtils.hasText(" ") = false
      * StringUtils.hasText("12345") = true
      * StringUtils.hasText(" 12345 ") = true
-     * </pre>
+     * &lt;/pre&gt;
      *
-     * @param str the CharSequence to check (may be <code>null</code>)
-     * @return <code>true</code> if the CharSequence is not <code>null</code>,
+     * @param str the CharSequence to check (may be &lt;code&gt;null&lt;/code&gt;)
+     * @return &lt;code&gt;true&lt;/code&gt; if the CharSequence is not &lt;code&gt;null&lt;/code&gt;,
      * its length is greater than 0, and it does not contain whitespace only
      * @see Character#isWhitespace
      */
@@ -98,11 +98,11 @@ public class StringUtils {
 
     /**
      * Check whether the given String has actual text.
-     * More specifically, returns <code>true</code> if the string not <code>null</code>,
+     * More specifically, returns &lt;code&gt;true&lt;/code&gt; if the string not &lt;code&gt;null&lt;/code&gt;,
      * its length is greater than 0, and it contains at least one non-whitespace character.
      *
-     * @param str the String to check (may be <code>null</code>)
-     * @return <code>true</code> if the String is not <code>null</code>, its length is
+     * @param str the String to check (may be &lt;code&gt;null&lt;/code&gt;)
+     * @return &lt;code&gt;true&lt;/code&gt; if the String is not &lt;code&gt;null&lt;/code&gt;, its length is
      * greater than 0, and it does not contain whitespace only
      * @see #hasText(CharSequence)
      */
@@ -266,6 +266,7 @@ public class StringUtils {
      *
      * @param str    the String to check
      * @param prefix the prefix to look for
+     * @return ok
      * @see String#startsWith
      */
     public static boolean startsWithIgnoreCase(String str, String prefix) {
@@ -289,6 +290,7 @@ public class StringUtils {
      *
      * @param str    the String to check
      * @param suffix the suffix to look for
+     * @return ok
      * @see String#endsWith
      */
     public static boolean endsWithIgnoreCase(String str, String suffix) {
@@ -314,6 +316,7 @@ public class StringUtils {
      * @param str       the original string (or StringBuilder)
      * @param index     the index in the original string to start matching against
      * @param substring the substring to match at the given index
+     * @return ok
      */
     public static boolean substringMatch(CharSequence str, int index, CharSequence substring) {
         for (int j = 0; j < substring.length(); j++) {
@@ -330,6 +333,7 @@ public class StringUtils {
      *
      * @param str string to search in. Return 0 if this is null.
      * @param sub string to search for. Return 0 if this is null.
+     * @return index
      */
     public static int countOccurrencesOf(String str, String sub) {
         if (str == null || sub == null || str.length() == 0 || sub.length() == 0) {
@@ -416,7 +420,7 @@ public class StringUtils {
      *
      * @param str the input String (e.g. "myString")
      * @return the quoted String (e.g. "'myString'"),
-     * or <code>null<code> if the input was <code>null</code>
+     * or &lt;code&gt;null&lt;code&gt; if the input was &lt;code&gt;null&lt;/code&gt;
      */
     public static String quote(String str) {
         return (str != null ? "'" + str + "'" : null);
@@ -439,6 +443,7 @@ public class StringUtils {
      * "this.name.is.qualified", returns "qualified".
      *
      * @param qualifiedName the qualified name
+     * @return value
      */
     public static String unqualify(String qualifiedName) {
         return unqualify(qualifiedName, '.');
@@ -450,6 +455,7 @@ public class StringUtils {
      *
      * @param qualifiedName the qualified name
      * @param separator     the separator
+     * @return value
      */
     public static String unqualify(String qualifiedName, char separator) {
         return qualifiedName.substring(qualifiedName.lastIndexOf(separator) + 1);
@@ -468,12 +474,12 @@ public class StringUtils {
     }
 
     /**
-     * Uncapitalize a <code>String</code>, changing the first letter to
+     * Uncapitalize a &lt;code&gt;String&lt;/code&gt;, changing the first letter to
      * lower case as per {@link Character#toLowerCase(char)}.
      * No other letters are changed.
      *
-     * @param str the String to uncapitalize, may be <code>null</code>
-     * @return the uncapitalized String, <code>null</code> if null
+     * @param str the String to uncapitalize, may be &lt;code&gt;null&lt;/code&gt;
+     * @return the uncapitalized String, &lt;code&gt;null&lt;/code&gt; if null
      */
     public static String uncapitalize(String str) {
         return changeFirstCharacterCase(str, false);
@@ -495,10 +501,10 @@ public class StringUtils {
 
     /**
      * Extract the filename from the given path,
-     * e.g. "mypath/myfile.txt" -> "myfile.txt".
+     * e.g. "mypath/myfile.txt" -&gt; "myfile.txt".
      *
-     * @param path the file path (may be <code>null</code>)
-     * @return the extracted filename, or <code>null</code> if none
+     * @param path the file path (may be &lt;code&gt;null&lt;/code&gt;)
+     * @return the extracted filename, or &lt;code&gt;null&lt;/code&gt; if none
      */
     public static String getFilename(String path) {
         if (path == null) {
@@ -510,7 +516,7 @@ public class StringUtils {
 
     /**
      * Extract the filename extension from the given path,
-     * e.g. "mypath/myfile.txt" -> "txt".
+     * e.g. "mypath/myfile.txt" -&gt; "txt".
      *
      * @param path the file path (may be <code>null</code>)
      * @return the extracted filename extension, or <code>null</code> if none
@@ -532,7 +538,7 @@ public class StringUtils {
 
     /**
      * Strip the filename extension from the given path,
-     * e.g. "mypath/myfile.txt" -> "mypath/myfile".
+     * e.g. "mypath/myfile.txt" -&gt; "mypath/myfile".
      *
      * @param path the file path (may be <code>null</code>)
      * @return the path with stripped filename extension,
@@ -1152,6 +1158,7 @@ public class StringUtils {
      * i.e. <code>null</code> or of zero length.
      *
      * @param array the array to check
+     * @return ok
      */
     public static boolean isEmpty(Object[] array) {
         return (array == null || array.length == 0);

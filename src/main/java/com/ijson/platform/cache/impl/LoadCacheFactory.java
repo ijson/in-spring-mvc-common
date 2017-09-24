@@ -38,7 +38,7 @@ public class LoadCacheFactory {
      *
      * @param cacheName 缓存空间名称
      * @author cuiyongxu
-     * @update Jul 3, 2015
+     * @return cacheManager
      */
     public CacheManager getCacheManager(String cacheName) {
         return getEhcacheManager(cacheName);
@@ -50,7 +50,7 @@ public class LoadCacheFactory {
      *
      * @param cacheName 缓存空间名称
      * @author cuiyongxu
-     * @update Jul 3, 2015
+     * @return cacheManager
      */
     private CacheManager getEhcacheManager(String cacheName) {
         if (Validator.isNull(cacheName))

@@ -28,7 +28,7 @@ public class MybatisSession<O> {
      *
      * @param query ql执行key
      * @param args  参数
-     * @return
+     * @return value
      */
     public int insert(String nameSpace, String query, Object... args) {
         QueryPair qp = buildQueryPair(nameSpace, "insert", query, args);
@@ -46,7 +46,7 @@ public class MybatisSession<O> {
      * description: 批量新增
      *
      * @param objList 对象集合
-     * @return
+     * @return value
      */
     public int insertBath(List<O> objList, String nameSpace) {
         int result = 0;
@@ -70,7 +70,7 @@ public class MybatisSession<O> {
      *
      * @param query sql执行key
      * @param args  sql执行参数
-     * @return
+     * @return value
      */
     public int update(String nameSpace, String query, Object... args) {
         QueryPair qp = buildQueryPair(nameSpace, "update", query, args);
@@ -89,7 +89,7 @@ public class MybatisSession<O> {
      *
      * @param query sql执行key
      * @param args  sql执行参数
-     * @return
+     * @return value
      */
     public int delete(String nameSpace, String query, Object... args) {
         QueryPair qp = buildQueryPair(nameSpace, "delete", query, args);
@@ -108,7 +108,7 @@ public class MybatisSession<O> {
      *
      * @param query sql执行key
      * @param args  sql执行参数
-     * @return
+     * @return value
      */
     public O selectSingle(String nameSpace, String query, Object... args) {
         QueryPair qp = buildQueryPair(nameSpace, "select", query, args);
@@ -127,6 +127,7 @@ public class MybatisSession<O> {
      *
      * @param query sql执行key
      * @param args  sql执行参数
+     * @return value
      */
     public long count(String nameSpace, String query, Object... args) {
         QueryPair qp = buildQueryPair(nameSpace, "count", query, args);
@@ -145,6 +146,7 @@ public class MybatisSession<O> {
      *
      * @param query sql执行key
      * @param args  sql执行参数
+     * @return value
      */
     public List<O> select(String nameSpace, String query, Object... args) {
         QueryPair qp = buildQueryPair(nameSpace, "select", query, args);
@@ -165,6 +167,7 @@ public class MybatisSession<O> {
      * @param start 开始位置
      * @param end   结束位置
      * @param args  sql执行参数
+     * @return value
      */
     public List<O> select(String nameSpace, String query, int start, int end, Object... args) {
         QueryPair qp = buildQueryPair(nameSpace, "select", query, args);
@@ -183,6 +186,7 @@ public class MybatisSession<O> {
      *
      * @param query sql执行key
      * @param param sql执行参数
+     * @return value
      */
     public Page selectPage(String nameSpace, String query, MethodParam param) {
         Page pagingData = new Page();
@@ -216,6 +220,7 @@ public class MybatisSession<O> {
      * @param type  执行sql前缀
      * @param query 执行sql后缀
      * @param args  执行sql参数
+     * @return value
      */
     protected QueryPair buildQueryPair(String nameSpace, String type, String query, Object... args) {
         String id = nameSpace;
@@ -249,7 +254,7 @@ public class MybatisSession<O> {
     /**
      * description: 打开session
      *
-     * @return
+     * @return value
      */
     private SqlSession getSqlSession() {
         return this.sessionFactory.openSession();

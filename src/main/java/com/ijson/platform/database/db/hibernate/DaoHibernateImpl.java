@@ -316,9 +316,7 @@ public class DaoHibernateImpl extends HibernateDaoSupport implements BaseDao {
      *
      * @param param
      * @return
-     * @throws Exception
      * @author cuiyongxu
-     * @update Nov 24, 2015
      */
     private int editOrDelForHql(MethodParam param) throws Exception {
         Session session = getHibernateTemplate().getSessionFactory().openSession();

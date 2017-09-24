@@ -104,7 +104,7 @@ public interface IDao {
      * description:获取要执行的sql
      *
      * @param type 标记
-     * @return
+     * @return sql
      */
     String getSql(int type);
 
@@ -116,20 +116,18 @@ public interface IDao {
     /**
      * description:  列表查询,并转型为object
      *
-     * @param param
-     * @return
+     * @param param param
+     * @return list
      * @author cuiyongxu
-     * @update Dec 11, 2015
      */
     List selectByObject(MethodParam param);
 
     /**
      * description:  获取唯一对象实例,主要转为vo等
      *
-     * @param param
-     * @return
+     * @param param param
+     * @return object
      * @author cuiyongxu
-     * @update Dec 11, 2015
      */
     Object selectSingleByObject(MethodParam param);
 }

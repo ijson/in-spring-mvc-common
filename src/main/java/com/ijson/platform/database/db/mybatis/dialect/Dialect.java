@@ -16,7 +16,7 @@ public interface Dialect {
     boolean supportsLimitOffset();
 
     /**
-     * 将sql变成分页sql语句,直接使用offset,limit的值作为占位符.</br> 源代码为:
+     * 将sql变成分页sql语句,直接使用offset,limit的值作为占位符,<br> 源代码为:
      * getLimitString(sql,offset,String.valueOf(offset),limit,String.valueOf(limit))
      */
     String getLimitString(String sql, int offset, int limit, String orderby);

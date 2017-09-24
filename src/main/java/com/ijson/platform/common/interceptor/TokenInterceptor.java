@@ -14,7 +14,7 @@ import java.util.UUID;
 
 /**
  * description: 防止数据重复提交拦截器
- * 用法：在表里加入<input type="hidden" name="formToken" value="${formToken}" />
+ * 用法：在表里加入&lt;input type="hidden" name="formToken" value="${formToken}" /&gt;
  * 在需要生成token的controller上增加@Token(save=true)，而在需要检查重复提交的controller上添加@Token(remove=true)就可以了
  * 如：initSave()方法上加@Token(save=true); doSave()方法上加@Token(remove=true)
  */

@@ -16,7 +16,6 @@ public class RegexUtil {
      * @param isTrim   为true去掉str空格后再比较；为false不取出空格，直接比较。
      * @return boolean 为true表示参数str匹配regexStr；为false表示参数str不匹配regexStr。
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     private static boolean isMatches(String str, String regexStr, boolean isTrim) {
         if (null == str || null == regexStr) {
@@ -35,7 +34,6 @@ public class RegexUtil {
      * @param isTrim 是否忽略首尾空格
      * @return boolean 为true表示是，为false表示否。
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static boolean isInt(String str, boolean isTrim) {
         return isMatches(str, RegexStr.Num.INT_ALL, isTrim);
@@ -48,7 +46,6 @@ public class RegexUtil {
      * @param isTrim 是否忽略首尾空格
      * @return boolean 为true表示是；为false表示否。
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static boolean isIntPlus(String str, boolean isTrim) {
         return isMatches(str, RegexStr.Num.INT_PLUS, isTrim);
@@ -61,7 +58,6 @@ public class RegexUtil {
      * @param isTrim 是否忽略首尾空格
      * @return boolean 为true表示是；为false表示否。
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static boolean isIntDec(String str, boolean isTrim) {
         return isMatches(str, RegexStr.Num.INT_DEC, isTrim);
@@ -74,7 +70,6 @@ public class RegexUtil {
      * @param isTrim 是否忽略首尾空格
      * @return boolean 为true表示是；为false表示否。
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static boolean isLong(String str, boolean isTrim) {
         return isMatches(str, RegexStr.Num.LONG_ALL, isTrim);
@@ -87,7 +82,6 @@ public class RegexUtil {
      * @param isTrim 是否忽略首尾空格
      * @return boolean 为true表示是；为false表示否。
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static boolean isLongPlus(String str, boolean isTrim) {
         return isMatches(str, RegexStr.Num.LONG_PLUS, isTrim);
@@ -100,7 +94,6 @@ public class RegexUtil {
      * @param isTrim 是否忽略首尾空格
      * @return boolean 为true表示是；为false表示否。
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static boolean isLongDec(String str, boolean isTrim) {
         return isMatches(str, RegexStr.Num.LONG_DEC, isTrim);
@@ -114,7 +107,6 @@ public class RegexUtil {
      * @param acceptE 是否兼容科学记数法。true：接受；false：不接受。
      * @return boolean 为true表示是；为false表示否。
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static boolean isDouble(String str, boolean isTrim, boolean acceptE) {
         if (acceptE) {
@@ -133,7 +125,6 @@ public class RegexUtil {
      * @param acceptE 是否兼容科学记数法。true：接受；false：不接受。
      * @return boolean 为true表示是；为false表示否。
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static boolean isDoublePlus(String str, boolean isTrim, boolean acceptE) {
         if (acceptE) {
@@ -152,7 +143,6 @@ public class RegexUtil {
      * @param acceptE 是否兼容科学记数法。true：接受；false：不接受。
      * @return boolean 为true表示是；为false表示否。
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static boolean isDoubleDec(String str, boolean isTrim, boolean acceptE) {
         if (acceptE) {

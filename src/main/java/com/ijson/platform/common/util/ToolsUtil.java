@@ -12,6 +12,7 @@ public class ToolsUtil {
      * 判断字符串是否以“/”结束，如果不是为其加上
      *
      * @param text 待处理的字符串
+     * @return value
      */
     public static String endsWith(String text) {
         if (Validator.isNotNull(text)) {
@@ -25,6 +26,7 @@ public class ToolsUtil {
      * 判断字符串是否以“/”结束，如果不是为其加上
      *
      * @param text 待处理的字符串
+     * @return value
      */
     public static boolean isendWith(String text) {
         boolean mark = true;
@@ -98,6 +100,7 @@ public class ToolsUtil {
      * @param text   待格字任串
      * @param regx   规则
      * @param target 替换内容
+     * @return value
      */
     public static String formatString(String text, String regx, String target) {
         if (Validator.isNull(text) || Validator.isNull(regx))
@@ -108,6 +111,8 @@ public class ToolsUtil {
     /**
      * 首字母大写
      *
+     * @param str key
+     * @return value
      */
     public static String toUpperFirst(String str) {
         String names[] = str.split("_");
@@ -121,6 +126,8 @@ public class ToolsUtil {
     /**
      * 属性值生成,符合骆驼命名
      *
+     * @param str key
+     * @return value
      */
     public static String toCamelNamed(String str) {
         String names[] = str.split("_");

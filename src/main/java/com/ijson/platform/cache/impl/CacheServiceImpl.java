@@ -17,9 +17,8 @@ public class CacheServiceImpl implements CacheService {
      * description:  获取缓存实例
      *
      * @param cacheName 缓存空间名称
-     * @return
+     * @return cacheManager
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public CacheManager getCache(String cacheName) {
         return LoadCacheFactory.getInstance().getCacheManager(cacheName);

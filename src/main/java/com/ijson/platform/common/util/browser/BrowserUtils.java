@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 
 
 /**
- * description: 浏览器工具类.
+ *  浏览器工具类.
  *
  * @author cuiyongxu 创建时间：Oct 27, 2015
  */
@@ -38,11 +38,10 @@ public class BrowserUtils {
     private final static String STYLEOTHER = "styleOther";
 
     /**
-     * description:  获取当前浏览器样式
+     *   获取当前浏览器样式
      *
-     * @return
+     * @return StyleType
      * @author cuiyongxu
-     * @update Nov 3, 2015
      */
     public static StyleType getCurrStyle() {
         StyleType styleType = null;
@@ -68,12 +67,11 @@ public class BrowserUtils {
     }
 
     /**
-     * description:  判断是否是IE
+     *   判断是否是IE
      *
-     * @param request
-     * @return
+     * @param request 请求
+     * @return isIEFlag
      * @author cuiyongxu
-     * @update Nov 3, 2015
      */
     public static boolean isIE(HttpServletRequest request) {
         return (getUserAgent(request).toLowerCase().indexOf("msie") > 0 || getUserAgent(request).toLowerCase().indexOf(
@@ -81,12 +79,11 @@ public class BrowserUtils {
     }
 
     /**
-     * description:  获取IE版本
+     *   获取IE版本
      *
-     * @param request
-     * @return
+     * @param request 请求
+     * @return ie version
      * @author cuiyongxu
-     * @update Oct 27, 2015
      */
     public static Double getIEversion(HttpServletRequest request) {
         Double version = 0.0;
@@ -109,8 +106,8 @@ public class BrowserUtils {
     /**
      * 获取浏览器类型
      *
-     * @param request
-     * @return
+     * @param request 请求
+     * @return brower type
      */
     public static BrowserType getBrowserType(HttpServletRequest request) {
         BrowserType browserType = null;
@@ -196,8 +193,8 @@ public class BrowserUtils {
     /**
      * 客户端信息
      *
-     * @param request
-     * @return
+     * @param request 请求
+     * @return 响应数据
      */
     public static String getUserAgent(HttpServletRequest request) {
         return request.getHeader("USER-AGENT");

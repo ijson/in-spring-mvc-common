@@ -41,6 +41,7 @@ public class FileOperate {
      * 新建目录操作
      *
      * @param folderPath 文件夹路径
+     * @return ok
      */
     public boolean newCreateFolder(String folderPath) {
         boolean result = false;
@@ -52,7 +53,7 @@ public class FileOperate {
                 }
             }
         } catch (Exception e) {
-           log.error("newCreateFolder 新建目录操作出错ERROR KEY:" , e.getMessage());
+            log.error("newCreateFolder 新建目录操作出错ERROR KEY:", e.getMessage());
         }
         return result;
     }
@@ -62,6 +63,7 @@ public class FileOperate {
      *
      * @param filePathAndName 文件名称
      * @param fileContent     文件内容
+     * @return ok
      */
     public boolean newCreateFile(String filePathAndName, String fileContent) {
         boolean result = false;
@@ -81,7 +83,7 @@ public class FileOperate {
                 result = true;
             }
         } catch (Exception e) {
-            log.error("newCreateFile 新建文件操作出错ERROR KEY:{}" ,filePathAndName, e.getMessage());
+            log.error("newCreateFile 新建文件操作出错ERROR KEY:{}", filePathAndName, e.getMessage());
         }
         return result;
     }
@@ -91,6 +93,8 @@ public class FileOperate {
      *
      * @param filePathAndName 文件名称
      * @param fileContent     文件内容
+     * @param coding          utf-8
+     * @return ok
      */
     public boolean newCreateFile(String filePathAndName, String fileContent, String coding) {
         boolean result = false;
@@ -111,7 +115,7 @@ public class FileOperate {
             }
         } catch (Exception e) {
 
-            log.error("newCreateFile 新建文件操作出错ERROR KEY:{}" ,filePathAndName, e.getMessage());
+            log.error("newCreateFile 新建文件操作出错ERROR KEY:{}", filePathAndName, e.getMessage());
         }
         return result;
     }
@@ -120,7 +124,7 @@ public class FileOperate {
      * description: 获取指定文件夹下的文件列表
      *
      * @param filePath 文件夹路径
-     * @return
+     * @return file list
      */
     public File[] getFileList(String filePath) {
         File file = new File(filePath);
@@ -130,8 +134,8 @@ public class FileOperate {
     /**
      * 返回文件名
      *
-     * @param fileName
-     * @return
+     * @param fileName fileName
+     * @return fileName
      */
     public String getFileName(String fileName) {
         File file = new File(fileName);
@@ -142,7 +146,7 @@ public class FileOperate {
      * 格式化文件路径
      *
      * @param path 文件路径
-     * @return
+     * @return filePath
      */
     public String formatFilePath(String path) {
         if (Validator.isNull(path))

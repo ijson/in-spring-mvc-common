@@ -22,7 +22,7 @@ public class LoadDaoFactory {
      *
      * @param databaseType
      * @author cuiyongxu
-     * @update Nov 13, 2015
+     * @return IDao
      */
     public IDao getDao(String databaseType) {
         if ("Mysql".equalsIgnoreCase(databaseType)) {

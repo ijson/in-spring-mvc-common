@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * description:  系统工具类
+ *   系统工具类
  *
  * @author cuiyongxu 创建时间：Oct 8, 2015
  */
@@ -17,10 +17,10 @@ public class SystemUtil {
     private Map<String, String> constant = new HashMap<String, String>();//存放系统配置参数
 
     /**
-     * description:  启用单例模式
+     *   启用单例模式
      *
      * @author cuiyongxu
-     * @update Jul 3, 2015
+     * @return instance
      */
     public synchronized static SystemUtil getInstance() {
         if (null == instance) {
@@ -30,10 +30,9 @@ public class SystemUtil {
     }
 
     /**
-     * description:  加载配置文件
+     *   加载配置文件
      *
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     private void initConfig() {
         ConfigFactory.getConfig("in-config", config -> {
@@ -42,10 +41,10 @@ public class SystemUtil {
     }
 
     /**
-     * description:  获取所有配置信息
+     *   获取所有配置信息
      *
      * @author cuiyongxu
-     * @update Jul 3, 2015
+     * @return map
      */
     public Map<String, String> getConstant() {
         initConfig();
@@ -53,11 +52,11 @@ public class SystemUtil {
     }
 
     /**
-     * description:  根据指定的KEY获取相应配置信息
+     *   根据指定的KEY获取相应配置信息
      *
      * @param key 指定的KEY
      * @author cuiyongxu
-     * @update Jul 3, 2015
+     * @return value
      */
     public String getConstant(String key) {
         initConfig();

@@ -33,9 +33,8 @@ public class ReflectDB {
      *
      * @param obj  值对象,内部存在值
      * @param obj2 对象-要转的对象,为空对象
-     * @return
+     * @return object
      * @author cuiyongxu
-     * @update Dec 14, 2015
      */
     public Object cloneObj(Object obj, Object obj2) {
         if (obj == null) {

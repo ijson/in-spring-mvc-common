@@ -27,7 +27,6 @@ public class NumberUtils {
      * @param roundModle 舍取模式：
      * @return double    把参数d根据roundModle的取舍模式四舍五入，并保留scale位小数
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     private static double round(double d, int scale, int roundModle) {
         if (scale < 0) {
@@ -47,7 +46,6 @@ public class NumberUtils {
      * @param fmtStr 格式化模板
      * @return String 把参数d按照参数fmtStr进行格式化
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     private static String formatDouble(double d, String fmtStr) {
         DecimalFormat df = new DecimalFormat(fmtStr);
@@ -68,7 +66,6 @@ public class NumberUtils {
      * 根据thousandSplit可以定义是否使用千分位分隔符;
      * 根据decMust可以定义小数位数不足时，是否自动补齐。
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     private static String formatDouble(double d, int scale, int roundModle, boolean thousandSplit, boolean decMust) {
         if (scale < 0) {
@@ -95,7 +92,6 @@ public class NumberUtils {
      * @param scale 保留小数位数
      * @return double 对double类型的参数d进行四舍五入，并保留scale位小数。
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static double round_halfUp(double d, int scale) {
         return round(d, scale, BigDecimal.ROUND_HALF_UP);
@@ -109,7 +105,6 @@ public class NumberUtils {
      * @param thousandSplit ： 是否用千分位分隔符
      * @return String       ： 格式化后的字符串
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static String format(double d, int scale, boolean thousandSplit) {
         return formatDouble(d, scale, BigDecimal.ROUND_HALF_UP, thousandSplit, true);
@@ -122,7 +117,6 @@ public class NumberUtils {
      * @param v2 加数
      * @return double 返回v1+v2的和
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static double add(double v1, double v2) {
         BigDecimal b1 = new BigDecimal(v1);
@@ -137,7 +131,6 @@ public class NumberUtils {
      * @param v2 减数
      * @return double 返回v1-v2的值
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static double subtract(double v1, double v2) {
         BigDecimal b1 = new BigDecimal(Double.toString(v1));
@@ -152,7 +145,6 @@ public class NumberUtils {
      * @param v2 乘数
      * @return double 返回v1*v2的值
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static double multiply(double v1, double v2) {
         BigDecimal b1 = new BigDecimal(v1);
@@ -168,7 +160,6 @@ public class NumberUtils {
      * @param scale 运算结果小数后精确的位数
      * @return double 返回v1*v2值，并保留scale位小数
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static double multiply(double v1, double v2, int scale) {
         if (scale < 0) {
@@ -186,7 +177,6 @@ public class NumberUtils {
      * @param v2 除数
      * @return double 返回v1除以v2的值
      * @author cuiyongxu
-     * @update Jul 3, 2015
      * @see #divide(double, double, int)
      */
     public static double divide(double v1, double v2) {
@@ -204,7 +194,6 @@ public class NumberUtils {
      * @param scale 表示表示需要精确到小数点以后几位
      * @return double 返回v1除以v2的值，并保留scale位小数
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static double divide(double v1, double v2, int scale) {
         if (scale < 0) {
@@ -223,7 +212,6 @@ public class NumberUtils {
      * @param scale 小数点后保留几位
      * @return double 对double类型的参数v进行四舍五入，并保留scale位小数
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static double round(double v, int scale) {
         if (scale < 0) {
@@ -242,7 +230,6 @@ public class NumberUtils {
      * @param defaultValue 转化失败后的默认值
      * @return int         把参数str转化为整数
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static int getInt(String str, int defaultValue) {
         Integer num = null;
@@ -259,7 +246,6 @@ public class NumberUtils {
      * @param defaultValue 缺省值
      * @return long        将字符串str转化为long型数值
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static long getLong(String str, long defaultValue) {
         Long l = null;
@@ -277,7 +263,6 @@ public class NumberUtils {
      * @param acceptE      是否兼容科学记数法。true：接受，false：不接受
      * @return double      将字符串str转化为double类型，缺省值为defaultValue，可定义是否兼容科学记数法
      * @author cuiyongxu
-     * @update Jul 3, 2015
      */
     public static double getDouble(String str, double defaultValue, boolean acceptE) {
         Double d = null;

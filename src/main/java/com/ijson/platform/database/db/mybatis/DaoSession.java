@@ -30,7 +30,7 @@ public class DaoSession<O> {
      *
      * @param query ql执行key
      * @param args  参数
-     * @return
+     * @return insert count
      */
     public int insert(String query, Object... args) {
         QueryPair qp = buildQueryPair("insert", query, args);
@@ -48,6 +48,7 @@ public class DaoSession<O> {
      * description: 批量新增
      *
      * @param objList 对象集合
+     * @return ok
      */
     public int insertBath(List<O> objList) {
         int result = 0;
@@ -71,6 +72,7 @@ public class DaoSession<O> {
      *
      * @param query sql执行key
      * @param args  sql执行参数
+     * @return ok
      */
     public int update(String query, Object... args) {
         QueryPair qp = buildQueryPair("update", query, args);
@@ -89,6 +91,7 @@ public class DaoSession<O> {
      *
      * @param query sql执行key
      * @param args  sql执行参数
+     * @return ok
      */
     public int delete(String query, Object... args) {
         QueryPair qp = buildQueryPair("delete", query, args);
@@ -107,8 +110,8 @@ public class DaoSession<O> {
      *
      * @param query sql执行key
      * @param args  sql执行参数
+     * @return Object
      */
-    @SuppressWarnings("unchecked")
     public O selectSingle(String query, Object... args) {
         QueryPair qp = buildQueryPair("select", query, args);
         try {
@@ -126,7 +129,7 @@ public class DaoSession<O> {
      *
      * @param query sql执行key
      * @param args  sql执行参数
-     * @return
+     * @return count
      */
     public long count(String query, Object... args) {
         QueryPair qp = buildQueryPair("count", query, args);
@@ -166,9 +169,8 @@ public class DaoSession<O> {
      * @param start 开始位置
      * @param end   结束位置
      * @param args  sql执行参数
-     * @return
+     * @return list
      */
-    @SuppressWarnings("unchecked")
     public List<O> select(String query, int start, int end, Object... args) {
         QueryPair qp = buildQueryPair("select", query, args);
         try {
