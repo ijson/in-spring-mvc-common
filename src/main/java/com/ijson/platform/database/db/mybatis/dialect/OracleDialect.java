@@ -18,7 +18,6 @@ public class OracleDialect implements Dialect {
 
     /**
      * 将sql变成分页sql语句,提供将offset及limit使用占位符(placeholder)替换.
-     * <p>
      * <pre>
      * 如mysql
      * dialect.getLimitString(&quot;select * from user&quot;, 12, 0,&quot;:limit&quot;) 将返回

@@ -25,6 +25,9 @@ public class SqlmapsXmlBuilder implements TemplateHanlder {
 
     /**
      * description: 生成sqlmaps.xml文件
+     * @param tables tables
+     * @param prefix prefix
+     * @param config configs
      */
     public void createdSqlmapsXml(String prefix, List<TableEntity> tables, Map<String, String> config) {
         String jarPath = config.get("package_name");

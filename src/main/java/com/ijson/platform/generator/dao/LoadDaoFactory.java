@@ -20,7 +20,7 @@ public class LoadDaoFactory {
     /**
      * description:  暂时默认使用mysql
      *
-     * @param databaseType
+     * @param databaseType databaseType
      * @author cuiyongxu
      * @return IDao
      */

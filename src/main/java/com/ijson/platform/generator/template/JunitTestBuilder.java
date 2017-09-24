@@ -28,6 +28,9 @@ public class JunitTestBuilder implements TemplateHanlder {
 
     /**
      * 生成manager接口的实现类
+     * @param config config
+     * @param prefix prefix
+     * @param tables tables
      */
     public void createdManagerImpl(String prefix, List<TableEntity> tables, Map<String, String> config) {
 

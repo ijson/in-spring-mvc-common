@@ -27,6 +27,7 @@ public class LoadManagerFactory {
     /**
      * description:  根据模板生成
      *
+     * @return value
      * @author cuiyongxu
      */
     public CodeGeneratorManager getCodeGeneratorManager() {

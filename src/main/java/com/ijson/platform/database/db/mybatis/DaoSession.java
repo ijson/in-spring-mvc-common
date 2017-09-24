@@ -148,8 +148,8 @@ public class DaoSession<O> {
      *
      * @param query sql执行key
      * @param args  sql执行参数
+     * @return value
      */
-    @SuppressWarnings("unchecked")
     public List<O> select(String query, Object... args) {
         QueryPair qp = buildQueryPair("select", query, args);
         try {
@@ -188,6 +188,7 @@ public class DaoSession<O> {
      *
      * @param query sql执行key
      * @param param sql执行参数
+     * @return value
      */
     public Page selectPage(String query, MethodParam param) {
         Page pagingData = new Page();
@@ -221,6 +222,7 @@ public class DaoSession<O> {
      * @param type  执行sql前缀
      * @param query 执行sql后缀
      * @param args  执行sql参数
+     * @return value
      */
     protected QueryPair buildQueryPair(String type, String query, Object... args) {
         String id = nameSpace;
@@ -253,6 +255,8 @@ public class DaoSession<O> {
 
     /**
      * description: 打开session
+     *
+     * @return value
      */
     private SqlSession getSqlSession() {
         return this.sessionFactory.openSession();

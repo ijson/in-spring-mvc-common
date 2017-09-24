@@ -15,9 +15,10 @@ public class DataType {
     /**
      * 获取字段的类型
      *
-     * @param columnType
-     * @param isAll
-     * @return
+     * @param columnType columnType
+     * @param isAll      isAll
+     * @return value
+     * @param length  length
      */
     public static String getDataType(String columnType, boolean isAll, int length) {
         String result = columnType;

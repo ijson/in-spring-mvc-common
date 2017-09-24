@@ -45,6 +45,7 @@ public class Page implements Serializable {
 
     /**
      * 设置总记录数,同时根据总记录数计算总页数,开始记录数,截止记录数
+     * @param totalRows totalRows
      */
     public void setCount(int totalRows) {
         if (pageSize != 0) {
@@ -74,7 +75,7 @@ public class Page implements Serializable {
      * 字符串传递规则:例如现在要用字段fiedl_1进行倒序,field_2 进行顺序排序. 则该字符串的内容为: "field_1
      * asc,field_2 asc" 如果只有单个排序字段则直接写成:"field_1 asc"
      *
-     * @param orderByStr
+     * @param orderByStr orderByStr
      */
     public void setOrderByStr(String orderByStr) {
         this.orderByStr = orderByStr;

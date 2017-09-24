@@ -109,6 +109,7 @@ public interface BaseDao {
      *
      * @param param param
      * @author cuiyongxu
+     * @return value
      */
     List selectByObject(MethodParam param);
 
@@ -117,6 +118,7 @@ public interface BaseDao {
      *
      * @param param param
      * @author cuiyongxu
+     * @return value
      */
     Object selectSingleByObject(MethodParam param);
 }

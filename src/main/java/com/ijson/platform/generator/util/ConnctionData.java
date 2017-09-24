@@ -58,6 +58,9 @@ public class ConnctionData {
      * 执行一条简单的更新语句
      * 执行成功则返回true
      *
+     * @param sql sql
+     * @return value
+     * @throws SQLException 异常
      */
 
     public boolean execute(String sql) throws SQLException {

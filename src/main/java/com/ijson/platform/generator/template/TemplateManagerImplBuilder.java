@@ -29,6 +29,10 @@ public class TemplateManagerImplBuilder implements TemplateHanlder {
 
     /**
      * 生成manager接口类
+     *
+     * @param prefix prefix
+     * @param config configs
+     * @param tables tables
      */
     public void createdManager(String prefix, List<TableEntity> tables, Map<String, String> config) {
         String projectName = config.get("project_name");
@@ -67,7 +71,7 @@ public class TemplateManagerImplBuilder implements TemplateHanlder {
     /**
      * 返回类的头引入内容
      *
-     * @return
+     * @return value
      */
     private String getManagerImports(String tableName, Map<String, String> config) {
         return "package " + config.get("package_name")
@@ -79,6 +83,9 @@ public class TemplateManagerImplBuilder implements TemplateHanlder {
 
     /**
      * 生成manager接口的实现类
+     * @param config 配置
+     * @param tables  表
+     * @param prefix  前缀
      */
     public void createdManagerImpl(String prefix, List<TableEntity> tables, Map<String, String> config) {
 
@@ -110,8 +117,8 @@ public class TemplateManagerImplBuilder implements TemplateHanlder {
 
     /**
      * 返回类的头引入内容
-     *
-     * @return
+     * @param config 配置
+     * @return 头信息
      */
     private String getManagerImplImports(String tableName, Map<String, String> config) {
 
@@ -134,8 +141,8 @@ public class TemplateManagerImplBuilder implements TemplateHanlder {
 
     /**
      * 生成类中的方法
-     *
-     * @return
+     *  @param config 配置
+     * @return value
      */
     private String getManagerImplClassMethods(String tableName, String beanIdName, String pkCol, TableEntity table, Map<String, String> config) {
         StringBuilder result = new StringBuilder();
@@ -231,6 +238,10 @@ public class TemplateManagerImplBuilder implements TemplateHanlder {
 
     /**
      * 新增方法的实现
+     * @param daoStr daoStr
+     * @param tableName  tableName
+     * @param pkCol  pkCol
+     * @param beanIdName  beanIdName
      */
     private String saveInfo(String daoStr, String tableName, String beanIdName, String pkCol) {
         StringBuilder result = new StringBuilder();

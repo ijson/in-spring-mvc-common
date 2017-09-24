@@ -16,6 +16,7 @@ public interface CodeGeneratorManager {
     /**
      * 代码统一生成器入口方法
      *
+     * @param config config
      * @param vo 方法参数
      */
     void execute(ParamsVo<TableEntity> vo, Map<String, String> config);

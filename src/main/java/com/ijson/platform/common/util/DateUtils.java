@@ -530,6 +530,7 @@ public class DateUtils {
      *
      * @param date new data
      * @author cuiyongxu
+     * @return value
      */
     public String getDate(String date) {
         String result = "";
