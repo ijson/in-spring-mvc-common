@@ -1,5 +1,7 @@
 package com.ijson.platform.database.interceptor;
 
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 import com.ijson.platform.cache.CacheManager;
 import com.ijson.platform.cache.impl.LoadCacheFactory;
 import com.ijson.platform.common.util.Validator;
@@ -8,7 +10,6 @@ import com.ijson.platform.database.model.Page;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -61,7 +62,7 @@ public class MethodCacheInterceptor implements MethodInterceptor {
                 if (!Validator.isEmpty(result)) {
                     if (mark) {
                         Page page = (Page) result;
-                        HashMap<String, Object> hm = new HashMap<String, Object>();
+                        Map<String, Object> hm = Maps.newHashMap();
                         hm.put("list", page.getPageObjects());
                         hm.put("pageIndex", page.getPageNeeded());
                         hm.put("pageSize", page.getPageSize());
@@ -97,7 +98,7 @@ public class MethodCacheInterceptor implements MethodInterceptor {
         List<String> list = (List<String>) getCache().getCacheObjectByKey(targetName);
         if (iswrite) {
             if (Validator.isEmpty(list))
-                list = new ArrayList<String>();
+                list = Lists.newArrayList();
             if (!list.contains(key)) {
                 list.add(key);
                 getCache().createCacheObject(targetName, list);

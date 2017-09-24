@@ -1,10 +1,10 @@
 package com.ijson.platform.api.model;
 
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -37,11 +37,11 @@ public class ParamsVo<E> extends BaseEntity {
     /**
      * 待操作批量对象,如果存在需要对对象批量操作,则可以将对象存至此List中
      */
-    private List<E> objs = new ArrayList<E>();
+    private List<E> objs = Lists.newArrayList();
     /**
      * 执行方法所需参数,在不同方法中需要的参数不同,可以存至map中,便于其他地方使用
      */
-    private Map<String, Object> params = new HashMap<String, Object>();
+    private Map<String, Object> params = Maps.newHashMap();
     /**
      * 当前操作用户Ename
      */

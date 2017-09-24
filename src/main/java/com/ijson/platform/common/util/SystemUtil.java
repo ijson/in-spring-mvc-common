@@ -1,8 +1,8 @@
 package com.ijson.platform.common.util;
 
+import com.google.common.collect.Maps;
 import com.ijson.config.ConfigFactory;
 
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -14,7 +14,7 @@ public class SystemUtil {
 
     private static SystemUtil instance;
 
-    private Map<String, String> constant = new HashMap<String, String>();//存放系统配置参数
+    private Map<String, String> constant = Maps.newHashMap();//存放系统配置参数
 
     /**
      *   启用单例模式

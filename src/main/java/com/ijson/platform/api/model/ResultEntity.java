@@ -1,9 +1,9 @@
 package com.ijson.platform.api.model;
 
+import com.google.common.collect.Maps;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -36,6 +36,6 @@ public class ResultEntity extends BaseEntity {
     private String result;
     private Object entity;
     private String message;
-    private Map<String, Object> params = new HashMap<String, Object>();
+    private Map<String, Object> params = Maps.newHashMap();
 
 }

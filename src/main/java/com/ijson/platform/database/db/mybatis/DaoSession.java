@@ -1,5 +1,6 @@
 package com.ijson.platform.database.db.mybatis;
 
+import com.google.common.collect.Maps;
 import com.ijson.platform.common.exception.DBServiceException;
 import com.ijson.platform.database.model.MethodParam;
 import com.ijson.platform.database.model.Page;
@@ -7,7 +8,6 @@ import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -235,7 +235,7 @@ public class DaoSession<O> {
         } else if (args.length == 1) {
             o = args[0];
         } else {
-            Map<String, Object> map = new HashMap<String, Object>();
+            Map<String, Object> map = Maps.newHashMap();
             String fields = query;
             if (fields.contains("By")) {
                 int index = fields.indexOf("By");

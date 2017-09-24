@@ -1,19 +1,9 @@
 package com.ijson.platform.common.util;
 
+import com.google.common.collect.Lists;
+
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Enumeration;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Locale;
-import java.util.Properties;
-import java.util.Set;
-import java.util.StringTokenizer;
-import java.util.TreeSet;
+import java.util.*;
 
 /**
  * description:  工具类
@@ -763,7 +753,7 @@ public class StringUtils {
         if (isEmpty(array2)) {
             return array1;
         }
-        List<String> result = new ArrayList<String>();
+        List<String> result = Lists.newArrayList();
         result.addAll(Arrays.asList(array1));
         for (String str : array2) {
             if (!result.contains(str)) {
@@ -975,7 +965,7 @@ public class StringUtils {
             return null;
         }
         StringTokenizer st = new StringTokenizer(str, delimiters);
-        List<String> tokens = new ArrayList<String>();
+        List<String> tokens = Lists.newArrayList();
         while (st.hasMoreTokens()) {
             String token = st.nextToken();
             if (trimTokens) {
@@ -1025,7 +1015,7 @@ public class StringUtils {
         if (delimiter == null) {
             return new String[]{str};
         }
-        List<String> result = new ArrayList<String>();
+        List<String> result = Lists.newArrayList();
         if ("".equals(delimiter)) {
             for (int i = 0; i < str.length(); i++) {
                 result.add(deleteAny(str.substring(i, i + 1), charsToDelete));

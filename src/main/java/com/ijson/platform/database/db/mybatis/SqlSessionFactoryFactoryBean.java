@@ -1,5 +1,6 @@
 package com.ijson.platform.database.db.mybatis;
 
+import com.google.common.collect.Maps;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.builder.xml.XMLMapperBuilder;
 import org.apache.ibatis.mapping.Environment;
@@ -18,7 +19,6 @@ import javax.sql.DataSource;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -56,7 +56,7 @@ public class SqlSessionFactoryFactoryBean implements FactoryBean, InitializingBe
             }
 
             if (mapperLocations != null) {
-                Map<String, XNode> sqlFragments = new HashMap<String, XNode>();
+                Map<String, XNode> sqlFragments = Maps.newHashMap();
                 for (Resource r : mapperLocations) {
                     log.info("Loading iBatis3 mapper xml from file[" + r.getFile().getAbsolutePath() + "]");
 

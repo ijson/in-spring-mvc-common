@@ -1,5 +1,6 @@
 package com.ijson.platform.database.db.hibernate;
 
+import com.google.common.collect.Lists;
 import com.ijson.platform.cache.CacheManager;
 import com.ijson.platform.cache.impl.LoadCacheFactory;
 import com.ijson.platform.common.exception.DBServiceException;
@@ -14,7 +15,6 @@ import org.hibernate.Session;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
 import java.lang.reflect.Method;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -379,7 +379,7 @@ public class DaoHibernateImpl extends HibernateDaoSupport implements BaseDao {
             Class clazz = Class.forName(spanceName);
             Object obj = clazz.newInstance();
             if (!Validator.isEmpty(list)) {
-                objList = new ArrayList();
+                objList = Lists.newArrayList();
                 for (Object aList : list) {
                     Object objClone = ReflectDB.getInstance().cloneObj(aList, obj);
                     objList.add(objClone);

@@ -1,9 +1,9 @@
 package com.ijson.platform.database.model;
 
+import com.google.common.collect.Maps;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -38,7 +38,7 @@ public class MethodParam {
     /**
      * 参数列表
      */
-    private Map<String, Object> params = new HashMap<String, Object>();
+    private Map<String, Object> params = Maps.newHashMap();
 
     /**
      * 自定义sql
@@ -75,7 +75,7 @@ public class MethodParam {
         this.sqlStr = sqlStr;
     }
 
-    public void setParams(String key,Object value){
-        this.params.put(key,value);
+    public void setParams(String key, Object value) {
+        this.params.put(key, value);
     }
 }

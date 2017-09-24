@@ -1,11 +1,11 @@
 package com.ijson.platform.cache.impl;
 
+import com.google.common.collect.Maps;
 import com.ijson.config.ConfigFactory;
 import com.ijson.platform.cache.CacheManager;
 import com.ijson.platform.cache.manager.ehcache.impl.EhcacheManagerImpl;
 import com.ijson.platform.common.util.Validator;
 
-import java.util.HashMap;
 import java.util.Map;
 
 
@@ -17,8 +17,8 @@ import java.util.Map;
 public class LoadCacheFactory {
 
     private static LoadCacheFactory instance;
-    private static Map<String, CacheManager> ehcaches = new HashMap<String, CacheManager>();
-    private Map<String, String> constant = new HashMap<String, String>();//存放系统配置参数
+    private static Map<String, CacheManager> ehcaches = Maps.newHashMap();
+    private Map<String, String> constant = Maps.newHashMap(); //存放系统配置参数
 
     public static LoadCacheFactory getInstance() {
         if (null == instance)

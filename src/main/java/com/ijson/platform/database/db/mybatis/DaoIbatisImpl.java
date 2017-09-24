@@ -1,5 +1,6 @@
 package com.ijson.platform.database.db.mybatis;
 
+import com.google.common.collect.Lists;
 import com.ijson.platform.cache.CacheManager;
 import com.ijson.platform.cache.impl.LoadCacheFactory;
 import com.ijson.platform.common.util.Validator;
@@ -8,10 +9,7 @@ import com.ijson.platform.database.model.MethodParam;
 import com.ijson.platform.database.model.Page;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 
 /**
@@ -21,7 +19,6 @@ public class DaoIbatisImpl implements BaseDao {
 
     private CacheManager cache;
     private SqlSessionFactory sqlSessionFactory;//需要注入
-    private Map<String, DaoSession> dao = new HashMap<String, DaoSession>();//不需要注入
 
     public DaoIbatisImpl() {
         cache = LoadCacheFactory.getInstance().getCacheManager("");
@@ -228,7 +225,7 @@ public class DaoIbatisImpl implements BaseDao {
             //return dao.get(param.getSpanceName()).select(param.getKey(), param.getParams());
             return getSession().select(param.getSpanceName(), param.getKey(), param.getParams());
         }
-        return new ArrayList();
+        return Lists.newArrayList();
     }
 
     /**
