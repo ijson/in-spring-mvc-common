@@ -210,6 +210,7 @@ public class JunitTestBuilder implements TemplateHanlder {
                 "       xsi:schemaLocation=\"http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd\"\n" +
                 "       default-autowire=\"byName\">\n" +
                 "\n" +
+                "    <import resource=\"classpath:spring/in-spring-database.xml\"/> \n"+
                 "    <import resource=\"classpath:spring/in-spring-biz-"+jarPath.substring(jarPath.lastIndexOf(".") + 1) +".xml\"/>\n" +
                 "\n" +
                 "</beans>\n" +
