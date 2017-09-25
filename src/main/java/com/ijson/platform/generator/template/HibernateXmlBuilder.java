@@ -4,9 +4,7 @@ import com.google.common.collect.Maps;
 import com.ijson.platform.api.model.ParamsVo;
 import com.ijson.platform.common.util.FileOperate;
 import com.ijson.platform.common.util.Validator;
-import com.ijson.platform.generator.model.ColumnEntity;
 import com.ijson.platform.generator.model.TableEntity;
-import com.ijson.platform.generator.util.DataType;
 import com.ijson.platform.generator.util.TemplateUtil;
 
 import java.util.List;
