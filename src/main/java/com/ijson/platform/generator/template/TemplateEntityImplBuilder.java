@@ -1,11 +1,13 @@
 package com.ijson.platform.generator.template;
 
+import com.google.common.collect.Maps;
 import com.ijson.platform.api.model.ParamsVo;
 import com.ijson.platform.common.util.FileOperate;
 import com.ijson.platform.common.util.Validator;
 import com.ijson.platform.generator.model.ColumnEntity;
 import com.ijson.platform.generator.model.TableEntity;
 import com.ijson.platform.generator.util.DataType;
+import com.ijson.platform.generator.util.TemplateUtil;
 
 import java.util.List;
 import java.util.Map;
@@ -27,31 +29,16 @@ public class TemplateEntityImplBuilder implements TemplateHanlder {
         FileOperate.getInstance().newCreateFolder(classPath);
         if (!Validator.isEmpty(tables)) {
             for (TableEntity table1 : tables) {
-                StringBuilder result = new StringBuilder("");
-                String tableName = table1.getTableAttName();
-                result.append(getImports(config));
-                result.append("@Setter()\n");
-                result.append("@Getter()\n");
-                result.append("public class ").append(tableName).append(" extends BaseEntity { \n\n");
-                result.append(getClassMethods(table1.getColumns()));
-                result.append("} \n");
-                FileOperate.getInstance().newCreateFile(classPath + tableName + ".java", result.toString());
+                String entityName = table1.getTableAttName();
+                Map<String,Object> map = Maps.newHashMap();
+                map.put("entityName",entityName);
+                map.put("package_name",config.get("package_name"));
+                map.put("columns",table1.getColumns());
+                FileOperate.getInstance().newCreateFile(classPath + entityName + ".java", TemplateUtil.getTemplate("entity.ijson",map));
             }
         }
     }
 
-    /**
-     * 返回类的头引入内容
-     *
-     * @return
-     */
-    private String getImports(Map<String, String> config) {
-        return "package " + config.get("package_name")
-                + ".entity;\n\n" + "import com.ijson.platform.api.model.BaseEntity;\n" +
-                "import lombok.Getter;\n" +
-                "import lombok.Setter;\n" +
-                "\n \n";
-    }
 
     /**
      * 生成类中的方法

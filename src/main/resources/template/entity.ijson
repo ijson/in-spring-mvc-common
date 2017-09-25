@@ -1,0 +1,25 @@
+${@com.ijson.platform.generator.util.DataType}
+
+package ${package_name}.entity;
+
+import com.ijson.platform.api.model.BaseEntity;
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter()
+@Getter()
+public class ${entityName} extends BaseEntity {
+
+   <%
+
+    for(col in columns){
+        var colType = @com.ijson.platform.generator.util.DataType.getDataType(col.columnTypeName, false, col.precision);
+        var str = colType + " " + col.attrName;
+        print("\n    private " + str + ";\n    ");
+    }
+
+    %>
+
+
+}
+
