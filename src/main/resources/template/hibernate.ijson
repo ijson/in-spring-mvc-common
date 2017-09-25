@@ -1,0 +1,28 @@
+${@com.ijson.platform.generator.util.DataType}
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.ijson.auth.entity.${entityName}" table="${tableName}" >
+    <%
+    if(table.columns.~size>0){
+        for(col in table.columns){
+            var colType = @com.ijson.platform.generator.util.DataType.getDataType(col.columnTypeName, true, col.precision);
+            if(col.attrName==table.pKColumn){
+                print("    <id name=\""+col.attrName+"\" type=\""+colType+"\">\n");
+                print("        <column name=\""+col.columnName+"\" length=\""+col.precision+"\" />\n");
+                print("        <generator class=\"assigned\" />\n");
+                print("    </id>\n");
+            }else{
+                print("    <property name=\""+col.attrName+"\" type=\""+colType+"\">\n");
+                print("        <column name=\""+col.columnName+"\" length=\""+col.precision+"\" />\n");
+                print("    </property>\n");
+            }
+        }
+    }
+    %>
+    </class>
+</hibernate-mapping>
+
