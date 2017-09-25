@@ -42,6 +42,7 @@ public class LoadManagerFactory {
             hanlders.add(new SqlmapsXmlBuilder());//ibatis
             hanlders.add(new HibernateXmlBuilder());//生成.hbm.xml
             hanlders.add(new JunitTestBuilder());//生成测试类
+            hanlders.add(new ControllerBuilder());//生成Controller
             codegener.setHanlders(hanlders);
             codeGeneratorManager = codegener;
         }

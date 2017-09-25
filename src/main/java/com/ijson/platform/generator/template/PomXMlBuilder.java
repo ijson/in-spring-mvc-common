@@ -33,9 +33,7 @@ public class PomXMlBuilder implements TemplateHanlder {
         //FileOperate.getInstance().newCreateFolder(xmlPath + "src/test/java/");
         //FileOperate.getInstance().newCreateFolder(xmlPath + "src/test/resources/");
 
-        String jarPath = config.get("package_name");
-        FileOperate.getInstance().newCreateFolder(
-                xmlPath + "src/main/java/" + jarPath.replace(".", "/") + "/controller");
+
     }
 
 
