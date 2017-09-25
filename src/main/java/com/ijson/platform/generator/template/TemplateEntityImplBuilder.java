@@ -4,9 +4,7 @@ import com.google.common.collect.Maps;
 import com.ijson.platform.api.model.ParamsVo;
 import com.ijson.platform.common.util.FileOperate;
 import com.ijson.platform.common.util.Validator;
-import com.ijson.platform.generator.model.ColumnEntity;
 import com.ijson.platform.generator.model.TableEntity;
-import com.ijson.platform.generator.util.DataType;
 import com.ijson.platform.generator.util.TemplateUtil;
 
 import java.util.List;
@@ -22,7 +20,7 @@ public class TemplateEntityImplBuilder implements TemplateHanlder {
     }
 
 
-    public void getTemplateStr(String prefix, List<TableEntity> tables, Map<String, String> config) {
+    private void getTemplateStr(String prefix, List<TableEntity> tables, Map<String, String> config) {
         String projectName = config.get("project_name");
         String classPath = config.get("fs_path") + "/" + projectName + "/" + prefix + "java/"
                 + config.get("package_name").replace(".", "/") + "/entity/";
@@ -38,29 +36,4 @@ public class TemplateEntityImplBuilder implements TemplateHanlder {
             }
         }
     }
-
-
-    /**
-     * 生成类中的方法
-     *
-     * @return
-     */
-    private String getClassMethods(List<ColumnEntity> columns) {
-        int count = columns.size();
-        StringBuilder result = new StringBuilder("");
-        String cols[] = new String[columns.size()];
-        for (int i = 0; i < count; i++) {
-            ColumnEntity column = columns.get(i);
-            String colType = DataType.getDataType(column.getColumnTypeName(), false, column.getPrecision());
-            String str = colType + " " + column.getAttrName();
-            cols[i] = str;
-        }
-        result.append("\n   ");
-        for (int i = 0; i < count; i++) {
-            result.append("private ").append(cols[i]).append(";\n   ");
-        }
-        result.append("\n");
-        return result.toString();
-    }
-
 }
