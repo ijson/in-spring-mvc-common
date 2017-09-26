@@ -1,0 +1,53 @@
+package ${package_name}.manager;
+
+import org.junit.Test;
+import ${package_name}.BaseTest;
+import org.springframework.beans.factory.annotation.Autowired;;
+import com.ijson.platform.api.model.ParamsVo;
+import ${package_name}.entity.${tableName};
+
+
+public class ${tableName}ManagerTest extends BaseTest {
+
+    @Autowired
+    private ${tableName}Manager ${tableId}Manager;
+
+
+    @Test
+    public void saveInfo() {
+      ${tableName} ${tableId} = new ${tableName}();
+      ParamsVo<${tableName}> vo = new ParamsVo<${tableName}>();
+      vo.setObj(${tableId});
+      String id = ${tableId}Manager.saveInfo(vo);
+      System.out.println(id);
+
+   }
+    @Test
+    public void editInfo() {
+      ${tableName} ${tableId} = new ${tableName}();
+      ParamsVo<${tableName}> vo = new ParamsVo<${tableName}>();
+      vo.setObj(${tableId});
+      boolean isOk = ${tableId}Manager.editInfo(vo);
+      System.out.println(isOk);
+
+   }
+    @Test
+    public void deleteInfo() {
+      ${tableName} ${tableId} = new ${tableName}();
+      ParamsVo<${tableName}> vo = new ParamsVo<${tableName}>();
+      vo.setObj(${tableId});
+      boolean isOk = ${tableId}Manager.deleteInfo(vo);
+      System.out.println(isOk);
+
+   }
+    @Test
+    public void infoById() {
+      ${tableName} uActGive = new ${tableName}();
+      ParamsVo<${tableName}> vo = new ParamsVo<${tableName}>();
+      vo.setObj(${tableId});
+      Object object = ${tableId}Manager.getInfoById(vo);
+      System.out.println(object);
+
+   }
+}
+

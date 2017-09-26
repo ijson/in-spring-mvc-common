@@ -54,20 +54,17 @@ public class JunitTestBuilder implements TemplateHanlder {
 
 
         FileOperate.getInstance().newCreateFolder(managerPath);
-        String baseTest = getBaseTest(config);
-        FileOperate.getInstance().newCreateFile(fsPath + projectName + "/" + prefix + "java/" + config.get("package_name").replace(".", "/") + "/BaseTest.java", baseTest);
+        FileOperate.getInstance().newCreateFile(fsPath + projectName + "/" + prefix + "java/" + config.get("package_name").replace(".", "/") + "/BaseTest.java", getBaseTest(config));
 
         if (!Validator.isEmpty(tables)) {
             for (TableEntity table1 : tables) {
-                StringBuilder result = new StringBuilder("");
                 String tableName = table1.getTableAttName();
-                String beanIdName = ToolsUtil.toCamelNamed(table1.getTableName().replaceAll(tabPrefix, ""));
-                result.append(getManagerImplImports(tableName, config));
-                result.append("public class ").append(tableName).append("ManagerTest extends BaseTest { \n\n");
-                result.append(getManagerImplClassMethods(tableName, beanIdName, table1.getPKColumn(), table1, config));
-                result.append("} \n");
-                FileOperate.getInstance()
-                        .newCreateFile(managerPath + tableName + "ManagerTest.java", result.toString());
+                Map map = Maps.newHashMap();
+                map.put("package_name", config.get("package_name"));
+                map.put("tableName", tableName);
+                map.put("tableId", TemplateUtil.toLowerCaseFirstOne(tableName));
+                String string = TemplateUtil.getTemplate("managertest.ijson", map);
+                FileOperate.getInstance().newCreateFile(managerPath + tableName + "ManagerTest.java", string);
             }
         }
     }
@@ -102,7 +99,7 @@ public class JunitTestBuilder implements TemplateHanlder {
 
 
     public String getBaseTest(Map<String, String> config) {
-        return TemplateUtil.getTemplate("basetest.ijson", Maps.newHashMap());
+        return TemplateUtil.getTemplate("basetest.ijson", config);
     }
 
     /**
