@@ -39,7 +39,7 @@ public class PomXMlBuilder implements TemplateHanlder {
     }
 
     private String getGitlabCi(Map<String, String> config) {
-        return TemplateUtil.getTemplate("gitlab-ci.ijson",config);
+        return TemplateUtil.getTemplate("gitlabci.ijson",config);
     }
 
 

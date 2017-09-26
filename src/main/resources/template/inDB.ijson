@@ -1,0 +1,19 @@
+db.driver=com.mysql.jdbc.Driver
+db.url=jdbc:mysql://127.0.0.1:3307/ijson_mvc_db?useUnicode=true&characterEncoding=utf8
+db.username=admin
+db.password=MSCR7KPCJMR5
+hibernate.dialect=org.hibernate.dialect.MySQLDialect
+
+#db.driver=org.h2.Driver
+#db.url=jdbc:h2:mem:test
+#db.username=sa
+#db.password=
+#Hibernate Settings
+#hibernate.dialect=org.hibernate.dialect.H2Dialect
+
+hibernate.show_sql=true
+hibernate.format_sql=false
+db.initialSize=50
+db.maxActive=100
+db.maxIdle=20
+

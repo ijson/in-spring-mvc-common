@@ -1,0 +1,3 @@
+cache_type=ehcache
+cache_default_name=ijsonCache
+

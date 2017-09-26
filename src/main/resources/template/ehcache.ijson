@@ -1,0 +1,58 @@
+<ehcache>
+    <diskStore path="java.io.tmpdir"/>
+
+    <!-- 默认缓存 -->
+    <defaultCache
+            maxElementsInMemory="10000"
+            eternal="false"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120"
+            overflowToDisk="true"
+            maxElementsOnDisk="10000000"
+            diskPersistent="false"
+            diskExpiryThreadIntervalSeconds="120"
+            memoryStoreEvictionPolicy="LRU"
+    />
+
+    <!-- 不做数据同步时配置,框架所需,禁止删除-->
+    <cache name="ijsonCache" maxElementsInMemory="100000" eternal="true"
+           overflowToDisk="true" timeToIdleSeconds="120" timeToLiveSeconds="120"
+           diskPersistent="false" diskExpiryThreadIntervalSeconds="120" diskSpoolBufferSizeMB="1024"
+           memoryStoreEvictionPolicy="LFU">
+    </cache>
+
+
+    <!-- 注释内容 -->
+    <cache
+            name="${cacheName}Cache"
+            maxElementsInMemory="1000000"
+            eternal="false"
+            maxElementsOnDisk="1000000"
+            diskPersistent="false"
+            overflowToDisk="true"
+            timeToIdleSeconds="86400"
+            timeToLiveSeconds="86400"
+            memoryStoreEvictionPolicy="LRU"
+    />
+    <!--
+        name  缓存名称  必填。
+        maxElementsInMemory:该缓存中允许存放的最大条目数量。
+        eternal:缓存内容是否永久储存。
+
+        overflowToDisk:如果内存中的数据超过maxElementsInMemory,是否使用磁盘存储。
+        maxElementsOnDisk 磁盘存储中允许存放的最大条目数
+        diskPersistent:磁盘储存的条目是否永久保存。
+
+        timeToIdleSeconds:如果不是永久储存的缓存，那么在timeToIdleSeconds指定时间内没有访问一个条目，则移除它，单位 秒
+        timeToLiveSeconds:如果不是永久储存的缓存，一个条目可以存在的最长时间，单位 秒
+
+        diskExpiryThreadIntervalSeconds:磁盘清理线程的运行时间间隔。即后台线程监测元素失效的间隔时间  默认是120秒
+
+        memoryStoreEvictionPolicy：缓存回收策略  即当缓存容量满了（达到maxElementsInMemory设定的最大条目数），需要为新的缓存腾出地方来时，回收已存在缓存的策略
+           1.FIFO ,first in first out   先进先出
+           2.LFU , Less Frequently Used  一直以来最少被使用
+           3.LRU ,Least Recently Used 最近最少使用   默认是这种回收策略
+     -->
+
+</ehcache>
+
