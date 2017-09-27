@@ -1,0 +1,9 @@
+package ${package_name}.manager;
+
+import ${package_name}.entity.${tableName};
+
+
+public interface ${tableName}Manager extends UnityBaseManager<${tableName}> {
+
+}
+

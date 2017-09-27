@@ -1,5 +1,6 @@
 package com.ijson.platform.generator.template;
 
+import com.google.common.collect.Maps;
 import com.ijson.platform.api.model.ParamsVo;
 import com.ijson.platform.common.util.FileOperate;
 import com.ijson.platform.common.util.ToolsUtil;
@@ -7,6 +8,7 @@ import com.ijson.platform.common.util.Validator;
 import com.ijson.platform.generator.model.ColumnEntity;
 import com.ijson.platform.generator.model.TableEntity;
 import com.ijson.platform.generator.util.DataType;
+import com.ijson.platform.generator.util.TemplateUtil;
 
 import java.util.List;
 import java.util.Map;
@@ -36,37 +38,21 @@ public class TemplateManagerImplBuilder implements TemplateHanlder {
      */
     public void createdManager(String prefix, List<TableEntity> tables, Map<String, String> config) {
         String projectName = config.get("project_name");
-        String managerPath = config.get("fs_path") + "/" + projectName + "/" + prefix + "java/"
-                + config.get("package_name").replace(".", "/") + "/manager/";
+        String managerPath = config.get("fs_path") + "/" + projectName + "/" + prefix + "java/" + config.get("package_name").replace(".", "/") + "/manager/";
         FileOperate.getInstance().newCreateFolder(managerPath);
-        FileOperate.getInstance().newCreateFile(managerPath + "UnityBaseManager.java", getUnityManager(config));
+        FileOperate.getInstance().newCreateFile(managerPath + "UnityBaseManager.java", TemplateUtil.getTemplate("unitybasemanager.ijson", config));
+
         if (!Validator.isEmpty(tables)) {
             for (TableEntity table1 : tables) {
-                StringBuilder result = new StringBuilder("");
                 String tableName = table1.getTableAttName();
-                result.append(getManagerImports(tableName, config));
-                result.append("public interface ").append(tableName).append("Manager extends UnityBaseManager<").append(tableName).append("> { \n\n");
-                //result.append(getManagerClassMethods(tableName));
-                result.append("} \n");
-                FileOperate.getInstance().newCreateFile(managerPath + tableName + "Manager.java", result.toString());
+                Map<String,Object> map = Maps.newHashMap();
+                map.put("package_name",config.get("package_name"));
+                map.put("tableName",tableName);
+                FileOperate.getInstance().newCreateFile(managerPath + tableName + "Manager.java", TemplateUtil.getTemplate("manager.ijson", map));
             }
         }
     }
 
-    /**
-     * description: 生成模块公共接口类
-     */
-    private String getUnityManager(Map<String, String> config) {
-        return "package " + config.get("package_name")
-                + ".manager;\n\n" + "import com.ijson.platform.database.model.Page;\n" +
-                "import com.ijson.platform.api.manager.BaseManager;\n" +
-                "import com.ijson.platform.api.model.ParamsVo;\n" +
-                "\n \n     /**\n       * description: 统一manager接口\n       */\n" +
-                "public interface UnityBaseManager<E> extends BaseManager<E> { \n\n" +
-                "    /**\n      * 获取信息列表（带分页）\n      * @param vo 方法参数\n      * @return 返回信息列表\n    */\n" +
-                "   Page getPageInfo(ParamsVo<E> vo); \n" +
-                "} \n";
-    }
 
     /**
      * 返回类的头引入内容
@@ -83,9 +69,10 @@ public class TemplateManagerImplBuilder implements TemplateHanlder {
 
     /**
      * 生成manager接口的实现类
+     *
      * @param config 配置
-     * @param tables  表
-     * @param prefix  前缀
+     * @param tables 表
+     * @param prefix 前缀
      */
     public void createdManagerImpl(String prefix, List<TableEntity> tables, Map<String, String> config) {
 
@@ -117,6 +104,7 @@ public class TemplateManagerImplBuilder implements TemplateHanlder {
 
     /**
      * 返回类的头引入内容
+     *
      * @param config 配置
      * @return 头信息
      */
@@ -142,7 +130,8 @@ public class TemplateManagerImplBuilder implements TemplateHanlder {
 
     /**
      * 生成类中的方法
-     *  @param config 配置
+     *
+     * @param config 配置
      * @return value
      */
     private String getManagerImplClassMethods(String tableName, String beanIdName, String pkCol, TableEntity table, Map<String, String> config) {
@@ -240,10 +229,11 @@ public class TemplateManagerImplBuilder implements TemplateHanlder {
 
     /**
      * 新增方法的实现
-     * @param daoStr daoStr
+     *
+     * @param daoStr     daoStr
      * @param tableName  tableName
-     * @param pkCol  pkCol
-     * @param beanIdName  beanIdName
+     * @param pkCol      pkCol
+     * @param beanIdName beanIdName
      */
     private String saveInfo(String daoStr, String tableName, String beanIdName, String pkCol) {
         StringBuilder result = new StringBuilder();

@@ -1,0 +1,20 @@
+package ${package_name}.manager;
+
+import com.ijson.platform.database.model.Page;
+import com.ijson.platform.api.manager.BaseManager;
+import com.ijson.platform.api.model.ParamsVo;
+
+
+/**
+ * description: 统一manager接口
+ */
+public interface UnityBaseManager<E> extends BaseManager<E> {
+
+    /**
+     * 获取信息列表（带分页）
+     * @param vo 方法参数
+     * @return 返回信息列表
+     */
+   Page getPageInfo(ParamsVo<E> vo);
+}
+
