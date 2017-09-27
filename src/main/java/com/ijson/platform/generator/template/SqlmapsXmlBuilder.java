@@ -47,6 +47,7 @@ public class SqlmapsXmlBuilder implements TemplateHanlder {
                     map.put("tableName", table.getTableAttName());
                     map.put("table_name", table.getTableName());
                     map.put("table", table);
+
                     String context = TemplateUtil.getTemplate("mapping.ijson", map);
                     FileOperate.getInstance().newCreateFile(xmlPath + table.getTableAttName() + "Mapper.xml", context);
                 }
