@@ -1,11 +1,14 @@
 
 package com.ijson.platform.generator.template;
 
+import com.google.common.collect.Maps;
 import com.ijson.platform.api.model.ParamsVo;
 import com.ijson.platform.common.util.FileOperate;
 import com.ijson.platform.common.util.Validator;
 import com.ijson.platform.generator.model.ColumnEntity;
 import com.ijson.platform.generator.model.TableEntity;
+import com.ijson.platform.generator.util.DataType;
+import com.ijson.platform.generator.util.TemplateUtil;
 
 import java.util.List;
 import java.util.Map;
@@ -25,6 +28,7 @@ public class SqlmapsXmlBuilder implements TemplateHanlder {
 
     /**
      * description: 生成sqlmaps.xml文件
+     *
      * @param tables tables
      * @param prefix prefix
      * @param config configs
@@ -35,25 +39,39 @@ public class SqlmapsXmlBuilder implements TemplateHanlder {
         String xmlPath = config.get("fs_path") + "/" + projectName + "/" + prefix + "resources/ibatis/sqlmaps/";
         FileOperate.getInstance().newCreateFolder(xmlPath);
         if (!Validator.isEmpty(tables)) {
-            for (TableEntity table : tables) {
-                StringBuilder result = new StringBuilder("");
-                result.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
-                result.append("<!DOCTYPE mapper PUBLIC \"-//mybatis.org//DTD Mapper 3.0//EN\" \n");
-                result.append("    \"http://mybatis.org/dtd/mybatis-3-mapper.dtd\">\n\n");
-                result.append("<mapper namespace=\"").append(jarPath).append(".entity.").append(table.getTableAttName()).append("\">\n\n");
 
-                result.append(getResultMap(jarPath, table));
+            if(true){
+                for (TableEntity table : tables) {
+                    Map<String, Object> map = Maps.newHashMap();
+                    map.put("package_name", jarPath);
+                    map.put("tableName", table.getTableAttName());
+                    map.put("table_name", table.getTableName());
+                    map.put("table", table);
+                    String context = TemplateUtil.getTemplate("mapping.ijson", map);
+                    FileOperate.getInstance().newCreateFile(xmlPath + table.getTableAttName() + "Mapper.xml", context);
+                }
+            }else{
+                for (TableEntity table : tables) {
+                    StringBuilder result = new StringBuilder("");
+                    result.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
+                    result.append("<!DOCTYPE mapper PUBLIC \"-//mybatis.org//DTD Mapper 3.0//EN\" \n");
+                    result.append("    \"http://mybatis.org/dtd/mybatis-3-mapper.dtd\">\n\n");
+                    result.append("<mapper namespace=\"").append(jarPath).append(".entity.").append(table.getTableAttName()).append("\">\n\n");
 
-                result.append(getInsertSql(jarPath, table));
+                    result.append(getResultMap(jarPath, table));
 
-                result.append(getUpdateSql(jarPath, table));
+                    result.append(getInsertSql(jarPath, table));
 
-                result.append(getIbatisSql(jarPath, table));
+                    result.append(getUpdateSql(jarPath, table));
 
-                result.append("</mapper>\n");
-                FileOperate.getInstance().newCreateFile(xmlPath + table.getTableAttName() + "Mapper.xml",
-                        result.toString());
+                    result.append(getIbatisSql(jarPath, table));
+
+                    result.append("</mapper>\n");
+                    FileOperate.getInstance().newCreateFile(xmlPath + table.getTableAttName() + "Mapper.xml",
+                            result.toString());
+                }
             }
+
         }
     }
 
@@ -78,7 +96,7 @@ public class SqlmapsXmlBuilder implements TemplateHanlder {
                 if (i == count - 1) {
                     dian = "";
                 }
-                String colType = getJdbcType(col.getColumnTypeName(), col.getPrecision());//字段类型
+                String colType = DataType.getJdbcType(col.getColumnTypeName(), col.getPrecision());//字段类型
 
                 result.append("      <result property=\"").append(col.getAttrName()).append("\" column=\"").append(col.getColumnName()).append("\" jdbcType=\"").append(colType).append("\"/>\n");
                 cols.append(col.getColumnName()).append(dian);
@@ -170,26 +188,5 @@ public class SqlmapsXmlBuilder implements TemplateHanlder {
         return result.toString();
     }
 
-    /**
-     * description: 获取数据类型
-     */
-    private String getJdbcType(String columnType, int precision) {
-        String colType = columnType.toUpperCase();
-        if ("INT".equals(colType) || "TINYINT".equals(colType) || "SMALLINT".equals(colType)) {
-            colType = "INTEGER";
-        } else if ("NUMBER".equals(colType)) {
-            if (precision > 20) {
-                colType = "DOUBLE";
-            } else {
-                colType = "BIGINT";
-            }
-        } else if ("VARCHAR2".equals(colType) || "TEXT".equals(colType) || "CHAR".equals(colType)) {
-            colType = "VARCHAR";
-        } else if ("TIMESTAMP".equalsIgnoreCase(colType)) {
-            colType = "TIMESTAMP";
-        } else if ("DATE".equals(colType) || "TIME".equals(colType)) {
-            colType = "DATETIME";
-        }
-        return colType;
-    }
+
 }

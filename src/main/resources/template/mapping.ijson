@@ -1,0 +1,79 @@
+${@com.ijson.platform.generator.util.DataType}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="${package_name}.entity.${tableName}">
+
+  <resultMap id="result${tableName}" type="${package_name}.entity.${tableName}">
+    <%
+        if(table.columns.~size>0){
+            for(col in table.columns){
+                var colType = @com.ijson.platform.generator.util.DataType.getJdbcType(col.columnTypeName, col.precision);
+                print("     <result property=\""+col.attrName+"\" column=\""+col.columnName+"\" jdbcType=\""+colType+"\"/>\n");
+            }
+        }
+        %>
+  </resultMap>
+
+  <sql id="selectSql${tableName}">
+    give_id,give_type,act_id,act_full_ename,role_id,role_ename,user_id,user_ename,give_status,give_remark,create_user,create_time,update_user,update_time,update_count
+  </sql>
+  <sql id="variableSql${tableName}">
+    #{giveId,jdbcType=VARCHAR},#{giveType,jdbcType=VARCHAR},#{actId,jdbcType=VARCHAR},#{actFullEname,jdbcType=VARCHAR},#{roleId,jdbcType=VARCHAR},#{roleEname,jdbcType=VARCHAR},#{userId,jdbcType=VARCHAR},#{userEname,jdbcType=VARCHAR},#{giveStatus,jdbcType=VARCHAR},#{giveRemark,jdbcType=VARCHAR},#{createUser,jdbcType=VARCHAR},#{createTime,jdbcType=VARCHAR},#{updateUser,jdbcType=VARCHAR},#{updateTime,jdbcType=VARCHAR},#{updateCount,jdbcType=VARCHAR}
+  </sql>
+  <sql id="whereSql${tableName}">
+    where 1=1
+    <if test="giveId != null and giveId != ''"> and give_id=#{giveId}</if>
+    <if test="giveType != null and giveType != ''"> and give_type=#{giveType}</if>
+    <if test="actId != null and actId != ''"> and act_id=#{actId}</if>
+    <if test="actFullEname != null and actFullEname != ''"> and act_full_ename=#{actFullEname}</if>
+    <if test="roleId != null and roleId != ''"> and role_id=#{roleId}</if>
+    <if test="roleEname != null and roleEname != ''"> and role_ename=#{roleEname}</if>
+    <if test="userId != null and userId != ''"> and user_id=#{userId}</if>
+    <if test="userEname != null and userEname != ''"> and user_ename=#{userEname}</if>
+    <if test="giveStatus != null and giveStatus != ''"> and give_status=#{giveStatus}</if>
+    <if test="giveRemark != null and giveRemark != ''"> and give_remark=#{giveRemark}</if>
+    <if test="createUser != null and createUser != ''"> and create_user=#{createUser}</if>
+    <if test="createTime != null and createTime != ''"> and create_time=#{createTime}</if>
+    <if test="updateUser != null and updateUser != ''"> and update_user=#{updateUser}</if>
+    <if test="updateTime != null and updateTime != ''"> and update_time=#{updateTime}</if>
+    <if test="updateCount != null and updateCount != ''"> and update_count=#{updateCount}</if>
+    </sql>
+  <insert id="insert${tableName}" parameterType="${package_name}.entity.${tableName}">
+       INSERT INTO ${table_name} ( <include refid="selectSql${tableName}"/>
+       ) VALUES ( <include refid="variableSql${tableName}"/>)
+   </insert>
+  <update id="update${tableName}" parameterType="${package_name}.entity.${tableName}">
+       UPDATE ${table_name} SET
+          <if test="giveType != null and giveType != ''">,give_type=#{giveType}</if>
+     <if test="actId != null and actId != ''">,act_id=#{actId}</if>
+     <if test="actFullEname != null and actFullEname != ''">,act_full_ename=#{actFullEname}</if>
+     <if test="roleId != null and roleId != ''">,role_id=#{roleId}</if>
+     <if test="roleEname != null and roleEname != ''">,role_ename=#{roleEname}</if>
+     <if test="userId != null and userId != ''">,user_id=#{userId}</if>
+     <if test="userEname != null and userEname != ''">,user_ename=#{userEname}</if>
+     <if test="giveStatus != null and giveStatus != ''">,give_status=#{giveStatus}</if>
+     <if test="giveRemark != null and giveRemark != ''">,give_remark=#{giveRemark}</if>
+     <if test="createUser != null and createUser != ''">,create_user=#{createUser}</if>
+     <if test="createTime != null and createTime != ''">,create_time=#{createTime}</if>
+     <if test="updateUser != null and updateUser != ''">,update_user=#{updateUser}</if>
+     <if test="updateTime != null and updateTime != ''">,update_time=#{updateTime}</if>
+     <if test="updateCount != null and updateCount != ''">,update_count=#{updateCount}</if>
+
+      WHERE give_id = #{giveId}
+   </update>
+  <delete id="deleteById" parameterType="java.util.Map">
+       DELETE FROM ${table_name} WHERE give_id = #{giveId}
+   </delete>
+  <select id="selectById" resultMap="result${tableName}" parameterType="java.util.Map">
+       select <include refid="selectSql${tableName}"/> from ${table_name} WHERE give_id = #{giveId}
+   </select>
+  <select id="countByProperty" resultType="java.lang.Long"  parameterType="java.util.Map">
+       SELECT count(*) FROM ${table_name} <include refid="whereSql${tableName}"/>
+   </select>
+  <select id="selectByProperty" resultMap="result${tableName}"  parameterType="java.util.Map">
+       SELECT <include refid="selectSql${tableName}"/> FROM ${table_name} <include refid="whereSql${tableName}"/>
+   </select>
+</mapper>
+

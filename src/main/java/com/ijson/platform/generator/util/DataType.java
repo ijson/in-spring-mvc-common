@@ -62,4 +62,27 @@ public class DataType {
         }
         return mark;
     }
+
+    /**
+     * description: 获取数据类型
+     */
+    public static String getJdbcType(String columnType, int precision) {
+        String colType = columnType.toUpperCase();
+        if ("INT".equals(colType) || "TINYINT".equals(colType) || "SMALLINT".equals(colType)) {
+            colType = "INTEGER";
+        } else if ("NUMBER".equals(colType)) {
+            if (precision > 20) {
+                colType = "DOUBLE";
+            } else {
+                colType = "BIGINT";
+            }
+        } else if ("VARCHAR2".equals(colType) || "TEXT".equals(colType) || "CHAR".equals(colType)) {
+            colType = "VARCHAR";
+        } else if ("TIMESTAMP".equalsIgnoreCase(colType)) {
+            colType = "TIMESTAMP";
+        } else if ("DATE".equals(colType) || "TIME".equals(colType)) {
+            colType = "DATETIME";
+        }
+        return colType;
+    }
 }
