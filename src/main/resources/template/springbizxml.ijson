@@ -6,7 +6,6 @@ ${@com.ijson.platform.common.util.ToolsUtil}
     default-autowire="byName">
 
    <!-- dao config start -->
-    var package_name = ${package_name};
    <%
        if(list.~size>0){
            for(col in list){
