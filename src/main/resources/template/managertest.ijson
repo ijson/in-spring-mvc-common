@@ -42,7 +42,7 @@ public class ${tableName}ManagerTest extends BaseTest {
    }
     @Test
     public void infoById() {
-      ${tableName} uActGive = new ${tableName}();
+      ${tableName} ${tableId} = new ${tableName}();
       ParamsVo<${tableName}> vo = new ParamsVo<${tableName}>();
       vo.setObj(${tableId});
       Object object = ${tableId}Manager.getInfoById(vo);

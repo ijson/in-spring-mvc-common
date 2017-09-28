@@ -9,6 +9,7 @@
 
     <artifactId>${project_name}</artifactId>
     <packaging>jar</packaging>
+    <version>1.0.0-SNAPSHOT</version>
 
     <name>${project_name}</name>
     <url>http://www.ijson.com</url>
