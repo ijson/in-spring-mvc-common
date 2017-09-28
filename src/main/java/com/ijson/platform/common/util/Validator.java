@@ -8,7 +8,6 @@ import java.net.URL;
 import java.security.MessageDigest;
 import java.util.Collection;
 import java.util.List;
-import java.util.UUID;
 
 /**
  * description:  验证工具类
@@ -30,7 +29,8 @@ public class Validator {
      * @author cuiyongxu
      */
     public synchronized static String generate() {
-        return UUID.randomUUID().toString().replaceAll("-", "");
+        //return UUID.randomUUID().toString().replaceAll("-", "");
+        return ObjectId.getId();
     }
 
     /**
