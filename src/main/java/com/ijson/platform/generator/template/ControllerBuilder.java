@@ -1,5 +1,6 @@
 package com.ijson.platform.generator.template;
 
+import com.google.common.base.Splitter;
 import com.google.common.collect.Maps;
 import com.ijson.platform.api.model.ParamsVo;
 import com.ijson.platform.common.util.FileOperate;
@@ -28,12 +29,16 @@ public class ControllerBuilder implements TemplateHanlder {
         FileOperate.getInstance().newCreateFolder(classPath);
         if (!Validator.isEmpty(tables)) {
             for (TableEntity table1 : tables) {
-                String entityName = table1.getTableAttName();
-                Map<String,Object> map = Maps.newHashMap();
-                map.put("entityName",entityName);
-                map.put("package_name",config.get("package_name"));
-                map.put("columns",table1.getColumns());
-                FileOperate.getInstance().newCreateFile(classPath + entityName + "Controller.java", TemplateUtil.getTemplate("controller.ijson",map));
+                String tableName = table1.getTableAttName();
+                Map<String, Object> map = Maps.newHashMap();
+                map.put("tableName", tableName);
+                map.put("tName", tableName.toLowerCase());
+                List<String> packageList = Splitter.on(".").splitToList(config.get("package_name"));
+
+                map.put("pack", packageList.get(packageList.size()-1));
+                map.put("package_name", config.get("package_name"));
+                map.put("columns", table1.getColumns());
+                FileOperate.getInstance().newCreateFile(classPath + tableName + "Controller.java", TemplateUtil.getTemplate("controller.ijson", map));
             }
         }
     }
