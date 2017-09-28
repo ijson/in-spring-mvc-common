@@ -48,7 +48,8 @@ public class DaoHibernateImpl extends HibernateDaoSupport implements BaseDao {
         try {
             this.getHibernateTemplate().deleteAll(list);
         } catch (Exception e) {
-            throw new DBServiceException("执行deleteBath方法出错");
+            log.error("DaoHibernateImpl deleteBath ERROR:", e);
+            throw new DBServiceException("执行deleteBath方法出错:" + e.getMessage());
         }
         return true;
     }
@@ -66,7 +67,8 @@ public class DaoHibernateImpl extends HibernateDaoSupport implements BaseDao {
                 this.getHibernateTemplate().update(po);
             }
         } catch (Exception e) {
-            throw new DBServiceException("执行editBath方法出错");
+            log.error("DaoHibernateImpl editBath ERROR:", e);
+            throw new DBServiceException("执行editBath方法出错:" + e.getMessage());
         }
         return true;
     }
@@ -82,7 +84,9 @@ public class DaoHibernateImpl extends HibernateDaoSupport implements BaseDao {
         try {
             this.getHibernateTemplate().save(list);
         } catch (Exception e) {
-            throw new DBServiceException("执行insertBath方法出错");
+            log.error("insertBath:", e);
+            log.error("DaoHibernateImpl insertBath ERROR:", e);
+            throw new DBServiceException("执行insertBath方法出错:" + e.getMessage());
         }
         return true;
     }
@@ -108,6 +112,7 @@ public class DaoHibernateImpl extends HibernateDaoSupport implements BaseDao {
                 count = Integer.parseInt(obj.toString());
             }
         } catch (Exception e) {
+            log.error("DaoHibernateImpl count ERROR:", e);
             throw new DBServiceException("执行count方法出错");
         } finally {
             session.flush();
@@ -133,6 +138,7 @@ public class DaoHibernateImpl extends HibernateDaoSupport implements BaseDao {
                 }
             }
         } catch (Exception e) {
+            log.error("DaoHibernateImpl delete ERROR:", e);
             throw new DBServiceException("执行delete方法出错");
         }
         return true;
@@ -156,6 +162,7 @@ public class DaoHibernateImpl extends HibernateDaoSupport implements BaseDao {
                 }
             }
         } catch (Exception e) {
+            log.error("DaoHibernateImpl edit ERROR:", e);
             throw new DBServiceException("执行edit方法出错");
         }
         return true;
@@ -174,8 +181,8 @@ public class DaoHibernateImpl extends HibernateDaoSupport implements BaseDao {
                 cache.createCacheObject(param.getCacheId(), param.getVaule());
             }
         } catch (Exception e) {
-            log.error("执行insert方法出错:",e);
-            throw new DBServiceException("执行insert方法出错");
+            log.error("DaoHibernateImpl insert ERROR:", e);
+            throw new DBServiceException("执行insert方法出错:" + e.getMessage());
         }
         return true;
     }
@@ -211,7 +218,8 @@ public class DaoHibernateImpl extends HibernateDaoSupport implements BaseDao {
                 page.setCount(rsCount);
             }
         } catch (Exception e) {
-            throw new DBServiceException("执行pageSelect方法出错");
+            log.error("DaoHibernateImpl pageSelect ERROR:", e);
+            throw new DBServiceException("执行pageSelect方法出错:" + e.getMessage());
         } finally {
             session.flush();
             session.close();
@@ -233,7 +241,8 @@ public class DaoHibernateImpl extends HibernateDaoSupport implements BaseDao {
             getParamClass(query, param.getParams());
             list = query.list();
         } catch (Exception e) {
-            throw new DBServiceException("执行select方法出错");
+            log.error("DaoHibernateImpl select ERROR:", e);
+            throw new DBServiceException("执行select方法出错:" + e.getMessage());
         } finally {
             session.flush();
             session.close();
@@ -262,7 +271,8 @@ public class DaoHibernateImpl extends HibernateDaoSupport implements BaseDao {
             }
             return obj;
         } catch (Exception e) {
-            throw new DBServiceException("执行selectSingle方法出错");
+            log.error("DaoHibernateImpl selectSingle ERROR:", e);
+            throw new DBServiceException("执行selectSingle方法出错:" + e.getMessage());
         } finally {
             session.flush();
             session.close();
@@ -281,13 +291,15 @@ public class DaoHibernateImpl extends HibernateDaoSupport implements BaseDao {
                     cache.createCacheObject(cacheId, obj);
             }
         } catch (Exception e) {
-            throw new DBServiceException("执行selectById方法出错");
+            log.error("DaoHibernateImpl selectById ERROR:", e);
+            throw new DBServiceException("执行selectById方法出错:" + e.getMessage());
         }
         return obj;
     }
 
     private void getParamClass(Query query, Object... args) {
         if (Validator.isNull(args) || args.length <= 0) {
+
         } else {
             Class queryclass = query.getClass();
             for (int k = 0; k < args.length; k++) {
@@ -305,7 +317,8 @@ public class DaoHibernateImpl extends HibernateDaoSupport implements BaseDao {
                     }
 
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    log.error("DaoHibernateImpl getParamClass ERROR:", e);
+                    throw new DBServiceException("执行selectById方法出错:" + e.getMessage());
                 }
             }
         }
@@ -324,6 +337,9 @@ public class DaoHibernateImpl extends HibernateDaoSupport implements BaseDao {
             Query query = session.createQuery(param.getSqlStr());
             getParamClass(query, param.getParams());
             return query.executeUpdate();
+        } catch (Exception e) {
+            log.error("DaoHibernateImpl editOrDelForHql ERROR:", e);
+            throw new DBServiceException("执行editOrDelForHql方法出错:" + e.getMessage());
         } finally {
             session.flush();
             session.close();
@@ -356,6 +372,7 @@ public class DaoHibernateImpl extends HibernateDaoSupport implements BaseDao {
             }
             return objClone;
         } catch (Exception e) {
+            log.error("DaoHibernateImpl selectSingleByObject ERROR:", e);
             throw new DBServiceException("执行selectSingle方法出错");
         } finally {
             session.flush();
@@ -369,7 +386,7 @@ public class DaoHibernateImpl extends HibernateDaoSupport implements BaseDao {
     @Override
     public List selectByObject(MethodParam param) {
         List list;
-        List objList = null;
+        List<Object> objList = null;
         Session session = getHibernateTemplate().getSessionFactory().openSession();
         try {
             Query query = session.createQuery(param.getSqlStr());
@@ -386,6 +403,7 @@ public class DaoHibernateImpl extends HibernateDaoSupport implements BaseDao {
                 }
             }
         } catch (Exception e) {
+            log.error("DaoHibernateImpl selectByObject ERROR:", e);
             throw new DBServiceException("执行select方法出错");
         } finally {
             session.flush();
