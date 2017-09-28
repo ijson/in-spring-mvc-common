@@ -36,7 +36,7 @@ public class TemplateManagerImplBuilder implements TemplateHanlder {
      * @param config configs
      * @param tables tables
      */
-    public void createdManager(String prefix, List<TableEntity> tables, Map<String, String> config) {
+    private void createdManager(String prefix, List<TableEntity> tables, Map<String, String> config) {
         String projectName = config.get("project_name");
         String managerPath = config.get("fs_path") + "/" + projectName + "/" + prefix + "java/" + config.get("package_name").replace(".", "/") + "/manager/";
         FileOperate.getInstance().newCreateFolder(managerPath);
@@ -54,18 +54,6 @@ public class TemplateManagerImplBuilder implements TemplateHanlder {
     }
 
 
-    /**
-     * 返回类的头引入内容
-     *
-     * @return value
-     */
-    private String getManagerImports(String tableName, Map<String, String> config) {
-        return "package " + config.get("package_name")
-                + ".manager;\n\n" +
-                "import " + config.get("package_name") + ".entity." + tableName
-                + ";\n" +
-                "\n \n";
-    }
 
     /**
      * 生成manager接口的实现类
@@ -79,25 +67,24 @@ public class TemplateManagerImplBuilder implements TemplateHanlder {
         String fsPath = config.get("fs_path") + "/";
 
         String projectName = config.get("project_name");
-        String managerPath = fsPath + projectName + "/" + prefix + "java/"
-                + config.get("package_name").replace(".", "/") + "/manager/impl/";
+        String managerPath = fsPath + projectName + "/" + prefix + "java/" + config.get("package_name").replace(".", "/") + "/manager/impl/";
+        String pluginPath = fsPath + projectName + "/" + prefix + "java/" + config.get("package_name").replace(".", "/") + "/manager/plugins/";
 
-
-        String pluginPath = fsPath + projectName + "/" + prefix + "java/"
-                + config.get("package_name").replace(".", "/") + "/manager/plugins/";
         FileOperate.getInstance().newCreateFolder(managerPath);
         FileOperate.getInstance().newCreateFolder(pluginPath);
+
         if (!Validator.isEmpty(tables)) {
             for (TableEntity table1 : tables) {
-                StringBuilder result = new StringBuilder("");
                 String tableName = table1.getTableAttName();
                 String beanIdName = ToolsUtil.toCamelNamed(table1.getTableName().replaceAll(tabPrefix, ""));
-                result.append(getManagerImplImports(tableName, config));
-                result.append("public class ").append(tableName).append("ManagerImpl implements ").append(tableName).append("Manager { \n\n");
-                result.append(getManagerImplClassMethods(tableName, beanIdName, table1.getPKColumn(), table1, config));
-                result.append("} \n");
-                FileOperate.getInstance()
-                        .newCreateFile(managerPath + tableName + "ManagerImpl.java", result.toString());
+                Map<String,Object> map = Maps.newHashMap();
+                map.put("package_name",config.get("package_name"));
+                map.put("tableName",tableName);
+                map.put("beanIdName",beanIdName);
+                map.put("table",table1);
+                map.put("pkey",ToolsUtil.toUpperFirst(table1.getPKColumn()));
+                map.put("pkeys",table1.getPKColumn());
+                FileOperate.getInstance().newCreateFile(managerPath + tableName + "ManagerImpl.java", TemplateUtil.getTemplate("managerimpl.ijson", map));
             }
         }
     }

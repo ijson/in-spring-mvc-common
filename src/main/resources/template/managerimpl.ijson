@@ -1,0 +1,162 @@
+${@com.ijson.platform.common.util.ToolsUtil}
+${@com.ijson.platform.generator.util.DataType}
+package ${package_name}.manager.impl;
+
+import java.util.List;
+import java.util.Map;
+import com.ijson.platform.database.model.MethodParam;
+import com.ijson.platform.database.model.Page;
+import com.ijson.platform.database.db.IDao;
+import com.ijson.platform.api.model.ParamsVo;
+import com.ijson.platform.common.util.Validator;
+import org.springframework.beans.factory.annotation.Autowired;;
+import com.ijson.platform.api.manager.PluginConnector;
+import ${package_name}.entity.${tableName};
+import ${package_name}.manager.${tableName}Manager;
+import com.ijson.platform.common.exception.MVCBusinessException;
+
+
+public class ${tableName}ManagerImpl implements ${tableName}Manager {
+
+    @Autowired
+    protected IDao ${beanIdName}Dao;
+    protected Map<String, PluginConnector> plugins;
+    protected final String entityName = "${package_name}.entity.${tableName}";
+
+    public void set${tableName}Dao(IDao ${beanIdName}Dao) {
+      this.${beanIdName}Dao=${beanIdName}Dao;
+    }
+    public void setPlugins(Map<String, PluginConnector> plugins) {
+     this.plugins = plugins;
+    }
+
+
+    public String saveInfo(ParamsVo<${tableName}> vo) throws MVCBusinessException {
+      ${tableName} ${beanIdName} = vo.getObj();
+      String infoId = Validator.generate();
+      String cacheKey="${beanIdName}_"+infoId;
+      ${beanIdName}.set${pkey}(infoId);
+
+      MethodParam param = new MethodParam("${tableName}", cacheKey, "", entityName);
+      param.setVaule(${beanIdName});
+      if (${beanIdName}Dao.insert(param)) {
+         return infoId;
+      }
+      return "";
+   }
+
+
+    public boolean editInfo(ParamsVo<${tableName}> vo) throws MVCBusinessException {
+      ${tableName} ${beanIdName} = vo.getObj();
+      if (Validator.isNotNull(${beanIdName}.get${pkey}())) {
+         String cacheKey="${beanIdName}_"+${beanIdName}.get${pkey}();
+         MethodParam param = new MethodParam("${tableName}", cacheKey, "", entityName);
+         param.setVaule(${beanIdName});
+         return ${beanIdName}Dao.edit(param);
+      }
+      return false;
+   }
+
+
+
+    public boolean deleteInfo(ParamsVo<${tableName}> vo) throws MVCBusinessException {
+      String infoId = vo.getInfoId();
+      if (Validator.isNull(infoId)){
+          return false;
+      }
+      String cacheKey="${beanIdName}_"+infoId;
+      String mark = Validator.getDefaultStr(String.valueOf(vo.getParams("isDelete")), "true");
+      MethodParam param = new MethodParam("ById", cacheKey, "", entityName);
+      param.setInfoId(infoId);
+      ${tableName} info = (${tableName}) ${beanIdName}Dao.selectById(param);
+      if (Validator.isEmpty(info)) {
+          return false;
+      }
+      param.setVaule(info);//此处需要先将状态值赋值为删除状态
+      if("false".equals(mark)){//逻辑删除
+         param.setKey("${tableName}");
+         return ${beanIdName}Dao.edit(param);
+      } else{
+         param.setParams("${pkeys}",infoId);
+         param.setDelete(true);
+         return ${beanIdName}Dao.delete(param);
+      }
+   }
+
+
+    public Object getInfoById(ParamsVo<${tableName}> vo){
+      String infoId = vo.getInfoId();
+      String cacheKey="${beanIdName}_"+infoId;
+      if (Validator.isNull(infoId)) {
+         return null;
+      }
+      MethodParam param = new MethodParam("ById", cacheKey, "", entityName);
+      param.setInfoId(infoId);
+      return ${beanIdName}Dao.selectById(param);
+   }
+
+
+    public Object execute(ParamsVo<${tableName}> vo){
+		  String key = vo.getMethodKey();
+		  try {
+			if (!Validator.isEmpty(plugins)) {
+				if (!Validator.isEmpty(plugins.get(key))) {
+					return plugins.get(key).execute(vo);
+				}
+	  		  }
+		  } catch (Exception e) {
+			e.printStackTrace();
+		  }
+ 	  return null;
+   }
+
+
+    public Page getPageInfo(ParamsVo<${tableName}> vo){
+      MethodParam param = setMethodParams(vo, 2);
+      int pageSize = Integer.valueOf(Validator.getDefaultStr(String.valueOf(vo.getParams("pageSize")), "10"));
+      int pageIndex = Integer.valueOf(Validator.getDefaultStr(String.valueOf(vo.getParams("pageIndex")), "1"));
+      param.setPageIndex(pageIndex);
+      param.setPageSize(pageSize);
+      Page page = ${beanIdName}Dao.pageSelect(param);
+      return page;
+   }
+
+
+    public List<${tableName}> getList(ParamsVo<${tableName}> vo){
+      MethodParam param = setMethodParams(vo, 2);
+      return ${beanIdName}Dao.select(param);
+    }
+
+
+    public long countInfo(ParamsVo<${tableName}> vo){
+      MethodParam param = setMethodParams(vo, 1);
+      return ${beanIdName}Dao.count(param);
+    }
+
+
+    private MethodParam setMethodParams(ParamsVo<${tableName}> vo, int type) {
+      String methodKey = Validator.getDefaultStr(vo.getMethodKey(), "ByProperty");
+      StringBuffer sb = new StringBuffer(${beanIdName}Dao.getSql(type));
+      MethodParam param = new MethodParam(methodKey, "", "", entityName);
+      ${tableName} ${beanIdName} = vo.getObj();
+
+      <%
+
+      if(table.columns.~size>0){
+          for(col in table.columns){
+              if(pkeys==col.attrName){
+                continue;
+              }
+              var dd = @com.ijson.platform.common.util.ToolsUtil.toUpperFirst(col.attrName);
+              print("    if(Validator.isNotNull("+beanIdName+".get"+dd+"())) {\n");
+              print("        sb.append(\" and "+col.attrName+" = :"+col.attrName+"\"); \n");
+              print("        param.setParams(\""+col.attrName+"\", "+beanIdName+".get"+dd+"()); \n");
+              print("     }\n");
+          }
+      }
+      %>
+      param.setSqlStr(sb.toString());
+      return param;
+   }
+}
+
