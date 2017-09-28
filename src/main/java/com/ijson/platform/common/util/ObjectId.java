@@ -44,7 +44,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * <p>
  * <p>Instances of this class are immutable.</p>
  *
- * @mongodb.driver.manual core/object-id ObjectId
+ * !mongodb.driver.manual core/object-id ObjectId
  */
 @Slf4j
 public final class ObjectId implements Comparable<ObjectId>, Serializable {

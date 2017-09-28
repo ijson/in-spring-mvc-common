@@ -65,6 +65,9 @@ public class DataType {
 
     /**
      * description: 获取数据类型
+     * @return type
+     * @param columnType type
+     * @param precision  precision
      */
     public static String getJdbcType(String columnType, int precision) {
         String colType = columnType.toUpperCase();

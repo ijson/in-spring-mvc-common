@@ -36,7 +36,7 @@ public class TemplateUtil {
     /**
      * 首字母转小写
      *
-     * @param s
+     * @param s string
      * @return 首字母转小写
      */
     public static String toLowerCaseFirstOne(String s) {
@@ -50,7 +50,7 @@ public class TemplateUtil {
     /**
      * 首字母转大写
      *
-     * @param s
+     * @param s string
      * @return 首字母转大写
      */
     public static String toUpperCaseFirstOne(String s) {
