@@ -24,8 +24,7 @@ public class ControllerBuilder implements TemplateHanlder {
 
     private void getTemplateStr(String prefix, List<TableEntity> tables, Map<String, String> config) {
         String projectName = config.get("project_name");
-        String classPath = config.get("fs_path") + "/" + projectName + "/" + prefix + "java/"
-                + config.get("package_name").replace(".", "/") + "/controller/";
+        String classPath = config.get("fs_path") + "/" + projectName + "/" + prefix + "java/" + config.get("package_name").replace(".", "/") + "/controller/";
         FileOperate.getInstance().newCreateFolder(classPath);
         if (!Validator.isEmpty(tables)) {
             for (TableEntity table1 : tables) {

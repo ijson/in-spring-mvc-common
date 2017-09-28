@@ -14,7 +14,7 @@ public class PomXMlBuilder implements TemplateHanlder {
         createdPomXml(config);
     }
 
-    public void createdPomXml(Map<String, String> config) {
+    private void createdPomXml(Map<String, String> config) {
         String projectName = config.get("project_name");
         String xmlPath = config.get("fs_path") + "/" + projectName + "/";
         FileOperate.getInstance().newCreateFolder(xmlPath);

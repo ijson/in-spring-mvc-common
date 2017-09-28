@@ -31,7 +31,7 @@ public class SqlmapsXmlBuilder implements TemplateHanlder {
      * @param prefix prefix
      * @param config configs
      */
-    public void createdSqlmapsXml(String prefix, List<TableEntity> tables, Map<String, String> config) {
+    private void createdSqlmapsXml(String prefix, List<TableEntity> tables, Map<String, String> config) {
         String jarPath = config.get("package_name");
         String projectName = config.get("project_name");
         String xmlPath = config.get("fs_path") + "/" + projectName + "/" + prefix + "resources/ibatis/sqlmaps/";

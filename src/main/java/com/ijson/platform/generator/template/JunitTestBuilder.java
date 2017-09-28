@@ -30,7 +30,7 @@ public class JunitTestBuilder implements TemplateHanlder {
      * @param prefix prefix
      * @param tables tables
      */
-    public void createdManagerImpl(String prefix, List<TableEntity> tables, Map<String, String> config) {
+    private void createdManagerImpl(String prefix, List<TableEntity> tables, Map<String, String> config) {
 
         String fsPath = config.get("fs_path") + "/";
 

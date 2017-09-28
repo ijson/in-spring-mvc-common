@@ -22,8 +22,7 @@ public class TemplateEntityImplBuilder implements TemplateHanlder {
 
     private void getTemplateStr(String prefix, List<TableEntity> tables, Map<String, String> config) {
         String projectName = config.get("project_name");
-        String classPath = config.get("fs_path") + "/" + projectName + "/" + prefix + "java/"
-                + config.get("package_name").replace(".", "/") + "/entity/";
+        String classPath = config.get("fs_path") + "/" + projectName + "/" + prefix + "java/" + config.get("package_name").replace(".", "/") + "/entity/";
         FileOperate.getInstance().newCreateFolder(classPath);
         if (!Validator.isEmpty(tables)) {
             for (TableEntity table1 : tables) {

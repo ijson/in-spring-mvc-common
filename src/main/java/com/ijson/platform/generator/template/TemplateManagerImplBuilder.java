@@ -55,7 +55,7 @@ public class TemplateManagerImplBuilder implements TemplateHanlder {
      * @param tables 表
      * @param prefix 前缀
      */
-    public void createdManagerImpl(String prefix, List<TableEntity> tables, Map<String, String> config) {
+    private void createdManagerImpl(String prefix, List<TableEntity> tables, Map<String, String> config) {
 
         String fsPath = config.get("fs_path") + "/";
 
