@@ -115,8 +115,7 @@ public class DaoHibernateImpl extends HibernateDaoSupport implements BaseDao {
             log.error("DaoHibernateImpl count ERROR:", e);
             throw new DBServiceException("执行count方法出错");
         } finally {
-            session.flush();
-            session.close();
+            close(session);
         }
         return count;
     }
@@ -221,8 +220,7 @@ public class DaoHibernateImpl extends HibernateDaoSupport implements BaseDao {
             log.error("DaoHibernateImpl pageSelect ERROR:", e);
             throw new DBServiceException("执行pageSelect方法出错:" + e.getMessage());
         } finally {
-            session.flush();
-            session.close();
+            close(session);
         }
         return page;
     }
@@ -244,8 +242,7 @@ public class DaoHibernateImpl extends HibernateDaoSupport implements BaseDao {
             log.error("DaoHibernateImpl select ERROR:", e);
             throw new DBServiceException("执行select方法出错:" + e.getMessage());
         } finally {
-            session.flush();
-            session.close();
+            close(session);
         }
         return list;
     }
@@ -274,8 +271,7 @@ public class DaoHibernateImpl extends HibernateDaoSupport implements BaseDao {
             log.error("DaoHibernateImpl selectSingle ERROR:", e);
             throw new DBServiceException("执行selectSingle方法出错:" + e.getMessage());
         } finally {
-            session.flush();
-            session.close();
+            close(session);
         }
     }
 
@@ -341,8 +337,7 @@ public class DaoHibernateImpl extends HibernateDaoSupport implements BaseDao {
             log.error("DaoHibernateImpl editOrDelForHql ERROR:", e);
             throw new DBServiceException("执行editOrDelForHql方法出错:" + e.getMessage());
         } finally {
-            session.flush();
-            session.close();
+            close(session);
         }
     }
 
@@ -375,8 +370,7 @@ public class DaoHibernateImpl extends HibernateDaoSupport implements BaseDao {
             log.error("DaoHibernateImpl selectSingleByObject ERROR:", e);
             throw new DBServiceException("执行selectSingle方法出错");
         } finally {
-            session.flush();
-            session.close();
+            close(session);
         }
     }
 
@@ -406,10 +400,16 @@ public class DaoHibernateImpl extends HibernateDaoSupport implements BaseDao {
             log.error("DaoHibernateImpl selectByObject ERROR:", e);
             throw new DBServiceException("执行select方法出错");
         } finally {
+            close(session);
+        }
+        return objList;
+    }
+
+    private void close(Session session) {
+        if (session != null) {
             session.flush();
             session.close();
         }
-        return objList;
     }
 
 }
