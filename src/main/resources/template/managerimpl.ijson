@@ -48,7 +48,12 @@ public class ${tableName}ManagerImpl implements ${tableName}Manager {
 
     public boolean editInfo(ParamsVo<${tableName}> vo) throws MVCBusinessException {
       ${tableName} ${beanIdName} = vo.getObj();
-      if (Validator.isNotNull(${beanIdName}.get${pkey}())) {
+      if (Validator.isNotNull(${beanIdName}.get${pkey}()) || Validator.isNotNull(vo.getInfoId())) {
+         String id = ${beanIdName}.get${pkey}();
+         if (Validator.isNull(id)) {
+             id = vo.getInfoId();
+         }
+
          String cacheKey="${beanIdName}_"+${beanIdName}.get${pkey}();
          MethodParam param = new MethodParam("${tableName}", cacheKey, "", entityName);
          param.setVaule(${beanIdName});
