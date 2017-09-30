@@ -92,16 +92,19 @@ ${@com.ijson.platform.generator.util.DataType}
 
       <%
         var count4 = table.columns.~size;
-        var pkId="";
         if(count4>0){
             for(col in table.columns){
+
+             if(col.attrName==pkId){
+                 continue;
+             }
              print("    ");
              var colType = @com.ijson.platform.generator.util.DataType.getJdbcType(col.columnTypeName, col.precision);
              print("<if test=\"");
              print(col.attrName);
              print(" != null and ");
              print(col.attrName);
-             print(" != ''\"> and ");
+             print(" != ''\"> , ");
              print(col.columnName);
              print("=#{");
              print(col.attrName);

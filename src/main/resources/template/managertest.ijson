@@ -22,6 +22,10 @@ public class ${tableName}ManagerTest extends BaseTest {
       System.out.println(id);
 
    }
+
+    /**
+     * 更新以id为主,不需要再对象中setId,只需要 vo.setInfoId(id); 即可
+     */
     @Test
     public void editInfo() {
       ${tableName} ${tableId} = new ${tableName}();
