@@ -1,5 +1,5 @@
 fs_path=/Users/cuiyongxu/Desktop
-project_name=in-auth-driver
+project_name=in-auth-driver2
 package_name=com.ijson.auth
 builder_tables=u_user,u_role,u_role_give,u_act,u_act_give,u_lock
 use_cache=T

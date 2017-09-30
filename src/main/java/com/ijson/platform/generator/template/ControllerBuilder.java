@@ -4,6 +4,7 @@ import com.google.common.base.Splitter;
 import com.google.common.collect.Maps;
 import com.ijson.platform.api.model.ParamsVo;
 import com.ijson.platform.common.util.FileOperate;
+import com.ijson.platform.common.util.ToolsUtil;
 import com.ijson.platform.common.util.Validator;
 import com.ijson.platform.generator.model.TableEntity;
 import com.ijson.platform.generator.util.TemplateUtil;
@@ -32,6 +33,8 @@ public class ControllerBuilder implements TemplateHanlder {
                 String tableName = table1.getTableAttName();
                 Map<String, Object> map = Maps.newHashMap();
                 map.put("tableName", tableName);
+                map.put("tcName", ToolsUtil.toCamelNamed(table1.getTableName()));
+                map.put("pKColumn",ToolsUtil.toUpperFirst(table1.getPKColumn()));
                 map.put("tName", tableName.toLowerCase());
                 List<String> packageList = Splitter.on(".").splitToList(config.get("package_name"));
 

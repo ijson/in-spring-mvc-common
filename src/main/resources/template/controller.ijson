@@ -1,16 +1,28 @@
 package ${package_name}.controller;
 
+
+import com.google.common.base.Strings;
 import com.google.common.collect.Maps;
+import ${package_name}.entity.${tableName};
+import ${package_name}.manager.${tableName}Manager;
+import com.ijson.platform.api.model.ParamsVo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Map;
 
+
 @Controller
 @RequestMapping("/${pack}/${tName}")
 public class ${tableName}Controller {
+
+    @Autowired
+    private ${tableName}Manager ${tcName}Manager;
+
 
     @ResponseBody
     @RequestMapping(value = "ping", method = RequestMethod.GET)
@@ -20,6 +32,41 @@ public class ${tableName}Controller {
         value.put("message", "success");
         value.put("package", "${tableName}");
         return value;
+    }
+
+  @ResponseBody
+    @RequestMapping(value = "save", method = RequestMethod.POST)
+    public String saveInfo(${tableName} ${tcName}) {
+        ParamsVo<${tableName} > vo = new ParamsVo<${tableName}>();
+        vo.setObj(${tcName});
+        return ${tcName}Manager.saveInfo(vo);
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "edit", method = RequestMethod.POST)
+    public boolean editInfo(${tableName} ${tcName}) {
+        if (Strings.isNullOrEmpty(${tcName}.get${pKColumn}())) {
+            return false;
+        }
+        ParamsVo<${tableName}> vo = new ParamsVo<${tableName}>();
+        vo.setObj(${tcName});
+        return ${tcName}Manager.editInfo(vo);
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "delete/{id}", method = RequestMethod.GET)
+    public boolean deleteInfo(@PathVariable("id") String id) {
+        ParamsVo<${tableName}> vo = new ParamsVo<${tableName}>();
+        vo.setInfoId(id);
+        return ${tcName}Manager.deleteInfo(vo);
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "get/{id}", method = RequestMethod.GET)
+    public ${tableName} infoById(@PathVariable("id") String id) {
+        ParamsVo<${tableName}> vo = new ParamsVo<${tableName}>();
+        vo.setInfoId(id);
+        return (${tableName}) ${tcName}Manager.getInfoById(vo);
     }
 
 }
