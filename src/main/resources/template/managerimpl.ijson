@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 import com.ijson.platform.database.model.MethodParam;
 import com.ijson.platform.database.model.Page;
+import com.ijson.platform.common.exception.ManagerBusinessException;
 import com.ijson.platform.database.db.IDao;
 import com.ijson.platform.api.model.ParamsVo;
 import com.ijson.platform.common.util.Validator;
@@ -48,10 +49,14 @@ public class ${tableName}ManagerImpl implements ${tableName}Manager {
 
     public boolean editInfo(ParamsVo<${tableName}> vo) throws MVCBusinessException {
       ${tableName} ${beanIdName} = vo.getObj();
+      if (${beanIdName} == null) {
+            throw new ManagerBusinessException("实体不能为空");
+      }
       if (Validator.isNotNull(${beanIdName}.get${pkey}()) || Validator.isNotNull(vo.getInfoId())) {
          String id = ${beanIdName}.get${pkey}();
          if (Validator.isNull(id)) {
              id = vo.getInfoId();
+             ${beanIdName}.set${pkey}(id);
          }
 
          String cacheKey="${beanIdName}_"+id;
