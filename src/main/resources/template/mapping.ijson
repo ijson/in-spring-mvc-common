@@ -122,10 +122,10 @@ ${@com.ijson.platform.generator.util.DataType}
 
    </update>
   <delete id="deleteById" parameterType="java.util.Map">
-       DELETE FROM ${table_name} WHERE ${table.pKColumn} = #{${table.pKColumn}}
+       DELETE FROM ${table_name} WHERE ${pktabelName} = #{${table.pKColumn}}
    </delete>
   <select id="selectById" resultMap="result${tableName}" parameterType="java.util.Map">
-       select <include refid="selectSql${tableName}"/> from ${table_name} WHERE ${table.pKColumn} = #{${table.pKColumn}}
+       select <include refid="selectSql${tableName}"/> from ${table_name} WHERE ${pktabelName} = #{${table.pKColumn}}
    </select>
   <select id="countByProperty" resultType="java.lang.Long"  parameterType="java.util.Map">
        SELECT count(*) FROM ${table_name} <include refid="whereSql${tableName}"/>
