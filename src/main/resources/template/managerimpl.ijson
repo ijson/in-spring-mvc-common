@@ -34,6 +34,9 @@ public class ${tableName}ManagerImpl implements ${tableName}Manager {
 
     public String saveInfo(ParamsVo<${tableName}> vo) throws MVCBusinessException {
       ${tableName} ${beanIdName} = vo.getObj();
+      if (${beanIdName} == null) {
+          throw new ManagerBusinessException("实体不能为空");
+      }
       String infoId = Validator.generate();
       String cacheKey="${beanIdName}_"+infoId;
       ${beanIdName}.set${pkey}(infoId);
@@ -72,7 +75,7 @@ public class ${tableName}ManagerImpl implements ${tableName}Manager {
     public boolean deleteInfo(ParamsVo<${tableName}> vo) throws MVCBusinessException {
       String infoId = vo.getInfoId();
       if (Validator.isNull(infoId)){
-          return false;
+         throw new ManagerBusinessException("记录Id不能为空");
       }
       String cacheKey="${beanIdName}_"+infoId;
       String mark = Validator.getDefaultStr(String.valueOf(vo.getParams("isDelete")), "true");
@@ -98,7 +101,7 @@ public class ${tableName}ManagerImpl implements ${tableName}Manager {
       String infoId = vo.getInfoId();
       String cacheKey="${beanIdName}_"+infoId;
       if (Validator.isNull(infoId)) {
-         return null;
+         throw new ManagerBusinessException("记录Id不能为空");
       }
       MethodParam param = new MethodParam("ById", cacheKey, "", entityName);
       param.setInfoId(infoId);
