@@ -54,7 +54,7 @@ public class ${tableName}ManagerImpl implements ${tableName}Manager {
              id = vo.getInfoId();
          }
 
-         String cacheKey="${beanIdName}_"+${beanIdName}.get${pkey}();
+         String cacheKey="${beanIdName}_"+id;
          MethodParam param = new MethodParam("${tableName}", cacheKey, "", entityName);
          param.setVaule(${beanIdName});
          return ${beanIdName}Dao.edit(param);

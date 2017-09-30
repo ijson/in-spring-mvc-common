@@ -25,7 +25,8 @@ public enum MVCBusinessExceptionCode {
      * 业务异常
      */
     PLUGIN_CONNECTOR_EXCEPTION(201_01_0001, "插件执行异常"),
-    DB_SERVICE_EXCEPTION(201_01_0002, "数据服务执行异常");
+    DB_SERVICE_EXCEPTION(201_01_0002, "数据服务执行异常"),
+    MANAGER_BUSSINESS_EXCEPTION(201_01_0003, "业务服务执行失败");
 
     private int code;
     private String message;
