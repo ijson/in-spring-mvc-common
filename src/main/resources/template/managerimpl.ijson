@@ -130,8 +130,7 @@ public class ${tableName}ManagerImpl implements ${tableName}Manager {
       int pageIndex = Integer.valueOf(Validator.getDefaultStr(String.valueOf(vo.getParams("pageIndex")), "1"));
       param.setPageIndex(pageIndex);
       param.setPageSize(pageSize);
-      Page page = ${beanIdName}Dao.pageSelect(param);
-      return page;
+      return ${beanIdName}Dao.pageSelect(param);
    }
 
 
@@ -149,7 +148,7 @@ public class ${tableName}ManagerImpl implements ${tableName}Manager {
 
     private MethodParam setMethodParams(ParamsVo<${tableName}> vo, int type) {
       String methodKey = Validator.getDefaultStr(vo.getMethodKey(), "ByProperty");
-      StringBuffer sb = new StringBuffer(${beanIdName}Dao.getSql(type));
+      StringBuilder sb = new StringBuilder(${beanIdName}Dao.getSql(type));
       MethodParam param = new MethodParam(methodKey, "", "", entityName);
       ${tableName} ${beanIdName} = vo.getObj();
 
