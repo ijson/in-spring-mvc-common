@@ -88,14 +88,18 @@ ${@com.ijson.platform.generator.util.DataType}
 
 
   <update id="update${tableName}" parameterType="${package_name}.entity.${tableName}">
-       UPDATE ${table_name} SET
+       UPDATE ${table_name}
+
+       <trim prefix="SET" prefixOverrides=",">
 
       <%
         var count4 = table.columns.~size;
+        var pktabelName = "";
         if(count4>0){
             for(col in table.columns){
 
              if(col.attrName==pkId){
+                 pktabelName = col.columnName;
                  continue;
              }
              print("    ");
@@ -111,7 +115,9 @@ ${@com.ijson.platform.generator.util.DataType}
              print("}</if>\n");
             }
          }
-         print("    WHERE "+table.pKColumn+" = #{"+table.pKColumn+"}");
+
+         print("    </trim>\n");
+         print("    WHERE "+ pktabelName +" = #{"+table.pKColumn+"}");
         %>
 
    </update>
