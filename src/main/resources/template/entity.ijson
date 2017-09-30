@@ -1,7 +1,5 @@
-${@com.ijson.platform.generator.util.DataType}
-
 package ${package_name}.entity;
-
+${@com.ijson.platform.generator.util.DataType}
 import com.ijson.platform.api.model.BaseEntity;
 import lombok.Getter;
 import lombok.Setter;

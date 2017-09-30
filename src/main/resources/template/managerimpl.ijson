@@ -1,7 +1,6 @@
+package ${package_name}.manager.impl;
 ${@com.ijson.platform.common.util.ToolsUtil}
 ${@com.ijson.platform.generator.util.DataType}
-package ${package_name}.manager.impl;
-
 import java.util.List;
 import java.util.Map;
 import com.ijson.platform.database.model.MethodParam;
