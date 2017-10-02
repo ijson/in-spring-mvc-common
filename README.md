@@ -12,7 +12,7 @@
 - DB:MySQL
 - CACHE:ehcache
 
-### 代码如何生成
+### 代码如何生成,修改test/resources/autoconf/generator
 - fs_path: 保存到哪个目录下,例如:/Users/cuiyongxu/Desktop 最后不要加 `/`
 - project_name 项目名称,会在/Users/cuiyongxu/Desktop下自动生成该目录
 - package_name 项目的包名称,必填项,会在此包下生成,dao,manager,entity等目录
@@ -21,6 +21,8 @@
 - jdbc.url 地址
 - jdbc.user mysql用户名
 - jdbc.password 密码
+
+``以上配置完成后,运行com.ijson.platform.generator.CoderTest即可``
 
 
 #### 如何使用本系统生成的代码
