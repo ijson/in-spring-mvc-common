@@ -36,3 +36,15 @@
 
 7. 启动tomcat,访问controller下的ping地址即可
 
+#### 本项目有点
+
+1. 自动生成相关pom.xml
+2. 自动生成mybatis.xml配置文件
+3. 自动生成hibernate.xml配置文件
+4. 自动生成controller
+5. 自动生成entity实体类
+6. 自动生成dao层代码结构
+7. 自动生成service层代码逻辑
+8. 自动生成测试代码及测试配置文件
+
+
