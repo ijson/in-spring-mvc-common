@@ -28,7 +28,6 @@ public class MysqlDaoImpl implements IDao {
             if (!Validator.isEmpty(connection)) {
                 log.info("连接数据库成功...");
             }
-            String tabPrefix = config.get("table_prefix").toLowerCase();
             for (String tableName1 : tableNames) {
                 String sql = "select * from " + tableName1.toLowerCase();
                 stmt = connection.prepareStatement(sql);
@@ -96,7 +95,7 @@ public class MysqlDaoImpl implements IDao {
                 if (Validator.isNotNull(pkColumn)) {
                     table.setPKColumn(ToolsUtil.toCamelNamed(pkColumn));
                 }
-                table.setTableAttName(ToolsUtil.toUpperFirst(tableName.substring(tabPrefix.length())));
+                table.setTableAttName(ToolsUtil.toUpperFirst(tableName));
                 table.setTableName(tableName);
                 result.add(table);
             }

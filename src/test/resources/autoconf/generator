@@ -2,11 +2,7 @@ fs_path=/Users/cuiyongxu/Desktop
 project_name=in-auth-driver
 package_name=com.paysyscn.auth
 builder_tables=u_user,u_role,u_role_give,u_act,u_act_give,u_lock
-use_cache=T
-table_prefix=
 jdbc.driver=com.mysql.jdbc.Driver
 jdbc.url=jdbc:mysql://localhost:3307/inauth?useUnicode=true&characterEncoding=utf8
 jdbc.user=admin
 jdbc.password=MSCR7KPCJMR5
-
--
