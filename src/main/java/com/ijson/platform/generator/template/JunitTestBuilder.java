@@ -69,7 +69,7 @@ public class JunitTestBuilder implements TemplateHanlder {
     }
 
     private String getInCacheBaseXml(String prefix, List<TableEntity> tables, Map<String, String> config) {
-        return TemplateUtil.getTemplate("autoincache.ijson", Maps.newHashMap());
+        return TemplateUtil.getTemplate("autoinCache.ijson", Maps.newHashMap());
     }
 
     private String getEhcacheBaseXml(String prefix, List<TableEntity> tables, Map<String, String> config) {

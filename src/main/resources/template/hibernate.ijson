@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 ${@com.ijson.platform.generator.util.DataType}
 <hibernate-mapping>
-    <class name="com.ijson.auth.entity.${entityName}" table="${tableName}" >
+    <class name="${package_name}.entity.${entityName}" table="${tableName}" >
     <%
     if(table.columns.~size>0){
         for(col in table.columns){
