@@ -1,8 +1,8 @@
 fs_path=/Users/cuiyongxu/Desktop
-project_name=in-auth-driver
-package_name=com.paysyscn.auth
+project_name=in-passport-core
+package_name=com.ijson.passport
 builder_tables=u_user,u_role,u_role_give,u_act,u_act_give,u_lock
 jdbc.driver=com.mysql.jdbc.Driver
-jdbc.url=jdbc:mysql://localhost:3307/inauth?useUnicode=true&characterEncoding=utf8
+jdbc.url=jdbc:mysql://localhost:3307/passport?useUnicode=true&characterEncoding=utf8
 jdbc.user=admin
-jdbc.password=MSCR7KPCJMR5
+jdbc.password=sFUgAVKgF5TO
