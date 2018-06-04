@@ -10,7 +10,7 @@
 
     <groupId>com.ijson</groupId>
     <artifactId>in-spring-mvc-common</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.2</version>
     <packaging>jar</packaging>
 
     <name>in-spring-mvc-common</name>
@@ -30,7 +30,7 @@
         <url>https://github.com/ijson/in-spring-mvc-common.git</url>
         <connection>scm:git:https://github.com/ijson/in-spring-mvc-common.git</connection>
         <developerConnection>scm:git:https://github.com/ijson/in-spring-mvc-common.git</developerConnection>
-      <tag>HEAD</tag>
+      <tag>in-spring-mvc-common-1.0.2</tag>
   </scm>
 
     <developers>
