@@ -1,6 +1,7 @@
 package com.ijson.platform.generator.template;
 
 import com.google.common.collect.Maps;
+
 import com.ijson.platform.api.model.ParamsVo;
 import com.ijson.platform.common.util.FileOperate;
 import com.ijson.platform.common.util.Validator;
@@ -54,7 +55,7 @@ public class JunitTestBuilder implements TemplateHanlder {
         if (!Validator.isEmpty(tables)) {
             for (TableEntity table1 : tables) {
                 String tableName = table1.getTableAttName();
-                Map<String,Object> map = Maps.newHashMap();
+                Map<String, Object> map = Maps.newHashMap();
                 map.put("package_name", config.get("package_name"));
                 map.put("tableName", tableName);
                 map.put("tableId", TemplateUtil.toLowerCaseFirstOne(tableName));
@@ -65,7 +66,12 @@ public class JunitTestBuilder implements TemplateHanlder {
     }
 
     private String getInDBBaseXml(String prefix, List<TableEntity> tables, Map<String, String> config) {
-        return TemplateUtil.getTemplate("indb.ijson", Maps.newHashMap());
+        Map dbConfig = Maps.newHashMap();
+        dbConfig.put("driver", config.get("jdbc.driver"));
+        dbConfig.put("url", config.get("jdbc.url"));
+        dbConfig.put("user", config.get("jdbc.user"));
+        dbConfig.put("password", config.get("jdbc.password"));
+        return TemplateUtil.getTemplate("indb.ijson", dbConfig);
     }
 
     private String getInCacheBaseXml(String prefix, List<TableEntity> tables, Map<String, String> config) {
