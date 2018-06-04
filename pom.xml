@@ -14,7 +14,7 @@
     <packaging>jar</packaging>
 
     <name>in-spring-mvc-common</name>
-    <url>http://maven.apache.org</url>
+    <url>http://www.ijson.com</url>
 
     <description>简单的springmvc框架,用于快速开发</description>
 
