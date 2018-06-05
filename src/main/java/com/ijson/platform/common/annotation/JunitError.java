@@ -7,8 +7,7 @@ import java.lang.annotation.Target;
 
 @Target({ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Token {
-    boolean save();
+public @interface JunitError {
 
-    boolean remove();
+    String desc() default "测试存在";
 }

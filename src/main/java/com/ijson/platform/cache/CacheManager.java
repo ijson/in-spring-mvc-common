@@ -45,6 +45,9 @@ public interface CacheManager<T> {
      */
     T getCacheCloneByKey(String key);
 
+
+    String getCacheCloneStringByKey(String key);
+
     /**
      * description: 获取list对象集合
      *

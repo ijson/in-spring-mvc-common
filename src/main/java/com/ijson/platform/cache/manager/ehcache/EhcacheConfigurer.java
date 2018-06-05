@@ -54,14 +54,22 @@ public class EhcacheConfigurer {
      */
     public Cache getCache(String storage) {
         init();
-        if (null == storage || "".equals(storage))
+        //为空,则采用默认 ijsonCache
+        if (null == storage || "".equals(storage)) {
             storage = "ijsonCache";
-        if ("defaultCache".equalsIgnoreCase(storage)) {
+        } else if ("defaultCache".equalsIgnoreCase(storage)) {
+            //大小写判断
             if (Validator.isEmpty(manager.getCache(storage))) {
                 manager.addCache("defaultCache");
             }
         }
-        return manager.getCache(storage);
+
+        Cache cache = manager.getCache(storage);
+        if (cache == null) {
+            log.info("缓存空间:{} 不存在,使用默认缓存空间:{}", storage, "ijsonCache");
+            cache = manager.getCache("ijsonCache");
+        }
+        return cache;
     }
 
     /**

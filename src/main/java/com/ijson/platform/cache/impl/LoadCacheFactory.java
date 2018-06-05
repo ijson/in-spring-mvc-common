@@ -47,9 +47,16 @@ public class LoadCacheFactory<T> {
     public CacheManager<T> getCacheManager(String cacheName) {
         initConfig();
         String cacheType = constant.get("cache_type");
-        log.info("缓存类型:{},缓存存储空间:{}", cacheType, cacheName);
         CacheHandler<T> cacheHandler = createCacheHandlerType(cacheType);
         return cacheHandler.getFactory(cacheName);
+    }
+
+
+    public CacheManager<T> getCacheManager() {
+        initConfig();
+        String cacheType = constant.get("cache_type");
+        CacheHandler<T> cacheHandler = createCacheHandlerType(cacheType);
+        return cacheHandler.getFactory("");
     }
 
 
@@ -68,6 +75,7 @@ public class LoadCacheFactory<T> {
             public CacheManager getFactory(String cacheName) {
                 if (Validator.isEmpty(cacheName)) {
                     cacheName = Validator.getDefaultStr(constant.get("cache_default_name"), "ijsonCache");
+                    log.info("{} 缓存存储空间未填写,使用默认缓存配置:{}", cacheName, "ijsonCache");
                 }
                 if (null == ehcaches.get(cacheName)) {
                     ehcaches.put(cacheName, new EhcacheManagerImpl(cacheName));

@@ -98,8 +98,14 @@ public class EhcacheManagerImpl<T> implements CacheManager<T> {
             } else {
                 return (T) Validator.clone(element.getObjectValue());
             }
-        } else
+        } else {
             return null;
+        }
+    }
+
+    @Override
+    public String getCacheCloneStringByKey(String key) {
+        return (String) getCacheCloneByKey(key);
     }
 
     public List<T> getObjects(List<String> keys) {
@@ -130,8 +136,9 @@ public class EhcacheManagerImpl<T> implements CacheManager<T> {
     }
 
     public List<String> getObjects(List<String> keys, String prefix, List<T> objs) {
-        if (Validator.isEmpty(keys))
+        if (Validator.isEmpty(keys)) {
             return null;
+        }
         List<String> list = Lists.newArrayList();
         for (String key1 : keys) {
             String key = prefix + key1;
