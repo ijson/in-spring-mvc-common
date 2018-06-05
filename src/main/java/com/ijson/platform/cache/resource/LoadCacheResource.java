@@ -1,4 +1,4 @@
-package com.ijson.platform.cache.manager.ehcache.resource;
+package com.ijson.platform.cache.resource;
 
 import com.ijson.platform.common.util.StringUtils;
 

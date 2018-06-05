@@ -1,7 +1,7 @@
 package com.ijson.platform.cache.manager.ehcache;
 
-import com.ijson.platform.cache.manager.ehcache.resource.CacheResource;
-import com.ijson.platform.cache.manager.ehcache.resource.LoadCacheResource;
+import com.ijson.platform.cache.resource.CacheResource;
+import com.ijson.platform.cache.resource.LoadCacheResource;
 import com.ijson.platform.common.util.Validator;
 
 import net.sf.ehcache.Cache;
