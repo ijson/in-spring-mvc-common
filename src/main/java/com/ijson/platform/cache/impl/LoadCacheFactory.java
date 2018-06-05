@@ -5,11 +5,14 @@ import com.google.common.collect.Maps;
 import com.ijson.config.ConfigFactory;
 import com.ijson.platform.cache.CacheManager;
 import com.ijson.platform.cache.manager.ehcache.impl.EhcacheManagerImpl;
+import com.ijson.platform.common.util.JacksonUtil;
 import com.ijson.platform.common.util.Validator;
 
 import org.apache.commons.collections.MapUtils;
 
 import java.util.Map;
+
+import lombok.extern.slf4j.Slf4j;
 
 
 /**
@@ -17,6 +20,7 @@ import java.util.Map;
  *
  * @author heppy1.com 创建时间：Jan 24, 2015
  */
+@Slf4j
 public class LoadCacheFactory<T> {
 
     public static LoadCacheFactory instance = new LoadCacheFactory();
@@ -25,8 +29,10 @@ public class LoadCacheFactory<T> {
 
     private void initConfig() {
         if (MapUtils.isEmpty(constant)) {
+            log.info("系统配置为空,预备初始化...");
             ConfigFactory.getConfig("in-cache", (config -> {
                 constant = config.getAll();
+                log.info("配置参数读取完毕,{}", JacksonUtil.toJson(constant));
             }));
             GetCacheHandlerType.constant.putAll(constant);
         }
@@ -41,6 +47,7 @@ public class LoadCacheFactory<T> {
     public CacheManager<T> getCacheManager(String cacheName) {
         initConfig();
         String cacheType = constant.get("cache_type");
+        log.info("缓存类型:{},缓存存储空间:{}", cacheType, cacheName);
         CacheHandler<T> cacheHandler = createCacheHandlerType(cacheType);
         return cacheHandler.getFactory(cacheName);
     }
