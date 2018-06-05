@@ -5,7 +5,6 @@ import com.ijson.platform.common.util.Validator;
 
 /**
  * description: MySQL分页插件
- *
  */
 public class MySQLDialect implements Dialect {
 

@@ -1,16 +1,19 @@
 package com.ijson.platform.database.db.mybatis;
 
 import com.google.common.collect.Maps;
+
 import com.ijson.platform.common.exception.DBServiceException;
 import com.ijson.platform.database.model.MethodParam;
 import com.ijson.platform.database.model.Page;
-import lombok.extern.slf4j.Slf4j;
+
 import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import java.util.List;
 import java.util.Map;
+
+import lombok.extern.slf4j.Slf4j;
 
 
 /**
@@ -39,7 +42,7 @@ public class MybatisSession<O> {
             session = getSqlSession();
             return session.insert(qp.id, qp.o);
         } catch (Exception e) {
-            log.error("MybatisSession insert ERROR:",e);
+            log.error("MybatisSession insert ERROR:", e);
             throw new DBServiceException("执行insert方法出错:" + e.getMessage());
         } finally {
             closeSqlSession(session);
@@ -64,7 +67,7 @@ public class MybatisSession<O> {
             session.clearCache();
             return result;
         } catch (Exception e) {
-            log.error("MybatisSession insertBath ERROR:",e);
+            log.error("MybatisSession insertBath ERROR:", e);
             throw new DBServiceException("执行insertBath方法出错:" + e.getMessage());
         } finally {
             closeSqlSession(session);
@@ -85,7 +88,7 @@ public class MybatisSession<O> {
             session = getSqlSession();
             return session.update(qp.id, qp.o);
         } catch (Exception e) {
-            log.error("MybatisSession update ERROR:",e);
+            log.error("MybatisSession update ERROR:", e);
             throw new DBServiceException("执行update方法出错:" + e.getMessage());
         } finally {
             closeSqlSession(session);
@@ -106,7 +109,7 @@ public class MybatisSession<O> {
             session = getSqlSession();
             return session.delete(qp.id, qp.o);
         } catch (Exception e) {
-            log.error("MybatisSession delete ERROR:",e);
+            log.error("MybatisSession delete ERROR:", e);
             throw new DBServiceException("执行delete方法出错:" + e.getMessage());
         } finally {
             closeSqlSession(session);
@@ -127,7 +130,7 @@ public class MybatisSession<O> {
             session = getSqlSession();
             return (O) session.selectOne(qp.id, qp.o);
         } catch (Exception e) {
-            log.error("MybatisSession selectSingle ERROR:",e);
+            log.error("MybatisSession selectSingle ERROR:", e);
             throw new DBServiceException("执行selectSingle方法出错:" + e.getMessage());
         } finally {
             closeSqlSession(session);
@@ -148,7 +151,7 @@ public class MybatisSession<O> {
             session = getSqlSession();
             return (long) (Long) session.selectOne(qp.id, qp.o);
         } catch (Exception e) {
-            log.error("MybatisSession count ERROR:",e);
+            log.error("MybatisSession count ERROR:", e);
             throw new DBServiceException("执行count方法出错:" + e.getMessage());
         } finally {
             closeSqlSession(session);
@@ -169,7 +172,7 @@ public class MybatisSession<O> {
             session = getSqlSession();
             return (List<O>) session.selectList(qp.id, qp.o);
         } catch (Exception e) {
-            log.error("MybatisSession select ERROR:",e);
+            log.error("MybatisSession select ERROR:", e);
             throw new DBServiceException("执行select方法出错:" + e.getMessage());
         } finally {
             closeSqlSession(session);
@@ -192,7 +195,7 @@ public class MybatisSession<O> {
             session = getSqlSession();
             return (List<O>) session.selectList(qp.id, qp.o, new RowBounds(start, end));
         } catch (Exception e) {
-            log.error("MybatisSession select ERROR:",e);
+            log.error("MybatisSession select ERROR:", e);
             throw new DBServiceException("执行select方法出错:" + e.getMessage());
         } finally {
             closeSqlSession(session);
@@ -226,7 +229,7 @@ public class MybatisSession<O> {
             pagingData.setPageObjects(list);
             //LimitedPageData.setPagingData(pagingData, null, null);
         } catch (Exception e) {
-            log.error("MybatisSession selectPage ERROR:",e);
+            log.error("MybatisSession selectPage ERROR:", e);
             throw new DBServiceException("执行selectPage方法出错:" + e.getMessage());
         } finally {
             closeSqlSession(session);

@@ -108,8 +108,8 @@ public interface BaseDao<T> {
      * description:  列表查询,并转型为object
      *
      * @param param param
-     * @author cuiyongxu
      * @return value
+     * @author cuiyongxu
      */
     List<T> selectByObject(MethodParam<T> param);
 
@@ -117,8 +117,8 @@ public interface BaseDao<T> {
      * description:  获取唯一对象实例,主要转为vo等
      *
      * @param param param
-     * @author cuiyongxu
      * @return value
+     * @author cuiyongxu
      */
     T selectSingleByObject(MethodParam<T> param);
 }

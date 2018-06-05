@@ -5,7 +5,6 @@ import com.ijson.platform.common.util.Validator;
 
 /**
  * description: DB2分页插件
- *
  */
 public class DB2Dialect implements Dialect {
 

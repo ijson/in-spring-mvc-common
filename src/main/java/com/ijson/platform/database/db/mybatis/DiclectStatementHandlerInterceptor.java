@@ -1,6 +1,7 @@
 package com.ijson.platform.database.db.mybatis;
 
 import com.ijson.platform.database.db.mybatis.dialect.Dialect;
+
 import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.mapping.BoundSql;
 import org.apache.ibatis.mapping.MappedStatement;
@@ -87,8 +88,8 @@ public class DiclectStatementHandlerInterceptor implements Interceptor {
     }
 
     /* (non-Javadoc)
-             * @see org.apache.ibatis.plugin.Interceptor#plugin(java.lang.Object)
-             */
+     * @see org.apache.ibatis.plugin.Interceptor#plugin(java.lang.Object)
+     */
     public Object plugin(Object target) {
         return Plugin.wrap(target, this);
     }

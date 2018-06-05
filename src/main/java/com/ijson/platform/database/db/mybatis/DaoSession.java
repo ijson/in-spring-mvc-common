@@ -1,16 +1,19 @@
 package com.ijson.platform.database.db.mybatis;
 
 import com.google.common.collect.Maps;
+
 import com.ijson.platform.common.exception.DBServiceException;
 import com.ijson.platform.database.model.MethodParam;
 import com.ijson.platform.database.model.Page;
-import lombok.extern.slf4j.Slf4j;
+
 import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import java.util.List;
 import java.util.Map;
+
+import lombok.extern.slf4j.Slf4j;
 
 
 /**
@@ -40,7 +43,7 @@ public class DaoSession<O> {
             session = getSqlSession();
             return session.insert(qp.id, qp.o);
         } catch (Exception e) {
-            log.error("DaoSession insert ERROR:",e);
+            log.error("DaoSession insert ERROR:", e);
             throw new DBServiceException("执行insert方法出错:" + e.getMessage());
         } finally {
             closeSqlSession(session);
@@ -64,7 +67,7 @@ public class DaoSession<O> {
             session.clearCache();
             return result;
         } catch (Exception e) {
-            log.error("DaoSession insertBath ERROR:",e);
+            log.error("DaoSession insertBath ERROR:", e);
             throw new DBServiceException("执行insertBath方法出错:" + e.getMessage());
         } finally {
             closeSqlSession(session);
@@ -84,7 +87,7 @@ public class DaoSession<O> {
             session = getSqlSession();
             return session.update(qp.id, qp.o);
         } catch (Exception e) {
-            log.error("DaoSession update ERROR:",e);
+            log.error("DaoSession update ERROR:", e);
             throw new DBServiceException("执行update方法出错:" + e.getMessage());
         } finally {
             closeSqlSession(session);
@@ -104,7 +107,7 @@ public class DaoSession<O> {
             session = getSqlSession();
             return session.delete(qp.id, qp.o);
         } catch (Exception e) {
-            log.error("DaoSession delete ERROR:",e);
+            log.error("DaoSession delete ERROR:", e);
             throw new DBServiceException("执行delete方法出错:" + e.getMessage());
         } finally {
             closeSqlSession(session);
@@ -124,7 +127,7 @@ public class DaoSession<O> {
             session = getSqlSession();
             return (O) session.selectOne(qp.id, qp.o);
         } catch (Exception e) {
-            log.error("DaoSession selectSingle ERROR:",e);
+            log.error("DaoSession selectSingle ERROR:", e);
             throw new DBServiceException("执行selectSingle方法出错:" + e.getMessage());
         } finally {
             closeSqlSession(session);
@@ -144,7 +147,7 @@ public class DaoSession<O> {
             session = getSqlSession();
             return (long) (Long) session.selectOne(qp.id, qp.o);
         } catch (Exception e) {
-            log.error("DaoSession count ERROR:",e);
+            log.error("DaoSession count ERROR:", e);
             throw new DBServiceException("执行count方法出错:" + e.getMessage());
         } finally {
             closeSqlSession(session);
@@ -164,7 +167,7 @@ public class DaoSession<O> {
             session = getSqlSession();
             return (List<O>) session.selectList(qp.id, qp.o);
         } catch (Exception e) {
-            log.error("DaoSession select ERROR:",e);
+            log.error("DaoSession select ERROR:", e);
             throw new DBServiceException("执行select方法出错:" + e.getMessage());
         } finally {
             closeSqlSession(session);
@@ -186,7 +189,7 @@ public class DaoSession<O> {
             session = getSqlSession();
             return (List<O>) session.selectList(qp.id, qp.o, new RowBounds(start, end));
         } catch (Exception e) {
-            log.error("DaoSession select ERROR:",e);
+            log.error("DaoSession select ERROR:", e);
             throw new DBServiceException("执行select方法出错:" + e.getMessage());
         } finally {
             closeSqlSession(session);
@@ -219,7 +222,7 @@ public class DaoSession<O> {
             pagingData.setPageObjects(list);
             //LimitedPageData.setPagingData(pagingData, null, null);
         } catch (Exception e) {
-            log.error("DaoSession selectPage ERROR:",e);
+            log.error("DaoSession selectPage ERROR:", e);
             throw new DBServiceException("执行selectPage方法出错:" + e.getMessage());
         } finally {
             closeSqlSession(session);

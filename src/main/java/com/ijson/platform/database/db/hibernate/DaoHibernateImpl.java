@@ -297,28 +297,25 @@ public class DaoHibernateImpl<T> extends HibernateDaoSupport implements BaseDao<
     }
 
     private void getParamClass(Query query, Object... args) {
-        if (Validator.isNull(args) || args.length <= 0) {
 
-        } else {
-            Class queryclass = query.getClass();
-            for (int k = 0; k < args.length; k++) {
-                try {
-                    Map<String, Object> map = (Map) args[k];
-                    for (String key : map.keySet()) {
-                        Object o = map.get(key);
-                        String oName = o.getClass().getSimpleName();
-                        Method qm = queryclass.getMethod("set" + oName, new Class[]{String.class, o.getClass()});
-                        Method valueof = o.getClass().getMethod("valueOf", new Class[]{char[].class});
-                        if ("".equals(key))
-                            qm.invoke(query, k, valueof.invoke(null, o.toString().toCharArray()));
-                        else
-                            qm.invoke(query, key, valueof.invoke(null, o.toString().toCharArray()));
-                    }
-
-                } catch (Exception e) {
-                    log.error("DaoHibernateImpl getParamClass ERROR:", e);
-                    throw new DBServiceException("执行selectById方法出错:" + e.getMessage());
+        Class queryclass = query.getClass();
+        for (int k = 0; k < args.length; k++) {
+            try {
+                Map<String, Object> map = (Map) args[k];
+                for (String key : map.keySet()) {
+                    Object o = map.get(key);
+                    String oName = o.getClass().getSimpleName();
+                    Method qm = queryclass.getMethod("set" + oName, new Class[]{String.class, o.getClass()});
+                    Method valueof = o.getClass().getMethod("valueOf", new Class[]{char[].class});
+                    if ("".equals(key))
+                        qm.invoke(query, k, valueof.invoke(null, o.toString().toCharArray()));
+                    else
+                        qm.invoke(query, key, valueof.invoke(null, o.toString().toCharArray()));
                 }
+
+            } catch (Exception e) {
+                log.error("DaoHibernateImpl getParamClass ERROR:", e);
+                throw new DBServiceException("执行selectById方法出错:" + e.getMessage());
             }
         }
     }

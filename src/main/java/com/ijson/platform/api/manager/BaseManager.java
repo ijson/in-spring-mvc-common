@@ -43,7 +43,7 @@ public interface BaseManager<E> {
      * @param vo 方法参数
      * @return 返回要获取的信息数据
      */
-    Object execute(ParamsVo<E> vo);
+    E execute(ParamsVo<E> vo);
 
     /**
      * description: 按信息ID获取信息对象
@@ -51,7 +51,7 @@ public interface BaseManager<E> {
      * @param vo 方法参数
      * @return 成功返回信息对象，失败返回空
      */
-    Object getInfoById(ParamsVo<E> vo);
+    E getInfoById(ParamsVo<E> vo);
 
     /**
      * description:  根据条件获取信息列表

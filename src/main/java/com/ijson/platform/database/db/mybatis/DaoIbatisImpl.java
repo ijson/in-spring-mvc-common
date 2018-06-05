@@ -1,12 +1,14 @@
 package com.ijson.platform.database.db.mybatis;
 
 import com.google.common.collect.Lists;
+
 import com.ijson.platform.cache.CacheManager;
 import com.ijson.platform.cache.impl.LoadCacheFactory;
 import com.ijson.platform.common.util.Validator;
 import com.ijson.platform.database.db.BaseDao;
 import com.ijson.platform.database.model.MethodParam;
 import com.ijson.platform.database.model.Page;
+
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import java.util.List;

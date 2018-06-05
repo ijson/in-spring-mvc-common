@@ -1,7 +1,7 @@
 package com.ijson.platform.database.db.mybatis;
 
 import com.google.common.collect.Maps;
-import lombok.extern.slf4j.Slf4j;
+
 import org.apache.ibatis.builder.xml.XMLMapperBuilder;
 import org.apache.ibatis.mapping.Environment;
 import org.apache.ibatis.parsing.XNode;
@@ -15,11 +15,14 @@ import org.springframework.core.io.Resource;
 import org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy;
 import org.springframework.util.Assert;
 
-import javax.sql.DataSource;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.Map;
+
+import javax.sql.DataSource;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * description: 重写ibatis的SqlSessionFactory
