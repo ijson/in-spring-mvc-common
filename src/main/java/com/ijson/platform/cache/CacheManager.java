@@ -7,7 +7,7 @@ import java.util.List;
  *
  * @author heppy1.com 创建时间：Jan 24, 2015
  */
-public interface CacheManager extends IBaseCache {
+public interface CacheManager<T> extends IBaseCache {
     /**
      * description: 创建单个缓存对象。
      *
@@ -16,7 +16,7 @@ public interface CacheManager extends IBaseCache {
      * @return 如果key和object 都不为空则返回true,否则返回false。
      * @author cuiyongxu
      */
-    boolean createCacheObject(String key, Object object);
+    boolean createCacheObject(String key, T object);
 
     /**
      * description: 检查是否存在缓存
@@ -43,7 +43,7 @@ public interface CacheManager extends IBaseCache {
      * @return 返回数据库结果集
      * @author cuiyongxu
      */
-    Object getCacheCloneByKey(String key);
+    T getCacheCloneByKey(String key);
 
     /**
      * description: 获取list对象集合
@@ -52,7 +52,7 @@ public interface CacheManager extends IBaseCache {
      * @return 缓存对象List集合。如果keys为空，返回null
      * @author cuiyongxu
      */
-    List<Object> getObjects(List<String> keys);
+    List<T> getObjects(List<String> keys);
 
     /**
      * description: 获取list对象集合
@@ -62,7 +62,7 @@ public interface CacheManager extends IBaseCache {
      * @return 缓存对象List集合。如果keys为空，返回null
      * @author cuiyongxu
      */
-    List<Object> getObjects(List<String> keys, String prefix);
+    List<T> getObjects(List<String> keys, String prefix);
 
     /**
      * description: 获取list对象集合
@@ -73,7 +73,7 @@ public interface CacheManager extends IBaseCache {
      * @return 返回keys中不在缓存中存在的key集合
      * @author cuiyongxu
      */
-    List<String> getObjects(List<String> keys, String prefix, List<Object> objs);
+    List<String> getObjects(List<String> keys, String prefix, List<T> objs);
 
     /**
      * description: 得到此域中所有缓存的key
@@ -100,7 +100,7 @@ public interface CacheManager extends IBaseCache {
      * @return 如果key和object 都不为空则返回true,否则返回false。
      * @author cuiyongxu
      */
-    boolean updateCacheObject(String key, Object value);
+    boolean updateCacheObject(String key, T value);
 
     /**
      * description:    关闭ehcache缓存，每次调用完cache，需要关闭缓存。

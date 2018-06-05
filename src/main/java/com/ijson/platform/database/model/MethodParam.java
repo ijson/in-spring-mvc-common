@@ -1,10 +1,11 @@
 package com.ijson.platform.database.model;
 
 import com.google.common.collect.Maps;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.util.Map;
+
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * description:   方法参数模型
@@ -13,12 +14,12 @@ import java.util.Map;
  */
 @Getter
 @Setter
-public class MethodParam {
+public class MethodParam <T>{
 
     /**
      * 待操作对象
      */
-    private Object vaule;
+    private T vaule;
 
     /**
      * 执行KEY,只要集中在manager
@@ -38,7 +39,7 @@ public class MethodParam {
     /**
      * 参数列表
      */
-    private Map<String, Object> params = Maps.newHashMap();
+    private Map<String, T> params = Maps.newHashMap();
 
     /**
      * 自定义sql
@@ -75,7 +76,7 @@ public class MethodParam {
         this.sqlStr = sqlStr;
     }
 
-    public void setParams(String key, Object value) {
+    public void setParams(String key, T value) {
         this.params.put(key, value);
     }
 }

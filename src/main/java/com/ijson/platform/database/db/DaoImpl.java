@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * description: 持久层的实现 可以重写此类的方法来满足特定的业务要求
  */
-public abstract class DaoImpl implements IDao {
+public abstract class DaoImpl<T> implements IDao<T> {
 
     protected DaoHibernateImpl hibernateDao;
 
@@ -107,7 +107,7 @@ public abstract class DaoImpl implements IDao {
     /* (non-Javadoc)
      * @see com.persistenceLayer.core.db.IDao#select(com.persistenceLayer.core.model.MethodParam)
      */
-    public List select(MethodParam param) {
+    public List<T> select(MethodParam param) {
         if (isHibernateDao()) {
             return hibernateDao.select(param);
         } else
@@ -118,21 +118,21 @@ public abstract class DaoImpl implements IDao {
      * @see com.persistenceLayer.core.db.IDao#selectSingle(com.persistenceLayer.core.model.MethodParam)
      */
 
-    public Object selectSingle(MethodParam param) {
+    public T selectSingle(MethodParam param) {
         if (isHibernateDao()) {
-            return hibernateDao.selectSingle(param);
+            return (T) hibernateDao.selectSingle(param);
         } else
-            return ibatisDao.selectSingle(param);
+            return (T) ibatisDao.selectSingle(param);
     }
 
     /* (non-Javadoc)
      */
-    public Object selectById(MethodParam param) {
+    public T selectById(MethodParam param) {
         if (isHibernateDao()) {
-            return hibernateDao
+            return (T) hibernateDao
                     .selectById(param.getSpanceName(), param.getKey(), param.getInfoId(), param.getCacheId());
         } else
-            return ibatisDao.selectById(param.getSpanceName(), param.getKey(), param.getInfoId(), param.getCacheId());
+            return (T) ibatisDao.selectById(param.getSpanceName(), param.getKey(), param.getInfoId(), param.getCacheId());
     }
 
     /**
@@ -143,7 +143,7 @@ public abstract class DaoImpl implements IDao {
      * @author cuiyongxu
      */
     @Override
-    public List selectByObject(MethodParam param) {
+    public List<T> selectByObject(MethodParam param) {
         if (isHibernateDao()) {
             return hibernateDao
                     .selectByObject(param);
@@ -160,12 +160,12 @@ public abstract class DaoImpl implements IDao {
      * @author cuiyongxu
      */
     @Override
-    public Object selectSingleByObject(MethodParam param) {
+    public T selectSingleByObject(MethodParam param) {
         if (isHibernateDao()) {
-            return hibernateDao
+            return (T) hibernateDao
                     .selectSingleByObject(param);
         } else
-            return ibatisDao.selectSingleByObject(param);
+            return (T) ibatisDao.selectSingleByObject(param);
     }
 
     public void setHibernateDao(DaoHibernateImpl hibernateDao) {

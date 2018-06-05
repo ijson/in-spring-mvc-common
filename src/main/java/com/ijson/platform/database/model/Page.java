@@ -1,10 +1,10 @@
 package com.ijson.platform.database.model;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import java.io.Serializable;
 import java.util.List;
+
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * description: 分页实体Bean，包含分页逻辑和前台显示代码
@@ -13,7 +13,7 @@ import java.util.List;
  */
 @Setter
 @Getter
-public class Page implements Serializable {
+public class Page<T> implements Serializable {
 
     private int count = 0; // 记录总数
     private int pageSize = -1; // 每页记录数
@@ -27,7 +27,7 @@ public class Page implements Serializable {
     private static int maxPageSize = 100; // 默认每页的最大数
     public static final String PAGER_IMAGE_LOCATION_PATH = "pagerImageLocationPath"; // 图片存放路径常量字符串
 
-    private List pageObjects;
+    private List<T> pageObjects;
 
     /**
      * 排序sql字符串,例如现在要用字段fiedl_1进行倒序,field_2 进行顺序排序.则该字符串的内容为: "field_1

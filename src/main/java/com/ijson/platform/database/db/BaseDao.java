@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author cuiyongxu 创建时间：Oct 27, 2015
  */
-public interface BaseDao {
+public interface BaseDao<T> {
 
     /**
      * description: 新增单个对象
@@ -19,7 +19,7 @@ public interface BaseDao {
      * @param param 方法参数模型
      * @return true为新增成功；false为新增失败
      */
-    boolean insert(MethodParam param);
+    boolean insert(MethodParam<T> param);
 
     /**
      * description: 批量新增
@@ -27,7 +27,7 @@ public interface BaseDao {
      * @param param 方法参数模型
      * @return true为新增成功；false为新增失败
      */
-    boolean insertBath(MethodParam param);
+    boolean insertBath(MethodParam<T> param);
 
     /**
      * description: 修改对象值
@@ -35,7 +35,7 @@ public interface BaseDao {
      * @param param 方法参数模型
      * @return true为修改成功；false为修改失败
      */
-    boolean edit(MethodParam param);
+    boolean edit(MethodParam<T> param);
 
     /**
      * description: 批量修改对象值
@@ -43,7 +43,7 @@ public interface BaseDao {
      * @param param 方法参数模型
      * @return true为修改成功；false为修改失败
      */
-    boolean editBath(MethodParam param);
+    boolean editBath(MethodParam<T> param);
 
     /**
      * description: 删除指定对象
@@ -51,7 +51,7 @@ public interface BaseDao {
      * @param param 方法参数模型
      * @return true为删除成功；false为删除失败
      */
-    boolean delete(MethodParam param);
+    boolean delete(MethodParam<T> param);
 
     /**
      * description: 批量删除对象
@@ -59,7 +59,7 @@ public interface BaseDao {
      * @param param 方法参数模型
      * @return true为删除成功；false为删除失败
      */
-    boolean deleteBath(MethodParam param);
+    boolean deleteBath(MethodParam<T> param);
 
     /**
      * description: 获取指定sql的count值
@@ -67,7 +67,7 @@ public interface BaseDao {
      * @param param 方法参数模型
      * @return 返回sql执行的记录数
      */
-    long count(MethodParam param);
+    long count(MethodParam<T> param);
 
     /**
      * description: 获取唯一对象实例
@@ -75,7 +75,7 @@ public interface BaseDao {
      * @param param 方法参数模型
      * @return 返回sql执行后的数据对象
      */
-    Object selectSingle(MethodParam param);
+    T selectSingle(MethodParam<T> param);
 
     /**
      * description: 获取唯一对象实例
@@ -86,7 +86,7 @@ public interface BaseDao {
      * @param cacheId    缓存ID
      * @return 返回执行后的数据对象
      */
-    Object selectById(String spanceName, String key, String infoId, String cacheId);
+    T selectById(String spanceName, String key, String infoId, String cacheId);
 
     /**
      * description: 分页查询
@@ -94,7 +94,7 @@ public interface BaseDao {
      * @param param 方法参数模型
      * @return 返回page对象
      */
-    Page pageSelect(MethodParam param);
+    Page pageSelect(MethodParam<T> param);
 
     /**
      * description: 列表查询
@@ -102,7 +102,7 @@ public interface BaseDao {
      * @param param 方法参数模型
      * @return 返回sql执行的结果集
      */
-    List select(MethodParam param);
+    List<T> select(MethodParam<T> param);
 
     /**
      * description:  列表查询,并转型为object
@@ -111,7 +111,7 @@ public interface BaseDao {
      * @author cuiyongxu
      * @return value
      */
-    List selectByObject(MethodParam param);
+    List<T> selectByObject(MethodParam<T> param);
 
     /**
      * description:  获取唯一对象实例,主要转为vo等
@@ -120,5 +120,5 @@ public interface BaseDao {
      * @author cuiyongxu
      * @return value
      */
-    Object selectSingleByObject(MethodParam param);
+    T selectSingleByObject(MethodParam<T> param);
 }

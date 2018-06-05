@@ -5,12 +5,12 @@ package com.ijson.platform.cache;
  *
  * @author heppy1.com 创建时间：Jan 24, 2015
  */
-public interface IBaseCache {
+public interface IBaseCache<T> {
     /**
      * description: 初始化缓存空间
      *
      * @param cacheName 缓存空间名称
      * @author cuiyongxu
      */
-    public void setCacheName(String cacheName);
+    void setCacheName(String cacheName);
 }
