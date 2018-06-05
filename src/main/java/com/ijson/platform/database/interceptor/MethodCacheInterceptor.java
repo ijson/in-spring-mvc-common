@@ -26,7 +26,7 @@ public class MethodCacheInterceptor implements MethodInterceptor {
 
     private CacheManager getCache() {
         if (cache == null) {
-            cache = LoadCacheFactory.getInstance().getCacheManager("defaultCache");
+            cache = LoadCacheFactory.instance.getCacheManager("ijsonCache");
         }
         return cache;
     }

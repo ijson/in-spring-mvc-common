@@ -21,7 +21,7 @@ public class DaoIbatisImpl implements BaseDao {
     private SqlSessionFactory sqlSessionFactory;//需要注入
 
     public DaoIbatisImpl() {
-        cache = LoadCacheFactory.getInstance().getCacheManager("");
+        cache = LoadCacheFactory.instance.getCacheManager("ijsonCache");
     }
 
     public CacheManager getCache() {

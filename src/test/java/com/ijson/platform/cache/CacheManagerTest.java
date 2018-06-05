@@ -1,6 +1,7 @@
 package com.ijson.platform.cache;
 
-import com.ijson.platform.cache.manager.ehcache.impl.EhcacheManagerImpl;
+import com.ijson.platform.cache.impl.LoadCacheFactory;
+
 import org.junit.Test;
 
 /**
@@ -8,12 +9,12 @@ import org.junit.Test;
  */
 public class CacheManagerTest {
 
-    private CacheManager cache = new EhcacheManagerImpl();
+    private CacheManager<String> cacheManager = LoadCacheFactory.instance.getCacheManager("ijsonCache");
 
     @Test
     public void saveOrGet() {
-        cache.createCacheObject("555", "6666");
-        String aa = (String) cache.getCacheCloneByKey("555");
+        cacheManager.createCacheObject("555", "6666");
+        String aa = cacheManager.getCacheCloneByKey("555");
         System.out.println(aa);
     }
 }

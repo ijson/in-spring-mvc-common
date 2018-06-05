@@ -1,13 +1,17 @@
 package com.ijson.platform.cache.manager.ehcache.impl;
 
 import com.google.common.collect.Lists;
+
 import com.ijson.platform.cache.CacheManager;
 import com.ijson.platform.cache.manager.ehcache.EhcacheConfigurer;
 import com.ijson.platform.common.util.Validator;
+
 import net.sf.ehcache.Cache;
 import net.sf.ehcache.Element;
 
 import java.util.List;
+
+import lombok.extern.slf4j.Slf4j;
 
 
 /**
@@ -15,11 +19,13 @@ import java.util.List;
  *
  * @author heppy1.com 创建时间：Jan 24, 2015
  */
+@Slf4j
 public class EhcacheManagerImpl<T> implements CacheManager<T> {
+
+
 
     //读取ehcache.xml映射文件
     private Cache cache;
-
     private EhcacheConfigurer cacheConfig;//做spring注入时可以注入
     private String cacheName = "ijsonCache";//做spring注入时需要注入
 
@@ -28,22 +34,36 @@ public class EhcacheManagerImpl<T> implements CacheManager<T> {
         cache = getCacheConfig().getCache(this.cacheName);
     }
 
+
+    public EhcacheManagerImpl(String cacheName){
+        this.cacheName = cacheName;
+        cache = getCacheConfig().getCache(this.cacheName);
+    }
     private Cache getCache() {
         if (null == cache) {
             cache = getCacheConfig().getCache(this.cacheName);
         }
+
         return cache;
     }
 
-    public boolean createCacheObject(String key, Object object) {
+    public boolean createCacheObject(String key, T object) {
         boolean flag = false;
         if (Validator.isNotNull(key) && object != null) {
-            getCache().remove(key);
+            Cache cache = getCache();
+            if (cache == null) {
+                cache = getDefaultCache();
+            }
+            cache.remove(key);
             Element element = new Element(key, object);
-            getCache().put(element);
+            cache.put(element);
             flag = true;
         }
         return flag;
+    }
+
+    private Cache getDefaultCache() {
+        return cache = getCacheConfig().getCache("ijsonCache");
     }
 
     public boolean checkCacheObject(String key) {
@@ -98,7 +118,7 @@ public class EhcacheManagerImpl<T> implements CacheManager<T> {
     public List<T> getObjects(List<String> keys, String prefix) {
         if (Validator.isEmpty(keys))
             return null;
-        List<T> list =  Lists.newArrayList();
+        List<T> list = Lists.newArrayList();
         for (String key1 : keys) {
             String key = prefix + key1;
             T object = getCacheCloneByKey(key);
@@ -112,7 +132,7 @@ public class EhcacheManagerImpl<T> implements CacheManager<T> {
     public List<String> getObjects(List<String> keys, String prefix, List<T> objs) {
         if (Validator.isEmpty(keys))
             return null;
-        List<String> list =  Lists.newArrayList();
+        List<String> list = Lists.newArrayList();
         for (String key1 : keys) {
             String key = prefix + key1;
             T object = getCacheCloneByKey(key);
@@ -138,7 +158,7 @@ public class EhcacheManagerImpl<T> implements CacheManager<T> {
         return flag;
     }
 
-    public boolean updateCacheObject(String key, Object value) {
+    public boolean updateCacheObject(String key, T value) {
         return createCacheObject(key, value);
     }
 

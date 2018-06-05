@@ -3,11 +3,11 @@ package com.ijson.platform.cache;
 import java.util.List;
 
 /**
- * description:  系统缓存操作接口
+ * description:  系统缓存操作接口,外部使用
  *
  * @author heppy1.com 创建时间：Jan 24, 2015
  */
-public interface CacheManager<T> extends IBaseCache {
+public interface CacheManager<T> {
     /**
      * description: 创建单个缓存对象。
      *
@@ -34,7 +34,7 @@ public interface CacheManager<T> extends IBaseCache {
      * @return 返回数据库结果集
      * @author cuiyongxu
      */
-    Object getCacheObjectByKey(String key);
+    T getCacheObjectByKey(String key);
 
     /**
      * description: 获取缓存结果集，主要应用于jdbc结果集缓存。(扩展应用)
@@ -115,4 +115,12 @@ public interface CacheManager<T> extends IBaseCache {
      * @author cuiyongxu
      */
     void removeAll();
+
+    /**
+     * description: 初始化缓存空间
+     *
+     * @param cacheName 缓存空间名称
+     * @author cuiyongxu
+     */
+    void setCacheName(String cacheName);
 }

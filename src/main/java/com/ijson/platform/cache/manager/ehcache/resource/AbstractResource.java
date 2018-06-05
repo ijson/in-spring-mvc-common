@@ -1,6 +1,4 @@
-package com.ijson.platform.cache.manager.ehcache.impl;
-
-import com.ijson.platform.cache.manager.ehcache.CacheResource;
+package com.ijson.platform.cache.manager.ehcache.resource;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

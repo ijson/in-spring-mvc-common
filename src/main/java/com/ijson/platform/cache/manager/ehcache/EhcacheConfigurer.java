@@ -1,12 +1,15 @@
 package com.ijson.platform.cache.manager.ehcache;
 
-import com.ijson.platform.cache.manager.ehcache.impl.LoadCacheResource;
+import com.ijson.platform.cache.manager.ehcache.resource.CacheResource;
+import com.ijson.platform.cache.manager.ehcache.resource.LoadCacheResource;
 import com.ijson.platform.common.util.Validator;
-import lombok.extern.slf4j.Slf4j;
+
 import net.sf.ehcache.Cache;
 import net.sf.ehcache.CacheManager;
 
 import java.net.URL;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * description:  ehcache资源配置类

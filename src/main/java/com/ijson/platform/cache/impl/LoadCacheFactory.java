@@ -1,10 +1,13 @@
 package com.ijson.platform.cache.impl;
 
 import com.google.common.collect.Maps;
+
 import com.ijson.config.ConfigFactory;
 import com.ijson.platform.cache.CacheManager;
 import com.ijson.platform.cache.manager.ehcache.impl.EhcacheManagerImpl;
 import com.ijson.platform.common.util.Validator;
+
+import org.apache.commons.collections.MapUtils;
 
 import java.util.Map;
 
@@ -14,53 +17,60 @@ import java.util.Map;
  *
  * @author heppy1.com 创建时间：Jan 24, 2015
  */
-public class LoadCacheFactory {
+public class LoadCacheFactory<T> {
 
-    private static LoadCacheFactory instance;
+    public static LoadCacheFactory instance = new LoadCacheFactory();
     private static Map<String, CacheManager> ehcaches = Maps.newHashMap();
     private Map<String, String> constant = Maps.newHashMap(); //存放系统配置参数
 
-    public static LoadCacheFactory getInstance() {
-        if (null == instance)
-            instance = new LoadCacheFactory();
-        return instance;
-    }
-
-    private String initConfig(String key) {
-        ConfigFactory.getConfig("in-cache", (config -> {
-            constant = config.getAll();
-        }));
-        return constant.get(key);
+    private void initConfig() {
+        if (MapUtils.isEmpty(constant)) {
+            ConfigFactory.getConfig("in-cache", (config -> {
+                constant = config.getAll();
+            }));
+            GetCacheHandlerType.constant.putAll(constant);
+        }
     }
 
     /**
      * description:  获取缓存实例
      *
-     * @param cacheName 缓存空间名称
-     * @author cuiyongxu
      * @return cacheManager
+     * @author cuiyongxu
      */
-    public CacheManager getCacheManager(String cacheName) {
-        return getEhcacheManager(cacheName);
+    public CacheManager<T> getCacheManager(String cacheName) {
+        initConfig();
+        String cacheType = constant.get("cache_type");
+        CacheHandler<T> cacheHandler = createCacheHandlerType(cacheType);
+        return cacheHandler.getFactory(cacheName);
     }
 
 
-    /**
-     * description: 获取ehcache缓存实例
-     *
-     * @param cacheName 缓存空间名称
-     * @author cuiyongxu
-     * @return cacheManager
-     */
-    private CacheManager getEhcacheManager(String cacheName) {
-        if (Validator.isNull(cacheName))
-            cacheName = Validator.getDefaultStr(initConfig("cache_default_name"), "ijsonCache");
-        if (null == ehcaches.get(cacheName)) {
-            CacheManager cacheManager = new EhcacheManagerImpl();
-            cacheManager.setCacheName(cacheName);
-            ehcaches.put(cacheName, cacheManager);
-        }
-        return ehcaches.get(cacheName);
+    interface CacheHandler<T> {
+        CacheManager<T> getFactory(String cacheName);
     }
+
+    private GetCacheHandlerType createCacheHandlerType(String type) {
+        return GetCacheHandlerType.valueOf(type);
+    }
+
+
+    enum GetCacheHandlerType implements CacheHandler {
+        ehcache {
+            @Override
+            public CacheManager getFactory(String cacheName) {
+                if (Validator.isEmpty(cacheName)) {
+                    cacheName = Validator.getDefaultStr(constant.get("cache_default_name"), "ijsonCache");
+                }
+                if (null == ehcaches.get(cacheName)) {
+                    ehcaches.put(cacheName, new EhcacheManagerImpl(cacheName));
+                }
+                return ehcaches.get(cacheName);
+            }
+        };
+
+        public static Map<String, String> constant = Maps.newHashMap(); //存放系统配置参数
+    }
+
 
 }

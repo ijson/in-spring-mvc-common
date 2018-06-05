@@ -33,7 +33,7 @@ public class DaoHibernateImpl<T> extends HibernateDaoSupport implements BaseDao<
     private CacheManager<T> cache;
 
     public DaoHibernateImpl() {
-        cache = LoadCacheFactory.getInstance().getCacheManager("");
+        cache = LoadCacheFactory.instance.getCacheManager("ijsonCache");
     }
 
     public CacheManager getCache() {
