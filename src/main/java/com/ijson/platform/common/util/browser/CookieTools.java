@@ -2,11 +2,12 @@ package com.ijson.platform.common.util.browser;
 
 import com.ijson.platform.common.util.SystemUtil;
 import com.ijson.platform.common.util.Validator;
-import lombok.extern.slf4j.Slf4j;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 专门对cookie进行操作
@@ -85,8 +86,8 @@ public class CookieTools {
         Cookie cookie = null;
         try {
             if (!Validator.isEmpty(cookies)) {
-                for (int i = 0; i < cookies.length; i++) {
-                    cookie = cookies[i];
+                for (Cookie cooky : cookies) {
+                    cookie = cooky;
                     if (cookieName.equals(cookie.getName())) {
                         return cookie;
                     }

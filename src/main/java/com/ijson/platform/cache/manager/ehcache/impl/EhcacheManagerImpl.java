@@ -23,11 +23,10 @@ import lombok.extern.slf4j.Slf4j;
 public class EhcacheManagerImpl<T> implements CacheManager<T> {
 
 
-
     //读取ehcache.xml映射文件
     private Cache cache;
     private EhcacheConfigurer cacheConfig;//做spring注入时可以注入
-    private String cacheName = "ijsonCache";//做spring注入时需要注入
+    private String cacheName;//做spring注入时需要注入
 
     public void setCacheName(String cacheName) {
         this.cacheName = cacheName;
@@ -35,10 +34,11 @@ public class EhcacheManagerImpl<T> implements CacheManager<T> {
     }
 
 
-    public EhcacheManagerImpl(String cacheName){
+    public EhcacheManagerImpl(String cacheName) {
         this.cacheName = cacheName;
         cache = getCacheConfig().getCache(this.cacheName);
     }
+
     private Cache getCache() {
         if (null == cache) {
             cache = getCacheConfig().getCache(this.cacheName);

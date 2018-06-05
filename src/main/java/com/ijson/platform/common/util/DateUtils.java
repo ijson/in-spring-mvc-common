@@ -108,8 +108,8 @@ public class DateUtils {
      * @param strDate 给定的字符串
      * @param pattern 给定的格式化格式
      * @return Date   将给定的字符串按照给定的格式格式化成日期类型返回
-     * @author cuiyongxu
      * @throws ParseException 异常
+     * @author cuiyongxu
      */
     public Date parse(String strDate, String pattern) throws ParseException {
         return Strings.isNullOrEmpty(strDate) ? null : new SimpleDateFormat(pattern).parse(strDate);
@@ -190,8 +190,8 @@ public class DateUtils {
      * @param startTime 给定的开始时间
      * @param endTime   给定的结束时间
      * @return long     给定的开始时间和给定的结束时间相差天数，返回long型值。
-     * @author cuiyongxu
      * @throws ParseException 异常
+     * @author cuiyongxu
      */
     public long comparisonDifferenceDays(Date startTime, Date endTime) throws ParseException {
         Validator.notNull(startTime, "StartTime is null");
@@ -517,8 +517,8 @@ public class DateUtils {
     /**
      * 初始化当前日期
      *
-     * @author cuiyongxu
      * @return new date
+     * @author cuiyongxu
      */
     public String getNow() {
         SimpleDateFormat simp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
@@ -529,8 +529,8 @@ public class DateUtils {
      * 格式化日期yyyy-MM-dd
      *
      * @param date new data
-     * @author cuiyongxu
      * @return value
+     * @author cuiyongxu
      */
     public String getDate(String date) {
         String result = "";
@@ -542,6 +542,7 @@ public class DateUtils {
 
     /**
      * 格式化日期yyyy-MM-dd HH:mm:ss
+     *
      * @param date new data
      * @return new data
      * @author cuiyongxu
@@ -557,8 +558,8 @@ public class DateUtils {
     /**
      * 格式化日期yyyy-MM
      *
-     * @return month
      * @param date now date
+     * @return month
      * @author cuiyongxu
      */
     public String getMonth(String date) {

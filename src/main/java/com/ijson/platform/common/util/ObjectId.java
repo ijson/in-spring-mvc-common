@@ -75,7 +75,7 @@ public final class ObjectId implements Comparable<ObjectId>, Serializable {
         return new ObjectId();
     }
 
-    public static String getId(){
+    public static String getId() {
         return new ObjectId().toString();
     }
 

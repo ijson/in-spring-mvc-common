@@ -3,13 +3,14 @@ package com.ijson.platform.common.util.browser;
 import com.ijson.platform.common.util.SystemUtil;
 import com.ijson.platform.common.util.Validator;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import javax.servlet.http.HttpServletRequest;
+
 
 /**
- *  浏览器工具类.
+ * 浏览器工具类.
  *
  * @author cuiyongxu 创建时间：Oct 27, 2015
  */
@@ -38,7 +39,7 @@ public class BrowserUtils {
     private final static String STYLEOTHER = "styleOther";
 
     /**
-     *   获取当前浏览器样式
+     * 获取当前浏览器样式
      *
      * @return StyleType
      * @author cuiyongxu
@@ -67,7 +68,7 @@ public class BrowserUtils {
     }
 
     /**
-     *   判断是否是IE
+     * 判断是否是IE
      *
      * @param request 请求
      * @return isIEFlag
@@ -79,7 +80,7 @@ public class BrowserUtils {
     }
 
     /**
-     *   获取IE版本
+     * 获取IE版本
      *
      * @param request 请求
      * @return ie version

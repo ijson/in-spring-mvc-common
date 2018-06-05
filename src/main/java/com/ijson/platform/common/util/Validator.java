@@ -1,13 +1,18 @@
 package com.ijson.platform.common.util;
 
-import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.beanutils.BeanUtils;
 
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.URL;
 import java.security.MessageDigest;
 import java.util.Collection;
 import java.util.List;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * description:  验证工具类

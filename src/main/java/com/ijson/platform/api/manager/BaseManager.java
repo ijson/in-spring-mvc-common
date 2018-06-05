@@ -17,7 +17,6 @@ public interface BaseManager<E> {
      * description:  保存
      *
      * @param vo 方法参数
-     * @return 成功返回信息ID，失败返回空
      * @return id
      */
     String saveInfo(ParamsVo<E> vo) throws DBServiceException;

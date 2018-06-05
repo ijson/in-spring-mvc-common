@@ -11,6 +11,7 @@ import com.ijson.platform.api.model.BaseEntity;
 public abstract class BaseAction<T extends BaseEntity> {
     /**
      * 由子类自定义前缀
+     *
      * @return prefix
      */
     protected abstract String getPrefix();

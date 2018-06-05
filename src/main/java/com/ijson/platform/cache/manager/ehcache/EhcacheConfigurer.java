@@ -36,7 +36,7 @@ public class EhcacheConfigurer {
                 manager = new CacheManager(url);
             }
         } catch (Exception e) {
-            log.error("init:",e);
+            log.error("init:", e);
         }
     }
 
