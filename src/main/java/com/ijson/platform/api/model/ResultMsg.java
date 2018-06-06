@@ -29,4 +29,16 @@ public class ResultMsg extends BaseEntity {
         this.msg = msg;
     }
 
+    public ResultMsg setError(String msg){
+        this.isok = "F";
+        this.msg = msg;
+        return this;
+    }
+
+    public ResultMsg setOK(String msg){
+        this.isok = "T";
+        this.msg = msg;
+        return this;
+    }
+
 }
