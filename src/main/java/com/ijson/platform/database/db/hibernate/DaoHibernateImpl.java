@@ -30,14 +30,14 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class DaoHibernateImpl<T> extends HibernateDaoSupport implements BaseDao<T> {
 
-    private CacheManager<T> cache;
+    private CacheManager<T> cacheManager;
 
     public DaoHibernateImpl() {
-        cache = LoadCacheFactory.instance.getCacheManager("ijsonCache");
+        cacheManager = LoadCacheFactory.instance.getCacheManager("ijsonCache");
     }
 
-    public CacheManager getCache() {
-        return cache;
+    public CacheManager getCacheManager() {
+        return cacheManager;
     }
 
     /**
@@ -136,7 +136,7 @@ public class DaoHibernateImpl<T> extends HibernateDaoSupport implements BaseDao<
             } else {
                 this.getHibernateTemplate().delete(param.getVaule());
                 if (Validator.isNotNull(param.getCacheId())) {
-                    cache.removeCacheObject(param.getCacheId());
+                    cacheManager.removeCacheObject(param.getCacheId());
                 }
             }
         } catch (Exception e) {
@@ -160,7 +160,7 @@ public class DaoHibernateImpl<T> extends HibernateDaoSupport implements BaseDao<
             } else {
                 this.getHibernateTemplate().update(param.getVaule());
                 if (Validator.isNotNull(param.getCacheId())) {
-                    cache.createCacheObject(param.getCacheId(), param.getVaule());
+                    cacheManager.createCacheObject(param.getCacheId(), param.getVaule());
                 }
             }
         } catch (Exception e) {
@@ -180,7 +180,7 @@ public class DaoHibernateImpl<T> extends HibernateDaoSupport implements BaseDao<
         try {
             this.getHibernateTemplate().save(param.getVaule());
             if (Validator.isNotNull(param.getCacheId())) {
-                cache.createCacheObject(param.getCacheId(), (T) param.getVaule());
+                cacheManager.createCacheObject(param.getCacheId(), (T) param.getVaule());
             }
         } catch (Exception e) {
             log.error("DaoHibernateImpl insert ERROR:", e);
@@ -262,7 +262,7 @@ public class DaoHibernateImpl<T> extends HibernateDaoSupport implements BaseDao<
         try {
             T obj = null;
             if (Validator.isNotNull(param.getCacheId())) {
-                obj = cache.getCacheCloneByKey(param.getCacheId());
+                obj = cacheManager.getCacheCloneByKey(param.getCacheId());
             }
             if (Validator.isEmpty(obj)) {
                 Query query = session.createQuery(param.getSqlStr());
@@ -281,13 +281,13 @@ public class DaoHibernateImpl<T> extends HibernateDaoSupport implements BaseDao<
     public T selectById(String spanceName, String key, String infoId, String cacheId) {
         T obj = null;
         if (Validator.isNotNull(cacheId)) {
-            obj = cache.getCacheCloneByKey(cacheId);
+            obj = cacheManager.getCacheCloneByKey(cacheId);
         }
         try {
             if (Validator.isEmpty(obj)) {
                 obj = (T) this.getHibernateTemplate().get(spanceName, infoId);
                 if (!Validator.isEmpty(obj) && Validator.isNotNull(cacheId))
-                    cache.createCacheObject(cacheId, obj);
+                    cacheManager.createCacheObject(cacheId, obj);
             }
         } catch (Exception e) {
             log.error("DaoHibernateImpl selectById ERROR:", e);
@@ -350,7 +350,7 @@ public class DaoHibernateImpl<T> extends HibernateDaoSupport implements BaseDao<
             Object objInstance = null;
             T objClone = null;
             if (Validator.isNotNull(param.getCacheId())) {
-                objClone = cache.getCacheCloneByKey(param.getCacheId());
+                objClone = cacheManager.getCacheCloneByKey(param.getCacheId());
             }
             if (Validator.isEmpty(objClone)) {
                 Query query = session.createQuery(param.getSqlStr());

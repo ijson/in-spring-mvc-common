@@ -62,8 +62,7 @@ public class DaoIbatisImpl implements BaseDao {
                 //count += dao.get(param.getSpanceName()).delete(param.getKey(), list.get(i));
                 count += getSession().delete(param.getSpanceName(), param.getKey(), aList);
             }
-            if (count > 0)
-                return true;
+            return count > 0;
         }
         return false;
     }
@@ -83,8 +82,7 @@ public class DaoIbatisImpl implements BaseDao {
                 //count += dao.get(param.getSpanceName()).update(param.getKey(), list.get(i));
                 count += getSession().update(param.getSpanceName(), param.getKey(), aList);
             }
-            if (count > 0)
-                return true;
+            return count > 0;
         }
         return false;
     }
@@ -102,8 +100,7 @@ public class DaoIbatisImpl implements BaseDao {
             List list = (List) param.getVaule();
             //count = dao.get(param.getSpanceName()).insertBath(list);
             count = getSession().insertBath(list, param.getSpanceName());
-            if (count > 0)
-                return true;
+            return count > 0;
         }
         return false;
     }
