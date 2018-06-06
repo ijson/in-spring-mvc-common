@@ -1,6 +1,6 @@
 fs_path=/Users/cuiyongxu/Desktop
 project_name=in-passport-core
-package_name=com.ijson.passport
+package_name=com.ijson.passport.user
 builder_tables=u_user,u_role,u_role_give,u_act,u_act_give,u_lock
 jdbc.driver=com.mysql.jdbc.Driver
 jdbc.url=jdbc:mysql://localhost:3307/passport?useUnicode=true&characterEncoding=utf8

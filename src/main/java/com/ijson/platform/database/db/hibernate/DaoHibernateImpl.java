@@ -160,7 +160,7 @@ public class DaoHibernateImpl<T> extends HibernateDaoSupport implements BaseDao<
             } else {
                 this.getHibernateTemplate().update(param.getVaule());
                 if (Validator.isNotNull(param.getCacheId())) {
-                    cacheManager.createCacheObject(param.getCacheId(), param.getVaule());
+                    cacheManager.createCacheObject(param.getCacheId(), (T) param.getVaule());
                 }
             }
         } catch (Exception e) {

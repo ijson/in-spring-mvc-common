@@ -19,7 +19,7 @@ public class MethodParam <T>{
     /**
      * 待操作对象
      */
-    private T vaule;
+    private Object vaule;
 
     /**
      * 执行KEY,只要集中在manager
@@ -39,7 +39,7 @@ public class MethodParam <T>{
     /**
      * 参数列表
      */
-    private Map<String, T> params = Maps.newHashMap();
+    private Map<String, Object> params = Maps.newHashMap();
 
     /**
      * 自定义sql
@@ -76,7 +76,7 @@ public class MethodParam <T>{
         this.sqlStr = sqlStr;
     }
 
-    public void setParams(String key, T value) {
+    public void setParams(String key, Object value) {
         this.params.put(key, value);
     }
 }
