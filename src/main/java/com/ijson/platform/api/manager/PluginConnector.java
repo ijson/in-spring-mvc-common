@@ -9,7 +9,7 @@ import com.ijson.platform.common.exception.PluginConnectorException;
  *
  * @author cuiyongxu 创建时间：Nov 20, 2015
  */
-public interface PluginConnector<T> {
+public interface PluginConnector {
     /**
      *   插件客户端实现&lt;p&gt;使用方式:&lt;/p&gt;
      * &lt;pre&gt;首先,我们需要在appliactionContext-{projectName}.xml中定义相关插件,代码如下&lt;/pre&gt;
@@ -52,5 +52,5 @@ public interface PluginConnector<T> {
      * @param param 参数
      * @return object
      */
-     T execute(ParamsVo<T> param) throws PluginConnectorException;
+    Object execute(ParamsVo param) throws PluginConnectorException;
 }
