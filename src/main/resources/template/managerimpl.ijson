@@ -19,7 +19,7 @@ import com.ijson.platform.common.exception.MVCBusinessException;
 public class ${tableName}ManagerImpl implements ${tableName}Manager {
 
     @Autowired
-    protected IDao ${beanIdName}Dao;
+    protected IDao<${tableName}> ${beanIdName}Dao;
     protected Map<String, PluginConnector> plugins;
     protected final String entityName = "${package_name}.entity.${tableName}";
 
@@ -96,7 +96,7 @@ public class ${tableName}ManagerImpl implements ${tableName}Manager {
    }
 
 
-    public Object getInfoById(ParamsVo<${tableName}> vo){
+    public ${tableName} getInfoById(ParamsVo<${tableName}> vo){
       String infoId = vo.getInfoId();
       String cacheKey="${beanIdName}_"+infoId;
       if (Validator.isNull(infoId)) {
