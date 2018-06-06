@@ -16,7 +16,7 @@ import ${package_name}.manager.${tableName}Manager;
 import com.ijson.platform.common.exception.MVCBusinessException;
 
 
-public class ${tableName}ManagerImpl implements ${tableName}Manager<${tableName}> {
+public class ${tableName}ManagerImpl implements ${tableName}Manager {
 
     @Autowired
     protected IDao ${beanIdName}Dao;
