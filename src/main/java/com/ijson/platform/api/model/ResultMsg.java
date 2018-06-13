@@ -52,4 +52,10 @@ public class ResultMsg extends BaseEntity {
         return this;
     }
 
+    public ResultMsg setOK(String msg){
+        this.isok = "T";
+        this.msg = msg;
+        return this;
+    }
+
 }
