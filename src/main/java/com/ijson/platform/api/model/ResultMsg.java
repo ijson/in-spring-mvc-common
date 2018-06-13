@@ -20,6 +20,9 @@ public class ResultMsg extends BaseEntity {
      */
     private Object msg;
 
+    private Boolean flag;
+
+
     public ResultMsg() {
 
     }
@@ -35,9 +38,17 @@ public class ResultMsg extends BaseEntity {
         return this;
     }
 
-    public ResultMsg setOK(String msg){
+    public ResultMsg setError(String msg,Boolean flag){
+        this.isok = "F";
+        this.msg = msg;
+        this.flag = flag;
+        return this;
+    }
+
+    public ResultMsg setOK(String msg,Boolean flag){
         this.isok = "T";
         this.msg = msg;
+        this.flag = flag;
         return this;
     }
 
