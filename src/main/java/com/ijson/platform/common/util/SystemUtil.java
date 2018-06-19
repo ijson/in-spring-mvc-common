@@ -23,9 +23,13 @@ public class SystemUtil {
      * @return instance
      * @author cuiyongxu
      */
-    public synchronized static SystemUtil getInstance() {
+    public synchronized SystemUtil getInstance() {
         if (null == instance) {
-            instance = new SystemUtil();
+            synchronized (SystemUtil.class){
+                if(instance==null){
+                    instance=new SystemUtil();
+                }
+            }
         }
         return instance;
     }
@@ -36,7 +40,7 @@ public class SystemUtil {
      * @author cuiyongxu
      */
     private void initConfig() {
-        ConfigFactory.getConfig("in-config", config -> {
+        ConfigFactory.getConfig("in-common-config", config -> {
             constant = config.getAll();
         });
     }
