@@ -1,6 +1,6 @@
 package com.ijson.platform.common.util.browser;
 
-import com.ijson.platform.common.util.ConfigFactory;
+import com.ijson.platform.common.util.IConfig;
 import com.ijson.platform.common.util.Validator;
 
 import java.util.regex.Matcher;
@@ -46,7 +46,7 @@ public class BrowserUtils {
      */
     public static StyleType getCurrStyle() {
         StyleType styleType = null;
-        String ts = ConfigFactory.get("style");
+        String ts = IConfig.get("style");
         String style = "easyui";
         if (!Validator.isNull(ts)) {
             style = ts.trim();

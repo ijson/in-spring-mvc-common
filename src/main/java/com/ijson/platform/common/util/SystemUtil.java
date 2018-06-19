@@ -13,9 +13,11 @@ import java.util.Map;
  */
 public class SystemUtil {
 
-    private SystemUtil(){}
 
-    public static SystemUtil instance;
+    private SystemUtil(){
+    }
+
+    private static SystemUtil instance;
 
     private Map<String, String> constant = Maps.newHashMap();//存放系统配置参数
 
@@ -25,7 +27,7 @@ public class SystemUtil {
      * @return instance
      * @author cuiyongxu
      */
-    public synchronized SystemUtil getInstance() {
+    public static synchronized SystemUtil getInstance() {
         if (null == instance) {
             synchronized (SystemUtil.class){
                 if(instance==null){

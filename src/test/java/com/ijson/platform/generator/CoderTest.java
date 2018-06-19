@@ -3,6 +3,7 @@ package com.ijson.platform.generator;
 import com.google.common.collect.Maps;
 import com.ijson.config.ConfigFactory;
 import com.ijson.platform.api.model.ParamsVo;
+import com.ijson.platform.common.util.IConfig;
 import com.ijson.platform.generator.dao.LoadDaoFactory;
 import com.ijson.platform.generator.manager.CodeGeneratorManager;
 import com.ijson.platform.generator.manager.LoadManagerFactory;
@@ -54,4 +55,9 @@ public class CoderTest {
         System.out.println(TemplateUtil.getTemplate("pom.ijson",aa));
     }
 
+
+    @Test
+    public void testIConfig(){
+        System.out.println(IConfig.get("v"));;
+    }
 }
