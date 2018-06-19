@@ -30,7 +30,7 @@ public class LoadCacheFactory<T> {
     private void initConfig() {
         if (MapUtils.isEmpty(constant)) {
             log.info("系统配置为空,预备初始化...");
-            ConfigFactory.getConfig("in-cache", (config -> {
+            ConfigFactory.getConfig("in-common-cache", (config -> {
                 constant = config.getAll();
                 log.info("配置参数读取完毕,{}", JacksonUtil.toJson(constant));
             }));

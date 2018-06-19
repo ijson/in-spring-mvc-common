@@ -17,7 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 public class DataSource extends DruidDataSource {
 
     public void initdb() throws SQLException {
-        ConfigFactory.getConfig("in-db", (c -> {
+        ConfigFactory.getConfig("in-common-db", (c -> {
             Map<String, String> config = c.getAll();
             try {
                 setProperties(config);
