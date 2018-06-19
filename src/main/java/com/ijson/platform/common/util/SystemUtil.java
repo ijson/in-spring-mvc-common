@@ -13,6 +13,8 @@ import java.util.Map;
  */
 public class SystemUtil {
 
+    private SystemUtil(){}
+
     public static SystemUtil instance;
 
     private Map<String, String> constant = Maps.newHashMap();//存放系统配置参数
