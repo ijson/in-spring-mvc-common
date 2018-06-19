@@ -1,7 +1,6 @@
 package com.ijson.platform.common.util.browser;
 
 import com.ijson.platform.common.util.ConfigFactory;
-import com.ijson.platform.common.util.SystemUtil;
 import com.ijson.platform.common.util.Validator;
 
 import javax.servlet.http.Cookie;
