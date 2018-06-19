@@ -1,5 +1,6 @@
 package com.ijson.platform.common.util.browser;
 
+import com.ijson.platform.common.util.ConfigFactory;
 import com.ijson.platform.common.util.SystemUtil;
 import com.ijson.platform.common.util.Validator;
 
@@ -34,9 +35,9 @@ public class CookieTools {
                                   String cookieValue, int maxAge) {
         Cookie cookie = new Cookie(cookieName, cookieValue);
 
-        String str = SystemUtil.getInstance().getConstant("isDoMain");
+        String str = ConfigFactory.get("isDoMain");
         if ("T".equals(str)) {
-            cookie.setDomain(SystemUtil.getInstance().getConstant("domain"));
+            cookie.setDomain(ConfigFactory.get("domain"));
         } else {
             //cookie.setDomain("");
         }
@@ -56,8 +57,8 @@ public class CookieTools {
      * @author cuiyongxu
      */
     public boolean deleteCookie(HttpServletRequest request, HttpServletResponse response, String cookieName) {
-        String domain = SystemUtil.getInstance().getConstant("domain");
-        String isDoMain = SystemUtil.getInstance().getConstant("isDoMain");
+        String domain = ConfigFactory.get("domain");
+        String isDoMain = ConfigFactory.get("isDoMain");
         if (cookieName != null) {
             Cookie cookie = getCookie(request, cookieName);//getCookie()方法在下面
             if (cookie != null) {

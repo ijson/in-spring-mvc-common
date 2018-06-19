@@ -1,5 +1,6 @@
 package com.ijson.platform.common.util.browser;
 
+import com.ijson.platform.common.util.ConfigFactory;
 import com.ijson.platform.common.util.SystemUtil;
 import com.ijson.platform.common.util.Validator;
 
@@ -46,7 +47,7 @@ public class BrowserUtils {
      */
     public static StyleType getCurrStyle() {
         StyleType styleType = null;
-        String ts = SystemUtil.getInstance().getConstant("style");
+        String ts = ConfigFactory.get("style");
         String style = "easyui";
         if (!Validator.isNull(ts)) {
             style = ts.trim();

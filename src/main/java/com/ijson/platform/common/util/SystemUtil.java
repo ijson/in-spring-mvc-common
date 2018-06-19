@@ -13,7 +13,7 @@ import java.util.Map;
  */
 public class SystemUtil {
 
-    private static SystemUtil instance;
+    public static SystemUtil instance;
 
     private Map<String, String> constant = Maps.newHashMap();//存放系统配置参数
 
@@ -63,7 +63,7 @@ public class SystemUtil {
      * @return value
      * @author cuiyongxu
      */
-    public String getConstant(String key) {
+    String getConstant(String key) {
         initConfig();
         return constant.get(key);
     }
