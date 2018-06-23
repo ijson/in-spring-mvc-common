@@ -13,6 +13,8 @@ import com.ijson.platform.database.model.Page;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.springframework.orm.hibernate3.HibernateTemplate;
+import org.springframework.orm.hibernate3.SessionFactoryUtils;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
 import java.lang.reflect.Method;
@@ -40,6 +42,18 @@ public class DaoHibernateImpl<T> extends HibernateDaoSupport implements BaseDao<
         return cacheManager;
     }
 
+    private void close(Session session) {
+        SessionFactoryUtils.closeSession(session);
+    }
+
+    private Session openSession() {
+        return getDao().getSessionFactory().openSession();
+    }
+
+    private HibernateTemplate getDao(){
+        return this.getHibernateTemplate();
+    }
+
     /**
      * description: 批量删除对象
      *
@@ -49,7 +63,7 @@ public class DaoHibernateImpl<T> extends HibernateDaoSupport implements BaseDao<
     public boolean deleteBath(MethodParam<T> param) {
         List list = (List) param.getVaule();
         try {
-            this.getHibernateTemplate().deleteAll(list);
+           getDao().deleteAll(list);
         } catch (Exception e) {
             log.error("DaoHibernateImpl deleteBath ERROR:", e);
             throw new DBServiceException("执行deleteBath方法出错:" + e.getMessage());
@@ -67,7 +81,7 @@ public class DaoHibernateImpl<T> extends HibernateDaoSupport implements BaseDao<
         List list = (List) param.getVaule();
         try {
             for (Object po : list) {
-                this.getHibernateTemplate().update(po);
+                getDao().update(po);
             }
         } catch (Exception e) {
             log.error("DaoHibernateImpl editBath ERROR:", e);
@@ -85,7 +99,7 @@ public class DaoHibernateImpl<T> extends HibernateDaoSupport implements BaseDao<
     public boolean insertBath(MethodParam<T> param) {
         List list = (List) param.getVaule();
         try {
-            this.getHibernateTemplate().save(list);
+            getDao().save(list);
         } catch (Exception e) {
             log.error("insertBath:", e);
             log.error("DaoHibernateImpl insertBath ERROR:", e);
@@ -93,6 +107,7 @@ public class DaoHibernateImpl<T> extends HibernateDaoSupport implements BaseDao<
         }
         return true;
     }
+
 
     /**
      * description: 获取指定sql的count值
@@ -102,7 +117,7 @@ public class DaoHibernateImpl<T> extends HibernateDaoSupport implements BaseDao<
      */
     public long count(MethodParam<T> param) {
         int count = 0;
-        Session session = getHibernateTemplate().getSessionFactory().openSession();
+        Session session = openSession();
         try {
             Query query = session.createQuery(param.getSqlStr());
             getParamClass(query, param.getParams());
@@ -134,7 +149,7 @@ public class DaoHibernateImpl<T> extends HibernateDaoSupport implements BaseDao<
             if (Validator.isNotNull(param.getSqlStr())) {//用hql批量删除
                 editOrDelForHql(param);
             } else {
-                this.getHibernateTemplate().delete(param.getVaule());
+                getDao().delete(param.getVaule());
                 if (Validator.isNotNull(param.getCacheId())) {
                     cacheManager.removeCacheObject(param.getCacheId());
                 }
@@ -154,11 +169,11 @@ public class DaoHibernateImpl<T> extends HibernateDaoSupport implements BaseDao<
      */
     public boolean edit(MethodParam<T> param) {
         try {
-            this.getHibernateTemplate().clear();
+            getDao().clear();
             if (Validator.isNotNull(param.getSqlStr())) {//用hql批量修改
                 editOrDelForHql(param);
             } else {
-                this.getHibernateTemplate().update(param.getVaule());
+                getDao().update(param.getVaule());
                 if (Validator.isNotNull(param.getCacheId())) {
                     cacheManager.createCacheObject(param.getCacheId(), (T) param.getVaule());
                 }
@@ -178,7 +193,7 @@ public class DaoHibernateImpl<T> extends HibernateDaoSupport implements BaseDao<
      */
     public boolean insert(MethodParam<T> param) {
         try {
-            this.getHibernateTemplate().save(param.getVaule());
+            getDao().save(param.getVaule());
             if (Validator.isNotNull(param.getCacheId())) {
                 cacheManager.createCacheObject(param.getCacheId(), (T) param.getVaule());
             }
@@ -205,7 +220,7 @@ public class DaoHibernateImpl<T> extends HibernateDaoSupport implements BaseDao<
         }
         page.setPageNeeded(param.getPageIndex());
         page.setPageSize(param.getPageSize());
-        Session session = getHibernateTemplate().getSessionFactory().openSession();
+        Session session = openSession();
         try {
             Query query = session.createQuery(param.getSqlStr());
             getParamClass(query, param.getParams());
@@ -236,7 +251,7 @@ public class DaoHibernateImpl<T> extends HibernateDaoSupport implements BaseDao<
      */
     public List<T> select(MethodParam<T> param) {
         List<T> list = null;
-        Session session = getHibernateTemplate().getSessionFactory().openSession();
+        Session session = openSession();
         try {
             Query query = session.createQuery(param.getSqlStr());
             getParamClass(query, param.getParams());
@@ -258,7 +273,7 @@ public class DaoHibernateImpl<T> extends HibernateDaoSupport implements BaseDao<
      */
     @Override
     public T selectSingle(MethodParam<T> param) {
-        Session session = getHibernateTemplate().getSessionFactory().openSession();
+        Session session = openSession();
         try {
             T obj = null;
             if (Validator.isNotNull(param.getCacheId())) {
@@ -285,7 +300,7 @@ public class DaoHibernateImpl<T> extends HibernateDaoSupport implements BaseDao<
         }
         try {
             if (Validator.isEmpty(obj)) {
-                obj = (T) this.getHibernateTemplate().get(spanceName, infoId);
+                obj = (T) getDao().get(spanceName, infoId);
                 if (!Validator.isEmpty(obj) && Validator.isNotNull(cacheId))
                     cacheManager.createCacheObject(cacheId, obj);
             }
@@ -326,7 +341,7 @@ public class DaoHibernateImpl<T> extends HibernateDaoSupport implements BaseDao<
      * @author cuiyongxu
      */
     private int editOrDelForHql(MethodParam<T> param) throws Exception {
-        Session session = getHibernateTemplate().getSessionFactory().openSession();
+        Session session = openSession();
         try {
             Query query = session.createQuery(param.getSqlStr());
             getParamClass(query, param.getParams());
@@ -344,7 +359,7 @@ public class DaoHibernateImpl<T> extends HibernateDaoSupport implements BaseDao<
      */
     @Override
     public T selectSingleByObject(MethodParam<T> param) {
-        Session session = getHibernateTemplate().getSessionFactory().openSession();
+        Session session = openSession();
         try {
             Object obj = null;
             Object objInstance = null;
@@ -379,7 +394,7 @@ public class DaoHibernateImpl<T> extends HibernateDaoSupport implements BaseDao<
     public List<T> selectByObject(MethodParam<T> param) {
         List list;
         List<Object> objList = null;
-        Session session = getHibernateTemplate().getSessionFactory().openSession();
+        Session session = openSession();
         try {
             Query query = session.createQuery(param.getSqlStr());
             getParamClass(query, param.getParams());
@@ -403,11 +418,5 @@ public class DaoHibernateImpl<T> extends HibernateDaoSupport implements BaseDao<
         return (List<T>) objList;
     }
 
-    private void close(Session session) {
-        if (session != null) {
-            session.flush();
-            session.close();
-        }
-    }
 
 }

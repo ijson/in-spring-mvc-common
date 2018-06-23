@@ -29,6 +29,24 @@ public class MybatisSession<O> {
     }
 
     /**
+     * description: 打开session
+     *
+     * @return value
+     */
+    private SqlSession getSqlSession() {
+        return this.sessionFactory.openSession();
+    }
+
+    /**
+     * description: 关闭session
+     */
+    private void closeSqlSession(SqlSession session) {
+        if (null != session) {
+            session.close();
+        }
+    }
+
+    /**
      * description: 新增记录
      *
      * @param query     ql执行key
@@ -224,7 +242,7 @@ public class MybatisSession<O> {
             param.setParams("Qrder-By", param.getOrderby());
             QueryPair qp = buildQueryPair(nameSpace, "select", query, param.getParams());
             session = getSqlSession();
-            list = (List<O>) session.selectList(qp.getId(), qp.getO(), new RowBounds(pagingData.getStartRow(),
+            list = session.selectList(qp.getId(), qp.getO(), new RowBounds(pagingData.getStartRow(),
                     pagingData.getEndRow()));
             pagingData.setPageObjects(list);
             //LimitedPageData.setPagingData(pagingData, null, null);
@@ -275,21 +293,5 @@ public class MybatisSession<O> {
         return new QueryPair(id, o);
     }
 
-    /**
-     * description: 打开session
-     *
-     * @return value
-     */
-    private SqlSession getSqlSession() {
-        return this.sessionFactory.openSession();
-    }
 
-    /**
-     * description: 关闭session
-     */
-    private void closeSqlSession(SqlSession session) {
-        if (null != session) {
-            session.close();
-        }
-    }
 }
