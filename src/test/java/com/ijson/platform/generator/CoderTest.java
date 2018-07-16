@@ -24,7 +24,7 @@ public class CoderTest {
 
     @Test
     public void generatorCode() {
-        ConfigFactory.getConfig("generator", (config) -> {
+        ConfigFactory.getConfig("in-common-generator", (config) -> {
             Map<String, String> configMap = config.getAll();
             CodeGeneratorManager codeGeneratorManager = LoadManagerFactory.getInstance().getCodeGeneratorManager();
             String tableNames[] = config.get("builder_tables").split(",");
