@@ -32,7 +32,7 @@ public class HibernateXmlBuilder implements TemplateHanlder {
                 maps.put("tableName", tableName);
                 maps.put("table",table);
                 maps.put("package_name", config.get("package_name"));
-                FileOperate.getInstance().newCreateFile(xmlPath + table.getTableAttName() + ".hbm.xml", TemplateUtil.getTemplate("hibernate.ijson", maps));
+                FileOperate.getInstance().newCreateFile(xmlPath + table.getTableAttName() + ".hbm.xml", TemplateUtil.getTemplate("in-hibernate-template", maps));
             }
         }
     }

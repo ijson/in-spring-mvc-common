@@ -28,7 +28,7 @@ public class SpringXmlBuilder implements TemplateHanlder {
             Map<String, Object> map = Maps.newHashMap();
             map.put("list", tables);
             map.put("package_name", jarPath);
-            String result = TemplateUtil.getTemplate("springbizxml.ijson", map);
+            String result = TemplateUtil.getTemplate("in-spring-biz-xml-template", map);
             FileOperate.getInstance().newCreateFile(xmlPath + "in-spring-biz-" + jarPath.substring(jarPath.lastIndexOf(".") + 1) + ".xml", result);
         }
     }

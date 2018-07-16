@@ -34,7 +34,7 @@ public class TemplateManagerImplBuilder implements TemplateHanlder {
         String projectName = config.get("project_name");
         String managerPath = config.get("fs_path") + "/" + projectName + "/" + prefix + "java/" + config.get("package_name").replace(".", "/") + "/manager/";
         FileOperate.getInstance().newCreateFolder(managerPath);
-        FileOperate.getInstance().newCreateFile(managerPath + "UnityBaseManager.java", TemplateUtil.getTemplate("unitybasemanager.ijson", config));
+        FileOperate.getInstance().newCreateFile(managerPath + "UnityBaseManager.java", TemplateUtil.getTemplate("in-unity-base-manager-template", config));
 
         if (!Validator.isEmpty(tables)) {
             for (TableEntity table1 : tables) {
@@ -42,7 +42,7 @@ public class TemplateManagerImplBuilder implements TemplateHanlder {
                 Map<String, Object> map = Maps.newHashMap();
                 map.put("package_name", config.get("package_name"));
                 map.put("tableName", tableName);
-                FileOperate.getInstance().newCreateFile(managerPath + tableName + "Manager.java", TemplateUtil.getTemplate("manager.ijson", map));
+                FileOperate.getInstance().newCreateFile(managerPath + tableName + "Manager.java", TemplateUtil.getTemplate("in-manager-xml-template", map));
             }
         }
     }
@@ -77,7 +77,7 @@ public class TemplateManagerImplBuilder implements TemplateHanlder {
                 map.put("table", table1);
                 map.put("pkey", ToolsUtil.toUpperFirst(table1.getPKColumn()));
                 map.put("pkeys", table1.getPKColumn());
-                FileOperate.getInstance().newCreateFile(managerPath + tableName + "ManagerImpl.java", TemplateUtil.getTemplate("managerimpl.ijson", map));
+                FileOperate.getInstance().newCreateFile(managerPath + tableName + "ManagerImpl.java", TemplateUtil.getTemplate("in-manager-impl-template", map));
             }
         }
     }

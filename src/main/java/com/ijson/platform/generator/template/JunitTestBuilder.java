@@ -59,7 +59,7 @@ public class JunitTestBuilder implements TemplateHanlder {
                 map.put("package_name", config.get("package_name"));
                 map.put("tableName", tableName);
                 map.put("tableId", TemplateUtil.toLowerCaseFirstOne(tableName));
-                String string = TemplateUtil.getTemplate("managertest.ijson", map);
+                String string = TemplateUtil.getTemplate("in-junit-manager-template", map);
                 FileOperate.getInstance().newCreateFile(managerPath + tableName + "ManagerTest.java", string);
             }
         }
@@ -71,11 +71,11 @@ public class JunitTestBuilder implements TemplateHanlder {
         dbConfig.put("url", config.get("jdbc.url"));
         dbConfig.put("user", config.get("jdbc.user"));
         dbConfig.put("password", config.get("jdbc.password"));
-        return TemplateUtil.getTemplate("indb.ijson", dbConfig);
+        return TemplateUtil.getTemplate("in-junit-database-config-template", dbConfig);
     }
 
     private String getInCacheBaseXml(String prefix, List<TableEntity> tables, Map<String, String> config) {
-        return TemplateUtil.getTemplate("autoinCache.ijson", Maps.newHashMap());
+        return TemplateUtil.getTemplate("in-common-cache-template", Maps.newHashMap());
     }
 
     private String getEhcacheBaseXml(String prefix, List<TableEntity> tables, Map<String, String> config) {
@@ -83,11 +83,11 @@ public class JunitTestBuilder implements TemplateHanlder {
         String cacheName = jarPath.substring(jarPath.lastIndexOf(".") + 1);
         Map<String, Object> maps = Maps.newHashMap();
         maps.put("cacheName", cacheName);
-        return TemplateUtil.getTemplate("ehcache.ijson", maps);
+        return TemplateUtil.getTemplate("in-junit-ehcache-template", maps);
     }
 
     private String getInDatabaseXml(String prefix, List<TableEntity> tables, Map<String, String> config) {
-        return TemplateUtil.getTemplate("inspringdatabase.ijson", Maps.newHashMap());
+        return TemplateUtil.getTemplate("in-junit-spring-database-template", Maps.newHashMap());
     }
 
     private String getInJunitBaseXml(String prefix, List<TableEntity> tables, Map<String, String> config) {
@@ -95,12 +95,12 @@ public class JunitTestBuilder implements TemplateHanlder {
         String bizName = jarPath.substring(jarPath.lastIndexOf(".") + 1);
         Map<String, Object> maps = Maps.newHashMap();
         maps.put("bizName", bizName);
-        return TemplateUtil.getTemplate("injunitbase.ijson", maps);
+        return TemplateUtil.getTemplate("in-base-junit-xml-template", maps);
     }
 
 
     private String getBaseTest(Map<String, String> config) {
-        return TemplateUtil.getTemplate("basetest.ijson", config);
+        return TemplateUtil.getTemplate("in-base-junit-template", config);
     }
 }
 

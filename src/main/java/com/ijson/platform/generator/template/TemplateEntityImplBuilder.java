@@ -31,7 +31,7 @@ public class TemplateEntityImplBuilder implements TemplateHanlder {
                 map.put("entityName",entityName);
                 map.put("package_name",config.get("package_name"));
                 map.put("columns",table1.getColumns());
-                FileOperate.getInstance().newCreateFile(classPath + entityName + ".java", TemplateUtil.getTemplate("entity.ijson",map));
+                FileOperate.getInstance().newCreateFile(classPath + entityName + ".java", TemplateUtil.getTemplate("in-entity-template",map));
             }
         }
     }

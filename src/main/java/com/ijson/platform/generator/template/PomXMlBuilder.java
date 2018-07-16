@@ -30,21 +30,21 @@ public class PomXMlBuilder implements TemplateHanlder {
 
 
     private String getPomStr(Map<String, String> config) {
-        return TemplateUtil.getTemplate("pom.ijson",config);
+        return TemplateUtil.getTemplate("in-pom-template",config);
     }
 
 
     private String getReadmeStr(Map<String, String> config) {
-        return TemplateUtil.getTemplate("readme.ijson",config);
+        return TemplateUtil.getTemplate("in-readme-template",config);
     }
 
     private String getGitlabCi(Map<String, String> config) {
-        return TemplateUtil.getTemplate("gitlabci.ijson",config);
+        return TemplateUtil.getTemplate("in-gitlabci-template",config);
     }
 
 
     private String getGitignoreStr(Map<String, String> config) {
-        return TemplateUtil.getTemplate("gitignore.ijson",config);
+        return TemplateUtil.getTemplate("in-gitignore-template",config);
     }
 
 }

@@ -34,7 +34,7 @@ public class TemplateDaoImplBuilder implements TemplateHanlder {
                 Map<String, Object> maps = Maps.newHashMap();
                 maps.put("tableName", tableName);
                 maps.put("package_name",config.get("package_name"));
-                FileOperate.getInstance().newCreateFile(daoPath + tableName + "DaoImpl.java", TemplateUtil.getTemplate("daoImpl.ijson", maps));
+                FileOperate.getInstance().newCreateFile(daoPath + tableName + "DaoImpl.java", TemplateUtil.getTemplate("in-dao-impl-template", maps));
             }
         }
     }

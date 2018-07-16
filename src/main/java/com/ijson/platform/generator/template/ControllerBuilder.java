@@ -41,7 +41,7 @@ public class ControllerBuilder implements TemplateHanlder {
                 map.put("pack", packageList.get(packageList.size()-1));
                 map.put("package_name", config.get("package_name"));
                 map.put("columns", table1.getColumns());
-                FileOperate.getInstance().newCreateFile(classPath + tableName + "Controller.java", TemplateUtil.getTemplate("controller.ijson", map));
+                FileOperate.getInstance().newCreateFile(classPath + tableName + "Controller.java", TemplateUtil.getTemplate("in-controller-template", map));
             }
         }
     }
