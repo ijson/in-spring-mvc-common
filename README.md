@@ -32,7 +32,7 @@
 4. 在in-spring-mvc的pom中,添加刚刚生成项目的dependency
 5. 在in-spring-mvc的WEB-INF下,找到applicationContext.xml,在其中添加,刚刚生成项目中生成的spring文件,文件都在resources/spring/目录下,命名规则为in-spring-biz-业务名称.xml
 
-6. 修改in-spring-mvc下authconf中的in-db文件,目前支持单机
+6. 修改in-spring-mvc下authconf中的in-common-db文件,目前支持单机
 
 7. 启动tomcat,访问controller下的ping地址即可
 

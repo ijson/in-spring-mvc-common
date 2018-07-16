@@ -44,8 +44,8 @@ public class JunitTestBuilder implements TemplateHanlder {
         //in-junit-base.xml
         FileOperate.getInstance().newCreateFile(fsPath + projectName + "/" + prefix + "/resources/in-junit-base.xml", getInJunitBaseXml(prefix, tables, config));
         FileOperate.getInstance().newCreateFile(fsPath + projectName + "/" + prefix + "/resources/ehcache.xml", getEhcacheBaseXml(prefix, tables, config));
-        FileOperate.getInstance().newCreateFile(fsPath + projectName + "/" + prefix + "/resources/autoconf/in-cache", getInCacheBaseXml(prefix, tables, config));
-        FileOperate.getInstance().newCreateFile(fsPath + projectName + "/" + prefix + "/resources/autoconf/in-db", getInDBBaseXml(prefix, tables, config));
+        FileOperate.getInstance().newCreateFile(fsPath + projectName + "/" + prefix + "/resources/autoconf/in-common-cache", getInCacheBaseXml(prefix, tables, config));
+        FileOperate.getInstance().newCreateFile(fsPath + projectName + "/" + prefix + "/resources/autoconf/in-common-db", getInDBBaseXml(prefix, tables, config));
         FileOperate.getInstance().newCreateFile(fsPath + projectName + "/" + prefix + "/resources/spring/in-spring-database.xml", getInDatabaseXml(prefix, tables, config));
 
 
