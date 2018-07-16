@@ -95,12 +95,12 @@ public class JunitTestBuilder implements TemplateHanlder {
         String bizName = jarPath.substring(jarPath.lastIndexOf(".") + 1);
         Map<String, Object> maps = Maps.newHashMap();
         maps.put("bizName", bizName);
-        return TemplateUtil.getTemplate("in-base-junit-xml-template", maps);
+        return TemplateUtil.getTemplate("in-junit-base-xml-template", maps);
     }
 
 
     private String getBaseTest(Map<String, String> config) {
-        return TemplateUtil.getTemplate("in-base-junit-template", config);
+        return TemplateUtil.getTemplate("in-junit-base-template", config);
     }
 }
 
