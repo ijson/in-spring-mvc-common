@@ -35,6 +35,18 @@ public class ParamsVo<E> extends BaseEntity {
         return paramsVo;
     }
 
+    public static <E> ParamsVo<E> editInfo(E e) {
+        ParamsVo<E> paramsVo = new ParamsVo<>();
+        paramsVo.setObj(e);
+        return paramsVo;
+    }
+
+    public static <E> ParamsVo<E> saveInfo(E e) {
+        ParamsVo<E> paramsVo = new ParamsVo<>();
+        paramsVo.setObj(e);
+        return paramsVo;
+    }
+
     private String key;
     /**
      * 为插件提供的参数值
