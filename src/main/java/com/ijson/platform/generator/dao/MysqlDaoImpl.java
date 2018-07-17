@@ -1,16 +1,23 @@
 package com.ijson.platform.generator.dao;
 
 import com.google.common.collect.Lists;
+
 import com.ijson.platform.common.util.ToolsUtil;
 import com.ijson.platform.common.util.Validator;
 import com.ijson.platform.generator.model.ColumnEntity;
 import com.ijson.platform.generator.model.TableEntity;
 import com.ijson.platform.generator.util.ConnctionData;
-import lombok.extern.slf4j.Slf4j;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DatabaseMetaData;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
+
+import lombok.extern.slf4j.Slf4j;
 
 
 @Slf4j

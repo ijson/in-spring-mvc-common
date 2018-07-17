@@ -1,8 +1,8 @@
 fs_path=/Users/cuiyongxu/Desktop
-project_name=in-passport-core
-package_name=com.ijson.passport.user
-builder_tables=u_user,u_role,u_role_give,u_act,u_act_give,u_lock
+project_name=in-evernote-base
+package_name=com.ijson.evernote
+builder_tables=in_user
 jdbc.driver=com.mysql.jdbc.Driver
-jdbc.url=jdbc:mysql://localhost:3307/passport?useUnicode=true&characterEncoding=utf8
+jdbc.url=jdbc:mysql://localhost:3307/evernote?useUnicode=true&characterEncoding=utf8
 jdbc.user=admin
 jdbc.password=sFUgAVKgF5TO

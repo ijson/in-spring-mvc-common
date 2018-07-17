@@ -1,5 +1,9 @@
 package com.ijson.platform.generator.util;
 
+import com.google.common.collect.Lists;
+
+import java.util.List;
+
 public class DataType {
 
     public static final String INTEGER = "Integer";
@@ -17,31 +21,42 @@ public class DataType {
      *
      * @param columnType columnType
      * @param isAll      isAll
+     * @param length     length
      * @return value
-     * @param length  length
      */
     public static String getDataType(String columnType, boolean isAll, int length) {
-        String result = columnType;
-        if ("DATE".equalsIgnoreCase(columnType) || "TIMESTAMP".equalsIgnoreCase(columnType)
-                || "TIME".equalsIgnoreCase(columnType) || "DATETIME".equalsIgnoreCase(columnType)) {
+        String result = "ERROR";
+
+        List iDate = Lists.newArrayList("TIMESTAMP", "DATE", "TIME", "DATETIME");
+        List iInteger = Lists.newArrayList("INTEGER", "INT", "TINYINT");
+        List iLong = Lists.newArrayList("BIGINT", "LONG");
+        List iDumber = Lists.newArrayList("NUMBER");
+        List iString = Lists.newArrayList("VARCHAR","VARCHAR2","LONGTEXT","TEXT");
+
+
+        columnType = columnType.toUpperCase();
+        if (iDate.contains(columnType)) {
             result = "java.util.Date";
-        } else if ("INTEGER".equalsIgnoreCase(columnType) || "INT".equalsIgnoreCase(columnType)) {
+        } else if (iInteger.contains(columnType)) {
             result = "java.lang.Integer";
-        } else if ("BIGINT".equalsIgnoreCase(columnType)) {
+        } else if (iLong.contains(columnType)) {
             result = "java.lang.Long";
-        } else if ("NUMBER".equalsIgnoreCase(columnType)) {
-            if (length < 20 && length > 10)
+        } else if (iDumber.contains(columnType)) {
+            if (length < 20 && length > 10) {
                 result = "java.lang.Double";
-            else if (length <= 10)
+            } else if (length <= 10) {
                 result = "java.lang.Integer";
-            else
+            } else {
                 result = "java.lang.Long";
+            }
         } else if ("DOUBLE".equalsIgnoreCase(columnType)) {
             result = "java.lang.Double";
         } else if ("FLOAT".equalsIgnoreCase(columnType)) {
             result = "java.lang.Float";
-        } else {
+        } else if (iString.contains(columnType)) {
             result = "java.lang.String";
+        } else if ("BOOLEAN".equalsIgnoreCase(columnType)) {
+            result = "java.lang.Boolean";
         }
         if (!isAll) {
             result = result.replaceAll("java.lang.", "");
@@ -65,9 +80,10 @@ public class DataType {
 
     /**
      * description: 获取数据类型
-     * @return type
+     *
      * @param columnType type
      * @param precision  precision
+     * @return type
      */
     public static String getJdbcType(String columnType, int precision) {
         String colType = columnType.toUpperCase();
