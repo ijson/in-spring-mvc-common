@@ -18,13 +18,20 @@ import lombok.Setter;
 @Getter
 public class ParamsVo<E> extends BaseEntity {
 
-    public ParamsVo(){
-
+    public ParamsVo() {
     }
 
-    public static ParamsVo getInfoById(String infoId){
-        ParamsVo paramsVo = new ParamsVo<>();
+
+    public static <E> ParamsVo<E> getInfoById(String infoId) {
+        ParamsVo<E> paramsVo = new ParamsVo<>();
         paramsVo.setInfoId(infoId);
+        return paramsVo;
+    }
+
+
+    public static <E> ParamsVo<E> getList(E e) {
+        ParamsVo<E> paramsVo = new ParamsVo<>();
+        paramsVo.setObj(e);
         return paramsVo;
     }
 
