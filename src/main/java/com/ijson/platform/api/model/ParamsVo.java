@@ -2,11 +2,12 @@ package com.ijson.platform.api.model;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.util.List;
 import java.util.Map;
+
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * description:  vo方法参数模型
@@ -16,6 +17,16 @@ import java.util.Map;
 @Setter
 @Getter
 public class ParamsVo<E> extends BaseEntity {
+
+    public ParamsVo(){
+
+    }
+
+    public static ParamsVo getInfoById(String infoId){
+        ParamsVo paramsVo = new ParamsVo<>();
+        paramsVo.setInfoId(infoId);
+        return paramsVo;
+    }
 
     private String key;
     /**
