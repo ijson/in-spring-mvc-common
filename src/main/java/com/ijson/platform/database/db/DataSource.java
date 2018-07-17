@@ -1,5 +1,8 @@
 package com.ijson.platform.database.db;
 
+import com.google.common.collect.Lists;
+
+import com.alibaba.druid.filter.logging.Slf4jLogFilter;
 import com.alibaba.druid.pool.DruidDataSource;
 import com.ijson.config.ConfigFactory;
 
@@ -52,6 +55,20 @@ public class DataSource extends DruidDataSource {
         setPoolPreparedStatements(true);
         setMaxPoolPreparedStatementPerConnectionSize(20);
         setFilters("stat,wall");
+        setProxyFilters(Lists.newArrayList(getSlf4j(Boolean.valueOf(config.get("db.show")))));
+    }
+
+    private Slf4jLogFilter getSlf4j(boolean b) {
+        Slf4jLogFilter slf4jLogFilter = new Slf4jLogFilter();
+        slf4jLogFilter.setConnectionLogEnabled(b);
+        slf4jLogFilter.setStatementLogEnabled(b);
+        slf4jLogFilter.setResultSetLogEnabled(b);
+        slf4jLogFilter.setStatementExecutableSqlLogEnable(b);
+        slf4jLogFilter.setStatementExecutableSqlLogEnable(b);
+        slf4jLogFilter.setStatementExecuteAfterLogEnabled(b);
+        slf4jLogFilter.setStatementExecuteQueryAfterLogEnabled(b);
+        slf4jLogFilter.setStatementExecuteUpdateAfterLogEnabled(b);
+        return slf4jLogFilter;
     }
 
 

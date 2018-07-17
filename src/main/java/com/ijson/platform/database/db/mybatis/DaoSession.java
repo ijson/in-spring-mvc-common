@@ -3,6 +3,7 @@ package com.ijson.platform.database.db.mybatis;
 import com.google.common.collect.Maps;
 
 import com.ijson.platform.common.exception.DBServiceException;
+import com.ijson.platform.common.util.JacksonUtil;
 import com.ijson.platform.database.model.MethodParam;
 import com.ijson.platform.database.model.Page;
 
@@ -43,7 +44,7 @@ public class DaoSession<O> {
             session = getSqlSession();
             return session.insert(qp.id, qp.o);
         } catch (Exception e) {
-            log.error("DaoSession insert ERROR:", e);
+            log.error("DaoSession insert ERROR :{},{}", JacksonUtil.toJson(qp), e);
             throw new DBServiceException("执行insert方法出错:" + e.getMessage());
         } finally {
             closeSqlSession(session);

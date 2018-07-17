@@ -1,8 +1,11 @@
 package com.ijson.platform.database.db.mybatis;
 
+import lombok.Data;
+
 /**
  * description: 查询参数模型
  */
+@Data
 public class QueryPair {
     String id;
     Object o;

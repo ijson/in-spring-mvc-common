@@ -198,7 +198,7 @@ public class DaoHibernateImpl<T> extends HibernateDaoSupport implements BaseDao<
                 cacheManager.createCacheObject(param.getCacheId(), (T) param.getVaule());
             }
         } catch (Exception e) {
-            log.error("DaoHibernateImpl insert ERROR:", e);
+            log.error("DaoSession insert ERROR :{}", e);
             throw new DBServiceException("执行insert方法出错:" + e.getMessage());
         }
         return true;
