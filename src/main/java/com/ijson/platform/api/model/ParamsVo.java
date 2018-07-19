@@ -22,29 +22,33 @@ public class ParamsVo<E> extends BaseEntity {
     }
 
 
-    public static <E> ParamsVo<E> getInfoById(String infoId) {
+    private static <E> ParamsVo<E> getParamsVo(String infoId, E e, String methodKey) {
         ParamsVo<E> paramsVo = new ParamsVo<>();
         paramsVo.setInfoId(infoId);
+        paramsVo.setObj(e);
+        paramsVo.setMethodKey(methodKey);
         return paramsVo;
+    }
+
+    public static <E> ParamsVo<E> getInfoById(String infoId) {
+        return getParamsVo(infoId, null, null);
     }
 
 
     public static <E> ParamsVo<E> getList(E e) {
-        ParamsVo<E> paramsVo = new ParamsVo<>();
-        paramsVo.setObj(e);
-        return paramsVo;
+        return getParamsVo(null, e, null);
     }
 
     public static <E> ParamsVo<E> editInfo(E e) {
-        ParamsVo<E> paramsVo = new ParamsVo<>();
-        paramsVo.setObj(e);
-        return paramsVo;
+        return getParamsVo(null, e, null);
     }
 
     public static <E> ParamsVo<E> saveInfo(E e) {
-        ParamsVo<E> paramsVo = new ParamsVo<>();
-        paramsVo.setObj(e);
-        return paramsVo;
+        return getParamsVo(null, e, null);
+    }
+
+    public static <E> ParamsVo<E> execute(String methodKey) {
+        return getParamsVo(null, null, methodKey);
     }
 
     private String key;
