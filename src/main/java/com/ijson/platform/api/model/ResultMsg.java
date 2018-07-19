@@ -22,37 +22,36 @@ public class ResultMsg extends BaseEntity {
 
     private Boolean flag;
 
-
     public ResultMsg() {
 
     }
 
-    public ResultMsg(String isok, String msg) {
+    public ResultMsg(String isok, Object msg) {
         this.isok = isok;
         this.msg = msg;
     }
 
-    public ResultMsg setError(String msg){
+    public ResultMsg setError(Object msg){
         this.isok = "F";
         this.msg = msg;
         return this;
     }
 
-    public ResultMsg setError(String msg,Boolean flag){
+    public ResultMsg setError(Object msg,Boolean flag){
         this.isok = "F";
         this.msg = msg;
         this.flag = flag;
         return this;
     }
 
-    public ResultMsg setOK(String msg,Boolean flag){
+    public ResultMsg setOK(Object msg,Boolean flag){
         this.isok = "T";
         this.msg = msg;
         this.flag = flag;
         return this;
     }
 
-    public ResultMsg setOK(String msg){
+    public ResultMsg setOK(Object msg){
         this.isok = "T";
         this.msg = msg;
         return this;
