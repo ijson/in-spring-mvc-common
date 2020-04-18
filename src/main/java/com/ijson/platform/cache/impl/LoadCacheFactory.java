@@ -5,6 +5,7 @@ import com.ijson.config.ConfigFactory;
 import com.ijson.platform.cache.CacheManager;
 import com.ijson.platform.cache.manager.ehcache.impl.EhcacheManagerImpl;
 import com.ijson.platform.common.util.Validator;
+import lombok.Data;
 
 import java.util.Map;
 
@@ -14,7 +15,10 @@ import java.util.Map;
  *
  * @author heppy1.com 创建时间：Jan 24, 2015
  */
+@Data
 public class LoadCacheFactory {
+
+    public String configName = "in-spring-cache";
 
     private static LoadCacheFactory instance;
     private static Map<String, CacheManager> ehcaches = Maps.newHashMap();
@@ -27,7 +31,7 @@ public class LoadCacheFactory {
     }
 
     private String initConfig(String key) {
-        ConfigFactory.getConfig("in-cache", (config -> {
+        ConfigFactory.getConfig(configName, (config -> {
             constant = config.getAll();
         }));
         return constant.get(key);

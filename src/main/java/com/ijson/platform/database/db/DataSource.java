@@ -2,6 +2,7 @@ package com.ijson.platform.database.db;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.ijson.config.ConfigFactory;
+import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.MapUtils;
 
@@ -12,10 +13,13 @@ import java.util.Map;
  * Created by cuiyongxu on 17/9/22.
  */
 @Slf4j
+@Data
 public class DataSource extends DruidDataSource {
 
+    public String configName = "in-spring-db";
+
     public void initdb() throws SQLException {
-        ConfigFactory.getConfig("in-db", (c -> {
+        ConfigFactory.getConfig(configName, (c -> {
             Map<String, String> config = c.getAll();
             try {
                 setProperties(config);
@@ -27,15 +31,17 @@ public class DataSource extends DruidDataSource {
         //close();
     }
 
+
+
     private void setProperties(Map<String, String> config) throws SQLException {
-        if(MapUtils.isEmpty(config)){
+        if (MapUtils.isEmpty(config)) {
             return;
         }
         setUrl(config.get("db.url"));
         setUsername(config.get("db.username"));
         setPassword(config.get("db.password"));
         setInitialSize(Integer.parseInt(config.get("db.initialSize")));
-        setMinIdle(Integer.parseInt(config.getOrDefault("db.minIdle","10")));
+        setMinIdle(Integer.parseInt(config.getOrDefault("db.minIdle", "10")));
         setMaxActive(Integer.parseInt(config.get("db.maxActive")));
         //配置获取连接等待超时的时间
         setMaxWait(60000);
