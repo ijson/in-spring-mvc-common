@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE configuration PUBLIC "-//ibatis.apache.org//DTD Config 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-config.dtd">
-<configuration>  
-   <settings>
-		<setting name="cacheEnabled" value="false"/> 
-		<setting name="lazyLoadingEnabled" value="false"/> 
-		<setting name="multipleResultSetsEnabled" value="true"/>
-		<setting name="useColumnLabel" value="true"/> 
-		<setting name="useGeneratedKeys" value="false"/> 
-		<setting name="defaultExecutorType" value="SIMPLE"/> 
-		<setting name="defaultStatementTimeout" value="25000"/> 
-   </settings> 
-	<plugins>
-		<!-- 指定数据库分页方言Dialect, 其它方言:OracleDialect,SQLServerDialect,SybaseDialect,DB2Dialect,MySQLDialect-->
-		<plugin interceptor="com.ijson.platform.database.db.mybatis.DiclectStatementHandlerInterceptor">
-			<property name="dialect" value="com.ijson.platform.database.db.mybatis.dialect.OracleDialect"/>
-		</plugin>
-	</plugins>
+<!DOCTYPE configuration PUBLIC "-//ibatis.apache.org//DTD Config 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="cacheEnabled" value="false"/>
+        <setting name="lazyLoadingEnabled" value="false"/>
+        <setting name="multipleResultSetsEnabled" value="true"/>
+        <setting name="useColumnLabel" value="true"/>
+        <setting name="useGeneratedKeys" value="false"/>
+        <setting name="defaultExecutorType" value="SIMPLE"/>
+        <setting name="defaultStatementTimeout" value="25000"/>
+    </settings>
+    <plugins>
+        <!-- 指定数据库分页方言Dialect, 其它方言:OracleDialect,SQLServerDialect,SybaseDialect,DB2Dialect,MySQLDialect-->
+        <plugin interceptor="com.ijson.platform.database.db.mybatis.DiclectStatementHandlerInterceptor">
+            <property name="dialect" value="com.ijson.platform.database.db.mybatis.dialect.OracleDialect"/>
+        </plugin>
+    </plugins>
 
 </configuration>

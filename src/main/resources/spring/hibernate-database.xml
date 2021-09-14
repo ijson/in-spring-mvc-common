@@ -7,7 +7,7 @@
 
     <!-- Hibernate配置 start -->
     <bean id="hibernateSessionFactory"
-          class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+          class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="mappingLocations">
             <list>
@@ -23,7 +23,7 @@
         </property>
     </bean>
 
-    <bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate"
+    <bean id="hibernateTemplate" class="org.springframework.orm.hibernate5.HibernateTemplate"
           p:sessionFactory-ref="hibernateSessionFactory"/>
 
     <!-- Hibernate配置 end -->
