@@ -12,6 +12,7 @@ public class DB2Dialect implements Dialect {
     /* (non-Javadoc)
      * @see com.kimbanx.database.db.ibatis3.dialect.Dialect#supportsLimit()
      */
+    @Override
     public boolean supportsLimit() {
         return true;
     }
@@ -19,6 +20,7 @@ public class DB2Dialect implements Dialect {
     /* (non-Javadoc)
      * @see com.kimbanx.database.db.ibatis3.dialect.Dialect#supportsLimitOffset()
      */
+    @Override
     public boolean supportsLimitOffset() {
         return true;
     }
@@ -26,9 +28,11 @@ public class DB2Dialect implements Dialect {
     /* (non-Javadoc)
      * @see com.kimbanx.database.db.ibatis3.dialect.Dialect#getLimitString(java.lang.String, int, int)
      */
+    @Override
     public String getLimitString(String sql, int offset, int limit, String orderby) {
-        if (sql == null)
+        if (sql == null) {
             return "";
+        }
         sql = trim(sql);
         String rowNumSql = getRowNumSql(orderby);
         StringBuilder sb = new StringBuilder(sql.length() + 20);
@@ -49,8 +53,9 @@ public class DB2Dialect implements Dialect {
      * @return 如果有排序条件的话则返回添加了order by语句的sql，否则直接返回sql
      */
     private String getRowNumSql(String orderby) {
-        if (Validator.isNull(orderby))
+        if (Validator.isNull(orderby)) {
             return "";
+        }
         return "ROW_NUMBER() OVER(ORDER BY  " + orderby + " )";
     }
 

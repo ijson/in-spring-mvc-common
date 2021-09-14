@@ -12,6 +12,7 @@ public class MySQLDialect implements Dialect {
     /* (non-Javadoc)
      * @see com.kimbanx.database.db.ibatis3.dialect.Dialect#supportsLimit()
      */
+    @Override
     public boolean supportsLimit() {
         return true;
     }
@@ -19,6 +20,7 @@ public class MySQLDialect implements Dialect {
     /* (non-Javadoc)
      * @see com.kimbanx.database.db.ibatis3.dialect.Dialect#supportsLimitOffset()
      */
+    @Override
     public boolean supportsLimitOffset() {
         return true;
     }
@@ -26,6 +28,7 @@ public class MySQLDialect implements Dialect {
     /* (non-Javadoc)
      * @see com.kimbanx.database.db.ibatis3.dialect.Dialect#getLimitString(java.lang.String, int, int)
      */
+    @Override
     public String getLimitString(String sql, int offset, int limit, String orderby) {
         String orderByStr = "";
         if (Validator.isNotNull(orderby)) {

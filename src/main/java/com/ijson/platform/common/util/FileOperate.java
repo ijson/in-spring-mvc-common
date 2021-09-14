@@ -17,8 +17,9 @@ public class FileOperate {
     }
 
     public synchronized static FileOperate getInstance() {
-        if (null == instance)
+        if (null == instance) {
             instance = new FileOperate();
+        }
         return instance;
     }
 
@@ -149,8 +150,9 @@ public class FileOperate {
      * @return filePath
      */
     public String formatFilePath(String path) {
-        if (Validator.isNull(path))
+        if (Validator.isNull(path)) {
             return "";
+        }
         path = path.replace("\\", "/");
         path = path.replace("\\\\", "/");
         return path.replace("//", "/");

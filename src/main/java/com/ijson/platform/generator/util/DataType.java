@@ -30,12 +30,13 @@ public class DataType {
         } else if ("BIGINT".equalsIgnoreCase(columnType)) {
             result = "java.lang.Long";
         } else if ("NUMBER".equalsIgnoreCase(columnType)) {
-            if (length < 20 && length > 10)
+            if (length < 20 && length > 10) {
                 result = "java.lang.Double";
-            else if (length <= 10)
+            } else if (length <= 10) {
                 result = "java.lang.Integer";
-            else
+            } else {
                 result = "java.lang.Long";
+            }
         } else if ("DOUBLE".equalsIgnoreCase(columnType)) {
             result = "java.lang.Double";
         } else if ("FLOAT".equalsIgnoreCase(columnType)) {

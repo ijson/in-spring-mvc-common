@@ -2,6 +2,7 @@ package com.ijson.platform.api.model;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,8 +14,7 @@ import java.util.Map;
  *
  * @author cuiyongxu 创建时间：Oct 27, 2015
  */
-@Setter
-@Getter
+@Data
 public class ParamsVo<E> extends BaseEntity {
 
     private String key;

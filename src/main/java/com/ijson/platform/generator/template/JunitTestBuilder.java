@@ -17,6 +17,7 @@ import java.util.Map;
 public class JunitTestBuilder implements TemplateHanlder {
 
 
+    @Override
     public void execute(ParamsVo<TableEntity> vo, Map<String, String> config) {
         List<TableEntity> tables = vo.getObjs();
         String prefix = "src/test/";

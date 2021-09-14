@@ -8,10 +8,12 @@ import com.ijson.platform.common.util.Validator;
  */
 public class OracleDialect implements Dialect {
 
+    @Override
     public boolean supportsLimit() {
         return true;
     }
 
+    @Override
     public boolean supportsLimitOffset() {
         return true;
     }
@@ -26,9 +28,11 @@ public class OracleDialect implements Dialect {
      *
      * @return 包含占位符的分页sql
      */
+    @Override
     public String getLimitString(String sql, int startRow, int endRow, String orderby) {
-        if (sql == null)
+        if (sql == null) {
             return "";
+        }
         sql = trim(sql);
         sql = decorateSql(sql, orderby);
         StringBuilder sb = new StringBuilder(sql.length() + 20);

@@ -45,6 +45,7 @@ public class LoadCacheResource extends AbstractResource {
         return cl;
     }
 
+    @Override
     public InputStream getInputStream() throws IOException {
         InputStream is = this.classLoader.getResourceAsStream(this.path);
         if (is == null) {
@@ -53,11 +54,13 @@ public class LoadCacheResource extends AbstractResource {
         return is;
     }
 
+    @Override
     public boolean exists() {
         URL url = this.classLoader.getResource(this.path);
         return (url != null);
     }
 
+    @Override
     public URL getURL() throws IOException {
         URL url = this.classLoader.getResource(this.path);
         if (null == url) {
@@ -72,10 +75,12 @@ public class LoadCacheResource extends AbstractResource {
         return url;
     }
 
+    @Override
     public String getFilename() {
         return StringUtils.getFilename(this.path);
     }
 
+    @Override
     public String getDescription() {
         return "class path resource [" + this.path +
                 ']';

@@ -1,0 +1,7358 @@
+[
+  {
+    "id": 1,
+    "createTime": "2018-09-12 17:54:48",
+    "name": "采购协同",
+    "parentId": 197,
+    "type": 2,
+    "uuidName": "m1"
+  },
+  {
+    "id": 2,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "企业信息设置",
+    "url": "/PartyGroupSet",
+    "parentId": 192,
+    "type": 3,
+    "uuidName": "m2"
+  },
+  {
+    "id": 9,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "默认身份登录",
+    "url": "/ViewPartyGroupSet,/EditPartyGroupSet",
+    "parentId": 2,
+    "type": 3,
+    "uuidName": "m9"
+  },
+  {
+    "id": 10,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看详情",
+    "url": "BtnViewPartyGroupCard",
+    "parentId": 9,
+    "type": 3,
+    "uuidName": "m10"
+  },
+  {
+    "id": 28,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "供应商工作台",
+    "url": "/SupplierBenchMenu",
+    "parentId": 193,
+    "type": 3,
+    "uuidName": "m28"
+  },
+  {
+    "id": 29,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看工作台",
+    "url": "/SupplierBench",
+    "parentId": 28,
+    "type": 3,
+    "uuidName": "m29"
+  },
+  {
+    "id": 30,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "待办事项",
+    "url": "BtnSupplierWork",
+    "parentId": 28,
+    "type": 3,
+    "uuidName": "m30"
+  },
+  {
+    "id": 31,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "待确认订单",
+    "url": "/FindSupplierWaitOrder",
+    "parentId": 30,
+    "type": 3,
+    "uuidName": "m31"
+  },
+  {
+    "id": 32,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "待发货",
+    "url": "BtnSupplierToBeDeliver",
+    "parentId": 30,
+    "type": 3,
+    "uuidName": "m32"
+  },
+  {
+    "id": 33,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "退货确认",
+    "url": "BtnSupplierRefund",
+    "parentId": 30,
+    "type": 3,
+    "uuidName": "m33"
+  },
+  {
+    "id": 34,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "我的订单",
+    "url": "BtnSupplierMyOrder",
+    "parentId": 28,
+    "type": 3,
+    "uuidName": "m34"
+  },
+  {
+    "id": 35,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "销售业务消息",
+    "url": "BtnSupplierMessage",
+    "parentId": 28,
+    "type": 3,
+    "uuidName": "m35"
+  },
+  {
+    "id": 36,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "商品管理",
+    "url": "BtnSupplierProMsg",
+    "parentId": 28,
+    "type": 3,
+    "uuidName": "m36"
+  },
+  {
+    "id": 37,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "交易关系",
+    "url": "BtnSupplierRelation",
+    "parentId": 28,
+    "type": 3,
+    "uuidName": "m37"
+  },
+  {
+    "id": 38,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "发货单管理",
+    "url": "BtnSupplierDeliver",
+    "parentId": 28,
+    "type": 3,
+    "uuidName": "m38"
+  },
+  {
+    "id": 39,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "最新订单",
+    "url": "BtnSupplierNewOrder",
+    "parentId": 28,
+    "type": 3,
+    "uuidName": "m39"
+  },
+  {
+    "id": 40,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "订单管理",
+    "url": "/EcSupplierOrderMenu",
+    "parentId": 193,
+    "type": 3,
+    "uuidName": "m40"
+  },
+  {
+    "id": 41,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看列表",
+    "url": "/FindEcSupplierOrder",
+    "parentId": 40,
+    "type": 3,
+    "uuidName": "m41"
+  },
+  {
+    "id": 42,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看详情",
+    "url": "/ViewEcSupplierOrder",
+    "parentId": 40,
+    "type": 3,
+    "uuidName": "m42"
+  },
+  {
+    "id": 43,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "同意(同意接收订单)",
+    "url": "BtnConfirmAgree",
+    "parentId": 42,
+    "type": 3,
+    "uuidName": "m43"
+  },
+  {
+    "id": 44,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "拒绝(拒绝接收订单)",
+    "url": "BtnConfirmRefuse",
+    "parentId": 42,
+    "type": 3,
+    "uuidName": "m44"
+  },
+  {
+    "id": 45,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "同意(同意取消订单)",
+    "url": "BtnAgreeCancel",
+    "parentId": 42,
+    "type": 3,
+    "uuidName": "m45"
+  },
+  {
+    "id": 46,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "拒绝(拒绝取消订单)",
+    "url": "BtnRefuseCancel",
+    "parentId": 42,
+    "type": 3,
+    "uuidName": "m46"
+  },
+  {
+    "id": 47,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "发货",
+    "url": "/EditEcSupplierDeliver",
+    "parentId": 42,
+    "type": 3,
+    "uuidName": "m47"
+  },
+  {
+    "id": 48,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "收货单",
+    "url": "BtnSupplierViewCollect,/ViewEcSupplierCollect",
+    "parentId": 42,
+    "type": 3,
+    "uuidName": "m48"
+  },
+  {
+    "id": 49,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "发货单",
+    "url": "BtnSupplierViewDeliver",
+    "parentId": 42,
+    "type": 3,
+    "uuidName": "m49"
+  },
+  {
+    "id": 50,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "上传附件",
+    "url": "BtnUploadOrderAttachmentSu",
+    "parentId": 42,
+    "type": 3,
+    "uuidName": "m50"
+  },
+  {
+    "id": 51,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "编辑附件",
+    "url": "BtnUpdateOrderAttachmentSu",
+    "parentId": 42,
+    "type": 3,
+    "uuidName": "m51"
+  },
+  {
+    "id": 52,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "删除附件",
+    "url": "BtnDelOrderAttachmentSu",
+    "parentId": 42,
+    "type": 3,
+    "uuidName": "m52"
+  },
+  {
+    "id": 53,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "退货单",
+    "url": "BtnSupplierViewRefund",
+    "parentId": 42,
+    "type": 3,
+    "uuidName": "m53"
+  },
+  {
+    "id": 54,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "发货单管理",
+    "url": "/SupplierDeliverMenu",
+    "parentId": 193,
+    "type": 3,
+    "uuidName": "m54"
+  },
+  {
+    "id": 55,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看列表",
+    "url": "/FindEcSupplierDeliver",
+    "parentId": 54,
+    "type": 3,
+    "uuidName": "m55"
+  },
+  {
+    "id": 56,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看详情",
+    "url": "/ViewEcSupplierDeliver",
+    "parentId": 54,
+    "type": 3,
+    "uuidName": "m56"
+  },
+  {
+    "id": 57,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "退货单列表",
+    "url": "/SupplierRefundMenu",
+    "parentId": 193,
+    "type": 3,
+    "uuidName": "m57"
+  },
+  {
+    "id": 58,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看列表",
+    "url": "/FindEcSupplierRefund",
+    "parentId": 57,
+    "type": 3,
+    "uuidName": "m58"
+  },
+  {
+    "id": 59,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看详情",
+    "url": "/ViewEcSupplierRefund",
+    "parentId": 57,
+    "type": 3,
+    "uuidName": "m59"
+  },
+  {
+    "id": 60,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "同意",
+    "url": "BtnAgreeRefund",
+    "parentId": 57,
+    "type": 3,
+    "uuidName": "m60"
+  },
+  {
+    "id": 61,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "拒绝",
+    "url": "BtnRefuseRefund",
+    "parentId": 57,
+    "type": 3,
+    "uuidName": "m61"
+  },
+  {
+    "id": 62,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "商品数据管理",
+    "url": "/EcSupplyProductMenu",
+    "parentId": 193,
+    "type": 3,
+    "uuidName": "m62"
+  },
+  {
+    "id": 66,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看详情",
+    "url": "/ViewSupplyProduct",
+    "parentId": 62,
+    "type": 3,
+    "uuidName": "m66"
+  },
+  {
+    "id": 71,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "商品发布管理",
+    "url": "/EcSupplyConnectMenu",
+    "parentId": 193,
+    "type": 3,
+    "uuidName": "m71"
+  },
+  {
+    "id": 72,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看列表",
+    "url": "/EcSupplyProductConnect",
+    "parentId": 71,
+    "type": 3,
+    "uuidName": "m72"
+  },
+  {
+    "id": 73,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "添加商品",
+    "url": "BtnConnectAdd",
+    "parentId": 71,
+    "type": 3,
+    "uuidName": "m73"
+  },
+  {
+    "id": 74,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "发布商品",
+    "url": "BtnConnectSubmit",
+    "parentId": 71,
+    "type": 3,
+    "uuidName": "m74"
+  },
+  {
+    "id": 75,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "商品价格变更",
+    "url": "/EcSupplySettingMenu",
+    "parentId": 193,
+    "type": 3,
+    "uuidName": "m75"
+  },
+  {
+    "id": 76,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看列表",
+    "url": "/EcSupplyPriceSetting",
+    "parentId": 75,
+    "type": 3,
+    "uuidName": "m76"
+  },
+  {
+    "id": 77,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "添加价格变更",
+    "url": "BtSupplyPriceAdd",
+    "parentId": 75,
+    "type": 3,
+    "uuidName": "m77"
+  },
+  {
+    "id": 78,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "编辑",
+    "url": "BtSupplyPriceEdit",
+    "parentId": 75,
+    "type": 3,
+    "uuidName": "m78"
+  },
+  {
+    "id": 79,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "提交",
+    "url": "BtSupplyPriceSubmit",
+    "parentId": 75,
+    "type": 3,
+    "uuidName": "m79"
+  },
+  {
+    "id": 80,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "取消变更",
+    "url": "BtSupplyPriceCancel",
+    "parentId": 75,
+    "type": 3,
+    "uuidName": "m80"
+  },
+  {
+    "id": 81,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "删除",
+    "url": "BtSupplyPriceDel",
+    "parentId": 75,
+    "type": 3,
+    "uuidName": "m81"
+  },
+  {
+    "id": 82,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "发货地址管理",
+    "url": "/EcSupplyCollectMenu",
+    "parentId": 193,
+    "type": 3,
+    "uuidName": "m82"
+  },
+  {
+    "id": 83,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看列表",
+    "url": "/FindSupplierCollectManage",
+    "parentId": 82,
+    "type": 3,
+    "uuidName": "m83"
+  },
+  {
+    "id": 84,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "新增",
+    "url": "BtnSupplyCollectAdd",
+    "parentId": 82,
+    "type": 3,
+    "uuidName": "m84"
+  },
+  {
+    "id": 85,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "编辑",
+    "url": "BtnSupplyCollectEdit",
+    "parentId": 82,
+    "type": 3,
+    "uuidName": "m85"
+  },
+  {
+    "id": 86,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "删除",
+    "url": "BtnSupplyCollectDel",
+    "parentId": 82,
+    "type": 3,
+    "uuidName": "m86"
+  },
+  {
+    "id": 87,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "交易关系",
+    "url": "/EcSupplyTradingMenu",
+    "parentId": 193,
+    "type": 3,
+    "uuidName": "m87"
+  },
+  {
+    "id": 88,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看列表",
+    "url": "/FindEcSupplyTrading",
+    "parentId": 87,
+    "type": 3,
+    "uuidName": "m88"
+  },
+  {
+    "id": 89,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "销售业务消息",
+    "url": "/SupplierMessageMenu",
+    "parentId": 193,
+    "type": 3,
+    "uuidName": "m89"
+  },
+  {
+    "id": 90,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看列表",
+    "url": "/FindSupplierMessage",
+    "parentId": 89,
+    "type": 3,
+    "uuidName": "m90"
+  },
+  {
+    "id": 91,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "采购商工作台",
+    "url": "/BuyerBenchMenu",
+    "parentId": 194,
+    "type": 3,
+    "uuidName": "m91"
+  },
+  {
+    "id": 92,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看工作台",
+    "url": "/BuyerBench",
+    "parentId": 91,
+    "type": 3,
+    "uuidName": "m92"
+  },
+  {
+    "id": 93,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "待办事项",
+    "url": "BtnBuyerWork",
+    "parentId": 91,
+    "type": 3,
+    "uuidName": "m93"
+  },
+  {
+    "id": 94,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "请购单审批",
+    "url": "/BuyerWaitApprovalPurchaseOrder",
+    "parentId": 93,
+    "type": 3,
+    "uuidName": "m94"
+  },
+  {
+    "id": 95,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "商品审批",
+    "url": "/BuyerWaitApprovalProduct",
+    "parentId": 93,
+    "type": 3,
+    "uuidName": "m95"
+  },
+  {
+    "id": 96,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "订单审批",
+    "url": "/BuyerWaitApprovalOrder",
+    "parentId": 93,
+    "type": 3,
+    "uuidName": "m96"
+  },
+  {
+    "id": 97,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "价格变更确认",
+    "url": "/BuyerWaitPriceChange",
+    "parentId": 93,
+    "type": 3,
+    "uuidName": "m97"
+  },
+  {
+    "id": 98,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "商品管理",
+    "url": "BtnBuyerProduct",
+    "parentId": 91,
+    "type": 3,
+    "uuidName": "m98"
+  },
+  {
+    "id": 99,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "商品选购",
+    "url": "BtnBuyerAddProduct",
+    "parentId": 91,
+    "type": 3,
+    "uuidName": "m99"
+  },
+  {
+    "id": 100,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "我的请购单",
+    "url": "BtnBuyerMyPurseOrder",
+    "parentId": 91,
+    "type": 3,
+    "uuidName": "m100"
+  },
+  {
+    "id": 101,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "采购业务消息",
+    "url": "BtnBuyerMessage",
+    "parentId": 91,
+    "type": 3,
+    "uuidName": "m101"
+  },
+  {
+    "id": 102,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "我的收藏夹",
+    "url": "BtnBuyerMyCollect",
+    "parentId": 91,
+    "type": 3,
+    "uuidName": "m102"
+  },
+  {
+    "id": 103,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "最新订单",
+    "url": "BtnBuyerNewOrder",
+    "parentId": 91,
+    "type": 3,
+    "uuidName": "m103"
+  },
+  {
+    "id": 104,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "商品选购",
+    "url": "/EcProductBuyMenu",
+    "parentId": 194,
+    "type": 3,
+    "uuidName": "m104"
+  },
+  {
+    "id": 105,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看列表",
+    "url": "/EcProductBuy",
+    "parentId": 104,
+    "type": 3,
+    "uuidName": "m105"
+  },
+  {
+    "id": 107,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "添加到购物车",
+    "url": "BtnAddCart",
+    "parentId": 104,
+    "type": 3,
+    "uuidName": "m107"
+  },
+  {
+    "id": 108,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "添加到收藏夹",
+    "url": "BtnAddCollect",
+    "parentId": 104,
+    "type": 3,
+    "uuidName": "m108"
+  },
+  {
+    "id": 109,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看商品历史版本",
+    "url": "/ViewBuyerProductHistory",
+    "parentId": 91,
+    "type": 3,
+    "uuidName": "m109"
+  },
+  {
+    "id": 110,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "请购单管理",
+    "url": "/EcPurchaseShopMenu",
+    "parentId": 194,
+    "type": 3,
+    "uuidName": "m110"
+  },
+  {
+    "id": 111,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看列表",
+    "url": "/FindEcPurchaseShop",
+    "parentId": 110,
+    "type": 3,
+    "uuidName": "m111"
+  },
+  {
+    "id": 112,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看详情",
+    "url": "/ViewEcPurchaseShop",
+    "parentId": 110,
+    "type": 3,
+    "uuidName": "m112"
+  },
+  {
+    "id": 113,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "编辑",
+    "url": "/EditEcPurchaseShop",
+    "parentId": 110,
+    "type": 3,
+    "uuidName": "m113"
+  },
+  {
+    "id": 114,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "提交",
+    "url": "BtnPurchaseShopSubmit",
+    "parentId": 110,
+    "type": 3,
+    "uuidName": "m114"
+  },
+  {
+    "id": 115,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "删除",
+    "url": "BtnPurchaseShopDel",
+    "parentId": 110,
+    "type": 3,
+    "uuidName": "m115"
+  },
+  {
+    "id": 116,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "订单管理",
+    "url": "/EcPurchaseOrderMenu",
+    "parentId": 194,
+    "type": 3,
+    "uuidName": "m116"
+  },
+  {
+    "id": 117,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看列表",
+    "url": "/FindEcPurchaseOrder",
+    "parentId": 116,
+    "type": 3,
+    "uuidName": "m117"
+  },
+  {
+    "id": 118,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看详情",
+    "url": "/ViewEcPurchaseOrder",
+    "parentId": 116,
+    "type": 3,
+    "uuidName": "m118"
+  },
+  {
+    "id": 119,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "取消",
+    "url": "BuyerCancel",
+    "parentId": 118,
+    "type": 3,
+    "uuidName": "m119"
+  },
+  {
+    "id": 120,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "收货",
+    "url": "/EditEcPurchaseCollect",
+    "parentId": 118,
+    "type": 3,
+    "uuidName": "m120"
+  },
+  {
+    "id": 121,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "退货",
+    "url": "/NewEcPurchaseRefund",
+    "parentId": 118,
+    "type": 3,
+    "uuidName": "m121"
+  },
+  {
+    "id": 122,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "完成",
+    "url": "BuyerClose",
+    "parentId": 118,
+    "type": 3,
+    "uuidName": "m122"
+  },
+  {
+    "id": 123,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "锁定",
+    "url": "BuyerLock",
+    "parentId": 118,
+    "type": 3,
+    "uuidName": "m123"
+  },
+  {
+    "id": 124,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "打开",
+    "url": "BuyerOpen",
+    "parentId": 118,
+    "type": 3,
+    "uuidName": "m124"
+  },
+  {
+    "id": 125,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "收货单",
+    "url": "BtnBuyerViewCollect",
+    "parentId": 116,
+    "type": 3,
+    "uuidName": "m125"
+  },
+  {
+    "id": 126,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "发货单",
+    "url": "BtnBuyerViewDeliver,/ViewEcPurchaseDeliver",
+    "parentId": 116,
+    "type": 3,
+    "uuidName": "m126"
+  },
+  {
+    "id": 127,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "退货单",
+    "url": "BtnBuyerViewRefund",
+    "parentId": 116,
+    "type": 3,
+    "uuidName": "m127"
+  },
+  {
+    "id": 128,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "上传附件",
+    "url": "BtnUploadOrderAttachmentBu",
+    "parentId": 116,
+    "type": 3,
+    "uuidName": "m128"
+  },
+  {
+    "id": 129,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "编辑附件",
+    "url": "BtnUpdateOrderAttachmentBu",
+    "parentId": 116,
+    "type": 3,
+    "uuidName": "m129"
+  },
+  {
+    "id": 130,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "删除附件",
+    "url": "BtnDelOrderAttachmentBu",
+    "parentId": 116,
+    "type": 3,
+    "uuidName": "m130"
+  },
+  {
+    "id": 131,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "收货单管理",
+    "url": "/EcPurchaseCollectMenu",
+    "parentId": 194,
+    "type": 3,
+    "uuidName": "m131"
+  },
+  {
+    "id": 132,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看列表",
+    "url": "/FindEcPurchaseCollect",
+    "parentId": 131,
+    "type": 3,
+    "uuidName": "m132"
+  },
+  {
+    "id": 133,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看详情",
+    "url": "/ViewEcPurchaseCollect",
+    "parentId": 131,
+    "type": 3,
+    "uuidName": "m133"
+  },
+  {
+    "id": 134,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "退货单管理",
+    "url": "/EcPurchaseRefundMenu",
+    "parentId": 194,
+    "type": 3,
+    "uuidName": "m134"
+  },
+  {
+    "id": 135,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看列表",
+    "url": "/FindEcPurchaseRefund",
+    "parentId": 134,
+    "type": 3,
+    "uuidName": "m135"
+  },
+  {
+    "id": 136,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看详情",
+    "url": "/ViewEcPurchaseRefund",
+    "parentId": 134,
+    "type": 3,
+    "uuidName": "m136"
+  },
+  {
+    "id": 137,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "编辑",
+    "url": "/EditEcPurchaseRefund",
+    "parentId": 134,
+    "type": 3,
+    "uuidName": "m137"
+  },
+  {
+    "id": 138,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "提交",
+    "url": "BtnEcRefundSubmit",
+    "parentId": 134,
+    "type": 3,
+    "uuidName": "m138"
+  },
+  {
+    "id": 139,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "删除",
+    "url": "BtnEcRefundDel",
+    "parentId": 134,
+    "type": 3,
+    "uuidName": "m139"
+  },
+  {
+    "id": 140,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "商品分类管理",
+    "url": "/EcProductCategoryMenu",
+    "parentId": 194,
+    "type": 3,
+    "uuidName": "m140"
+  },
+  {
+    "id": 141,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看详情",
+    "url": "/EcProductCategory",
+    "parentId": 140,
+    "type": 3,
+    "uuidName": "m141"
+  },
+  {
+    "id": 142,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "新增下级分类",
+    "url": "BtnBuCategoryAdd",
+    "parentId": 140,
+    "type": 3,
+    "uuidName": "m142"
+  },
+  {
+    "id": 143,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看已归档分类",
+    "url": "/EcProductCategoryFile",
+    "parentId": 140,
+    "type": 3,
+    "uuidName": "m143"
+  },
+  {
+    "id": 144,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "保存",
+    "url": "BtnBuCategorySubmit",
+    "parentId": 140,
+    "type": 3,
+    "uuidName": "m144"
+  },
+  {
+    "id": 145,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "删除",
+    "url": "BtnBuCategoryDel",
+    "parentId": 140,
+    "type": 3,
+    "uuidName": "m145"
+  },
+  {
+    "id": 146,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "归档",
+    "url": "BtnBuCategoryCancel",
+    "parentId": 140,
+    "type": 3,
+    "uuidName": "m146"
+  },
+  {
+    "id": 147,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "商品分类授权",
+    "url": "/EcBuCategoryAuthMenu",
+    "parentId": 194,
+    "type": 3,
+    "uuidName": "m147"
+  },
+  {
+    "id": 148,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看列表",
+    "url": "/EcProductCategoryAuth",
+    "parentId": 147,
+    "type": 3,
+    "uuidName": "m148"
+  },
+  {
+    "id": 149,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "授权",
+    "url": "BtnCategoryAuthAdd",
+    "parentId": 147,
+    "type": 3,
+    "uuidName": "m149"
+  },
+  {
+    "id": 150,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "批量授权",
+    "url": "BtnCategoryAuthAddAll",
+    "parentId": 147,
+    "type": 3,
+    "uuidName": "m150"
+  },
+  {
+    "id": 151,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "商品管理",
+    "url": "/EcPurchaseProduct",
+    "parentId": 194,
+    "type": 3,
+    "uuidName": "m151"
+  },
+  {
+    "id": 152,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看列表",
+    "url": "/FindEcPurchaseProduct",
+    "parentId": 151,
+    "type": 3,
+    "uuidName": "m152"
+  },
+  {
+    "id": 153,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看详情",
+    "url": "/ViewPurchaseProduct",
+    "parentId": 151,
+    "type": 3,
+    "uuidName": "m153"
+  },
+  {
+    "id": 154,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "审批",
+    "url": "BtnProductApproval",
+    "parentId": 151,
+    "type": 3,
+    "uuidName": "m154"
+  },
+  {
+    "id": 155,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "上架",
+    "url": "BtnProductStockOn",
+    "parentId": 151,
+    "type": 3,
+    "uuidName": "m155"
+  },
+  {
+    "id": 156,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "下架",
+    "url": "BtnProductStockDown",
+    "parentId": 151,
+    "type": 3,
+    "uuidName": "m156"
+  },
+  {
+    "id": 157,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "有效设置",
+    "url": "BtnProductEffective",
+    "parentId": 151,
+    "type": 3,
+    "uuidName": "m157"
+  },
+  {
+    "id": 158,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "无效设置",
+    "url": "BtnProductInvalid",
+    "parentId": 151,
+    "type": 3,
+    "uuidName": "m158"
+  },
+  {
+    "id": 159,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "商品编码",
+    "url": "BtnProductCode",
+    "parentId": 151,
+    "type": 3,
+    "uuidName": "m159"
+  },
+  {
+    "id": 160,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "商品更改分类",
+    "url": "/EcProductCategoryChange",
+    "parentId": 151,
+    "type": 3,
+    "uuidName": "m160"
+  },
+  {
+    "id": 161,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "更改分类",
+    "url": "BtnUpdateProductCategory",
+    "parentId": 160,
+    "type": 3,
+    "uuidName": "m161"
+  },
+  {
+    "id": 162,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "操作记录",
+    "url": "BtnProductHistory",
+    "parentId": 151,
+    "type": 3,
+    "uuidName": "m162"
+  },
+  {
+    "id": 163,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "价格变更确认管理",
+    "url": "/EcProductChangeMenu",
+    "parentId": 194,
+    "type": 3,
+    "uuidName": "m163"
+  },
+  {
+    "id": 164,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看列表",
+    "url": "/FindPriceChanges",
+    "parentId": 163,
+    "type": 3,
+    "uuidName": "m164"
+  },
+  {
+    "id": 165,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看详情",
+    "url": "BtnProductChangeView",
+    "parentId": 163,
+    "type": 3,
+    "uuidName": "m165"
+  },
+  {
+    "id": 166,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "价格变更确认",
+    "url": "BtnProductChangeSubmit",
+    "parentId": 163,
+    "type": 3,
+    "uuidName": "m166"
+  },
+  {
+    "id": 167,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "购物车",
+    "url": "/EcCartMenu",
+    "parentId": 194,
+    "type": 3,
+    "uuidName": "m167"
+  },
+  {
+    "id": 168,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看列表",
+    "url": "/EcCart",
+    "parentId": 167,
+    "type": 3,
+    "uuidName": "m168"
+  },
+  {
+    "id": 169,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "生成请购单",
+    "url": "/EcSettlement",
+    "parentId": 167,
+    "type": 3,
+    "uuidName": "m169"
+  },
+  {
+    "id": 170,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "交易关系",
+    "url": "/EcPurchaseRelMenu",
+    "parentId": 194,
+    "type": 3,
+    "uuidName": "m170"
+  },
+  {
+    "id": 171,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看列表",
+    "url": "/FindPurchaseRelationship",
+    "parentId": 170,
+    "type": 3,
+    "uuidName": "m171"
+  },
+  {
+    "id": 172,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "新建关系",
+    "url": "BtnNewRel",
+    "parentId": 170,
+    "type": 3,
+    "uuidName": "m172"
+  },
+  {
+    "id": 173,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "取消关系",
+    "url": "BtnCanelRel",
+    "parentId": 170,
+    "type": 3,
+    "uuidName": "m173"
+  },
+  {
+    "id": 174,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "重建关系",
+    "url": "BtnRebuildRel",
+    "parentId": 170,
+    "type": 3,
+    "uuidName": "m174"
+  },
+  {
+    "id": 175,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "收货地址",
+    "url": "/EcPurchaseDeliveryMenu",
+    "parentId": 194,
+    "type": 3,
+    "uuidName": "m175"
+  },
+  {
+    "id": 176,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看列表",
+    "url": "/FindBuyerDeliveryManage",
+    "parentId": 175,
+    "type": 3,
+    "uuidName": "m176"
+  },
+  {
+    "id": 177,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "新增",
+    "url": "BtnDeliveryAdd",
+    "parentId": 175,
+    "type": 3,
+    "uuidName": "m177"
+  },
+  {
+    "id": 178,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "编辑",
+    "url": "BtnDeliveryEdit",
+    "parentId": 175,
+    "type": 3,
+    "uuidName": "m178"
+  },
+  {
+    "id": 179,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "删除",
+    "url": "BtnDeliveryDel",
+    "parentId": 175,
+    "type": 3,
+    "uuidName": "m179"
+  },
+  {
+    "id": 180,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "收货规则设置",
+    "url": "/EcPurchaseReceiveRuleMenu",
+    "parentId": 194,
+    "type": 3,
+    "uuidName": "m180"
+  },
+  {
+    "id": 181,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看",
+    "url": "/FindBuyerReceiveRule",
+    "parentId": 180,
+    "type": 3,
+    "uuidName": "m181"
+  },
+  {
+    "id": 182,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "保存",
+    "url": "BtnDeliverySubmit",
+    "parentId": 180,
+    "type": 3,
+    "uuidName": "m182"
+  },
+  {
+    "id": 183,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "审批流程",
+    "url": "/EcBuyerApprovalMenu",
+    "parentId": 194,
+    "type": 3,
+    "uuidName": "m183"
+  },
+  {
+    "id": 184,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "查看",
+    "url": "/FindBuyerApprovalProcess",
+    "parentId": 183,
+    "type": 3,
+    "uuidName": "m184"
+  },
+  {
+    "id": 185,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "编辑",
+    "url": "BtnApprovalSubmit",
+    "parentId": 183,
+    "type": 3,
+    "uuidName": "m185"
+  },
+  {
+    "id": 186,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "启用",
+    "url": "BtnApprovalEnb",
+    "parentId": 183,
+    "type": 3,
+    "uuidName": "m186"
+  },
+  {
+    "id": 187,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "停用",
+    "url": "BtnApprovalDis",
+    "parentId": 183,
+    "type": 3,
+    "uuidName": "m187"
+  },
+  {
+    "id": 188,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "我的收藏夹",
+    "url": "/EcBuyerCollectionMenu",
+    "parentId": 194,
+    "type": 3,
+    "uuidName": "m188"
+  },
+  {
+    "id": 189,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "收藏夹列表",
+    "url": "/FindEcPurchaseCollection",
+    "parentId": 188,
+    "type": 3,
+    "uuidName": "m189"
+  },
+  {
+    "id": 190,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "采购业务消息",
+    "url": "/PurchaseMessageMenu",
+    "parentId": 194,
+    "type": 3,
+    "uuidName": "m190"
+  },
+  {
+    "id": 191,
+    "createTime": "2018-09-12 00:00:00",
+    "name": "我的消息",
+    "url": "/FindPurchaseMessage",
+    "parentId": 190,
+    "type": 3,
+    "uuidName": "m191"
+  },
+  {
+    "id": 192,
+    "createTime": "2018-09-12 17:57:33",
+    "name": "企业账户相关",
+    "parentId": 1,
+    "type": 2,
+    "uuidName": "m192"
+  },
+  {
+    "id": 193,
+    "createTime": "2018-09-12 17:58:12",
+    "name": "供应商身份",
+    "parentId": 1,
+    "type": 2,
+    "uuidName": "m193"
+  },
+  {
+    "id": 194,
+    "createTime": "2018-09-12 17:58:25",
+    "name": "采购商身份",
+    "parentId": 1,
+    "type": 2,
+    "uuidName": "m194"
+  },
+  {
+    "id": 196,
+    "createTime": "2018-09-17 18:45:02",
+    "name": "运营端",
+    "parentId": 0,
+    "type": 2,
+    "uuidName": "m196"
+  },
+  {
+    "id": 197,
+    "createTime": "2018-10-18 17:41:12",
+    "name": "用户端",
+    "parentId": 0,
+    "type": 2,
+    "uuidName": "m197"
+  },
+  {
+    "id": 198,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "企业管理",
+    "url": "/PartyGroupMenu",
+    "parentId": 271,
+    "type": 3,
+    "uuidName": "m198"
+  },
+  {
+    "id": 199,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "查看列表",
+    "url": "/FindPartyGroup",
+    "parentId": 198,
+    "type": 3,
+    "uuidName": "m199"
+  },
+  {
+    "id": 202,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "查看详情",
+    "url": "/ViewPartyGroup",
+    "parentId": 198,
+    "type": 3,
+    "uuidName": "m202"
+  },
+  {
+    "id": 206,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "交易关系-他的供应商",
+    "url": "/FindSupplier",
+    "parentId": 198,
+    "type": 3,
+    "uuidName": "m206"
+  },
+  {
+    "id": 207,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "交易关系-他的采购商",
+    "url": "/FindBuyer",
+    "parentId": 198,
+    "type": 3,
+    "uuidName": "m207"
+  },
+  {
+    "id": 208,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "发货地址",
+    "url": "/FindDeliveryAddress",
+    "parentId": 198,
+    "type": 3,
+    "uuidName": "m208"
+  },
+  {
+    "id": 209,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "收货地址",
+    "url": "/FindCollectAddress",
+    "parentId": 198,
+    "type": 3,
+    "uuidName": "m209"
+  },
+  {
+    "id": 210,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "收货规则",
+    "url": "/ViewSysReceiptRules",
+    "parentId": 198,
+    "type": 3,
+    "uuidName": "m210"
+  },
+  {
+    "id": 211,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "审批流程",
+    "url": "/ViewSysApproval",
+    "parentId": 198,
+    "type": 3,
+    "uuidName": "m211"
+  },
+  {
+    "id": 213,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "企业用户",
+    "url": "/PartyPersonMenu",
+    "parentId": 271,
+    "type": 3,
+    "uuidName": "m213"
+  },
+  {
+    "id": 214,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "企业用户管理",
+    "url": "/PartyPersonAdmin",
+    "parentId": 213,
+    "type": 3,
+    "uuidName": "m214"
+  },
+  {
+    "id": 215,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "查看列表",
+    "url": "/FindPartyPerson",
+    "parentId": 214,
+    "type": 3,
+    "uuidName": "m215"
+  },
+  {
+    "id": 216,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "查看详情",
+    "url": "/ViewPartyPerson",
+    "parentId": 214,
+    "type": 3,
+    "uuidName": "m216"
+  },
+  {
+    "id": 217,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "收藏夹",
+    "url": "/FindSysCollection",
+    "parentId": 214,
+    "type": 3,
+    "uuidName": "m217"
+  },
+  {
+    "id": 221,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "商品管理",
+    "url": "/SysProductMenu",
+    "parentId": 271,
+    "type": 3,
+    "uuidName": "m221"
+  },
+  {
+    "id": 234,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "商品类别",
+    "url": "/SysCategoryMenu",
+    "parentId": 221,
+    "type": 3,
+    "uuidName": "m234"
+  },
+  {
+    "id": 235,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "商品分类",
+    "url": "/FindSysCategory",
+    "parentId": 234,
+    "type": 3,
+    "uuidName": "m235"
+  },
+  {
+    "id": 236,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "查看授权企业",
+    "url": "/ViewSysCategory",
+    "parentId": 234,
+    "type": 3,
+    "uuidName": "m236"
+  },
+  {
+    "id": 237,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "请购单管理",
+    "url": "/SysPurseOrderMenu",
+    "parentId": 271,
+    "type": 3,
+    "uuidName": "m237"
+  },
+  {
+    "id": 238,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "查看列表",
+    "url": "/FindSysPurseOrder",
+    "parentId": 237,
+    "type": 3,
+    "uuidName": "m238"
+  },
+  {
+    "id": 239,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "查看详情",
+    "url": "/ViewSysPurseOrder",
+    "parentId": 237,
+    "type": 3,
+    "uuidName": "m239"
+  },
+  {
+    "id": 240,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "订单管理",
+    "url": "/SysOrderMenu",
+    "parentId": 271,
+    "type": 3,
+    "uuidName": "m240"
+  },
+  {
+    "id": 241,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "订单列表",
+    "url": "/FindSysOrder",
+    "parentId": 240,
+    "type": 3,
+    "uuidName": "m241"
+  },
+  {
+    "id": 242,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "查看订单",
+    "url": "/ViewSysOrder",
+    "parentId": 240,
+    "type": 3,
+    "uuidName": "m242"
+  },
+  {
+    "id": 243,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "发货单",
+    "url": "/ViewSysDeliver",
+    "parentId": 240,
+    "type": 3,
+    "uuidName": "m243"
+  },
+  {
+    "id": 244,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "退货单",
+    "url": "/ViewSysRefund",
+    "parentId": 240,
+    "type": 3,
+    "uuidName": "m244"
+  },
+  {
+    "id": 245,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "收货单",
+    "url": "/ViewSysCollect",
+    "parentId": 240,
+    "type": 3,
+    "uuidName": "m245"
+  },
+  {
+    "id": 246,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "消息管理",
+    "url": "/EcMessageMenu",
+    "parentId": 271,
+    "type": 3,
+    "uuidName": "m246"
+  },
+  {
+    "id": 247,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "查看列表",
+    "url": "/FindEcMessage",
+    "parentId": 246,
+    "type": 3,
+    "uuidName": "m247"
+  },
+  {
+    "id": 248,
+    "createTime": "2018-09-17 00:00:00",
+    "name": "查看详情",
+    "url": "/EditEcMessage",
+    "parentId": 246,
+    "type": 3,
+    "uuidName": "m248"
+  },
+  {
+    "id": 266,
+    "createTime": "2018-09-17 19:31:54",
+    "name": "用户中心",
+    "parentId": 197,
+    "type": 2,
+    "uuidName": "m266"
+  },
+  {
+    "id": 267,
+    "createTime": "2018-09-17 19:32:18",
+    "name": "商品系统",
+    "parentId": 197,
+    "type": 2,
+    "uuidName": "m267"
+  },
+  {
+    "id": 268,
+    "createTime": "2018-09-17 19:32:41",
+    "name": "商机系统",
+    "parentId": 197,
+    "type": 2,
+    "uuidName": "m268"
+  },
+  {
+    "id": 269,
+    "createTime": "2018-09-17 19:32:53",
+    "name": "寻源系统",
+    "parentId": 197,
+    "type": 2,
+    "uuidName": "m269"
+  },
+  {
+    "id": 270,
+    "createTime": "2018-09-17 19:34:09",
+    "name": "生产监督",
+    "parentId": 197,
+    "type": 2,
+    "uuidName": "m270"
+  },
+  {
+    "id": 271,
+    "createTime": "2018-09-17 19:48:11",
+    "name": "采购协同",
+    "parentId": 196,
+    "type": 2,
+    "uuidName": "m271"
+  },
+  {
+    "id": 272,
+    "createTime": "2018-09-25 11:01:54",
+    "name": "用户中心",
+    "parentId": 196,
+    "type": 2,
+    "uuidName": "m272"
+  },
+  {
+    "id": 273,
+    "createTime": "2018-09-25 11:02:22",
+    "name": "委托寻源",
+    "parentId": 196,
+    "type": 2,
+    "uuidName": "m273"
+  },
+  {
+    "id": 274,
+    "createTime": "2018-09-25 11:03:15",
+    "name": "采购竞价",
+    "parentId": 196,
+    "type": 2,
+    "uuidName": "m274"
+  },
+  {
+    "id": 275,
+    "createTime": "2018-09-25 11:03:35",
+    "name": "商机管理",
+    "parentId": 196,
+    "type": 2,
+    "uuidName": "m275"
+  },
+  {
+    "id": 276,
+    "createTime": "2018-09-25 11:04:11",
+    "name": "生产监督",
+    "parentId": 196,
+    "type": 2,
+    "uuidName": "m276"
+  },
+  {
+    "id": 277,
+    "createTime": "2018-09-25 11:04:29",
+    "name": "商品管理",
+    "parentId": 196,
+    "type": 2,
+    "uuidName": "m277"
+  },
+  {
+    "id": 278,
+    "createTime": "2018-09-25 11:04:47",
+    "name": "看板管理",
+    "parentId": 196,
+    "type": 2,
+    "uuidName": "m278"
+  },
+  {
+    "id": 279,
+    "createTime": "2018-09-25 11:05:12",
+    "name": "综合管理",
+    "parentId": 196,
+    "type": 2,
+    "uuidName": "m279"
+  },
+  {
+    "id": 423,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "委托寻源申请管理",
+    "url": "/caiEntrustApply/list.shtml",
+    "parentId": 273,
+    "type": 3,
+    "uuidName": "m423"
+  },
+  {
+    "id": 424,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看详情",
+    "parentId": 423,
+    "type": 4,
+    "uuidName": "m424"
+  },
+  {
+    "id": 425,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "审核",
+    "parentId": 423,
+    "type": 4,
+    "uuidName": "m425"
+  },
+  {
+    "id": 426,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "创建委托项目",
+    "parentId": 423,
+    "type": 4,
+    "uuidName": "m426"
+  },
+  {
+    "id": 428,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "委托寻源项目管理",
+    "url": "/caiEntrustInfo/list.shtml",
+    "parentId": 273,
+    "type": 3,
+    "uuidName": "m428"
+  },
+  {
+    "id": 429,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看详情",
+    "parentId": 428,
+    "type": 4,
+    "uuidName": "m429"
+  },
+  {
+    "id": 430,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 428,
+    "type": 4,
+    "uuidName": "m430"
+  },
+  {
+    "id": 431,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "开始服务",
+    "parentId": 428,
+    "type": 4,
+    "uuidName": "m431"
+  },
+  {
+    "id": 432,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "节点列表",
+    "parentId": 428,
+    "type": 4,
+    "uuidName": "m432"
+  },
+  {
+    "id": 433,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "关闭",
+    "parentId": 428,
+    "type": 4,
+    "uuidName": "m433"
+  },
+  {
+    "id": 434,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "授权及URL",
+    "parentId": 428,
+    "type": 4,
+    "uuidName": "m434"
+  },
+  {
+    "id": 436,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "商机前端信息管理",
+    "url": "",
+    "parentId": 275,
+    "type": 3,
+    "uuidName": "m436"
+  },
+  {
+    "id": 437,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "商机项目信息管理",
+    "url": "/caiGjxyInfo/list.shtml",
+    "parentId": 436,
+    "type": 3,
+    "uuidName": "m437"
+  },
+  {
+    "id": 438,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看详情",
+    "parentId": 437,
+    "type": 4,
+    "uuidName": "m438"
+  },
+  {
+    "id": 439,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看匹配的供应商",
+    "parentId": 437,
+    "type": 4,
+    "uuidName": "m439"
+  },
+  {
+    "id": 440,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "上下线设置",
+    "parentId": 437,
+    "type": 4,
+    "uuidName": "m440"
+  },
+  {
+    "id": 441,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑基本信息",
+    "parentId": 437,
+    "type": 4,
+    "uuidName": "m441"
+  },
+  {
+    "id": 442,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "批量上下线设置",
+    "parentId": 437,
+    "type": 4,
+    "uuidName": "m442"
+  },
+  {
+    "id": 443,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "置顶推荐",
+    "parentId": 437,
+    "type": 4,
+    "uuidName": "m443"
+  },
+  {
+    "id": 444,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "商机导出",
+    "parentId": 437,
+    "type": 4,
+    "uuidName": "m444"
+  },
+  {
+    "id": 445,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "置顶商机管理",
+    "url": "/caiGjxyInfo/list3.shtml",
+    "parentId": 436,
+    "type": 3,
+    "uuidName": "m445"
+  },
+  {
+    "id": 446,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "修改置顶值",
+    "parentId": 445,
+    "type": 4,
+    "uuidName": "m446"
+  },
+  {
+    "id": 447,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除",
+    "parentId": 445,
+    "type": 4,
+    "uuidName": "m447"
+  },
+  {
+    "id": 448,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "置顶行业类别管理",
+    "parentId": 445,
+    "type": 4,
+    "uuidName": "m448"
+  },
+  {
+    "id": 449,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "推荐商机管理",
+    "url": "/caiGjxyInfo/list4.shtml",
+    "parentId": 436,
+    "type": 3,
+    "uuidName": "m449"
+  },
+  {
+    "id": 450,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "修改推荐值",
+    "parentId": 449,
+    "type": 4,
+    "uuidName": "m450"
+  },
+  {
+    "id": 451,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除",
+    "parentId": 449,
+    "type": 4,
+    "uuidName": "m451"
+  },
+  {
+    "id": 452,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "商机评价管理",
+    "url": "/caiGjxyEvaluate/list.shtml",
+    "parentId": 436,
+    "type": 3,
+    "uuidName": "m452"
+  },
+  {
+    "id": 453,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看评价详情",
+    "parentId": 452,
+    "type": 4,
+    "uuidName": "m453"
+  },
+  {
+    "id": 454,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 452,
+    "type": 4,
+    "uuidName": "m454"
+  },
+  {
+    "id": 455,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "审核",
+    "parentId": 452,
+    "type": 4,
+    "uuidName": "m455"
+  },
+  {
+    "id": 456,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "上线&下线",
+    "parentId": 452,
+    "type": 4,
+    "uuidName": "m456"
+  },
+  {
+    "id": 457,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "商机套餐内容管理",
+    "url": "/cGjxyCombo/list.shtml",
+    "parentId": 436,
+    "type": 3,
+    "uuidName": "m457"
+  },
+  {
+    "id": 458,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "新增",
+    "parentId": 457,
+    "type": 4,
+    "uuidName": "m458"
+  },
+  {
+    "id": 459,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 457,
+    "type": 4,
+    "uuidName": "m459"
+  },
+  {
+    "id": 460,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "关联模板",
+    "parentId": 457,
+    "type": 4,
+    "uuidName": "m460"
+  },
+  {
+    "id": 461,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看",
+    "parentId": 457,
+    "type": 4,
+    "uuidName": "m461"
+  },
+  {
+    "id": 462,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "显示/隐藏",
+    "parentId": 457,
+    "type": 4,
+    "uuidName": "m462"
+  },
+  {
+    "id": 463,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "国内寻源商机管理",
+    "url": "/caiGnxyInfo/list.shtml",
+    "parentId": 436,
+    "type": 3,
+    "uuidName": "m463"
+  },
+  {
+    "id": 464,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "新增",
+    "parentId": 463,
+    "type": 4,
+    "uuidName": "m464"
+  },
+  {
+    "id": 465,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 463,
+    "type": 4,
+    "uuidName": "m465"
+  },
+  {
+    "id": 466,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除",
+    "parentId": 463,
+    "type": 4,
+    "uuidName": "m466"
+  },
+  {
+    "id": 467,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "发布/撤销",
+    "parentId": 463,
+    "type": 4,
+    "uuidName": "m467"
+  },
+  {
+    "id": 468,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "详情",
+    "parentId": 463,
+    "type": 4,
+    "uuidName": "m468"
+  },
+  {
+    "id": 469,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "商机行业类别开关（PC）",
+    "url": "/frontIndustryCateSet/list.shtml",
+    "parentId": 436,
+    "type": 3,
+    "uuidName": "m469"
+  },
+  {
+    "id": 470,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "开启",
+    "parentId": 469,
+    "type": 4,
+    "uuidName": "m470"
+  },
+  {
+    "id": 471,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "关闭",
+    "parentId": 469,
+    "type": 4,
+    "uuidName": "m471"
+  },
+  {
+    "id": 472,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "返回上一级",
+    "parentId": 469,
+    "type": 4,
+    "uuidName": "m472"
+  },
+  {
+    "id": 473,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "排序",
+    "parentId": 469,
+    "type": 4,
+    "uuidName": "m473"
+  },
+  {
+    "id": 474,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看",
+    "parentId": 469,
+    "type": 4,
+    "uuidName": "m474"
+  },
+  {
+    "id": 475,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "商机行业类别开关（wap）",
+    "url": "/frontIndustryCateSet/list3.shtml",
+    "parentId": 436,
+    "type": 3,
+    "uuidName": "m475"
+  },
+  {
+    "id": 476,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "开启",
+    "parentId": 475,
+    "type": 4,
+    "uuidName": "m476"
+  },
+  {
+    "id": 477,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "关闭",
+    "parentId": 475,
+    "type": 4,
+    "uuidName": "m477"
+  },
+  {
+    "id": 478,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "返回上一级",
+    "parentId": 475,
+    "type": 4,
+    "uuidName": "m478"
+  },
+  {
+    "id": 479,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "排序",
+    "parentId": 475,
+    "type": 4,
+    "uuidName": "m479"
+  },
+  {
+    "id": 480,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 475,
+    "type": 4,
+    "uuidName": "m480"
+  },
+  {
+    "id": 481,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "商机用户需求管理",
+    "url": "",
+    "parentId": 275,
+    "type": 3,
+    "uuidName": "m481"
+  },
+  {
+    "id": 482,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "商机反馈管理",
+    "url": "/caiGjxyFeedback/list.shtml",
+    "parentId": 481,
+    "type": 3,
+    "uuidName": "m482"
+  },
+  {
+    "id": 483,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "处理",
+    "parentId": 482,
+    "type": 4,
+    "uuidName": "m483"
+  },
+  {
+    "id": 484,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除",
+    "parentId": 482,
+    "type": 4,
+    "uuidName": "m484"
+  },
+  {
+    "id": 485,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看反馈详情",
+    "parentId": 482,
+    "type": 4,
+    "uuidName": "m485"
+  },
+  {
+    "id": 490,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "商机服务申请管理（wap）",
+    "url": "/cCompanyAttendPurchaseBid/list2.shtml",
+    "parentId": 481,
+    "type": 3,
+    "uuidName": "m490"
+  },
+  {
+    "id": 491,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "国内寻源商机供货信息管理",
+    "url": "/caiGnxySupplyInfo/list.shtml",
+    "parentId": 481,
+    "type": 3,
+    "uuidName": "m491"
+  },
+  {
+    "id": 492,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "商机策略管理",
+    "url": "",
+    "parentId": 275,
+    "type": 3,
+    "uuidName": "m492"
+  },
+  {
+    "id": 493,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "商机开关策略设置",
+    "url": "/ploy/list.shtml",
+    "parentId": 492,
+    "type": 3,
+    "uuidName": "m493"
+  },
+  {
+    "id": 494,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "新增",
+    "parentId": 493,
+    "type": 4,
+    "uuidName": "m494"
+  },
+  {
+    "id": 495,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 493,
+    "type": 4,
+    "uuidName": "m495"
+  },
+  {
+    "id": 496,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除",
+    "parentId": 493,
+    "type": 4,
+    "uuidName": "m496"
+  },
+  {
+    "id": 497,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看详情",
+    "parentId": 493,
+    "type": 4,
+    "uuidName": "m497"
+  },
+  {
+    "id": 498,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "启用",
+    "parentId": 493,
+    "type": 4,
+    "uuidName": "m498"
+  },
+  {
+    "id": 499,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "停用",
+    "parentId": 493,
+    "type": 4,
+    "uuidName": "m499"
+  },
+  {
+    "id": 500,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "体验商机策略设置",
+    "url": "/ploy/list2.shtml",
+    "parentId": 492,
+    "type": 3,
+    "uuidName": "m500"
+  },
+  {
+    "id": 501,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "新增",
+    "parentId": 500,
+    "type": 4,
+    "uuidName": "m501"
+  },
+  {
+    "id": 502,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 500,
+    "type": 4,
+    "uuidName": "m502"
+  },
+  {
+    "id": 503,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除",
+    "parentId": 500,
+    "type": 4,
+    "uuidName": "m503"
+  },
+  {
+    "id": 504,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看详情",
+    "parentId": 500,
+    "type": 4,
+    "uuidName": "m504"
+  },
+  {
+    "id": 505,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "启用",
+    "parentId": 500,
+    "type": 4,
+    "uuidName": "m505"
+  },
+  {
+    "id": 506,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "停用",
+    "parentId": 500,
+    "type": 4,
+    "uuidName": "m506"
+  },
+  {
+    "id": 507,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "精选商机策略设置",
+    "url": "/ploy/list3.shtml",
+    "parentId": 492,
+    "type": 3,
+    "uuidName": "m507"
+  },
+  {
+    "id": 508,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "新增",
+    "parentId": 507,
+    "type": 4,
+    "uuidName": "m508"
+  },
+  {
+    "id": 509,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 507,
+    "type": 4,
+    "uuidName": "m509"
+  },
+  {
+    "id": 510,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除",
+    "parentId": 507,
+    "type": 4,
+    "uuidName": "m510"
+  },
+  {
+    "id": 511,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看详情",
+    "parentId": 507,
+    "type": 4,
+    "uuidName": "m511"
+  },
+  {
+    "id": 512,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "启用",
+    "parentId": 507,
+    "type": 4,
+    "uuidName": "m512"
+  },
+  {
+    "id": 513,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "停用",
+    "parentId": 507,
+    "type": 4,
+    "uuidName": "m513"
+  },
+  {
+    "id": 514,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "商机策略默认设置",
+    "url": "/ployDefaultValue/list.shtml",
+    "parentId": 492,
+    "type": 3,
+    "uuidName": "m514"
+  },
+  {
+    "id": 515,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "商机开关默认设置",
+    "parentId": 514,
+    "type": 4,
+    "uuidName": "m515"
+  },
+  {
+    "id": 516,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "商机体验默认设置",
+    "parentId": 514,
+    "type": 4,
+    "uuidName": "m516"
+  },
+  {
+    "id": 517,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "商机精选默认设置",
+    "parentId": 514,
+    "type": 4,
+    "uuidName": "m517"
+  },
+  {
+    "id": 518,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "商机策略黑名单设置",
+    "url": "/ployBlacklist/list.shtml",
+    "parentId": 492,
+    "type": 3,
+    "uuidName": "m518"
+  },
+  {
+    "id": 519,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除黑名单",
+    "parentId": 518,
+    "type": 4,
+    "uuidName": "m519"
+  },
+  {
+    "id": 520,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "添加商机开关黑名单",
+    "parentId": 518,
+    "type": 4,
+    "uuidName": "m520"
+  },
+  {
+    "id": 521,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "添加体验商机黑名单",
+    "parentId": 518,
+    "type": 4,
+    "uuidName": "m521"
+  },
+  {
+    "id": 522,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "添加精选商机黑名单",
+    "parentId": 518,
+    "type": 4,
+    "uuidName": "m522"
+  },
+  {
+    "id": 523,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "商机发布管理",
+    "url": "",
+    "parentId": 275,
+    "type": 3,
+    "uuidName": "m523"
+  },
+  {
+    "id": 524,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "Zber平台商机发布管理",
+    "url": "/caiGjxyInfoApply/list2.shtml",
+    "parentId": 523,
+    "type": 3,
+    "uuidName": "m524"
+  },
+  {
+    "id": 525,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看详情",
+    "parentId": 524,
+    "type": 4,
+    "uuidName": "m525"
+  },
+  {
+    "id": 526,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "审核并创建项目",
+    "parentId": 524,
+    "type": 4,
+    "uuidName": "m526"
+  },
+  {
+    "id": 527,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "添加",
+    "parentId": 524,
+    "type": 4,
+    "uuidName": "m527"
+  },
+  {
+    "id": 528,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "设置产品与服务类别",
+    "parentId": 524,
+    "type": 4,
+    "uuidName": "m528"
+  },
+  {
+    "id": 529,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "批量设置产品与服务类别",
+    "parentId": 524,
+    "type": 4,
+    "uuidName": "m529"
+  },
+  {
+    "id": 530,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "设置送货或服务地点",
+    "parentId": 524,
+    "type": 4,
+    "uuidName": "m530"
+  },
+  {
+    "id": 531,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "批量设置送货或服务地点",
+    "parentId": 524,
+    "type": 4,
+    "uuidName": "m531"
+  },
+  {
+    "id": 532,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "批量设置货币单位",
+    "parentId": 524,
+    "type": 4,
+    "uuidName": "m532"
+  },
+  {
+    "id": 533,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "批量审核并创建项目",
+    "parentId": 524,
+    "type": 4,
+    "uuidName": "m533"
+  },
+  {
+    "id": 534,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "批量添加",
+    "parentId": 524,
+    "type": 4,
+    "uuidName": "m534"
+  },
+  {
+    "id": 535,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "下载导入模板",
+    "parentId": 524,
+    "type": 4,
+    "uuidName": "m535"
+  },
+  {
+    "id": 536,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看",
+    "parentId": 524,
+    "type": 4,
+    "uuidName": "m536"
+  },
+  {
+    "id": 537,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "批量添加精选",
+    "parentId": 524,
+    "type": 4,
+    "uuidName": "m537"
+  },
+  {
+    "id": 538,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "批量设置邮箱状态",
+    "parentId": 524,
+    "type": 4,
+    "uuidName": "m538"
+  },
+  {
+    "id": 539,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "批量设置电话状态",
+    "parentId": 524,
+    "type": 4,
+    "uuidName": "m539"
+  },
+  {
+    "id": 540,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 524,
+    "type": 4,
+    "uuidName": "m540"
+  },
+  {
+    "id": 541,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "Zber用户商机发布管理",
+    "url": "/caiGjxyInfoApply/list.shtml",
+    "parentId": 523,
+    "type": 3,
+    "uuidName": "m541"
+  },
+  {
+    "id": 542,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看详情",
+    "parentId": 541,
+    "type": 4,
+    "uuidName": "m542"
+  },
+  {
+    "id": 543,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "审核并创建项目",
+    "parentId": 541,
+    "type": 4,
+    "uuidName": "m543"
+  },
+  {
+    "id": 544,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看",
+    "parentId": 541,
+    "type": 4,
+    "uuidName": "m544"
+  },
+  {
+    "id": 545,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "广告管理",
+    "url": "",
+    "parentId": 279,
+    "type": 3,
+    "uuidName": "m545"
+  },
+  {
+    "id": 546,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "轮播图管理",
+    "url": "/tLunboImgMgr/list.shtml",
+    "parentId": 545,
+    "type": 3,
+    "uuidName": "m546"
+  },
+  {
+    "id": 547,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "新增",
+    "parentId": 546,
+    "type": 4,
+    "uuidName": "m547"
+  },
+  {
+    "id": 548,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 546,
+    "type": 4,
+    "uuidName": "m548"
+  },
+  {
+    "id": 549,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除",
+    "parentId": 546,
+    "type": 4,
+    "uuidName": "m549"
+  },
+  {
+    "id": 550,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看图片",
+    "parentId": 546,
+    "type": 4,
+    "uuidName": "m550"
+  },
+  {
+    "id": 551,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看",
+    "parentId": 546,
+    "type": 4,
+    "uuidName": "m551"
+  },
+  {
+    "id": 552,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "版权信息管理",
+    "url": "/tCprt/list.shtml",
+    "parentId": 279,
+    "type": 3,
+    "uuidName": "m552"
+  },
+  {
+    "id": 553,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "新增",
+    "parentId": 552,
+    "type": 4,
+    "uuidName": "m553"
+  },
+  {
+    "id": 554,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 552,
+    "type": 4,
+    "uuidName": "m554"
+  },
+  {
+    "id": 555,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除",
+    "parentId": 552,
+    "type": 4,
+    "uuidName": "m555"
+  },
+  {
+    "id": 556,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看",
+    "parentId": 552,
+    "type": 4,
+    "uuidName": "m556"
+  },
+  {
+    "id": 557,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "新闻资讯管理",
+    "url": "/tNews/list.shtml",
+    "parentId": 279,
+    "type": 3,
+    "uuidName": "m557"
+  },
+  {
+    "id": 558,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "新增",
+    "parentId": 557,
+    "type": 4,
+    "uuidName": "m558"
+  },
+  {
+    "id": 559,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 557,
+    "type": 4,
+    "uuidName": "m559"
+  },
+  {
+    "id": 560,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除",
+    "parentId": 557,
+    "type": 4,
+    "uuidName": "m560"
+  },
+  {
+    "id": 561,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看图片",
+    "parentId": 557,
+    "type": 4,
+    "uuidName": "m561"
+  },
+  {
+    "id": 562,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看",
+    "parentId": 557,
+    "type": 4,
+    "uuidName": "m562"
+  },
+  {
+    "id": 563,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "招贤纳士管理",
+    "url": "/tRecruit/list.shtml",
+    "parentId": 279,
+    "type": 3,
+    "uuidName": "m563"
+  },
+  {
+    "id": 564,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "新增",
+    "parentId": 563,
+    "type": 4,
+    "uuidName": "m564"
+  },
+  {
+    "id": 565,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 563,
+    "type": 4,
+    "uuidName": "m565"
+  },
+  {
+    "id": 566,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除",
+    "parentId": 563,
+    "type": 4,
+    "uuidName": "m566"
+  },
+  {
+    "id": 567,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看图片",
+    "parentId": 563,
+    "type": 4,
+    "uuidName": "m567"
+  },
+  {
+    "id": 568,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看",
+    "parentId": 563,
+    "type": 4,
+    "uuidName": "m568"
+  },
+  {
+    "id": 569,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "门户意见反馈管理",
+    "url": "/tFeedback/list.shtml",
+    "parentId": 279,
+    "type": 3,
+    "uuidName": "m569"
+  },
+  {
+    "id": 570,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 569,
+    "type": 4,
+    "uuidName": "m570"
+  },
+  {
+    "id": 571,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除",
+    "parentId": 569,
+    "type": 4,
+    "uuidName": "m571"
+  },
+  {
+    "id": 573,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "显示详情",
+    "parentId": 569,
+    "type": 4,
+    "uuidName": "m573"
+  },
+  {
+    "id": 599,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "易竞价",
+    "url": "",
+    "parentId": 279,
+    "type": 3,
+    "uuidName": "m599"
+  },
+  {
+    "id": 600,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "易竞价项目管理",
+    "url": "",
+    "parentId": 599,
+    "type": 3,
+    "uuidName": "m600"
+  },
+  {
+    "id": 601,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "竞价项目信息管理",
+    "url": "/biddingInfo/list.shtml",
+    "parentId": 600,
+    "type": 3,
+    "uuidName": "m601"
+  },
+  {
+    "id": 602,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看详情",
+    "parentId": 601,
+    "type": 4,
+    "uuidName": "m602"
+  },
+  {
+    "id": 603,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑基本信息",
+    "parentId": 601,
+    "type": 4,
+    "uuidName": "m603"
+  },
+  {
+    "id": 604,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑详细信息",
+    "parentId": 601,
+    "type": 4,
+    "uuidName": "m604"
+  },
+  {
+    "id": 605,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "P2P授权及URL",
+    "parentId": 601,
+    "type": 4,
+    "uuidName": "m605"
+  },
+  {
+    "id": 606,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "供应商列表",
+    "parentId": 601,
+    "type": 4,
+    "uuidName": "m606"
+  },
+  {
+    "id": 607,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "保证金设置",
+    "parentId": 601,
+    "type": 4,
+    "uuidName": "m607"
+  },
+  {
+    "id": 608,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "退保设置",
+    "parentId": 601,
+    "type": 4,
+    "uuidName": "m608"
+  },
+  {
+    "id": 609,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "佣金设置",
+    "parentId": 601,
+    "type": 4,
+    "uuidName": "m609"
+  },
+  {
+    "id": 610,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "项目节点列表",
+    "parentId": 601,
+    "type": 4,
+    "uuidName": "m610"
+  },
+  {
+    "id": 611,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "授权及URL",
+    "parentId": 601,
+    "type": 4,
+    "uuidName": "m611"
+  },
+  {
+    "id": 612,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "上下线设置",
+    "parentId": 601,
+    "type": 4,
+    "uuidName": "m612"
+  },
+  {
+    "id": 613,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "推进",
+    "parentId": 601,
+    "type": 4,
+    "uuidName": "m613"
+  },
+  {
+    "id": 614,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "撤回",
+    "parentId": 601,
+    "type": 4,
+    "uuidName": "m614"
+  },
+  {
+    "id": 615,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "置顶",
+    "parentId": 601,
+    "type": 4,
+    "uuidName": "m615"
+  },
+  {
+    "id": 616,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "委托方评分",
+    "parentId": 601,
+    "type": 4,
+    "uuidName": "m616"
+  },
+  {
+    "id": 617,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "终止",
+    "parentId": 601,
+    "type": 4,
+    "uuidName": "m617"
+  },
+  {
+    "id": 618,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "关闭",
+    "parentId": 601,
+    "type": 4,
+    "uuidName": "m618"
+  },
+  {
+    "id": 620,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "发布&撤回",
+    "parentId": 601,
+    "type": 4,
+    "uuidName": "m620"
+  },
+  {
+    "id": 621,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "图片列表",
+    "parentId": 601,
+    "type": 4,
+    "uuidName": "m621"
+  },
+  {
+    "id": 622,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "竞价项目展示管理",
+    "url": "/biddingInfoView/list.shtml",
+    "parentId": 600,
+    "type": 3,
+    "uuidName": "m622"
+  },
+  {
+    "id": 623,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "新增",
+    "parentId": 622,
+    "type": 4,
+    "uuidName": "m623"
+  },
+  {
+    "id": 624,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 622,
+    "type": 4,
+    "uuidName": "m624"
+  },
+  {
+    "id": 625,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除",
+    "parentId": 622,
+    "type": 4,
+    "uuidName": "m625"
+  },
+  {
+    "id": 626,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看详情",
+    "parentId": 622,
+    "type": 4,
+    "uuidName": "m626"
+  },
+  {
+    "id": 627,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "发布/撤销",
+    "parentId": 622,
+    "type": 4,
+    "uuidName": "m627"
+  },
+  {
+    "id": 628,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "置顶排序",
+    "parentId": 622,
+    "type": 4,
+    "uuidName": "m628"
+  },
+  {
+    "id": 629,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "批量取消置顶",
+    "parentId": 622,
+    "type": 4,
+    "uuidName": "m629"
+  },
+  {
+    "id": 630,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "竞价案例管理",
+    "url": "/biddingCaseInfo/list.shtml",
+    "parentId": 600,
+    "type": 3,
+    "uuidName": "m630"
+  },
+  {
+    "id": 631,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "详情",
+    "parentId": 630,
+    "type": 4,
+    "uuidName": "m631"
+  },
+  {
+    "id": 632,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "新增",
+    "parentId": 630,
+    "type": 4,
+    "uuidName": "m632"
+  },
+  {
+    "id": 633,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "修改",
+    "parentId": 630,
+    "type": 4,
+    "uuidName": "m633"
+  },
+  {
+    "id": 634,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除",
+    "parentId": 630,
+    "type": 4,
+    "uuidName": "m634"
+  },
+  {
+    "id": 635,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "发布/撤销",
+    "parentId": 630,
+    "type": 4,
+    "uuidName": "m635"
+  },
+  {
+    "id": 636,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "置顶",
+    "parentId": 630,
+    "type": 4,
+    "uuidName": "m636"
+  },
+  {
+    "id": 637,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "取消置顶",
+    "parentId": 630,
+    "type": 4,
+    "uuidName": "m637"
+  },
+  {
+    "id": 638,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "易竞价申请管理",
+    "url": "",
+    "parentId": 599,
+    "type": 3,
+    "uuidName": "m638"
+  },
+  {
+    "id": 639,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "竞价服务申请管理（门户）",
+    "url": "/biddingInfoApply/list.shtml",
+    "parentId": 638,
+    "type": 3,
+    "uuidName": "m639"
+  },
+  {
+    "id": 640,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看详情",
+    "parentId": 639,
+    "type": 4,
+    "uuidName": "m640"
+  },
+  {
+    "id": 641,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "创建项目信息",
+    "parentId": 639,
+    "type": 4,
+    "uuidName": "m641"
+  },
+  {
+    "id": 642,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "审核",
+    "parentId": 639,
+    "type": 4,
+    "uuidName": "m642"
+  },
+  {
+    "id": 643,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "分派",
+    "parentId": 639,
+    "type": 4,
+    "uuidName": "m643"
+  },
+  {
+    "id": 644,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "提交竞价申请",
+    "parentId": 639,
+    "type": 4,
+    "uuidName": "m644"
+  },
+  {
+    "id": 645,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 639,
+    "type": 4,
+    "uuidName": "m645"
+  },
+  {
+    "id": 646,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除",
+    "parentId": 639,
+    "type": 4,
+    "uuidName": "m646"
+  },
+  {
+    "id": 647,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "竞价服务申请管理（前端）",
+    "url": "/cCompanyAttendPurchaseBid/list.shtml",
+    "parentId": 638,
+    "type": 3,
+    "uuidName": "m647"
+  },
+  {
+    "id": 648,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看",
+    "parentId": 647,
+    "type": 4,
+    "uuidName": "m648"
+  },
+  {
+    "id": 649,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "易集采商品管理",
+    "url": "/businessGatherMining/list.shtml",
+    "parentId": 599,
+    "type": 3,
+    "uuidName": "m649"
+  },
+  {
+    "id": 650,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "新增",
+    "parentId": 649,
+    "type": 4,
+    "uuidName": "m650"
+  },
+  {
+    "id": 651,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 649,
+    "type": 4,
+    "uuidName": "m651"
+  },
+  {
+    "id": 652,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看详情",
+    "parentId": 649,
+    "type": 4,
+    "uuidName": "m652"
+  },
+  {
+    "id": 654,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "发布&下架",
+    "parentId": 649,
+    "type": 4,
+    "uuidName": "m654"
+  },
+  {
+    "id": 655,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "置顶",
+    "parentId": 649,
+    "type": 4,
+    "uuidName": "m655"
+  },
+  {
+    "id": 656,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "预览",
+    "parentId": 649,
+    "type": 4,
+    "uuidName": "m656"
+  },
+  {
+    "id": 657,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "需求收集列表",
+    "parentId": 649,
+    "type": 4,
+    "uuidName": "m657"
+  },
+  {
+    "id": 659,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "副图列表",
+    "parentId": 649,
+    "type": 4,
+    "uuidName": "m659"
+  },
+  {
+    "id": 662,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "企业管理",
+    "url": "",
+    "parentId": 279,
+    "type": 3,
+    "uuidName": "m662"
+  },
+  {
+    "id": 663,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "企业注册管理",
+    "url": "",
+    "parentId": 662,
+    "type": 3,
+    "uuidName": "m663"
+  },
+  {
+    "id": 673,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "企查查信息管理",
+    "url": "/qccCompanyInfo2/list.shtml",
+    "parentId": 663,
+    "type": 3,
+    "uuidName": "m673"
+  },
+  {
+    "id": 687,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "注册企业信息管理",
+    "url": "",
+    "parentId": 662,
+    "type": 3,
+    "uuidName": "m687"
+  },
+  {
+    "id": 688,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "注册企业信息设置",
+    "url": "/cCommpanyInfo/list.shtml",
+    "parentId": 687,
+    "type": 3,
+    "uuidName": "m688"
+  },
+  {
+    "id": 689,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑基本信息",
+    "parentId": 688,
+    "type": 4,
+    "uuidName": "m689"
+  },
+  {
+    "id": 690,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "设置企业状态",
+    "parentId": 688,
+    "type": 4,
+    "uuidName": "m690"
+  },
+  {
+    "id": 691,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "设置国际目录",
+    "parentId": 688,
+    "type": 4,
+    "uuidName": "m691"
+  },
+  {
+    "id": 692,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "设置国内目录",
+    "parentId": 688,
+    "type": 4,
+    "uuidName": "m692"
+  },
+  {
+    "id": 693,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "设置服务地址",
+    "parentId": 688,
+    "type": 4,
+    "uuidName": "m693"
+  },
+  {
+    "id": 694,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "设置认证信息",
+    "parentId": 688,
+    "type": 4,
+    "uuidName": "m694"
+  },
+  {
+    "id": 695,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看详情",
+    "parentId": 688,
+    "type": 4,
+    "uuidName": "m695"
+  },
+  {
+    "id": 696,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "设置签约运营付费",
+    "parentId": 688,
+    "type": 4,
+    "uuidName": "m696"
+  },
+  {
+    "id": 697,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "置顶推荐",
+    "parentId": 688,
+    "type": 4,
+    "uuidName": "m697"
+  },
+  {
+    "id": 698,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "发送激活邮件",
+    "parentId": 688,
+    "type": 4,
+    "uuidName": "m698"
+  },
+  {
+    "id": 699,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "商机匹配开关",
+    "parentId": 688,
+    "type": 4,
+    "uuidName": "m699"
+  },
+  {
+    "id": 700,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "企业门户",
+    "parentId": 688,
+    "type": 4,
+    "uuidName": "m700"
+  },
+  {
+    "id": 701,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "商品列表",
+    "parentId": 688,
+    "type": 4,
+    "uuidName": "m701"
+  },
+  {
+    "id": 702,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "匹配商机",
+    "parentId": 688,
+    "type": 4,
+    "uuidName": "m702"
+  },
+  {
+    "id": 703,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看Ariba信息",
+    "parentId": 688,
+    "type": 4,
+    "uuidName": "m703"
+  },
+  {
+    "id": 704,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "设置Ariba信息",
+    "parentId": 688,
+    "type": 4,
+    "uuidName": "m704"
+  },
+  {
+    "id": 705,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "Ariba注册",
+    "parentId": 688,
+    "type": 4,
+    "uuidName": "m705"
+  },
+  {
+    "id": 706,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看企业商机",
+    "parentId": 688,
+    "type": 4,
+    "uuidName": "m706"
+  },
+  {
+    "id": 707,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "注册企业分派管理",
+    "url": "/cCommpanyInfo/list2.shtml",
+    "parentId": 687,
+    "type": 3,
+    "uuidName": "m707"
+  },
+  {
+    "id": 708,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "分派",
+    "parentId": 707,
+    "type": 4,
+    "uuidName": "m708"
+  },
+  {
+    "id": 709,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "设置所属行业",
+    "parentId": 707,
+    "type": 4,
+    "uuidName": "m709"
+  },
+  {
+    "id": 710,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "取消分派",
+    "parentId": 707,
+    "type": 4,
+    "uuidName": "m710"
+  },
+  {
+    "id": 711,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "企业登录用户管理",
+    "url": "/uUser/list.shtml",
+    "parentId": 687,
+    "type": 3,
+    "uuidName": "m711"
+  },
+  {
+    "id": 712,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 711,
+    "type": 4,
+    "uuidName": "m712"
+  },
+  {
+    "id": 713,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "重置密码",
+    "parentId": 711,
+    "type": 4,
+    "uuidName": "m713"
+  },
+  {
+    "id": 714,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看企业信息",
+    "parentId": 711,
+    "type": 4,
+    "uuidName": "m714"
+  },
+  {
+    "id": 715,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看用户信息",
+    "parentId": 711,
+    "type": 4,
+    "uuidName": "m715"
+  },
+  {
+    "id": 716,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "企业前端信息管理",
+    "url": "",
+    "parentId": 662,
+    "type": 3,
+    "uuidName": "m716"
+  },
+  {
+    "id": 717,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "企业置顶管理",
+    "url": "/cCommpanyInfo/list4.shtml",
+    "parentId": 716,
+    "type": 3,
+    "uuidName": "m717"
+  },
+  {
+    "id": 718,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "修改置顶值",
+    "parentId": 717,
+    "type": 4,
+    "uuidName": "m718"
+  },
+  {
+    "id": 719,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "移除置顶值",
+    "parentId": 717,
+    "type": 4,
+    "uuidName": "m719"
+  },
+  {
+    "id": 720,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "置顶行业类别管理",
+    "parentId": 717,
+    "type": 4,
+    "uuidName": "m720"
+  },
+  {
+    "id": 721,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "企业热门推荐管理",
+    "url": "/cCommpanyInfo/list5.shtml",
+    "parentId": 716,
+    "type": 3,
+    "uuidName": "m721"
+  },
+  {
+    "id": 722,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "修改推荐值",
+    "parentId": 721,
+    "type": 4,
+    "uuidName": "m722"
+  },
+  {
+    "id": 723,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "移除推荐值",
+    "parentId": 721,
+    "type": 4,
+    "uuidName": "m723"
+  },
+  {
+    "id": 724,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "供应商行业类别开关",
+    "url": "/frontIndustryCateSet/list2.shtml",
+    "parentId": 716,
+    "type": 3,
+    "uuidName": "m724"
+  },
+  {
+    "id": 725,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "开启",
+    "parentId": 724,
+    "type": 4,
+    "uuidName": "m725"
+  },
+  {
+    "id": 726,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "关闭",
+    "parentId": 724,
+    "type": 4,
+    "uuidName": "m726"
+  },
+  {
+    "id": 727,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "返回上一级",
+    "parentId": 724,
+    "type": 4,
+    "uuidName": "m727"
+  },
+  {
+    "id": 728,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "排序",
+    "parentId": 724,
+    "type": 4,
+    "uuidName": "m728"
+  },
+  {
+    "id": 729,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看",
+    "parentId": 724,
+    "type": 4,
+    "uuidName": "m729"
+  },
+  {
+    "id": 730,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "供应链服务",
+    "url": "",
+    "parentId": 279,
+    "type": 3,
+    "uuidName": "m730"
+  },
+  {
+    "id": 731,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "企业服务管理",
+    "url": "/cCompanyService/list.shtml",
+    "parentId": 730,
+    "type": 3,
+    "uuidName": "m731"
+  },
+  {
+    "id": 732,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看详情",
+    "parentId": 731,
+    "type": 4,
+    "uuidName": "m732"
+  },
+  {
+    "id": 733,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "新增",
+    "parentId": 731,
+    "type": 4,
+    "uuidName": "m733"
+  },
+  {
+    "id": 734,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 731,
+    "type": 4,
+    "uuidName": "m734"
+  },
+  {
+    "id": 735,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除",
+    "parentId": 731,
+    "type": 4,
+    "uuidName": "m735"
+  },
+  {
+    "id": 736,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑服务内容",
+    "parentId": 731,
+    "type": 4,
+    "uuidName": "m736"
+  },
+  {
+    "id": 737,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看",
+    "parentId": 731,
+    "type": 4,
+    "uuidName": "m737"
+  },
+  {
+    "id": 738,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "加入生态伙伴申请管理",
+    "url": "/cCompanyEcologyPartner/list.shtml",
+    "parentId": 730,
+    "type": 3,
+    "uuidName": "m738"
+  },
+  {
+    "id": 739,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看详情",
+    "parentId": 738,
+    "type": 4,
+    "uuidName": "m739"
+  },
+  {
+    "id": 740,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "供应链服务申请管理",
+    "url": "/cCompanyApplyService/list.shtml",
+    "parentId": 730,
+    "type": 3,
+    "uuidName": "m740"
+  },
+  {
+    "id": 741,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看详情",
+    "parentId": 740,
+    "type": 4,
+    "uuidName": "m741"
+  },
+  {
+    "id": 742,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看",
+    "parentId": 740,
+    "type": 4,
+    "uuidName": "m742"
+  },
+  {
+    "id": 743,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "照明一号",
+    "url": "",
+    "parentId": 279,
+    "type": 3,
+    "uuidName": "m743"
+  },
+  {
+    "id": 744,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "用户管理",
+    "url": "/lightingOne/list.shtml",
+    "parentId": 743,
+    "type": 3,
+    "uuidName": "m744"
+  },
+  {
+    "id": 745,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "新增",
+    "parentId": 744,
+    "type": 4,
+    "uuidName": "m745"
+  },
+  {
+    "id": 746,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 744,
+    "type": 4,
+    "uuidName": "m746"
+  },
+  {
+    "id": 747,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除",
+    "parentId": 744,
+    "type": 4,
+    "uuidName": "m747"
+  },
+  {
+    "id": 748,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "设置授权",
+    "parentId": 744,
+    "type": 4,
+    "uuidName": "m748"
+  },
+  {
+    "id": 749,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "清除授权",
+    "parentId": 744,
+    "type": 4,
+    "uuidName": "m749"
+  },
+  {
+    "id": 750,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "账号限制/恢复",
+    "parentId": 744,
+    "type": 4,
+    "uuidName": "m750"
+  },
+  {
+    "id": 751,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "易商机采集管理",
+    "url": "/gyCollect/list1.shtml",
+    "parentId": 743,
+    "type": 3,
+    "uuidName": "m751"
+  },
+  {
+    "id": 752,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 751,
+    "type": 4,
+    "uuidName": "m752"
+  },
+  {
+    "id": 753,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除",
+    "parentId": 751,
+    "type": 4,
+    "uuidName": "m753"
+  },
+  {
+    "id": 754,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看",
+    "parentId": 751,
+    "type": 4,
+    "uuidName": "m754"
+  },
+  {
+    "id": 755,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "易竞价采集管理",
+    "url": "/gyCollect/list2.shtml",
+    "parentId": 743,
+    "type": 3,
+    "uuidName": "m755"
+  },
+  {
+    "id": 756,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 755,
+    "type": 4,
+    "uuidName": "m756"
+  },
+  {
+    "id": 757,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除",
+    "parentId": 755,
+    "type": 4,
+    "uuidName": "m757"
+  },
+  {
+    "id": 758,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看",
+    "parentId": 755,
+    "type": 4,
+    "uuidName": "m758"
+  },
+  {
+    "id": 759,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "企业信息管理（光亚）",
+    "url": "/gyCompanyInfo/list.shtml",
+    "parentId": 743,
+    "type": 3,
+    "uuidName": "m759"
+  },
+  {
+    "id": 760,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "设置国际目录",
+    "parentId": 759,
+    "type": 4,
+    "uuidName": "m760"
+  },
+  {
+    "id": 761,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "设置服务地址",
+    "parentId": 759,
+    "type": 4,
+    "uuidName": "m761"
+  },
+  {
+    "id": 762,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 759,
+    "type": 4,
+    "uuidName": "m762"
+  },
+  {
+    "id": 763,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看详情",
+    "parentId": 759,
+    "type": 4,
+    "uuidName": "m763"
+  },
+  {
+    "id": 764,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "创建ariba信息",
+    "parentId": 759,
+    "type": 4,
+    "uuidName": "m764"
+  },
+  {
+    "id": 765,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "Ariba注册",
+    "parentId": 759,
+    "type": 4,
+    "uuidName": "m765"
+  },
+  {
+    "id": 766,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看Ariba信息",
+    "parentId": 759,
+    "type": 4,
+    "uuidName": "m766"
+  },
+  {
+    "id": 767,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "设置Ariba信息",
+    "parentId": 759,
+    "type": 4,
+    "uuidName": "m767"
+  },
+  {
+    "id": 768,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "批量Ariba注册",
+    "parentId": 759,
+    "type": 4,
+    "uuidName": "m768"
+  },
+  {
+    "id": 769,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "标记使用状态",
+    "parentId": 759,
+    "type": 4,
+    "uuidName": "m769"
+  },
+  {
+    "id": 770,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "供应商用户信息列表",
+    "parentId": 759,
+    "type": 4,
+    "uuidName": "m770"
+  },
+  {
+    "id": 842,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "后台系统管理",
+    "url": "",
+    "parentId": 279,
+    "type": 3,
+    "uuidName": "m842"
+  },
+  {
+    "id": 843,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "后台日志管理",
+    "url": "/sysOperatorLog/list.shtml",
+    "parentId": 842,
+    "type": 3,
+    "uuidName": "m843"
+  },
+  {
+    "id": 844,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "导出日志",
+    "parentId": 843,
+    "type": 4,
+    "uuidName": "m844"
+  },
+  {
+    "id": 845,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看详情",
+    "parentId": 843,
+    "type": 4,
+    "uuidName": "m845"
+  },
+  {
+    "id": 846,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看",
+    "parentId": 843,
+    "type": 4,
+    "uuidName": "m846"
+  },
+  {
+    "id": 847,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "数据字典管理",
+    "url": "/dictionary/list.shtml",
+    "parentId": 842,
+    "type": 3,
+    "uuidName": "m847"
+  },
+  {
+    "id": 848,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "新增",
+    "parentId": 847,
+    "type": 4,
+    "uuidName": "m848"
+  },
+  {
+    "id": 849,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 847,
+    "type": 4,
+    "uuidName": "m849"
+  },
+  {
+    "id": 850,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除",
+    "parentId": 847,
+    "type": 4,
+    "uuidName": "m850"
+  },
+  {
+    "id": 851,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "字典数据列表",
+    "parentId": 847,
+    "type": 4,
+    "uuidName": "m851"
+  },
+  {
+    "id": 852,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "初始化数据字典",
+    "parentId": 847,
+    "type": 4,
+    "uuidName": "m852"
+  },
+  {
+    "id": 853,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "初始化验证",
+    "parentId": 847,
+    "type": 4,
+    "uuidName": "m853"
+  },
+  {
+    "id": 854,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看",
+    "parentId": 847,
+    "type": 4,
+    "uuidName": "m854"
+  },
+  {
+    "id": 855,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "Sourcing用户管理",
+    "url": "/uSourcingUsers/list.shtml",
+    "parentId": 842,
+    "type": 3,
+    "uuidName": "m855"
+  },
+  {
+    "id": 856,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "新增",
+    "parentId": 855,
+    "type": 4,
+    "uuidName": "m856"
+  },
+  {
+    "id": 857,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 855,
+    "type": 4,
+    "uuidName": "m857"
+  },
+  {
+    "id": 858,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除",
+    "parentId": 855,
+    "type": 4,
+    "uuidName": "m858"
+  },
+  {
+    "id": 859,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "授权历史",
+    "parentId": 855,
+    "type": 4,
+    "uuidName": "m859"
+  },
+  {
+    "id": 860,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看",
+    "parentId": 855,
+    "type": 4,
+    "uuidName": "m860"
+  },
+  {
+    "id": 861,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "公共数据管理",
+    "url": "",
+    "parentId": 279,
+    "type": 3,
+    "uuidName": "m861"
+  },
+  {
+    "id": 862,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "行业类别",
+    "url": "/tIndustry/list.shtml",
+    "parentId": 861,
+    "type": 3,
+    "uuidName": "m862"
+  },
+  {
+    "id": 863,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "新增",
+    "parentId": 862,
+    "type": 4,
+    "uuidName": "m863"
+  },
+  {
+    "id": 864,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 862,
+    "type": 4,
+    "uuidName": "m864"
+  },
+  {
+    "id": 865,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除",
+    "parentId": 862,
+    "type": 4,
+    "uuidName": "m865"
+  },
+  {
+    "id": 866,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看",
+    "parentId": 862,
+    "type": 4,
+    "uuidName": "m866"
+  },
+  {
+    "id": 867,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "国家代码管理",
+    "url": "/tCountry/list.shtml",
+    "parentId": 861,
+    "type": 3,
+    "uuidName": "m867"
+  },
+  {
+    "id": 868,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "新增",
+    "parentId": 867,
+    "type": 4,
+    "uuidName": "m868"
+  },
+  {
+    "id": 869,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 867,
+    "type": 4,
+    "uuidName": "m869"
+  },
+  {
+    "id": 870,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除",
+    "parentId": 867,
+    "type": 4,
+    "uuidName": "m870"
+  },
+  {
+    "id": 871,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看图片",
+    "parentId": 867,
+    "type": 4,
+    "uuidName": "m871"
+  },
+  {
+    "id": 872,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看",
+    "parentId": 867,
+    "type": 4,
+    "uuidName": "m872"
+  },
+  {
+    "id": 873,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "语言代码管理",
+    "url": "/tLanguage/list.shtml",
+    "parentId": 861,
+    "type": 3,
+    "uuidName": "m873"
+  },
+  {
+    "id": 874,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "新增",
+    "parentId": 873,
+    "type": 4,
+    "uuidName": "m874"
+  },
+  {
+    "id": 875,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 873,
+    "type": 4,
+    "uuidName": "m875"
+  },
+  {
+    "id": 876,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除",
+    "parentId": 873,
+    "type": 4,
+    "uuidName": "m876"
+  },
+  {
+    "id": 877,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看",
+    "parentId": 873,
+    "type": 4,
+    "uuidName": "m877"
+  },
+  {
+    "id": 878,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "密码问题管理（Ariba）",
+    "url": "/tPassQuestion/list.shtml",
+    "parentId": 861,
+    "type": 3,
+    "uuidName": "m878"
+  },
+  {
+    "id": 879,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "新增",
+    "parentId": 878,
+    "type": 4,
+    "uuidName": "m879"
+  },
+  {
+    "id": 880,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 878,
+    "type": 4,
+    "uuidName": "m880"
+  },
+  {
+    "id": 881,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除",
+    "parentId": 878,
+    "type": 4,
+    "uuidName": "m881"
+  },
+  {
+    "id": 882,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看",
+    "parentId": 878,
+    "type": 4,
+    "uuidName": "m882"
+  },
+  {
+    "id": 883,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "服务点&送货地址管理",
+    "url": "/tServeAddr/list.shtml",
+    "parentId": 861,
+    "type": 3,
+    "uuidName": "m883"
+  },
+  {
+    "id": 884,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "新增",
+    "parentId": 883,
+    "type": 4,
+    "uuidName": "m884"
+  },
+  {
+    "id": 885,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 883,
+    "type": 4,
+    "uuidName": "m885"
+  },
+  {
+    "id": 886,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除",
+    "parentId": 883,
+    "type": 4,
+    "uuidName": "m886"
+  },
+  {
+    "id": 887,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看",
+    "parentId": 883,
+    "type": 4,
+    "uuidName": "m887"
+  },
+  {
+    "id": 888,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "产品和服务类别管理(国际)",
+    "url": "/tProductType/list.shtml",
+    "parentId": 861,
+    "type": 3,
+    "uuidName": "m888"
+  },
+  {
+    "id": 889,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "新增",
+    "parentId": 888,
+    "type": 4,
+    "uuidName": "m889"
+  },
+  {
+    "id": 890,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 888,
+    "type": 4,
+    "uuidName": "m890"
+  },
+  {
+    "id": 891,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除",
+    "parentId": 888,
+    "type": 4,
+    "uuidName": "m891"
+  },
+  {
+    "id": 892,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看",
+    "parentId": 888,
+    "type": 4,
+    "uuidName": "m892"
+  },
+  {
+    "id": 893,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "产品和服务类别管理(国内)",
+    "url": "/tProductNeiType/list.shtml",
+    "parentId": 861,
+    "type": 3,
+    "uuidName": "m893"
+  },
+  {
+    "id": 894,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "新增",
+    "parentId": 893,
+    "type": 4,
+    "uuidName": "m894"
+  },
+  {
+    "id": 895,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "编辑",
+    "parentId": 893,
+    "type": 4,
+    "uuidName": "m895"
+  },
+  {
+    "id": 896,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "删除",
+    "parentId": 893,
+    "type": 4,
+    "uuidName": "m896"
+  },
+  {
+    "id": 897,
+    "createTime": "2018-09-25 00:00:00",
+    "name": "查看",
+    "parentId": 893,
+    "type": 4,
+    "uuidName": "m897"
+  },
+  {
+    "id": 898,
+    "createTime": "2018-09-25 14:46:08",
+    "name": "商品数据管理",
+    "url": "/product/toProductList",
+    "parentId": 277,
+    "type": 3,
+    "uuidName": "m898"
+  },
+  {
+    "id": 899,
+    "createTime": "2018-09-25 14:46:30",
+    "name": "商品特征管理",
+    "url": "/orderItem/toOrderItem",
+    "parentId": 277,
+    "type": 3,
+    "uuidName": "m899"
+  },
+  {
+    "id": 900,
+    "createTime": "2018-09-25 14:46:47",
+    "name": "商品特征描述管理",
+    "url": "/orderItemVal/toOrderItemVal",
+    "parentId": 277,
+    "type": 3,
+    "uuidName": "m900"
+  },
+  {
+    "id": 901,
+    "createTime": "2018-09-25 14:48:07",
+    "name": "企业管理",
+    "parentId": 272,
+    "type": 3,
+    "uuidName": "m901"
+  },
+  {
+    "id": 902,
+    "createTime": "2018-09-25 14:48:20",
+    "name": "用户管理",
+    "parentId": 272,
+    "type": 3,
+    "uuidName": "m902"
+  },
+  {
+    "id": 903,
+    "createTime": "2018-09-25 14:48:32",
+    "name": "系统管理",
+    "parentId": 272,
+    "type": 3,
+    "uuidName": "m903"
+  },
+  {
+    "id": 904,
+    "createTime": "2018-09-25 14:49:11",
+    "name": "企业基本信息管理",
+    "url": "/company/toBaseInfoManager",
+    "parentId": 901,
+    "type": 3,
+    "uuidName": "m904"
+  },
+  {
+    "id": 905,
+    "createTime": "2018-09-25 14:49:35",
+    "name": "企业营业执照审核",
+    "url": "/company/toLicenseReview",
+    "parentId": 901,
+    "type": 3,
+    "uuidName": "m905"
+  },
+  {
+    "id": 906,
+    "createTime": "2018-09-25 14:49:59",
+    "name": "企业资质证书审核",
+    "url": "/company/toQualificationReview",
+    "parentId": 901,
+    "type": 3,
+    "uuidName": "m906"
+  },
+  {
+    "id": 907,
+    "createTime": "2018-09-25 14:50:25",
+    "name": "用户管理",
+    "url": "/user/toUserManager",
+    "parentId": 902,
+    "type": 3,
+    "uuidName": "m907"
+  },
+  {
+    "id": 908,
+    "createTime": "2018-09-25 14:50:47",
+    "name": "角色管理",
+    "url": "/user/toRoleManager",
+    "parentId": 902,
+    "type": 2,
+    "uuidName": "m908"
+  },
+  {
+    "id": 909,
+    "createTime": "2018-09-25 14:51:25",
+    "name": "子系统管理",
+    "url": "/system/toSystemManager",
+    "parentId": 903,
+    "type": 3,
+    "uuidName": "m909"
+  },
+  {
+    "id": 910,
+    "createTime": "2018-09-25 14:51:51",
+    "name": "后台用户管理",
+    "url": "/sysUser/toBackstageUser",
+    "parentId": 903,
+    "type": 3,
+    "uuidName": "m910"
+  },
+  {
+    "id": 911,
+    "createTime": "2018-09-25 14:52:09",
+    "name": "后角色管理",
+    "url": "/sysRole/toBackstageRole",
+    "parentId": 903,
+    "type": 3,
+    "uuidName": "m911"
+  },
+  {
+    "id": 912,
+    "createTime": "2018-09-25 14:52:35",
+    "name": "权限数据管理",
+    "url": "/system/toBackstageAuthority/1",
+    "parentId": 903,
+    "type": 3,
+    "uuidName": "m912"
+  },
+  {
+    "id": 913,
+    "createTime": "2018-09-25 14:53:11",
+    "name": "企业权限管理",
+    "url": "/system/toEnterpriseAuthority",
+    "parentId": 903,
+    "type": 3,
+    "uuidName": "m913"
+  },
+  {
+    "id": 914,
+    "createTime": "2018-09-25 14:53:37",
+    "name": "企业权限组管理",
+    "url": "/system/toEnterpriseAuthorityGroup",
+    "parentId": 903,
+    "type": 3,
+    "uuidName": "m914"
+  },
+  {
+    "id": 915,
+    "createTime": "2018-09-25 14:53:51",
+    "name": "日志管理",
+    "url": "/system/toFrontLog",
+    "parentId": 903,
+    "type": 3,
+    "uuidName": "m915"
+  },
+  {
+    "id": 916,
+    "createTime": "2018-09-27 09:07:13",
+    "name": "查看",
+    "parentId": 904,
+    "type": 4,
+    "uuidName": "m916"
+  },
+  {
+    "id": 917,
+    "createTime": "2018-09-27 09:07:40",
+    "name": "解除异常状态",
+    "parentId": 904,
+    "type": 4,
+    "uuidName": "m917"
+  },
+  {
+    "id": 918,
+    "createTime": "2018-09-27 09:08:06",
+    "name": "查看企业荣誉证书",
+    "parentId": 904,
+    "type": 4,
+    "uuidName": "m918"
+  },
+  {
+    "id": 919,
+    "createTime": "2018-09-27 09:09:06",
+    "name": "查看企业资质证书",
+    "parentId": 904,
+    "type": 4,
+    "uuidName": "m919"
+  },
+  {
+    "id": 920,
+    "createTime": "2018-09-27 09:09:25",
+    "name": "查看联系人",
+    "parentId": 904,
+    "type": 4,
+    "uuidName": "m920"
+  },
+  {
+    "id": 921,
+    "createTime": "2018-09-27 09:09:41",
+    "name": "行业类别",
+    "parentId": 904,
+    "type": 4,
+    "uuidName": "m921"
+  },
+  {
+    "id": 922,
+    "createTime": "2018-09-27 09:10:27",
+    "name": "查看",
+    "parentId": 905,
+    "type": 4,
+    "uuidName": "m922"
+  },
+  {
+    "id": 923,
+    "createTime": "2018-09-27 09:10:46",
+    "name": "审核营业执照",
+    "parentId": 905,
+    "type": 4,
+    "uuidName": "m923"
+  },
+  {
+    "id": 924,
+    "createTime": "2018-09-27 09:11:16",
+    "name": "审核",
+    "parentId": 906,
+    "type": 4,
+    "uuidName": "m924"
+  },
+  {
+    "id": 925,
+    "createTime": "2018-09-27 09:11:53",
+    "name": "新增",
+    "parentId": 909,
+    "type": 4,
+    "uuidName": "m925"
+  },
+  {
+    "id": 926,
+    "createTime": "2018-09-27 09:12:14",
+    "name": "编辑",
+    "parentId": 909,
+    "type": 4,
+    "uuidName": "m926"
+  },
+  {
+    "id": 927,
+    "createTime": "2018-09-27 11:22:48",
+    "name": "新增",
+    "parentId": 910,
+    "type": 4,
+    "uuidName": "m927"
+  },
+  {
+    "id": 928,
+    "createTime": "2018-09-27 11:23:10",
+    "name": "编辑",
+    "parentId": 910,
+    "type": 4,
+    "uuidName": "m928"
+  },
+  {
+    "id": 929,
+    "createTime": "2018-09-27 11:23:36",
+    "name": "启用",
+    "parentId": 910,
+    "type": 4,
+    "uuidName": "m929"
+  },
+  {
+    "id": 930,
+    "createTime": "2018-09-27 11:23:50",
+    "name": "停用",
+    "parentId": 910,
+    "type": 4,
+    "uuidName": "m930"
+  },
+  {
+    "id": 931,
+    "createTime": "2018-09-27 11:24:12",
+    "name": "角色设置",
+    "parentId": 910,
+    "type": 4,
+    "uuidName": "m931"
+  },
+  {
+    "id": 932,
+    "createTime": "2018-09-27 11:24:53",
+    "name": "新增",
+    "parentId": 912,
+    "type": 4,
+    "uuidName": "m932"
+  },
+  {
+    "id": 933,
+    "createTime": "2018-09-27 11:25:22",
+    "name": "编辑",
+    "parentId": 912,
+    "type": 4,
+    "uuidName": "m933"
+  },
+  {
+    "id": 934,
+    "createTime": "2018-09-27 11:27:06",
+    "name": "删除",
+    "parentId": 912,
+    "type": 4,
+    "uuidName": "m934"
+  },
+  {
+    "id": 935,
+    "createTime": "2018-09-27 11:27:32",
+    "name": "查看",
+    "parentId": 913,
+    "type": 4,
+    "uuidName": "m935"
+  },
+  {
+    "id": 936,
+    "createTime": "2018-09-27 11:27:49",
+    "name": "设置企业权限",
+    "parentId": 913,
+    "type": 4,
+    "uuidName": "m936"
+  },
+  {
+    "id": 937,
+    "createTime": "2018-09-27 11:28:11",
+    "name": "转移企业管理员",
+    "parentId": 913,
+    "type": 4,
+    "uuidName": "m937"
+  },
+  {
+    "id": 938,
+    "createTime": "2018-09-27 11:28:29",
+    "name": "设置默认企业权限",
+    "parentId": 913,
+    "type": 4,
+    "uuidName": "m938"
+  },
+  {
+    "id": 939,
+    "createTime": "2018-09-27 11:29:03",
+    "name": "新增",
+    "parentId": 914,
+    "type": 4,
+    "uuidName": "m939"
+  },
+  {
+    "id": 940,
+    "createTime": "2018-09-27 11:29:14",
+    "name": "查看",
+    "parentId": 914,
+    "type": 4,
+    "uuidName": "m940"
+  },
+  {
+    "id": 941,
+    "createTime": "2018-09-27 11:29:25",
+    "name": "编辑",
+    "parentId": 914,
+    "type": 4,
+    "uuidName": "m941"
+  },
+  {
+    "id": 942,
+    "createTime": "2018-09-27 11:29:35",
+    "name": "删除",
+    "parentId": 914,
+    "type": 4,
+    "uuidName": "m942"
+  },
+  {
+    "id": 943,
+    "createTime": "2018-09-27 11:30:25",
+    "name": "导出日志",
+    "parentId": 915,
+    "type": 4,
+    "uuidName": "m943"
+  },
+  {
+    "id": 944,
+    "createTime": "2018-09-27 11:30:47",
+    "name": "查看详情",
+    "parentId": 915,
+    "type": 4,
+    "uuidName": "m944"
+  },
+  {
+    "id": 945,
+    "createTime": "2018-09-28 10:17:31",
+    "name": "生产监督管理",
+    "parentId": 276,
+    "type": 3,
+    "uuidName": "m945"
+  },
+  {
+    "id": 946,
+    "createTime": "2018-09-28 10:18:16",
+    "name": "监督项目管理",
+    "parentId": 945,
+    "type": 3,
+    "uuidName": "m946"
+  },
+  {
+    "id": 947,
+    "createTime": "2018-09-28 10:18:39",
+    "name": "生产流程管理",
+    "parentId": 945,
+    "type": 3,
+    "uuidName": "m947"
+  },
+  {
+    "id": 948,
+    "createTime": "2018-09-28 10:18:54",
+    "name": "生产任务管理",
+    "parentId": 945,
+    "type": 3,
+    "uuidName": "m948"
+  },
+  {
+    "id": 949,
+    "createTime": "2018-09-28 10:19:11",
+    "name": "物料清单管理",
+    "parentId": 945,
+    "type": 3,
+    "uuidName": "m949"
+  },
+  {
+    "id": 950,
+    "createTime": "2018-09-28 10:20:10",
+    "name": "物料管理",
+    "parentId": 945,
+    "type": 3,
+    "uuidName": "m950"
+  },
+  {
+    "id": 951,
+    "createTime": "2018-09-28 10:20:40",
+    "name": "动态表单",
+    "parentId": 945,
+    "type": 3,
+    "uuidName": "m951"
+  },
+  {
+    "id": 952,
+    "createTime": "2018-09-29 10:57:52",
+    "name": "企业信息设置",
+    "url": "/company/baseInfo",
+    "parentId": 266,
+    "type": 3,
+    "uuidName": "m952"
+  },
+  {
+    "id": 953,
+    "createTime": "2018-09-29 10:58:58",
+    "name": "用户管理",
+    "url": "/user/userList",
+    "parentId": 266,
+    "type": 3,
+    "uuidName": "m953"
+  },
+  {
+    "id": 954,
+    "createTime": "2018-09-29 10:59:32",
+    "name": "角色管理",
+    "url": "/user/roleList",
+    "parentId": 266,
+    "type": 3,
+    "uuidName": "m954"
+  },
+  {
+    "id": 957,
+    "createTime": "2018-09-29 11:03:19",
+    "name": "企业基本信息",
+    "url": "/company/baseInfo",
+    "parentId": 952,
+    "type": 3,
+    "uuidName": "m957"
+  },
+  {
+    "id": 958,
+    "createTime": "2018-09-29 11:03:49",
+    "name": "企业联系人信息",
+    "url": "/company/contactInfo",
+    "parentId": 952,
+    "type": 3,
+    "uuidName": "m958"
+  },
+  {
+    "id": 959,
+    "createTime": "2018-09-29 11:04:13",
+    "name": "行业类别信息",
+    "url": "/company/industryCate",
+    "parentId": 952,
+    "type": 3,
+    "uuidName": "m959"
+  },
+  {
+    "id": 960,
+    "createTime": "2018-09-29 11:04:46",
+    "name": "荣誉证书",
+    "url": "/company/certificateList/7",
+    "parentId": 952,
+    "type": 3,
+    "uuidName": "m960"
+  },
+  {
+    "id": 961,
+    "createTime": "2018-09-29 11:05:13",
+    "name": "资质证书",
+    "url": "/company/certificateList/6",
+    "parentId": 952,
+    "type": 3,
+    "uuidName": "m961"
+  },
+  {
+    "id": 962,
+    "createTime": "2018-09-29 11:05:50",
+    "name": "黄页模板",
+    "url": "/companyTemplate/findTemplates",
+    "parentId": 952,
+    "type": 3,
+    "uuidName": "m962"
+  },
+  {
+    "id": 966,
+    "createTime": "2018-09-29 11:10:50",
+    "name": "修改",
+    "parentId": 957,
+    "type": 4,
+    "uuidName": "m966"
+  },
+  {
+    "id": 967,
+    "createTime": "2018-09-29 11:11:13",
+    "name": "修改",
+    "parentId": 958,
+    "type": 4,
+    "uuidName": "m967"
+  },
+  {
+    "id": 968,
+    "createTime": "2018-09-29 11:11:43",
+    "name": "修改",
+    "parentId": 959,
+    "type": 4,
+    "uuidName": "m968"
+  },
+  {
+    "id": 969,
+    "createTime": "2018-09-29 11:12:08",
+    "name": "上传证书",
+    "parentId": 960,
+    "type": 4,
+    "uuidName": "m969"
+  },
+  {
+    "id": 970,
+    "createTime": "2018-09-29 11:12:16",
+    "name": "删除",
+    "parentId": 960,
+    "type": 4,
+    "uuidName": "m970"
+  },
+  {
+    "id": 971,
+    "createTime": "2018-09-29 11:15:35",
+    "name": "上传证书",
+    "parentId": 961,
+    "type": 4,
+    "uuidName": "m971"
+  },
+  {
+    "id": 972,
+    "createTime": "2018-09-29 11:15:44",
+    "name": "删除",
+    "parentId": 961,
+    "type": 4,
+    "uuidName": "m972"
+  },
+  {
+    "id": 973,
+    "createTime": "2018-09-29 11:16:20",
+    "name": "选择模板",
+    "parentId": 962,
+    "type": 4,
+    "uuidName": "m973"
+  },
+  {
+    "id": 974,
+    "createTime": "2018-09-29 11:20:57",
+    "name": "新增",
+    "parentId": 953,
+    "type": 4,
+    "uuidName": "m974"
+  },
+  {
+    "id": 975,
+    "createTime": "2018-09-29 11:21:42",
+    "name": "查看",
+    "parentId": 953,
+    "type": 4,
+    "uuidName": "m975"
+  },
+  {
+    "id": 976,
+    "createTime": "2018-09-29 11:21:54",
+    "name": "停用",
+    "parentId": 953,
+    "type": 4,
+    "uuidName": "m976"
+  },
+  {
+    "id": 977,
+    "createTime": "2018-09-29 11:22:10",
+    "name": "编辑",
+    "parentId": 953,
+    "type": 4,
+    "uuidName": "m977"
+  },
+  {
+    "id": 978,
+    "createTime": "2018-09-29 11:22:33",
+    "name": "角色设置",
+    "parentId": 953,
+    "type": 4,
+    "uuidName": "m978"
+  },
+  {
+    "id": 979,
+    "createTime": "2018-09-29 11:23:02",
+    "name": "新增",
+    "parentId": 954,
+    "type": 4,
+    "uuidName": "m979"
+  },
+  {
+    "id": 980,
+    "createTime": "2018-09-29 11:23:23",
+    "name": "查看",
+    "parentId": 954,
+    "type": 4,
+    "uuidName": "m980"
+  },
+  {
+    "id": 981,
+    "createTime": "2018-09-29 11:23:39",
+    "name": "用户",
+    "parentId": 954,
+    "type": 4,
+    "uuidName": "m981"
+  },
+  {
+    "id": 982,
+    "createTime": "2018-09-29 11:23:51",
+    "name": "编辑",
+    "parentId": 954,
+    "type": 4,
+    "uuidName": "m982"
+  },
+  {
+    "id": 983,
+    "createTime": "2018-09-29 11:24:05",
+    "name": "删除",
+    "parentId": 954,
+    "type": 4,
+    "uuidName": "m983"
+  },
+  {
+    "id": 985,
+    "createTime": "2018-09-29 12:01:17",
+    "name": "管理员转移",
+    "url": "/user/administratorList",
+    "parentId": 266,
+    "type": 3,
+    "uuidName": "m985"
+  },
+  {
+    "id": 986,
+    "createTime": "2018-10-07 18:38:05",
+    "name": "询价申请",
+    "url": "/inquiryApply/applyList",
+    "parentId": 269,
+    "type": 3,
+    "uuidName": "m986"
+  },
+  {
+    "id": 987,
+    "createTime": "2018-10-07 18:38:28",
+    "name": "询价项目",
+    "url": "/inquiry/infoList",
+    "parentId": 269,
+    "type": 3,
+    "uuidName": "m987"
+  },
+  {
+    "id": 988,
+    "createTime": "2018-10-07 18:39:19",
+    "name": "委托寻源申请",
+    "url": "/entrust/applyList",
+    "parentId": 269,
+    "type": 3,
+    "uuidName": "m988"
+  },
+  {
+    "id": 989,
+    "createTime": "2018-10-07 18:39:44",
+    "name": "委托寻源项目",
+    "url": "/entrust/itemList",
+    "parentId": 269,
+    "type": 3,
+    "uuidName": "m989"
+  },
+  {
+    "id": 990,
+    "createTime": "2018-10-07 18:42:26",
+    "name": "新增询价申请",
+    "parentId": 986,
+    "type": 4,
+    "uuidName": "m990"
+  },
+  {
+    "id": 991,
+    "createTime": "2018-10-07 18:43:13",
+    "name": "查看",
+    "parentId": 986,
+    "type": 4,
+    "uuidName": "m991"
+  },
+  {
+    "id": 992,
+    "createTime": "2018-10-07 18:43:39",
+    "name": "取消申请",
+    "parentId": 986,
+    "type": 4,
+    "uuidName": "m992"
+  },
+  {
+    "id": 993,
+    "createTime": "2018-10-07 21:01:30",
+    "name": "查看",
+    "parentId": 987,
+    "type": 4,
+    "uuidName": "m993"
+  },
+  {
+    "id": 994,
+    "createTime": "2018-10-07 21:01:47",
+    "name": "提前结束",
+    "parentId": 987,
+    "type": 4,
+    "uuidName": "m994"
+  },
+  {
+    "id": 995,
+    "createTime": "2018-10-07 21:02:58",
+    "name": "邀请竞价",
+    "parentId": 987,
+    "type": 4,
+    "uuidName": "m995"
+  },
+  {
+    "id": 996,
+    "createTime": "2018-10-07 21:04:19",
+    "name": "新增委托寻源申请",
+    "parentId": 988,
+    "type": 4,
+    "uuidName": "m996"
+  },
+  {
+    "id": 997,
+    "createTime": "2018-10-07 21:04:38",
+    "name": "查看",
+    "url": "1111",
+    "parentId": 988,
+    "type": 4,
+    "uuidName": "m997"
+  },
+  {
+    "id": 998,
+    "createTime": "2018-10-07 21:04:53",
+    "name": "取消申请",
+    "parentId": 988,
+    "type": 4,
+    "uuidName": "m998"
+  },
+  {
+    "id": 999,
+    "createTime": "2018-10-07 22:12:38",
+    "name": "商机管理",
+    "url": "/gjxy/infoList/4/0",
+    "parentId": 268,
+    "type": 3,
+    "uuidName": "m999"
+  },
+  {
+    "id": 1000,
+    "createTime": "2018-10-07 22:13:22",
+    "name": "商机收藏",
+    "url": "/gjxy/infoList/3/0",
+    "parentId": 268,
+    "type": 3,
+    "uuidName": "m1000"
+  },
+  {
+    "id": 1002,
+    "createTime": "2018-10-07 22:20:44",
+    "name": "回复",
+    "parentId": 999,
+    "type": 4,
+    "uuidName": "m1002"
+  },
+  {
+    "id": 1003,
+    "createTime": "2018-10-07 22:20:50",
+    "name": "查看",
+    "parentId": 999,
+    "type": 4,
+    "uuidName": "m1003"
+  },
+  {
+    "id": 1004,
+    "createTime": "2018-10-07 22:21:03",
+    "name": "响应",
+    "parentId": 999,
+    "type": 4,
+    "uuidName": "m1004"
+  },
+  {
+    "id": 1005,
+    "createTime": "2018-10-07 22:21:03",
+    "name": "收藏/取消收藏商机",
+    "parentId": 999,
+    "type": 4,
+    "uuidName": "m1005"
+  },
+  {
+    "id": 1008,
+    "createTime": "2018-10-07 23:04:46",
+    "name": "商品管理",
+    "url": "/product/toProductList",
+    "parentId": 267,
+    "type": 3,
+    "uuidName": "m1008"
+  },
+  {
+    "id": 1010,
+    "createTime": "2018-10-07 23:05:14",
+    "name": "新增商品",
+    "parentId": 1008,
+    "type": 4,
+    "uuidName": "m1010"
+  },
+  {
+    "id": 1011,
+    "createTime": "2018-10-07 23:05:34",
+    "name": "查看",
+    "parentId": 1008,
+    "type": 4,
+    "uuidName": "m1011"
+  },
+  {
+    "id": 1012,
+    "createTime": "2018-10-07 23:05:43",
+    "name": "编辑",
+    "parentId": 1008,
+    "type": 4,
+    "uuidName": "m1012"
+  },
+  {
+    "id": 1013,
+    "createTime": "2018-10-07 23:05:51",
+    "name": "版本管理",
+    "parentId": 1008,
+    "type": 4,
+    "uuidName": "m1013"
+  },
+  {
+    "id": 1014,
+    "createTime": "2018-10-07 23:05:58",
+    "name": "删除",
+    "parentId": 1008,
+    "type": 4,
+    "uuidName": "m1014"
+  },
+  {
+    "id": 1015,
+    "createTime": "2018-10-09 10:37:46",
+    "name": "物料分类",
+    "url": "/materielClassify/materielClassifyList",
+    "parentId": 1238,
+    "type": 3,
+    "uuidName": "m1015"
+  },
+  {
+    "id": 1016,
+    "createTime": "2018-10-09 10:38:07",
+    "name": "物料管理",
+    "url": "/materiel/materielList",
+    "parentId": 1238,
+    "type": 3,
+    "uuidName": "m1016"
+  },
+  {
+    "id": 1017,
+    "createTime": "2018-10-09 10:38:32",
+    "name": "物料清单",
+    "url": "/materielDetailed/materielDetailedList",
+    "parentId": 1238,
+    "type": 3,
+    "uuidName": "m1017"
+  },
+  {
+    "id": 1018,
+    "createTime": "2018-10-09 10:38:55",
+    "name": "生产任务",
+    "url": "/productTask/productTaskList",
+    "parentId": 1238,
+    "type": 3,
+    "uuidName": "m1018"
+  },
+  {
+    "id": 1019,
+    "createTime": "2018-10-09 10:39:12",
+    "name": "生产流程",
+    "url": "/productiProcess/processList",
+    "parentId": 1238,
+    "type": 3,
+    "uuidName": "m1019"
+  },
+  {
+    "id": 1020,
+    "createTime": "2018-10-09 10:40:39",
+    "name": "监督项目",
+    "url": "/supervisionProject/supervisionProjectList",
+    "parentId": 1238,
+    "type": 3,
+    "uuidName": "m1020"
+  },
+  {
+    "id": 1021,
+    "createTime": "2018-10-09 10:41:28",
+    "name": "新增下级分类",
+    "parentId": 1015,
+    "type": 4,
+    "uuidName": "m1021"
+  },
+  {
+    "id": 1022,
+    "createTime": "2018-10-09 10:42:52",
+    "name": "修改分类",
+    "parentId": 1015,
+    "type": 4,
+    "uuidName": "m1022"
+  },
+  {
+    "id": 1023,
+    "createTime": "2018-10-09 10:44:59",
+    "name": "删除",
+    "parentId": 1015,
+    "type": 4,
+    "uuidName": "m1023"
+  },
+  {
+    "id": 1024,
+    "createTime": "2018-10-09 10:47:07",
+    "name": "新增物料",
+    "parentId": 1016,
+    "type": 4,
+    "uuidName": "m1024"
+  },
+  {
+    "id": 1025,
+    "createTime": "2018-10-09 10:47:41",
+    "name": "查看",
+    "parentId": 1016,
+    "type": 4,
+    "uuidName": "m1025"
+  },
+  {
+    "id": 1026,
+    "createTime": "2018-10-09 10:47:51",
+    "name": "编辑",
+    "parentId": 1016,
+    "type": 4,
+    "uuidName": "m1026"
+  },
+  {
+    "id": 1027,
+    "createTime": "2018-10-09 10:48:02",
+    "name": "删除",
+    "parentId": 1016,
+    "type": 4,
+    "uuidName": "m1027"
+  },
+  {
+    "id": 1028,
+    "createTime": "2018-10-09 10:59:35",
+    "name": "新增物料清单",
+    "parentId": 1017,
+    "type": 4,
+    "uuidName": "m1028"
+  },
+  {
+    "id": 1029,
+    "createTime": "2018-10-09 10:59:50",
+    "name": "查看",
+    "parentId": 1017,
+    "type": 4,
+    "uuidName": "m1029"
+  },
+  {
+    "id": 1030,
+    "createTime": "2018-10-09 11:00:01",
+    "name": "编辑",
+    "parentId": 1017,
+    "type": 4,
+    "uuidName": "m1030"
+  },
+  {
+    "id": 1031,
+    "createTime": "2018-10-09 11:00:08",
+    "name": "删除",
+    "parentId": 1017,
+    "type": 4,
+    "uuidName": "m1031"
+  },
+  {
+    "id": 1032,
+    "createTime": "2018-10-09 11:01:33",
+    "name": "新增任务",
+    "parentId": 1018,
+    "type": 4,
+    "uuidName": "m1032"
+  },
+  {
+    "id": 1033,
+    "createTime": "2018-10-09 11:01:42",
+    "name": "编辑",
+    "parentId": 1018,
+    "type": 4,
+    "uuidName": "m1033"
+  },
+  {
+    "id": 1034,
+    "createTime": "2018-10-09 11:01:49",
+    "name": "查看",
+    "parentId": 1018,
+    "type": 4,
+    "uuidName": "m1034"
+  },
+  {
+    "id": 1035,
+    "createTime": "2018-10-09 11:01:57",
+    "name": "删除",
+    "parentId": 1018,
+    "type": 4,
+    "uuidName": "m1035"
+  },
+  {
+    "id": 1036,
+    "createTime": "2018-10-09 11:03:19",
+    "name": "新增流程",
+    "parentId": 1019,
+    "type": 4,
+    "uuidName": "m1036"
+  },
+  {
+    "id": 1037,
+    "createTime": "2018-10-09 11:03:35",
+    "name": "编辑",
+    "parentId": 1019,
+    "type": 4,
+    "uuidName": "m1037"
+  },
+  {
+    "id": 1038,
+    "createTime": "2018-10-09 11:03:41",
+    "name": "查看",
+    "parentId": 1019,
+    "type": 4,
+    "uuidName": "m1038"
+  },
+  {
+    "id": 1039,
+    "createTime": "2018-10-09 11:03:51",
+    "name": "删除",
+    "parentId": 1019,
+    "type": 4,
+    "uuidName": "m1039"
+  },
+  {
+    "id": 1040,
+    "createTime": "2018-10-09 11:04:16",
+    "name": "添加任务",
+    "parentId": 1019,
+    "type": 4,
+    "uuidName": "m1040"
+  },
+  {
+    "id": 1041,
+    "createTime": "2018-10-09 11:04:25",
+    "name": "删除任务",
+    "parentId": 1019,
+    "type": 4,
+    "uuidName": "m1041"
+  },
+  {
+    "id": 1042,
+    "createTime": "2018-10-09 11:04:39",
+    "name": "添加商品",
+    "parentId": 1019,
+    "type": 4,
+    "uuidName": "m1042"
+  },
+  {
+    "id": 1043,
+    "createTime": "2018-10-09 11:04:48",
+    "name": "删除商品",
+    "parentId": 1019,
+    "type": 4,
+    "uuidName": "m1043"
+  },
+  {
+    "id": 1044,
+    "createTime": "2018-10-09 11:07:23",
+    "name": "创建项目",
+    "parentId": 1020,
+    "type": 4,
+    "uuidName": "m1044"
+  },
+  {
+    "id": 1045,
+    "createTime": "2018-10-09 13:47:41",
+    "name": "归档",
+    "parentId": 1016,
+    "type": 4,
+    "uuidName": "m1045"
+  },
+  {
+    "id": 1046,
+    "createTime": "2018-10-10 11:31:11",
+    "name": "管理",
+    "parentId": 1020,
+    "type": 4,
+    "uuidName": "m1046"
+  },
+  {
+    "id": 1047,
+    "createTime": "2018-10-10 11:31:18",
+    "name": "查看",
+    "parentId": 1020,
+    "type": 4,
+    "uuidName": "m1047"
+  },
+  {
+    "id": 1048,
+    "createTime": "2018-10-10 11:31:24",
+    "name": "删除",
+    "parentId": 1020,
+    "type": 4,
+    "uuidName": "m1048"
+  },
+  {
+    "id": 1051,
+    "createTime": "2018-10-10 11:35:17",
+    "name": "编辑",
+    "parentId": 1046,
+    "type": 4,
+    "uuidName": "m1051"
+  },
+  {
+    "id": 1052,
+    "createTime": "2018-10-10 11:35:25",
+    "name": "在线回复",
+    "parentId": 1046,
+    "type": 4,
+    "uuidName": "m1052"
+  },
+  {
+    "id": 1053,
+    "createTime": "2018-10-10 11:35:39",
+    "name": "发布",
+    "parentId": 1046,
+    "type": 4,
+    "uuidName": "m1053"
+  },
+  {
+    "id": 1054,
+    "createTime": "2018-10-10 11:35:56",
+    "name": "新增商品",
+    "parentId": 1046,
+    "type": 4,
+    "uuidName": "m1054"
+  },
+  {
+    "id": 1055,
+    "createTime": "2018-10-10 11:36:11",
+    "name": "编辑商品",
+    "parentId": 1046,
+    "type": 4,
+    "uuidName": "m1055"
+  },
+  {
+    "id": 1056,
+    "createTime": "2018-10-10 11:36:26",
+    "name": "删除商品",
+    "parentId": 1046,
+    "type": 4,
+    "uuidName": "m1056"
+  },
+  {
+    "id": 1057,
+    "createTime": "2018-10-10 11:52:11",
+    "name": "新增任务",
+    "parentId": 1046,
+    "type": 4,
+    "uuidName": "m1057"
+  },
+  {
+    "id": 1058,
+    "createTime": "2018-10-10 11:52:21",
+    "name": "编辑任务",
+    "parentId": 1046,
+    "type": 4,
+    "uuidName": "m1058"
+  },
+  {
+    "id": 1059,
+    "createTime": "2018-10-10 11:53:32",
+    "name": "删除任务",
+    "parentId": 1046,
+    "type": 4,
+    "uuidName": "m1059"
+  },
+  {
+    "id": 1060,
+    "createTime": "2018-10-10 11:55:13",
+    "name": "新增生产物料",
+    "parentId": 1046,
+    "type": 4,
+    "uuidName": "m1060"
+  },
+  {
+    "id": 1061,
+    "createTime": "2018-10-10 11:55:25",
+    "name": "编辑生产物料",
+    "parentId": 1046,
+    "type": 4,
+    "uuidName": "m1061"
+  },
+  {
+    "id": 1062,
+    "createTime": "2018-10-10 11:55:33",
+    "name": "删除生产物料",
+    "parentId": 1046,
+    "type": 4,
+    "uuidName": "m1062"
+  },
+  {
+    "id": 1063,
+    "createTime": "2018-10-10 11:56:20",
+    "name": "新增物料采购计划",
+    "parentId": 1046,
+    "type": 4,
+    "uuidName": "m1063"
+  },
+  {
+    "id": 1064,
+    "createTime": "2018-10-10 11:56:29",
+    "name": "编辑物料采购计划",
+    "parentId": 1046,
+    "type": 4,
+    "uuidName": "m1064"
+  },
+  {
+    "id": 1065,
+    "createTime": "2018-10-10 11:56:48",
+    "name": "删除物料采购计划",
+    "parentId": 1046,
+    "type": 4,
+    "uuidName": "m1065"
+  },
+  {
+    "id": 1066,
+    "createTime": "2018-10-10 11:57:37",
+    "name": "新增物料库存变更记录",
+    "parentId": 1046,
+    "type": 4,
+    "uuidName": "m1066"
+  },
+  {
+    "id": 1067,
+    "createTime": "2018-10-10 11:58:03",
+    "name": "删除物料库存变更记录",
+    "parentId": 1046,
+    "type": 4,
+    "uuidName": "m1067"
+  },
+  {
+    "id": 1068,
+    "createTime": "2018-10-10 12:06:01",
+    "name": "新增成品/半成品库存变更记录",
+    "parentId": 1046,
+    "type": 4,
+    "uuidName": "m1068"
+  },
+  {
+    "id": 1069,
+    "createTime": "2018-10-10 12:06:13",
+    "name": "删除成品/半成品库存变更记录",
+    "parentId": 1046,
+    "type": 4,
+    "uuidName": "m1069"
+  },
+  {
+    "id": 1070,
+    "createTime": "2018-10-10 12:15:23",
+    "name": "新增检验数据",
+    "parentId": 1046,
+    "type": 4,
+    "uuidName": "m1070"
+  },
+  {
+    "id": 1071,
+    "createTime": "2018-10-10 12:15:47",
+    "name": "编辑检验数据",
+    "parentId": 1046,
+    "type": 4,
+    "uuidName": "m1071"
+  },
+  {
+    "id": 1072,
+    "createTime": "2018-10-10 12:15:53",
+    "name": "删除检验数据",
+    "parentId": 1046,
+    "type": 4,
+    "uuidName": "m1072"
+  },
+  {
+    "id": 1074,
+    "createTime": "2018-10-10 12:22:31",
+    "name": "上传生产活动",
+    "parentId": 1046,
+    "type": 4,
+    "uuidName": "m1074"
+  },
+  {
+    "id": 1075,
+    "createTime": "2018-10-10 12:22:42",
+    "name": "删除生产活动",
+    "parentId": 1046,
+    "type": 4,
+    "uuidName": "m1075"
+  },
+  {
+    "id": 1076,
+    "createTime": "2018-10-10 13:16:23",
+    "name": "启动任务",
+    "parentId": 1046,
+    "type": 4,
+    "uuidName": "m1076"
+  },
+  {
+    "id": 1077,
+    "createTime": "2018-10-10 13:16:33",
+    "name": "暂停任务",
+    "parentId": 1046,
+    "type": 4,
+    "uuidName": "m1077"
+  },
+  {
+    "id": 1078,
+    "createTime": "2018-10-10 13:16:40",
+    "name": "结束任务",
+    "parentId": 1046,
+    "type": 4,
+    "uuidName": "m1078"
+  },
+  {
+    "id": 1079,
+    "createTime": "2018-10-10 15:42:48",
+    "name": "查看",
+    "parentId": 898,
+    "type": 4,
+    "uuidName": "m1079"
+  },
+  {
+    "id": 1080,
+    "createTime": "2018-10-10 15:42:55",
+    "name": "审核",
+    "parentId": 898,
+    "type": 4,
+    "uuidName": "m1080"
+  },
+  {
+    "id": 1081,
+    "createTime": "2018-10-10 16:08:37",
+    "name": "新增商品特征",
+    "parentId": 899,
+    "type": 4,
+    "uuidName": "m1081"
+  },
+  {
+    "id": 1082,
+    "createTime": "2018-10-10 16:08:55",
+    "name": "编辑商品特征",
+    "parentId": 899,
+    "type": 4,
+    "uuidName": "m1082"
+  },
+  {
+    "id": 1083,
+    "createTime": "2018-10-10 16:10:34",
+    "name": "删除商品特征",
+    "parentId": 899,
+    "type": 4,
+    "uuidName": "m1083"
+  },
+  {
+    "id": 1085,
+    "createTime": "2018-10-10 16:12:06",
+    "name": "编辑特征描述",
+    "parentId": 900,
+    "type": 4,
+    "uuidName": "m1085"
+  },
+  {
+    "id": 1086,
+    "createTime": "2018-10-10 16:12:16",
+    "name": "删除特征描述",
+    "parentId": 900,
+    "type": 4,
+    "uuidName": "m1086"
+  },
+  {
+    "id": 1087,
+    "createTime": "2018-10-10 18:53:10",
+    "name": "创建表单模板",
+    "parentId": 951,
+    "type": 4,
+    "uuidName": "m1087"
+  },
+  {
+    "id": 1088,
+    "createTime": "2018-10-10 18:53:27",
+    "name": "编辑",
+    "parentId": 951,
+    "type": 4,
+    "uuidName": "m1088"
+  },
+  {
+    "id": 1089,
+    "createTime": "2018-10-10 18:53:42",
+    "name": "删除",
+    "parentId": 951,
+    "type": 4,
+    "uuidName": "m1089"
+  },
+  {
+    "id": 1090,
+    "createTime": "2018-10-10 19:06:07",
+    "name": "模板管理",
+    "parentId": 278,
+    "type": 3,
+    "uuidName": "m1090"
+  },
+  {
+    "id": 1091,
+    "createTime": "2018-10-10 19:06:31",
+    "name": "插件管理",
+    "parentId": 278,
+    "type": 3,
+    "uuidName": "m1091"
+  },
+  {
+    "id": 1092,
+    "createTime": "2018-10-10 19:06:46",
+    "name": "接口管理",
+    "parentId": 278,
+    "type": 3,
+    "uuidName": "m1092"
+  },
+  {
+    "id": 1094,
+    "createTime": "2018-10-10 20:55:49",
+    "name": "设置内容",
+    "parentId": 1090,
+    "type": 4,
+    "uuidName": "m1094"
+  },
+  {
+    "id": 1095,
+    "createTime": "2018-10-10 21:04:00",
+    "name": "新增插件",
+    "parentId": 1091,
+    "type": 4,
+    "uuidName": "m1095"
+  },
+  {
+    "id": 1096,
+    "createTime": "2018-10-10 21:04:08",
+    "name": "编辑",
+    "parentId": 1091,
+    "type": 4,
+    "uuidName": "m1096"
+  },
+  {
+    "id": 1097,
+    "createTime": "2018-10-10 21:04:14",
+    "name": "删除",
+    "parentId": 1091,
+    "type": 4,
+    "uuidName": "m1097"
+  },
+  {
+    "id": 1098,
+    "createTime": "2018-10-10 21:09:16",
+    "name": "新增接口",
+    "parentId": 1092,
+    "type": 4,
+    "uuidName": "m1098"
+  },
+  {
+    "id": 1109,
+    "createTime": "2018-10-26 17:56:30",
+    "name": "易竞价",
+    "parentId": 274,
+    "type": 3,
+    "uuidName": "m1109"
+  },
+  {
+    "id": 1117,
+    "createTime": "2018-10-26 18:00:09",
+    "name": "自助竞价服务",
+    "parentId": 1109,
+    "type": 3,
+    "uuidName": "m1117"
+  },
+  {
+    "id": 1118,
+    "createTime": "2018-10-26 18:00:22",
+    "name": "竞价项目管理",
+    "parentId": 1109,
+    "type": 3,
+    "uuidName": "m1118"
+  },
+  {
+    "id": 1119,
+    "createTime": "2018-10-26 18:01:24",
+    "name": "开通服务",
+    "parentId": 1117,
+    "type": 3,
+    "uuidName": "m1119"
+  },
+  {
+    "id": 1120,
+    "createTime": "2018-10-26 18:01:37",
+    "name": "竞价事件",
+    "parentId": 1117,
+    "type": 3,
+    "uuidName": "m1120"
+  },
+  {
+    "id": 1121,
+    "createTime": "2018-10-26 18:05:03",
+    "name": "新增项目",
+    "parentId": 1118,
+    "type": 4,
+    "uuidName": "m1121"
+  },
+  {
+    "id": 1122,
+    "createTime": "2018-10-26 18:05:21",
+    "name": "竞价事件",
+    "parentId": 1118,
+    "type": 4,
+    "uuidName": "m1122"
+  },
+  {
+    "id": 1123,
+    "createTime": "2018-10-26 18:05:53",
+    "name": "详情",
+    "parentId": 1118,
+    "type": 4,
+    "uuidName": "m1123"
+  },
+  {
+    "id": 1124,
+    "createTime": "2018-10-26 18:06:06",
+    "name": "编辑",
+    "parentId": 1118,
+    "type": 4,
+    "uuidName": "m1124"
+  },
+  {
+    "id": 1125,
+    "createTime": "2018-10-26 18:06:16",
+    "name": "删除",
+    "parentId": 1118,
+    "type": 4,
+    "uuidName": "m1125"
+  },
+  {
+    "id": 1153,
+    "createTime": "2018-11-19 14:02:10",
+    "name": "通栏广告管理",
+    "url": "/frontAdBanner/list.shtml",
+    "parentId": 545,
+    "type": 3,
+    "uuidName": "m1153"
+  },
+  {
+    "id": 1154,
+    "createTime": "2018-11-19 14:07:15",
+    "name": "新增",
+    "parentId": 1153,
+    "type": 4,
+    "uuidName": "m1154"
+  },
+  {
+    "id": 1155,
+    "createTime": "2018-11-19 14:07:31",
+    "name": "编辑",
+    "parentId": 1153,
+    "type": 4,
+    "uuidName": "m1155"
+  },
+  {
+    "id": 1156,
+    "createTime": "2018-11-19 14:07:49",
+    "name": "删除",
+    "parentId": 1153,
+    "type": 4,
+    "uuidName": "m1156"
+  },
+  {
+    "id": 1157,
+    "createTime": "2018-11-19 14:11:22",
+    "name": "帮助中心管理",
+    "parentId": 279,
+    "type": 3,
+    "uuidName": "m1157"
+  },
+  {
+    "id": 1158,
+    "createTime": "2018-11-19 14:12:09",
+    "name": "帮助中心文档管理",
+    "url": "/helpCenterType/list.shtml",
+    "parentId": 1157,
+    "type": 3,
+    "uuidName": "m1158"
+  },
+  {
+    "id": 1159,
+    "createTime": "2018-11-19 14:12:53",
+    "name": "帮助中心在线提问管理",
+    "url": "/helpCenterLineanswer/list.shtml",
+    "parentId": 1157,
+    "type": 3,
+    "uuidName": "m1159"
+  },
+  {
+    "id": 1160,
+    "createTime": "2018-11-19 14:13:31",
+    "name": "新增分类",
+    "parentId": 1158,
+    "type": 4,
+    "uuidName": "m1160"
+  },
+  {
+    "id": 1161,
+    "createTime": "2018-11-19 14:13:57",
+    "name": "编辑分类",
+    "parentId": 1158,
+    "type": 4,
+    "uuidName": "m1161"
+  },
+  {
+    "id": 1162,
+    "createTime": "2018-11-19 14:14:21",
+    "name": "删除分类",
+    "parentId": 1158,
+    "type": 4,
+    "uuidName": "m1162"
+  },
+  {
+    "id": 1163,
+    "createTime": "2018-11-19 14:14:40",
+    "name": "查看文档",
+    "parentId": 1158,
+    "type": 4,
+    "uuidName": "m1163"
+  },
+  {
+    "id": 1164,
+    "createTime": "2018-11-19 14:15:17",
+    "name": "查看详情",
+    "parentId": 1159,
+    "type": 4,
+    "uuidName": "m1164"
+  },
+  {
+    "id": 1165,
+    "createTime": "2018-11-19 14:15:25",
+    "name": "处理问题",
+    "parentId": 1159,
+    "type": 4,
+    "uuidName": "m1165"
+  },
+  {
+    "id": 1166,
+    "createTime": "2018-11-19 14:15:37",
+    "name": "忽略",
+    "parentId": 1159,
+    "type": 4,
+    "uuidName": "m1166"
+  },
+  {
+    "id": 1173,
+    "createTime": "2018-11-19 14:26:50",
+    "name": "短信管理",
+    "url": "/sysSmsTask/list.shtml",
+    "parentId": 842,
+    "type": 3,
+    "uuidName": "m1173"
+  },
+  {
+    "id": 1174,
+    "createTime": "2018-11-19 14:30:55",
+    "name": "发送短信",
+    "parentId": 1173,
+    "type": 4,
+    "uuidName": "m1174"
+  },
+  {
+    "id": 1175,
+    "createTime": "2018-11-19 14:31:13",
+    "name": "重发短信",
+    "parentId": 1173,
+    "type": 4,
+    "uuidName": "m1175"
+  },
+  {
+    "id": 1176,
+    "createTime": "2018-11-19 14:32:03",
+    "name": "待发短信",
+    "parentId": 1173,
+    "type": 4,
+    "uuidName": "m1176"
+  },
+  {
+    "id": 1177,
+    "createTime": "2018-11-19 14:32:25",
+    "name": "手动获取状态码",
+    "parentId": 1173,
+    "type": 4,
+    "uuidName": "m1177"
+  },
+  {
+    "id": 1178,
+    "createTime": "2018-11-19 14:33:13",
+    "name": "邮件管理",
+    "url": "/sysMailTask/list.shtml",
+    "parentId": 842,
+    "type": 3,
+    "uuidName": "m1178"
+  },
+  {
+    "id": 1179,
+    "createTime": "2018-11-19 14:33:41",
+    "name": "发邮件",
+    "parentId": 1178,
+    "type": 4,
+    "uuidName": "m1179"
+  },
+  {
+    "id": 1180,
+    "createTime": "2018-11-19 14:33:50",
+    "name": "重发邮件",
+    "parentId": 1178,
+    "type": 4,
+    "uuidName": "m1180"
+  },
+  {
+    "id": 1181,
+    "createTime": "2018-11-19 14:34:03",
+    "name": "待发邮件",
+    "parentId": 1178,
+    "type": 4,
+    "uuidName": "m1181"
+  },
+  {
+    "id": 1182,
+    "createTime": "2018-11-19 14:36:48",
+    "name": "BPO P2P用户管理",
+    "url": "/uBpoP2pUsers/list.shtml",
+    "parentId": 842,
+    "type": 3,
+    "uuidName": "m1182"
+  },
+  {
+    "id": 1183,
+    "createTime": "2018-11-19 14:39:21",
+    "name": "新增",
+    "parentId": 1182,
+    "type": 4,
+    "uuidName": "m1183"
+  },
+  {
+    "id": 1184,
+    "createTime": "2018-11-19 14:39:29",
+    "name": "编辑",
+    "parentId": 1182,
+    "type": 4,
+    "uuidName": "m1184"
+  },
+  {
+    "id": 1185,
+    "createTime": "2018-11-19 14:39:35",
+    "name": "删除",
+    "parentId": 1182,
+    "type": 4,
+    "uuidName": "m1185"
+  },
+  {
+    "id": 1186,
+    "createTime": "2018-11-19 14:40:55",
+    "name": "系统参数配置管理",
+    "url": "/sysConfig/list.shtml",
+    "parentId": 842,
+    "type": 3,
+    "uuidName": "m1186"
+  },
+  {
+    "id": 1187,
+    "createTime": "2018-11-19 14:41:22",
+    "name": "新增",
+    "parentId": 1186,
+    "type": 4,
+    "uuidName": "m1187"
+  },
+  {
+    "id": 1188,
+    "createTime": "2018-11-19 14:41:34",
+    "name": "编辑",
+    "parentId": 1186,
+    "type": 4,
+    "uuidName": "m1188"
+  },
+  {
+    "id": 1189,
+    "createTime": "2018-11-19 14:41:40",
+    "name": "删除",
+    "parentId": 1186,
+    "type": 4,
+    "uuidName": "m1189"
+  },
+  {
+    "id": 1194,
+    "createTime": "2018-11-19 14:48:02",
+    "name": "行业类别更名设置",
+    "url": "/tProductType/list4.shtml",
+    "parentId": 861,
+    "type": 3,
+    "uuidName": "m1194"
+  },
+  {
+    "id": 1195,
+    "createTime": "2018-11-19 14:48:22",
+    "name": "更名",
+    "parentId": 1194,
+    "type": 4,
+    "uuidName": "m1195"
+  },
+  {
+    "id": 1196,
+    "createTime": "2018-11-19 14:49:38",
+    "name": "申请通知设置",
+    "url": "/applyNoticeSet/getNoticeSet.shtml",
+    "parentId": 842,
+    "type": 3,
+    "uuidName": "m1196"
+  },
+  {
+    "id": 1197,
+    "createTime": "2018-11-19 14:50:27",
+    "name": "邮件通知记录",
+    "url": "/sysMailTask/list1.shtml",
+    "parentId": 842,
+    "type": 3,
+    "uuidName": "m1197"
+  },
+  {
+    "id": 1198,
+    "createTime": "2018-11-19 14:51:03",
+    "name": "新增",
+    "parentId": 1197,
+    "type": 4,
+    "uuidName": "m1198"
+  },
+  {
+    "id": 1199,
+    "createTime": "2018-11-19 14:51:16",
+    "name": "编辑",
+    "parentId": 1197,
+    "type": 4,
+    "uuidName": "m1199"
+  },
+  {
+    "id": 1200,
+    "createTime": "2018-11-19 14:51:42",
+    "name": "删除",
+    "parentId": 1197,
+    "type": 4,
+    "uuidName": "m1200"
+  },
+  {
+    "id": 1202,
+    "createTime": "2018-11-19 17:19:40",
+    "name": "日志记录",
+    "parentId": 500,
+    "type": 4,
+    "uuidName": "m1202"
+  },
+  {
+    "id": 1203,
+    "createTime": "2018-11-19 17:52:20",
+    "name": "查看商机详情",
+    "parentId": 490,
+    "type": 4,
+    "uuidName": "m1203"
+  },
+  {
+    "id": 1204,
+    "createTime": "2018-11-19 17:53:14",
+    "name": "新增",
+    "parentId": 491,
+    "type": 4,
+    "uuidName": "m1204"
+  },
+  {
+    "id": 1205,
+    "createTime": "2018-11-19 17:53:24",
+    "name": "编辑",
+    "parentId": 491,
+    "type": 4,
+    "uuidName": "m1205"
+  },
+  {
+    "id": 1206,
+    "createTime": "2018-11-19 17:53:33",
+    "name": "删除",
+    "parentId": 491,
+    "type": 4,
+    "uuidName": "m1206"
+  },
+  {
+    "id": 1208,
+    "createTime": "2018-11-19 18:01:23",
+    "name": "文件上传",
+    "parentId": 524,
+    "type": 4,
+    "uuidName": "m1208"
+  },
+  {
+    "id": 1215,
+    "createTime": "2018-11-20 17:21:57",
+    "name": "新增",
+    "parentId": 647,
+    "type": 4,
+    "uuidName": "m1215"
+  },
+  {
+    "id": 1216,
+    "createTime": "2018-11-20 17:22:13",
+    "name": "编辑",
+    "parentId": 647,
+    "type": 4,
+    "uuidName": "m1216"
+  },
+  {
+    "id": 1217,
+    "createTime": "2018-11-20 17:22:20",
+    "name": "删除",
+    "parentId": 647,
+    "type": 4,
+    "uuidName": "m1217"
+  },
+  {
+    "id": 1218,
+    "createTime": "2018-11-20 17:24:42",
+    "name": "新增",
+    "parentId": 673,
+    "type": 4,
+    "uuidName": "m1218"
+  },
+  {
+    "id": 1219,
+    "createTime": "2018-11-20 17:24:50",
+    "name": "编辑",
+    "parentId": 673,
+    "type": 4,
+    "uuidName": "m1219"
+  },
+  {
+    "id": 1220,
+    "createTime": "2018-11-20 17:24:58",
+    "name": "删除",
+    "parentId": 673,
+    "type": 4,
+    "uuidName": "m1220"
+  },
+  {
+    "id": 1221,
+    "createTime": "2018-11-20 17:41:53",
+    "name": "邀请码",
+    "parentId": 688,
+    "type": 4,
+    "uuidName": "m1221"
+  },
+  {
+    "id": 1222,
+    "createTime": "2018-11-20 17:43:55",
+    "name": "商机策略设置",
+    "parentId": 688,
+    "type": 4,
+    "uuidName": "m1222"
+  },
+  {
+    "id": 1224,
+    "createTime": "2018-11-21 09:47:30",
+    "name": "企业商机信息设置",
+    "url": "/cCommpanyInfo/list6.shtml",
+    "parentId": 275,
+    "type": 3,
+    "uuidName": "m1224"
+  },
+  {
+    "id": 1225,
+    "createTime": "2018-11-21 10:54:54",
+    "name": "查看详情",
+    "parentId": 1224,
+    "type": 4,
+    "uuidName": "m1225"
+  },
+  {
+    "id": 1226,
+    "createTime": "2018-11-21 10:55:10",
+    "name": "匹配商机",
+    "parentId": 1224,
+    "type": 4,
+    "uuidName": "m1226"
+  },
+  {
+    "id": 1227,
+    "createTime": "2018-11-21 10:55:21",
+    "name": "查看企业商机",
+    "parentId": 1224,
+    "type": 4,
+    "uuidName": "m1227"
+  },
+  {
+    "id": 1228,
+    "createTime": "2018-11-21 10:55:35",
+    "name": "商机策略设置",
+    "parentId": 1224,
+    "type": 4,
+    "uuidName": "m1228"
+  },
+  {
+    "id": 1229,
+    "createTime": "2018-11-21 17:25:02",
+    "name": "设置处置员",
+    "parentId": 910,
+    "type": 4,
+    "uuidName": "m1229"
+  },
+  {
+    "id": 1230,
+    "createTime": "2018-11-22 19:36:21",
+    "name": "采购竞价",
+    "url": "/",
+    "parentId": 197,
+    "type": 3,
+    "uuidName": "m1230"
+  },
+  {
+    "id": 1233,
+    "createTime": "2018-12-19 13:28:19",
+    "name": "委托竞价",
+    "url": "/bidding/biddingProject/list",
+    "parentId": 1230,
+    "type": 3,
+    "uuidName": "m1233"
+  },
+  {
+    "id": 1234,
+    "createTime": "2018-12-19 13:30:00",
+    "name": "自助竞价",
+    "url": "/bidding/selfHelp/event/list",
+    "parentId": 1230,
+    "type": 3,
+    "uuidName": "m1234"
+  },
+  {
+    "id": 1235,
+    "createTime": "2018-12-19 13:30:47",
+    "name": "参与的竞价",
+    "url": "/bidding/join",
+    "parentId": 1230,
+    "type": 3,
+    "uuidName": "m1235"
+  },
+  {
+    "id": 1236,
+    "createTime": "2018-12-19 13:33:12",
+    "name": "监督生产项目",
+    "url": "/supervisionProject/buyProjectList",
+    "parentId": 1237,
+    "type": 3,
+    "uuidName": "m1236"
+  },
+  {
+    "id": 1237,
+    "createTime": "2018-12-25 16:53:48",
+    "name": "采购商",
+    "parentId": 270,
+    "type": 3,
+    "uuidName": "m1237"
+  },
+  {
+    "id": 1238,
+    "createTime": "2018-12-25 16:53:59",
+    "name": "供应商",
+    "parentId": 270,
+    "type": 3,
+    "uuidName": "m1238"
+  },
+  {
+    "id": 1240,
+    "createTime": "2019-01-07 13:39:19",
+    "name": "归档",
+    "parentId": 1008,
+    "type": 4,
+    "uuidName": "m1240"
+  },
+  {
+    "id": 1241,
+    "createTime": "2019-01-10 16:25:49",
+    "name": "最新询价项目",
+    "parentId": 269,
+    "type": 4,
+    "uuidName": "m1241"
+  },
+  {
+    "id": 1242,
+    "createTime": "2019-01-10 16:25:49",
+    "name": "最新委托寻源项目",
+    "parentId": 269,
+    "type": 4,
+    "uuidName": "m1242"
+  },
+  {
+    "id": 1246,
+    "createTime": "2019-01-17 15:04:04",
+    "name": "查看商品历史版本",
+    "url": "/ViewSupplyProductHistory",
+    "parentId": 62,
+    "type": 4,
+    "uuidName": "m1246"
+  },
+  {
+    "id": 1247,
+    "createTime": "2019-01-21 18:08:56",
+    "name": "最近浏览的商品",
+    "url": "BtnBuyerWatchProduct",
+    "parentId": 91,
+    "type": 4,
+    "uuidName": "m1247"
+  },
+  {
+    "id": 1248,
+    "createTime": "2019-01-24 16:27:39",
+    "name": "数据导入",
+    "parentId": 278,
+    "type": 3,
+    "uuidName": "m1248"
+  },
+  {
+    "id": 1249,
+    "createTime": "2019-01-25 17:09:59",
+    "name": "编辑",
+    "parentId": 1092,
+    "type": 4,
+    "uuidName": "m1249"
+  },
+  {
+    "id": 1250,
+    "createTime": "2019-01-25 17:10:07",
+    "name": "删除",
+    "parentId": 1092,
+    "type": 4,
+    "uuidName": "m1250"
+  },
+  {
+    "id": 1251,
+    "createTime": "2019-01-25 17:16:02",
+    "name": "导入",
+    "parentId": 1248,
+    "type": 4,
+    "uuidName": "m1251"
+  },
+  {
+    "id": 1252,
+    "createTime": "2019-01-25 17:16:08",
+    "name": "下载",
+    "parentId": 1248,
+    "type": 4,
+    "uuidName": "m1252"
+  },
+  {
+    "id": 1253,
+    "createTime": "2019-01-25 18:21:04",
+    "name": "外综服",
+    "parentId": 279,
+    "type": 3,
+    "uuidName": "m1253"
+  },
+  {
+    "id": 1254,
+    "createTime": "2019-01-25 18:22:06",
+    "name": "服务申请管理",
+    "url": "/wzf/list.shtml",
+    "parentId": 1253,
+    "type": 3,
+    "uuidName": "m1254"
+  },
+  {
+    "id": 1255,
+    "createTime": "2019-01-25 18:22:30",
+    "name": "订单数据统计",
+    "url": "/wzf/listOrder.shtml",
+    "parentId": 1253,
+    "type": 3,
+    "uuidName": "m1255"
+  },
+  {
+    "id": 1256,
+    "createTime": "2019-01-25 18:22:44",
+    "name": "金额数据统计",
+    "url": "/wzf/listAmount.shtml",
+    "parentId": 1253,
+    "type": 3,
+    "uuidName": "m1256"
+  },
+  {
+    "id": 1257,
+    "createTime": "2019-01-25 19:16:12",
+    "name": "外综服",
+    "parentId": 197,
+    "type": 3,
+    "uuidName": "m1257"
+  },
+  {
+    "id": 1258,
+    "createTime": "2019-01-27 16:24:15",
+    "name": "查看详情",
+    "parentId": 1254,
+    "type": 4,
+    "uuidName": "m1258"
+  },
+  {
+    "id": 1259,
+    "createTime": "2019-01-27 16:24:42",
+    "name": "初审",
+    "parentId": 1254,
+    "type": 4,
+    "uuidName": "m1259"
+  },
+  {
+    "id": 1261,
+    "createTime": "2019-05-06 17:46:49",
+    "name": "友情链接管理",
+    "url": "/friendlyLink/list.shtml",
+    "parentId": 279,
+    "type": 3,
+    "uuidName": "m1261"
+  },
+  {
+    "id": 1262,
+    "createTime": "2019-05-06 17:48:11",
+    "name": "新增",
+    "parentId": 1261,
+    "type": 4,
+    "uuidName": "m1262"
+  },
+  {
+    "id": 1263,
+    "createTime": "2019-05-06 17:48:21",
+    "name": "编辑",
+    "parentId": 1261,
+    "type": 4,
+    "uuidName": "m1263"
+  },
+  {
+    "id": 1264,
+    "createTime": "2019-05-06 17:48:28",
+    "name": "删除",
+    "parentId": 1261,
+    "type": 4,
+    "uuidName": "m1264"
+  },
+  {
+    "id": 1265,
+    "createTime": "2019-05-21 13:50:08",
+    "name": "合同管理",
+    "url": "--",
+    "parentId": 196,
+    "type": 2,
+    "uuidName": "m1265"
+  },
+  {
+    "id": 1268,
+    "createTime": "2019-05-21 14:02:58",
+    "name": "合同管理",
+    "url": "--",
+    "parentId": 1265,
+    "type": 3,
+    "uuidName": "m1268"
+  },
+  {
+    "id": 1269,
+    "createTime": "2019-05-21 14:04:02",
+    "name": "合同管理",
+    "url": "/contract/contractList",
+    "parentId": 1268,
+    "type": 3,
+    "uuidName": "m1269"
+  },
+  {
+    "id": 1270,
+    "createTime": "2019-05-21 14:04:28",
+    "name": "基础资料",
+    "url": "/contract/contractInfo",
+    "parentId": 1268,
+    "type": 3,
+    "uuidName": "m1270"
+  },
+  {
+    "id": 1275,
+    "createTime": "2019-05-21 14:16:26",
+    "name": "合同管理",
+    "url": "--",
+    "parentId": 197,
+    "type": 2,
+    "uuidName": "m1275"
+  },
+  {
+    "id": 1276,
+    "createTime": "2019-05-21 14:16:50",
+    "name": "合同管理",
+    "url": "/contract/contractList",
+    "parentId": 1275,
+    "type": 3,
+    "uuidName": "m1276"
+  },
+  {
+    "id": 1277,
+    "createTime": "2019-05-21 14:17:37",
+    "name": "合同分类",
+    "url": "/classification/classificationList",
+    "parentId": 1275,
+    "type": 3,
+    "uuidName": "m1277"
+  },
+  {
+    "id": 1278,
+    "createTime": "2019-05-21 14:17:47",
+    "name": "合同项目",
+    "url": "/contractItem/contractItemList",
+    "parentId": 1275,
+    "type": 3,
+    "uuidName": "m1278"
+  },
+  {
+    "id": 1280,
+    "createTime": "2019-05-21 14:18:36",
+    "name": "来往单位",
+    "url": "/companyDealings/companyDealingsList",
+    "parentId": 1275,
+    "type": 3,
+    "uuidName": "m1280"
+  },
+  {
+    "id": 1281,
+    "createTime": "2019-05-21 14:23:10",
+    "name": "新增单位",
+    "url": "--",
+    "parentId": 1280,
+    "type": 4,
+    "uuidName": "m1281"
+  },
+  {
+    "id": 1282,
+    "createTime": "2019-05-21 14:23:20",
+    "name": "编辑",
+    "url": "--",
+    "parentId": 1280,
+    "type": 4,
+    "uuidName": "m1282"
+  },
+  {
+    "id": 1283,
+    "createTime": "2019-05-21 14:23:28",
+    "name": "删除",
+    "url": "--",
+    "parentId": 1280,
+    "type": 4,
+    "uuidName": "m1283"
+  },
+  {
+    "id": 1284,
+    "createTime": "2019-05-21 14:23:53",
+    "name": "创建项目",
+    "url": "--",
+    "parentId": 1278,
+    "type": 4,
+    "uuidName": "m1284"
+  },
+  {
+    "id": 1285,
+    "createTime": "2019-05-21 14:24:02",
+    "name": "编辑",
+    "url": "--",
+    "parentId": 1278,
+    "type": 4,
+    "uuidName": "m1285"
+  },
+  {
+    "id": 1286,
+    "createTime": "2019-05-21 14:24:10",
+    "name": "删除",
+    "url": "--",
+    "parentId": 1278,
+    "type": 4,
+    "uuidName": "m1286"
+  },
+  {
+    "id": 1287,
+    "createTime": "2019-05-21 14:24:29",
+    "name": "创建分类",
+    "url": "--",
+    "parentId": 1277,
+    "type": 4,
+    "uuidName": "m1287"
+  },
+  {
+    "id": 1288,
+    "createTime": "2019-05-21 14:24:39",
+    "name": "编辑",
+    "url": "--",
+    "parentId": 1277,
+    "type": 4,
+    "uuidName": "m1288"
+  },
+  {
+    "id": 1289,
+    "createTime": "2019-05-21 14:24:47",
+    "name": "删除",
+    "url": "--",
+    "parentId": 1277,
+    "type": 4,
+    "uuidName": "m1289"
+  },
+  {
+    "id": 1290,
+    "createTime": "2019-05-21 14:25:03",
+    "name": "创建合同",
+    "url": "--",
+    "parentId": 1276,
+    "type": 4,
+    "uuidName": "m1290"
+  },
+  {
+    "id": 1291,
+    "createTime": "2019-05-21 14:35:26",
+    "name": "编辑",
+    "parentId": 1276,
+    "type": 4,
+    "uuidName": "m1291"
+  },
+  {
+    "id": 1292,
+    "createTime": "2019-05-21 14:35:44",
+    "name": "查看",
+    "parentId": 1276,
+    "type": 4,
+    "uuidName": "m1292"
+  },
+  {
+    "id": 1293,
+    "createTime": "2019-05-21 14:35:55",
+    "name": "删除",
+    "parentId": 1276,
+    "type": 4,
+    "uuidName": "m1293"
+  },
+  {
+    "id": 1294,
+    "createTime": "2019-05-21 16:38:25",
+    "name": "审批中心",
+    "parentId": 197,
+    "type": 3,
+    "uuidName": "m1294"
+  },
+  {
+    "id": 1295,
+    "createTime": "2019-05-21 16:39:59",
+    "name": "审批列表",
+    "parentId": 1294,
+    "type": 3,
+    "uuidName": "m1295"
+  },
+  {
+    "id": 1296,
+    "createTime": "2019-05-21 16:40:12",
+    "name": "审批流程",
+    "parentId": 1294,
+    "type": 3,
+    "uuidName": "m1296"
+  },
+  {
+    "id": 1297,
+    "createTime": "2019-06-18 11:16:57",
+    "name": "金融服务申请",
+    "parentId": 197,
+    "type": 3,
+    "uuidName": "m1297"
+  },
+  {
+    "id": 1298,
+    "createTime": "2019-06-18 15:27:51",
+    "name": "英文翻译",
+    "parentId": 688,
+    "type": 4,
+    "uuidName": "m1298"
+  },
+  {
+    "id": 1299,
+    "createTime": "2019-06-18 15:30:09",
+    "name": "海外站推荐",
+    "parentId": 688,
+    "type": 4,
+    "uuidName": "m1299"
+  },
+  {
+    "id": 1300,
+    "createTime": "2019-06-18 15:31:13",
+    "name": "海外站批量推荐",
+    "parentId": 688,
+    "type": 4,
+    "uuidName": "m1300"
+  },
+  {
+    "id": 1302,
+    "createTime": "2019-06-18 15:31:47",
+    "name": "海外站置顶",
+    "parentId": 688,
+    "type": 4,
+    "uuidName": "m1302"
+  },
+  {
+    "id": 1303,
+    "createTime": "2019-06-24 10:39:28",
+    "name": "金融服务申请管理",
+    "url": "/cCompanyFinance/list.shtml",
+    "parentId": 279,
+    "type": 3,
+    "uuidName": "m1303"
+  },
+  {
+    "id": 1304,
+    "createTime": "2019-06-25 11:27:52",
+    "name": "查看详情",
+    "parentId": 1303,
+    "type": 4,
+    "uuidName": "m1304"
+  },
+  {
+    "id": 1305,
+    "createTime": "2019-06-25 11:28:34",
+    "name": "审核",
+    "parentId": 1303,
+    "type": 4,
+    "uuidName": "m1305"
+  },
+  {
+    "id": 1306,
+    "createTime": "2019-06-25 11:28:47",
+    "name": "签约",
+    "parentId": 1303,
+    "type": 4,
+    "uuidName": "m1306"
+  },
+  {
+    "id": 1307,
+    "createTime": "2019-06-25 11:29:06",
+    "name": "订单融服务进度",
+    "parentId": 1303,
+    "type": 4,
+    "uuidName": "m1307"
+  },
+  {
+    "id": 1308,
+    "createTime": "2019-06-25 11:29:16",
+    "name": "保理融服务进度",
+    "parentId": 1303,
+    "type": 4,
+    "uuidName": "m1308"
+  },
+  {
+    "id": 1309,
+    "createTime": "2019-06-25 11:29:26",
+    "name": "退税融服务进度",
+    "parentId": 1303,
+    "type": 4,
+    "uuidName": "m1309"
+  },
+  {
+    "id": 1310,
+    "createTime": "2019-06-25 11:29:36",
+    "name": "关闭服务",
+    "parentId": 1303,
+    "type": 4,
+    "uuidName": "m1310"
+  },
+  {
+    "id": 1311,
+    "createTime": "2019-08-27 16:31:06",
+    "name": "导入",
+    "parentId": 904,
+    "type": 4,
+    "uuidName": "m1311"
+  },
+  {
+    "id": 1312,
+    "createTime": "2019-08-28 17:28:39",
+    "name": "导入",
+    "parentId": 898,
+    "type": 4,
+    "uuidName": "m1312"
+  },
+  {
+    "id": 1313,
+    "createTime": "2018-08-27 13:44:05",
+    "name": "资源树",
+    "type": 1,
+    "uuidName": "m0"
+  }
+]

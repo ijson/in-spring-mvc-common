@@ -15,6 +15,7 @@ import java.util.Map;
 public class TemplateManagerImplBuilder implements TemplateHanlder {
 
 
+    @Override
     public void execute(ParamsVo<TableEntity> vo, Map<String, String> config) {
         List<TableEntity> tables = vo.getObjs();
         String prefix = Validator.getDefaultStr(String.valueOf(vo.getParams("prefix")), "src/main/");

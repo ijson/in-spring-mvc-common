@@ -33,6 +33,7 @@ public class SqlSessionFactoryFactoryBean implements FactoryBean, InitializingBe
     private boolean useTransactionAwareDataSource = true;
     SqlSessionFactory sqlSessionFactory;
 
+    @Override
     public void afterPropertiesSet() throws Exception {
         Assert.notNull(configLocation, "configLocation must be not null");
         sqlSessionFactory = createSqlSessionFactory();
@@ -71,6 +72,7 @@ public class SqlSessionFactoryFactoryBean implements FactoryBean, InitializingBe
         }
     }
 
+    @Override
     public Object getObject() throws Exception {
         return sqlSessionFactory;
     }
@@ -83,10 +85,12 @@ public class SqlSessionFactoryFactoryBean implements FactoryBean, InitializingBe
         this.dataSource = dataSource;
     }
 
+    @Override
     public Class getObjectType() {
         return SqlSessionFactory.class;
     }
 
+    @Override
     public boolean isSingleton() {
         return true;
     }

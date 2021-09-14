@@ -20,30 +20,37 @@ public class CacheServiceImpl implements CacheService {
      * @return cacheManager
      * @author cuiyongxu
      */
+    @Override
     public CacheManager getCache(String cacheName) {
         return LoadCacheFactory.getInstance().getCacheManager(cacheName);
     }
 
+    @Override
     public boolean createCacheObject(String cacheName, String key, Object object) {
         return getCache(cacheName).createCacheObject(key, object);
     }
 
+    @Override
     public boolean checkCacheObject(String cacheName, String key) {
         return getCache(cacheName).checkCacheObject(key);
     }
 
+    @Override
     public Object getCacheObjectByKey(String cacheName, String key) {
         return getCache(cacheName).getCacheCloneByKey(key);
     }
 
+    @Override
     public List<Object> getObjects(String cacheName, List<String> keys, String prefix) {
         return getCache(cacheName).getObjects(keys, prefix);
     }
 
+    @Override
     public List<String> getObjects(String cacheName, List<String> keys, String prefix, List<Object> objs) {
         return getCache(cacheName).getObjects(keys, prefix, objs);
     }
 
+    @Override
     public boolean removeCacheObject(String cacheName, String key) {
         return getCache(cacheName).removeCacheObject(key);
     }

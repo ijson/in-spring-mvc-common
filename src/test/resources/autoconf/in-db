@@ -1,7 +1,7 @@
 db.driver=com.mysql.jdbc.Driver
-db.url=jdbc:mysql://127.0.0.1:3307/ijson_mvc_db?useUnicode=true&characterEncoding=utf8
-db.username=admin
-db.password=MSCR7KPCJMR5
+db.url=jdbc:mysql://192.168.31.130/lyp?useUnicode=true&characterEncoding=utf8
+db.username=root
+db.password=123456
 hibernate.dialect=org.hibernate.dialect.MySQLDialect
 
 #db.driver=org.h2.Driver

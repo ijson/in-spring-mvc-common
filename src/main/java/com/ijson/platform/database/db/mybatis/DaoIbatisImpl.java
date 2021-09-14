@@ -51,6 +51,7 @@ public class DaoIbatisImpl implements BaseDao {
      * @param param 方法参数模型
      * @return true为删除成功；false为删除失败
      */
+    @Override
     public boolean deleteBath(MethodParam param) {
         if (Validator.isNotNull(param.getSpanceName())) {
             //init(param.getSpanceName());
@@ -60,8 +61,9 @@ public class DaoIbatisImpl implements BaseDao {
                 //count += dao.get(param.getSpanceName()).delete(param.getKey(), list.get(i));
                 count += getSession().delete(param.getSpanceName(), param.getKey(), aList);
             }
-            if (count > 0)
+            if (count > 0) {
                 return true;
+            }
         }
         return false;
     }
@@ -72,6 +74,7 @@ public class DaoIbatisImpl implements BaseDao {
      * @param param 方法参数模型
      * @return true为修改成功；false为修改失败
      */
+    @Override
     public boolean editBath(MethodParam param) {
         if (Validator.isNotNull(param.getSpanceName())) {
             //init(param.getSpanceName());
@@ -81,8 +84,9 @@ public class DaoIbatisImpl implements BaseDao {
                 //count += dao.get(param.getSpanceName()).update(param.getKey(), list.get(i));
                 count += getSession().update(param.getSpanceName(), param.getKey(), aList);
             }
-            if (count > 0)
+            if (count > 0) {
                 return true;
+            }
         }
         return false;
     }
@@ -93,6 +97,7 @@ public class DaoIbatisImpl implements BaseDao {
      * @param param 方法参数模型
      * @return true为新增成功；false为新增失败
      */
+    @Override
     public boolean insertBath(MethodParam param) {
         if (Validator.isNotNull(param.getSpanceName())) {
             //init(param.getSpanceName());
@@ -100,8 +105,9 @@ public class DaoIbatisImpl implements BaseDao {
             List list = (List) param.getVaule();
             //count = dao.get(param.getSpanceName()).insertBath(list);
             count = getSession().insertBath(list, param.getSpanceName());
-            if (count > 0)
+            if (count > 0) {
                 return true;
+            }
         }
         return false;
     }
@@ -112,6 +118,7 @@ public class DaoIbatisImpl implements BaseDao {
      * @param param 方法参数模型
      * @return 返回sql执行的记录数
      */
+    @Override
     public long count(MethodParam param) {
         if (Validator.isNotNull(param.getSpanceName())) {
             //init(param.getSpanceName());
@@ -127,16 +134,20 @@ public class DaoIbatisImpl implements BaseDao {
      * @param param 方法参数模型
      * @return true为删除成功；false为删除失败
      */
+    @Override
     public boolean delete(MethodParam param) {
         if (Validator.isNotNull(param.getSpanceName())) {
             //init(param.getSpanceName());
             int count = 0;
             if (param.isDelete())
                 //count = dao.get(param.getSpanceName()).delete(param.getKey(), param.getParams());
+            {
                 count = getSession().delete(param.getSpanceName(), param.getKey(), param.getParams());
-            else
+            } else
                 //count = dao.get(param.getSpanceName()).update(param.getKey(), param.getParams());
+            {
                 count = getSession().update(param.getSpanceName(), param.getKey(), param.getParams());
+            }
             if (count > 0) {
                 if (Validator.isNotNull(param.getCacheId())) {
                     cache.removeCacheObject(param.getCacheId());
@@ -153,16 +164,20 @@ public class DaoIbatisImpl implements BaseDao {
      * @param param 方法参数模型
      * @return true为修改成功；false为修改失败
      */
+    @Override
     public boolean edit(MethodParam param) {
         if (Validator.isNotNull(param.getSpanceName())) {
             //	init(param.getSpanceName());
             int count = 0;
             if (Validator.isEmpty(param.getVaule()))
                 //count = dao.get(param.getSpanceName()).update(param.getKey(), param.getParams());
+            {
                 count = getSession().update(param.getSpanceName(), param.getKey(), param.getParams());
-            else
+            } else
                 //count = dao.get(param.getSpanceName()).update(param.getKey(), param.getVaule());
+            {
                 count = getSession().update(param.getSpanceName(), param.getKey(), param.getVaule());
+            }
             if (count > 0) {
                 if (Validator.isNotNull(param.getCacheId())) {
                     if (Validator.isEmpty(param.getVaule())) {
@@ -183,6 +198,7 @@ public class DaoIbatisImpl implements BaseDao {
      * @param param 方法参数模型
      * @return true为新增成功；false为新增失败
      */
+    @Override
     public boolean insert(MethodParam param) {
         if (Validator.isNotNull(param.getSpanceName())) {
             //	init(param.getSpanceName());
@@ -204,6 +220,7 @@ public class DaoIbatisImpl implements BaseDao {
      * @param param 方法参数模型
      * @return 返回page对象
      */
+    @Override
     public Page pageSelect(MethodParam param) {
         if (Validator.isNotNull(param.getSpanceName())) {
             //	init(param.getSpanceName());
@@ -219,6 +236,7 @@ public class DaoIbatisImpl implements BaseDao {
      * @param param 方法参数模型
      * @return 返回sql执行的结果集
      */
+    @Override
     public List select(MethodParam param) {
         if (Validator.isNotNull(param.getSpanceName())) {
             //init(param.getSpanceName());
@@ -258,6 +276,7 @@ public class DaoIbatisImpl implements BaseDao {
      * @param param 方法参数模型
      * @return 返回sql执行后的数据对象
      */
+    @Override
     public Object selectSingle(MethodParam param) {
         Object obj = null;
         if (Validator.isNotNull(param.getSpanceName())) {
@@ -273,6 +292,7 @@ public class DaoIbatisImpl implements BaseDao {
         return obj;
     }
 
+    @Override
     public Object selectById(String spanceName, String key, String infoId, String cacheId) {
         Object obj = null;
         if (Validator.isNotNull(spanceName)) {
@@ -283,8 +303,9 @@ public class DaoIbatisImpl implements BaseDao {
             if (Validator.isEmpty(obj)) {
                 //obj = dao.get(spanceName).selectSingle(key, infoId);
                 obj = getSession().selectSingle(spanceName, key, infoId);
-                if (!Validator.isEmpty(obj) && Validator.isNotNull(cacheId))
+                if (!Validator.isEmpty(obj) && Validator.isNotNull(cacheId)) {
                     cache.createCacheObject(cacheId, obj);
+                }
             }
         }
         return obj;

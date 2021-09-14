@@ -53,8 +53,9 @@ public class Validator {
      * @author cuiyongxu
      */
     public static String isNull(String str, String defaultStr) {
-        if (isNull(str))
+        if (isNull(str)) {
             return defaultStr;
+        }
         return str;
     }
 
@@ -93,8 +94,9 @@ public class Validator {
      * @author cuiyongxu
      */
     public static String getDefaultStr(String text, String defaultStr) {
-        if (Validator.isNull(text))
+        if (Validator.isNull(text)) {
             return defaultStr;
+        }
         return text;
     }
 
@@ -164,11 +166,13 @@ public class Validator {
         if (Validator.isNotNull(path)) {
             if (path.startsWith(File.separator) || path.startsWith("/")) {
                 String systemType = getSystemType();
-                if ("windows".equals(systemType))
+                if ("windows".equals(systemType)) {
                     path = path.substring(1);
+                }
             }
-            if (!path.endsWith(File.separator) && !path.endsWith("/"))
+            if (!path.endsWith(File.separator) && !path.endsWith("/")) {
                 path += "/";
+            }
         }
         return path;
     }

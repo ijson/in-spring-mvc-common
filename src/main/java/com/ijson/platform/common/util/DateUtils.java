@@ -643,6 +643,7 @@ public class DateUtils {
             this.fmtStr = str;
         }
 
+        @Override
         public String toString() {
             return this.fmtStr;
         }

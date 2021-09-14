@@ -27,112 +27,134 @@ public abstract class DaoImpl implements IDao {
     /* (non-Javadoc)
      * @see com.persistenceLayer.core.db.IDao#count(com.persistenceLayer.core.model.MethodParam)
      */
+    @Override
     public long count(MethodParam param) {
         if (isHibernateDao()) {
             return hibernateDao.count(param);
-        } else
+        } else {
             return ibatisDao.count(param);
+        }
     }
 
     /* (non-Javadoc)
      * @see com.persistenceLayer.core.db.IDao#delete(com.persistenceLayer.core.model.MethodParam)
      */
+    @Override
     public boolean delete(MethodParam param) {
         if (isHibernateDao()) {
             return hibernateDao.delete(param);
-        } else
+        } else {
             return ibatisDao.delete(param);
+        }
     }
 
     /* (non-Javadoc)
      * @see com.persistenceLayer.core.db.IDao#deleteBath(com.persistenceLayer.core.model.MethodParam)
      */
+    @Override
     public boolean deleteBath(MethodParam param) {
         if (isHibernateDao()) {
             return hibernateDao.deleteBath(param);
-        } else
+        } else {
             return ibatisDao.deleteBath(param);
+        }
     }
 
     /* (non-Javadoc)
      * @see com.persistenceLayer.core.db.IDao#edit(com.persistenceLayer.core.model.MethodParam)
      */
+    @Override
     public boolean edit(MethodParam param) {
         if (isHibernateDao()) {
             return hibernateDao.edit(param);
-        } else
+        } else {
             return ibatisDao.edit(param);
+        }
     }
 
     /* (non-Javadoc)
      * @see com.persistenceLayer.core.db.IDao#editBath(com.persistenceLayer.core.model.MethodParam)
      */
+    @Override
     public boolean editBath(MethodParam param) {
         if (isHibernateDao()) {
             return hibernateDao.editBath(param);
-        } else
+        } else {
             return ibatisDao.editBath(param);
+        }
     }
 
     /* (non-Javadoc)
      * @see com.persistenceLayer.core.db.IDao#insert(com.persistenceLayer.core.model.MethodParam)
      */
+    @Override
     public boolean insert(MethodParam param) {
         if (isHibernateDao()) {
             return hibernateDao.insert(param);
-        } else
+        } else {
             return ibatisDao.insert(param);
+        }
     }
 
     /* (non-Javadoc)
      * @see com.persistenceLayer.core.db.IDao#insertBath(com.persistenceLayer.core.model.MethodParam)
      */
+    @Override
     public boolean insertBath(MethodParam param) {
         if (isHibernateDao()) {
             return hibernateDao.insertBath(param);
-        } else
+        } else {
             return ibatisDao.insertBath(param);
+        }
     }
 
     /* (non-Javadoc)
      * @see com.persistenceLayer.core.db.IDao#pageSelect(com.persistenceLayer.core.model.MethodParam)
      */
+    @Override
     public Page pageSelect(MethodParam param) {
         if (isHibernateDao()) {
             return hibernateDao.pageSelect(param);
-        } else
+        } else {
             return ibatisDao.pageSelect(param);
+        }
     }
 
     /* (non-Javadoc)
      * @see com.persistenceLayer.core.db.IDao#select(com.persistenceLayer.core.model.MethodParam)
      */
+    @Override
     public List select(MethodParam param) {
         if (isHibernateDao()) {
             return hibernateDao.select(param);
-        } else
+        } else {
             return ibatisDao.select(param);
+        }
     }
 
     /* (non-Javadoc)
      * @see com.persistenceLayer.core.db.IDao#selectSingle(com.persistenceLayer.core.model.MethodParam)
      */
 
+    @Override
     public Object selectSingle(MethodParam param) {
         if (isHibernateDao()) {
             return hibernateDao.selectSingle(param);
-        } else
+        } else {
             return ibatisDao.selectSingle(param);
+        }
     }
 
     /* (non-Javadoc)
      */
+    @Override
     public Object selectById(MethodParam param) {
         if (isHibernateDao()) {
             return hibernateDao
                     .selectById(param.getSpanceName(), param.getKey(), param.getInfoId(), param.getCacheId());
-        } else
+        } else {
             return ibatisDao.selectById(param.getSpanceName(), param.getKey(), param.getInfoId(), param.getCacheId());
+        }
     }
 
     /**
@@ -147,8 +169,9 @@ public abstract class DaoImpl implements IDao {
         if (isHibernateDao()) {
             return hibernateDao
                     .selectByObject(param);
-        } else
+        } else {
             return ibatisDao.selectByObject(param);
+        }
 
     }
 
@@ -164,8 +187,9 @@ public abstract class DaoImpl implements IDao {
         if (isHibernateDao()) {
             return hibernateDao
                     .selectSingleByObject(param);
-        } else
+        } else {
             return ibatisDao.selectSingleByObject(param);
+        }
     }
 
     public void setHibernateDao(DaoHibernateImpl hibernateDao) {

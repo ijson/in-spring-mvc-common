@@ -14,11 +14,13 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(locations = "classpath:spring/in-spring-database.xml")
 public class DatabaseTest {
 
+
     @Autowired
     private MethodCacheInterceptor resultCacheInterceptor;
 
     @Test
     public void create(){
 
+        System.out.println("hello world");
     }
 }

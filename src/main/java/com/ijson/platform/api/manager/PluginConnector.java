@@ -5,22 +5,22 @@ import com.ijson.platform.api.model.ParamsVo;
 import com.ijson.platform.common.exception.PluginConnectorException;
 
 /**
- *  插件管理,需要客户端实现,并实现功能
+ * 插件管理,需要客户端实现,并实现功能
  *
  * @author cuiyongxu 创建时间：Nov 20, 2015
  */
 public interface PluginConnector {
     /**
-     *   插件客户端实现&lt;p&gt;使用方式:&lt;/p&gt;
+     * 插件客户端实现&lt;p&gt;使用方式:&lt;/p&gt;
      * &lt;pre&gt;首先,我们需要在appliactionContext-{projectName}.xml中定义相关插件,代码如下&lt;/pre&gt;
      * &lt;blockquote&gt;
      * &lt;pre&gt;
-     *  &lt;bean id="dictCateManager" class="com.ijson.dict.manager.impl.DictCateManagerImpl"&gt;
-     * 	&lt;property name="plugins"&gt;
-     * 		&lt;map&gt;
-     * 			&lt;entry key="cateEname" value-ref="cateEnamePlugin"&gt;&lt;/entry&gt;
-     * 		&lt;/map&gt;
-     * 	&lt;/property&gt;
+     * &lt;bean id="dictCateManager" class="com.ijson.dict.manager.impl.DictCateManagerImpl"&gt;
+     * &lt;property name="plugins"&gt;
+     * &lt;map&gt;
+     * &lt;entry key="cateEname" value-ref="cateEnamePlugin"&gt;&lt;/entry&gt;
+     * &lt;/map&gt;
+     * &lt;/property&gt;
      * &lt;/bean&gt;
      * &lt;bean id="cateEnamePlugin" class="com.ijson.dict.manager.plugins.CateEnamePlugin"&gt;&lt;/bean&gt;
      * &lt;/pre&gt;

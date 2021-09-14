@@ -16,8 +16,9 @@ public class ToolsUtil {
      */
     public static String endsWith(String text) {
         if (Validator.isNotNull(text)) {
-            if (!text.endsWith(File.separator) && !text.endsWith("/"))
+            if (!text.endsWith(File.separator) && !text.endsWith("/")) {
                 text += "/";
+            }
         }
         return text;
     }
@@ -31,8 +32,9 @@ public class ToolsUtil {
     public static boolean isendWith(String text) {
         boolean mark = true;
         if (Validator.isNotNull(text)) {
-            if (!text.endsWith(File.separator) && !text.endsWith("/"))
+            if (!text.endsWith(File.separator) && !text.endsWith("/")) {
                 mark = false;
+            }
         }
         return mark;
     }
@@ -88,8 +90,9 @@ public class ToolsUtil {
     public static boolean isstartWith(String text) {
         boolean mark = true;
         if (Validator.isNotNull(text)) {
-            if (!text.startsWith(File.separator) && !text.startsWith("/"))
+            if (!text.startsWith(File.separator) && !text.startsWith("/")) {
                 mark = false;
+            }
         }
         return mark;
     }
@@ -103,8 +106,9 @@ public class ToolsUtil {
      * @return value
      */
     public static String formatString(String text, String regx, String target) {
-        if (Validator.isNull(text) || Validator.isNull(regx))
+        if (Validator.isNull(text) || Validator.isNull(regx)) {
             return null;
+        }
         return text = text.replaceAll(regx, target);
     }
 

@@ -41,6 +41,7 @@ public class MethodCacheInterceptor implements MethodInterceptor {
     /* (non-Javadoc)
      * @see org.aopalliance.intercept.MethodInterceptor#invoke(org.aopalliance.intercept.MethodInvocation)
      */
+    @Override
     public Object invoke(MethodInvocation invocation) throws Throwable {
         String targetName = invocation.getThis().getClass().getName();
         String methodName = invocation.getMethod().getName();
@@ -97,8 +98,9 @@ public class MethodCacheInterceptor implements MethodInterceptor {
     private void writeCache(String key, String targetName, boolean iswrite) {
         List<String> list = (List<String>) getCache().getCacheObjectByKey(targetName);
         if (iswrite) {
-            if (Validator.isEmpty(list))
+            if (Validator.isEmpty(list)) {
                 list = Lists.newArrayList();
+            }
             if (!list.contains(key)) {
                 list.add(key);
                 getCache().createCacheObject(targetName, list);

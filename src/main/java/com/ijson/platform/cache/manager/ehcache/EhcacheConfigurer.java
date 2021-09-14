@@ -51,8 +51,9 @@ public class EhcacheConfigurer {
      */
     public Cache getCache(String storage) {
         init();
-        if (null == storage || "".equals(storage))
+        if (null == storage || "".equals(storage)) {
             storage = "ijsonCache";
+        }
         if ("defaultCache".equalsIgnoreCase(storage)) {
             if (Validator.isEmpty(manager.getCache(storage))) {
                 manager.addCache("defaultCache");

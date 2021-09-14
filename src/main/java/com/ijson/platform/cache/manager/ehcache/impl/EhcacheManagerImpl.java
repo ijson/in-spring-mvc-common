@@ -23,6 +23,7 @@ public class EhcacheManagerImpl implements CacheManager {
     private EhcacheConfigurer cacheConfig;//做spring注入时可以注入
     private String cacheName = "ijsonCache";//做spring注入时需要注入
 
+    @Override
     public void setCacheName(String cacheName) {
         this.cacheName = cacheName;
         cache = getCacheConfig().getCache(this.cacheName);
@@ -35,6 +36,7 @@ public class EhcacheManagerImpl implements CacheManager {
         return cache;
     }
 
+    @Override
     public boolean createCacheObject(String key, Object object) {
         boolean flag = false;
         if (Validator.isNotNull(key) && object != null) {
@@ -46,6 +48,7 @@ public class EhcacheManagerImpl implements CacheManager {
         return flag;
     }
 
+    @Override
     public boolean checkCacheObject(String key) {
         boolean flag = false;
         if (Validator.isNotNull(key)) {
@@ -57,6 +60,7 @@ public class EhcacheManagerImpl implements CacheManager {
         return flag;
     }
 
+    @Override
     public Object getCacheObjectByKey(String key) {
         if (Validator.isNotNull(key)) {
             Element element = getCache().get(key);
@@ -70,6 +74,7 @@ public class EhcacheManagerImpl implements CacheManager {
         }
     }
 
+    @Override
     public Object getCacheCloneByKey(String key) {
         if (Validator.isNotNull(key)) {
             Element element = getCache().get(key);
@@ -78,13 +83,16 @@ public class EhcacheManagerImpl implements CacheManager {
             } else {
                 return Validator.clone(element.getObjectValue());
             }
-        } else
+        } else {
             return null;
+        }
     }
 
+    @Override
     public List<Object> getObjects(List<String> keys) {
-        if (Validator.isEmpty(keys))
+        if (Validator.isEmpty(keys)) {
             return null;
+        }
         List<Object> list = Lists.newArrayList();
         for (String key : keys) {
             Object object = getCacheCloneByKey(key);
@@ -95,10 +103,12 @@ public class EhcacheManagerImpl implements CacheManager {
         return list;
     }
 
+    @Override
     public List<Object> getObjects(List<String> keys, String prefix) {
-        if (Validator.isEmpty(keys))
+        if (Validator.isEmpty(keys)) {
             return null;
-        List<Object> list =  Lists.newArrayList();
+        }
+        List<Object> list = Lists.newArrayList();
         for (String key1 : keys) {
             String key = prefix + key1;
             Object object = getCacheCloneByKey(key);
@@ -109,10 +119,12 @@ public class EhcacheManagerImpl implements CacheManager {
         return list;
     }
 
+    @Override
     public List<String> getObjects(List<String> keys, String prefix, List<Object> objs) {
-        if (Validator.isEmpty(keys))
+        if (Validator.isEmpty(keys)) {
             return null;
-        List<String> list =  Lists.newArrayList();
+        }
+        List<String> list = Lists.newArrayList();
         for (String key1 : keys) {
             String key = prefix + key1;
             Object object = getCacheCloneByKey(key);
@@ -125,10 +137,12 @@ public class EhcacheManagerImpl implements CacheManager {
         return list;
     }
 
+    @Override
     public List getAllKeys() {
         return getCache().getKeys();
     }
 
+    @Override
     public boolean removeCacheObject(String key) {
         boolean flag = false;
         if (Validator.isNotNull(key)) {
@@ -138,14 +152,17 @@ public class EhcacheManagerImpl implements CacheManager {
         return flag;
     }
 
+    @Override
     public boolean updateCacheObject(String key, Object value) {
         return createCacheObject(key, value);
     }
 
+    @Override
     public void shutdownCache() {
         cacheConfig.shutdownCache();
     }
 
+    @Override
     public void removeAll() {
         getCache().removeAll();
     }

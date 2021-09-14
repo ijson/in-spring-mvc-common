@@ -1,7 +1,7 @@
 package com.ijson.platform.api.manager;
 
-import com.ijson.platform.common.exception.DBServiceException;
 import com.ijson.platform.api.model.ParamsVo;
+import com.ijson.platform.common.exception.DBServiceException;
 
 import java.util.List;
 

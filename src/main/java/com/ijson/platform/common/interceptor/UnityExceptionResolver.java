@@ -16,6 +16,7 @@ import java.io.PrintWriter;
 public class UnityExceptionResolver implements HandlerExceptionResolver {
 
 
+    @Override
     public ModelAndView resolveException(HttpServletRequest request, HttpServletResponse response, Object handler,
                                          Exception ex) {
 

@@ -1,14 +1,13 @@
 package com.ijson.platform.api.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 /**
  * description:  JSON返回对象封装
+ *
  * @author cuiyongxu 创建时间：Oct 27, 2015
  */
-@Setter
-@Getter
+@Data
 public class ResultMsg extends BaseEntity {
 
     /**

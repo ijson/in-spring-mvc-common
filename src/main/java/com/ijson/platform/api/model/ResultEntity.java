@@ -1,6 +1,7 @@
 package com.ijson.platform.api.model;
 
 import com.google.common.collect.Maps;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,8 +12,7 @@ import java.util.Map;
  *
  * @author cuiyongxu 创建时间：2016年1月4日
  */
-@Getter
-@Setter
+@Data
 public class ResultEntity extends BaseEntity {
 
     public ResultEntity() {

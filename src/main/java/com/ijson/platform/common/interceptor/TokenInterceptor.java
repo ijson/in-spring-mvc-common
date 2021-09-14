@@ -23,6 +23,7 @@ public class TokenInterceptor extends HandlerInterceptorAdapter {
     /**
      * 方法执行前拦截
      */
+    @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
         if (handler instanceof HandlerMethod) {//方法级拦截
@@ -33,8 +34,9 @@ public class TokenInterceptor extends HandlerInterceptorAdapter {
                 boolean needSaveSession = annotation.save();
                 if (needSaveSession) {//加入token
                     HttpSession session = request.getSession(true);
-                    if (null != session)
+                    if (null != session) {
                         session.setAttribute("formToken", UUID.randomUUID().toString());
+                    }
                 }
                 boolean needRemoveSession = annotation.remove();
                 if (needRemoveSession) {//移出token

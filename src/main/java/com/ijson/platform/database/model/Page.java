@@ -62,8 +62,9 @@ public class Page implements Serializable {
 
         startRow = (getPageNeeded() - 1) * getPageSize() + 1;
         endRow = getPageSize() * getPageNeeded();
-        if (endRow > totalRows)
+        if (endRow > totalRows) {
             endRow = totalRows;
+        }
 
     }
 

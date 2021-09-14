@@ -21,8 +21,8 @@ public class LoadDaoFactory {
      * description:  暂时默认使用mysql
      *
      * @param databaseType databaseType
-     * @author cuiyongxu
      * @return IDao
+     * @author cuiyongxu
      */
     public IDao getDao(String databaseType) {
         if ("Mysql".equalsIgnoreCase(databaseType)) {

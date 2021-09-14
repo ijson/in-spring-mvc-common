@@ -16,6 +16,7 @@ import java.util.Map;
 @Slf4j
 public class MysqlDaoImpl implements IDao {
 
+    @Override
     public List<TableEntity> getTables(String[] tableNames, Map<String, String> config) {
         ConnctionData conn = ConnctionData.getInstance(config.get("jdbc.url"), config.get("jdbc.driver"), config.get("jdbc.user"), config.get("jdbc.password"));
 

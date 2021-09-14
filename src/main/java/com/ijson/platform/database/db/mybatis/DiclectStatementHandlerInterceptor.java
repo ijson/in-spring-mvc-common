@@ -27,6 +27,7 @@ public class DiclectStatementHandlerInterceptor implements Interceptor {
     /* (non-Javadoc)
      * @see org.apache.ibatis.plugin.Interceptor#intercept(org.apache.ibatis.plugin.Invocation)
      */
+    @Override
     public Object intercept(Invocation invocation) throws Throwable {
         processIntercept(invocation.getArgs());
         return invocation.proceed();
@@ -89,6 +90,7 @@ public class DiclectStatementHandlerInterceptor implements Interceptor {
     /* (non-Javadoc)
              * @see org.apache.ibatis.plugin.Interceptor#plugin(java.lang.Object)
              */
+    @Override
     public Object plugin(Object target) {
         return Plugin.wrap(target, this);
     }
@@ -96,6 +98,7 @@ public class DiclectStatementHandlerInterceptor implements Interceptor {
     /* (non-Javadoc)
      * @see org.apache.ibatis.plugin.Interceptor#setProperties(java.util.Properties)
      */
+    @Override
     public void setProperties(Properties properties) {
         String dialectClass = properties.getProperty(DIALECT);
         try {
@@ -112,6 +115,7 @@ public class DiclectStatementHandlerInterceptor implements Interceptor {
             this.boundSql = boundSql;
         }
 
+        @Override
         public BoundSql getBoundSql(Object parameterObject) {
             return boundSql;
         }

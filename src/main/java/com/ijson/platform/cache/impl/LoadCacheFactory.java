@@ -25,8 +25,9 @@ public class LoadCacheFactory {
     private Map<String, String> constant = Maps.newHashMap(); //存放系统配置参数
 
     public static LoadCacheFactory getInstance() {
-        if (null == instance)
+        if (null == instance) {
             instance = new LoadCacheFactory();
+        }
         return instance;
     }
 
@@ -41,8 +42,8 @@ public class LoadCacheFactory {
      * description:  获取缓存实例
      *
      * @param cacheName 缓存空间名称
-     * @author cuiyongxu
      * @return cacheManager
+     * @author cuiyongxu
      */
     public CacheManager getCacheManager(String cacheName) {
         return getEhcacheManager(cacheName);
@@ -53,12 +54,13 @@ public class LoadCacheFactory {
      * description: 获取ehcache缓存实例
      *
      * @param cacheName 缓存空间名称
-     * @author cuiyongxu
      * @return cacheManager
+     * @author cuiyongxu
      */
     private CacheManager getEhcacheManager(String cacheName) {
-        if (Validator.isNull(cacheName))
+        if (Validator.isNull(cacheName)) {
             cacheName = Validator.getDefaultStr(initConfig("cache_default_name"), "ijsonCache");
+        }
         if (null == ehcaches.get(cacheName)) {
             CacheManager cacheManager = new EhcacheManagerImpl();
             cacheManager.setCacheName(cacheName);

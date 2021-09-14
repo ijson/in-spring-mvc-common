@@ -19,6 +19,7 @@ public class CodeGeneratorManagerImpl implements CodeGeneratorManager {
      * @param vo     方法参数
      * @param config 配置文件
      */
+    @Override
     public void execute(ParamsVo<TableEntity> vo, Map<String, String> config) {
         String prefix = "src/main/";
         vo.setParams("prefix", prefix);
