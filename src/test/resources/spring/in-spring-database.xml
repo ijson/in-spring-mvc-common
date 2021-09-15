@@ -20,13 +20,13 @@
         <aop:advisor pointcut-ref="transactionServiceMethod" advice-ref="txAdvice"/>
     </aop:config>
 
-    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+    <tx:advice id="txAdvice">
         <tx:attributes>
-            <tx:method name="save*" propagation="REQUIRED"
+            <tx:method name="save*"
                        rollback-for="com.ijson.platform.common.exception.MVCBusinessException"/>
-            <tx:method name="delete*" propagation="REQUIRED"
+            <tx:method name="delete*"
                        rollback-for="com.ijson.platform.common.exception.MVCBusinessException"/>
-            <tx:method name="edit*" propagation="REQUIRED"
+            <tx:method name="edit*"
                        rollback-for="com.ijson.platform.common.exception.MVCBusinessException"/>
             <tx:method name="*" propagation="SUPPORTS"/>
         </tx:attributes>
