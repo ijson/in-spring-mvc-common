@@ -86,7 +86,7 @@ public interface BaseDao {
      * @param cacheId    缓存ID
      * @return 返回执行后的数据对象
      */
-    Object selectById(String spanceName, String key, String infoId, String cacheId);
+    Object selectById(String spanceName, String key, Object infoId, String cacheId);
 
     /**
      * description: 分页查询

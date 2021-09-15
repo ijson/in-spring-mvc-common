@@ -27,6 +27,7 @@ public class CodeGeneratorManagerImpl implements CodeGeneratorManager {
             for (TemplateHanlder hanlder : hanlders) {
                 hanlder.execute(vo, config);
             }
+            log.info("代码生成完毕!请检查:"+config.get("fs_path")+config.get("project_name"));
         } else {
             log.error("生成器模板接口没有被注入成功");
         }

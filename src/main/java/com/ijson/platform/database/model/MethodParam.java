@@ -33,7 +33,7 @@ public class MethodParam {
     /**
      * 主键id
      */
-    private String infoId = "";
+    private Object infoId = "";
 
     /**
      * 参数列表

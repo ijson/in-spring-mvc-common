@@ -287,14 +287,21 @@ public class DaoHibernateImpl extends HibernateDaoSupport implements BaseDao {
     }
 
     @Override
-    public Object selectById(String spanceName, String key, String infoId, String cacheId) {
+    public Object selectById(String spanceName, String key, Object infoId, String cacheId) {
         Object obj = null;
         if (Validator.isNotNull(cacheId)) {
             obj = cache.getCacheCloneByKey(cacheId);
         }
         try {
             if (Validator.isEmpty(obj)) {
-                obj = this.getHibernateTemplate().get(spanceName, infoId);
+
+                String id = String.valueOf(infoId);
+                if (infoId instanceof Integer) {
+                    obj = this.getHibernateTemplate().get(spanceName, Integer.parseInt(id + ""));
+                } else {
+                    obj = this.getHibernateTemplate().get(spanceName, id);
+                }
+
                 if (!Validator.isEmpty(obj) && Validator.isNotNull(cacheId)) {
                     cache.createCacheObject(cacheId, obj);
                 }

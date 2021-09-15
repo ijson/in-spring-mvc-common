@@ -293,7 +293,7 @@ public class DaoIbatisImpl implements BaseDao {
     }
 
     @Override
-    public Object selectById(String spanceName, String key, String infoId, String cacheId) {
+    public Object selectById(String spanceName, String key, Object infoId, String cacheId) {
         Object obj = null;
         if (Validator.isNotNull(spanceName)) {
             //	init(spanceName);

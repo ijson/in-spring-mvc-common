@@ -3,8 +3,6 @@ package com.ijson.platform.api.model;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.util.List;
 import java.util.Map;
@@ -29,7 +27,7 @@ public class ParamsVo<E> extends BaseEntity {
     /**
      * 信息ID,多为主键ID
      */
-    private String infoId;
+    private Object infoId;
     /**
      * 待操作的单对象,需要对当前对象增删改查等
      */
@@ -53,6 +51,19 @@ public class ParamsVo<E> extends BaseEntity {
 
     public void setParams(String key, Object value) {
         params.put(key, value);
+    }
+
+
+    public static <E> ParamsVo<E> of(String key) {
+        ParamsVo<E> vo = new ParamsVo();
+        vo.setKey(key);
+        return vo;
+    }
+
+    public static <E> ParamsVo<E> id(Object infoId) {
+        ParamsVo<E> vo = new ParamsVo();
+        vo.setInfoId(infoId);
+        return vo;
     }
 
 }

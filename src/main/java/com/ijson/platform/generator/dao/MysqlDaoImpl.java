@@ -1,6 +1,8 @@
 package com.ijson.platform.generator.dao;
 
+import com.google.common.base.Strings;
 import com.google.common.collect.Lists;
+import com.ijson.platform.common.exception.GeneratorException;
 import com.ijson.platform.common.util.ToolsUtil;
 import com.ijson.platform.common.util.Validator;
 import com.ijson.platform.generator.model.ColumnEntity;
@@ -35,6 +37,9 @@ public class MysqlDaoImpl implements IDao {
                 rs = stmt.executeQuery(sql);
                 ResultSetMetaData data = rs.getMetaData();
                 String pkColumn = getPKColumn(tableName1, connection);
+                if (Strings.isNullOrEmpty(pkColumn)) {
+                    throw new GeneratorException(-1, tableName1+ "表主键不存在,自动终止代码生成");
+                }
                 TableEntity table = new TableEntity();
                 String tableName = tableName1.toLowerCase();
                 log.info("当前表名:{}", tableName);

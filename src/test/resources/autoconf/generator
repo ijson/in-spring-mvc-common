@@ -1,8 +1,8 @@
 fs_path=/Users/cuiyongxu/Desktop
 project_name=in-auth-core
 package_name=com.ijson.passport
-builder_tables=u_menu
+builder_tables=user_list
 jdbc.driver=com.mysql.jdbc.Driver
-jdbc.url=jdbc:mysql://192.168.31.130:3306/zber?useUnicode=true&characterEncoding=utf8
+jdbc.url=jdbc:mysql://localhost:3306/jquery_comment?useUnicode=true&characterEncoding=utf8
 jdbc.user=root
-jdbc.password=123456
+jdbc.password=Cuiyx910922

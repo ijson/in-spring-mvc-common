@@ -18,10 +18,7 @@ public abstract class DaoImpl implements IDao {
     protected DaoIbatisImpl ibatisDao;
 
     protected boolean isHibernateDao() {//判断是启用Hibernate还是ibatis
-        if (Validator.isEmpty(ibatisDao)) {
-            return true;
-        }
-        return false;
+        return Validator.isEmpty(ibatisDao);
     }
 
     /* (non-Javadoc)
