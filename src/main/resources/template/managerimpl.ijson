@@ -3,6 +3,8 @@ ${@com.ijson.platform.common.util.ToolsUtil}
 ${@com.ijson.platform.generator.util.DataType}
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
+
 import com.ijson.platform.database.model.MethodParam;
 import com.ijson.platform.database.model.Page;
 import com.ijson.platform.common.exception.ManagerBusinessException;
@@ -30,7 +32,7 @@ public class ${tableName}ManagerImpl implements ${tableName}Manager {
      this.plugins = plugins;
     }
 
-
+    @Override
     public String saveInfo(ParamsVo<${tableName}> vo) throws MVCBusinessException {
       ${tableName} ${beanIdName} = vo.getObj();
       if (${beanIdName} == null) {
@@ -48,15 +50,15 @@ public class ${tableName}ManagerImpl implements ${tableName}Manager {
       return "";
    }
 
-
+    @Override
     public boolean editInfo(ParamsVo<${tableName}> vo) throws MVCBusinessException {
       ${tableName} ${beanIdName} = vo.getObj();
       if (${beanIdName} == null) {
             throw new ManagerBusinessException("实体不能为空");
       }
-      if (Validator.isNotNull(${beanIdName}.get${pkey}()) || Validator.isNotNull(vo.getInfoId())) {
-         String id = ${beanIdName}.get${pkey}();
-         if (Validator.isNull(id)) {
+      if (Validator.isNotNull(${beanIdName}.get${pkey}()) || Objects.nonNull(vo.getInfoId())) {
+         Object id = ${beanIdName}.get${pkey}();
+         if (Objects.isNull(id)) {
              id = vo.getInfoId();
              ${beanIdName}.set${pkey}(id);
          }
@@ -70,7 +72,7 @@ public class ${tableName}ManagerImpl implements ${tableName}Manager {
    }
 
 
-
+    @Override
     public boolean deleteInfo(ParamsVo<${tableName}> vo) throws MVCBusinessException {
       String infoId = vo.getInfoId();
       if (Validator.isNull(infoId)){
@@ -95,7 +97,7 @@ public class ${tableName}ManagerImpl implements ${tableName}Manager {
       }
    }
 
-
+    @Override
     public Object getInfoById(ParamsVo<${tableName}> vo){
       String infoId = vo.getInfoId();
       String cacheKey="${beanIdName}_"+infoId;
@@ -107,7 +109,7 @@ public class ${tableName}ManagerImpl implements ${tableName}Manager {
       return ${beanIdName}Dao.selectById(param);
    }
 
-
+    @Override
     public Object execute(ParamsVo<${tableName}> vo){
 		  String key = vo.getMethodKey();
 		  try {
@@ -122,7 +124,7 @@ public class ${tableName}ManagerImpl implements ${tableName}Manager {
  	  return null;
    }
 
-
+    @Override
     public Page getPageInfo(ParamsVo<${tableName}> vo){
       MethodParam param = setMethodParams(vo, 2);
       int pageSize = Integer.valueOf(Validator.getDefaultStr(String.valueOf(vo.getParams("pageSize")), "10"));
@@ -132,13 +134,13 @@ public class ${tableName}ManagerImpl implements ${tableName}Manager {
       return ${beanIdName}Dao.pageSelect(param);
    }
 
-
+    @Override
     public List<${tableName}> getList(ParamsVo<${tableName}> vo){
       MethodParam param = setMethodParams(vo, 2);
       return ${beanIdName}Dao.select(param);
     }
 
-
+    @Override
     public long countInfo(ParamsVo<${tableName}> vo){
       MethodParam param = setMethodParams(vo, 1);
       return ${beanIdName}Dao.count(param);
