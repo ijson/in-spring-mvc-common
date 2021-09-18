@@ -38,17 +38,14 @@ public class CacheManager extends ApplicationObjectSupport {
             case "ehcache":
                 getEhcacheManager(cacheName);
                 break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + cacheType);
         }
         return cache;
     }
 
     public CacheHandler cacheHandler() {
-        switch (cacheType) {
-            case "ehcache":
-                getEhcacheManager("");
-                break;
-        }
-        return cache;
+        return cacheHandler("");
     }
 
 
