@@ -1,6 +1,5 @@
-package com.ijson.platform.cache.manager.ehcache;
+package com.ijson.platform.cache.handler.ehcache;
 
-import com.ijson.platform.cache.manager.ehcache.impl.LoadCacheResource;
 import com.ijson.platform.common.util.Validator;
 import lombok.extern.slf4j.Slf4j;
 import net.sf.ehcache.Cache;
@@ -33,7 +32,7 @@ public class EhcacheConfigurer {
                 manager = new CacheManager(url);
             }
         } catch (Exception e) {
-            log.error("init:",e);
+            log.error("init:", e);
         }
     }
 

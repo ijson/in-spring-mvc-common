@@ -1,12 +1,14 @@
-package com.ijson.platform.cache.manager.ehcache.impl;
+package com.ijson.platform.cache.handler.ehcache;
 
 import com.google.common.collect.Lists;
-import com.ijson.platform.cache.manager.CacheManager;
-import com.ijson.platform.cache.manager.ehcache.EhcacheConfigurer;
+import com.ijson.platform.cache.handler.CacheHandler;
+import com.ijson.platform.common.exception.CacheException;
 import com.ijson.platform.common.util.Validator;
 import net.sf.ehcache.Cache;
 import net.sf.ehcache.Element;
+import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
 
 
@@ -15,23 +17,34 @@ import java.util.List;
  *
  * @author ijson.com 创建时间：Jan 24, 2015
  */
-public class EhcacheManagerImpl implements CacheManager {
+@Component
+public class EhcacheHandler implements CacheHandler {
 
     //读取ehcache.xml映射文件
     private Cache cache;
 
-    private EhcacheConfigurer cacheConfig;//做spring注入时可以注入
-    private String cacheName = "ijsonCache";//做spring注入时需要注入
+    private volatile EhcacheConfigurer cacheConfig;//做spring注入时可以注入
+    private String cacheName = "ijson-cache";//做spring注入时需要注入
+
+    @PostConstruct
+    public void init() {
+        cacheConfig = new EhcacheConfigurer();
+    }
 
     @Override
-    public void cacheName(String cacheName) {
+    public void setCacheName(String cacheName) {
         this.cacheName = cacheName;
-        cache = getCacheConfig().getCache(this.cacheName);
+        cache = cacheConfig.getCache(this.cacheName);
     }
+
 
     private Cache getCache() {
         if (null == cache) {
-            cache = getCacheConfig().getCache(this.cacheName);
+            cache = cacheConfig.getCache(this.cacheName);
+        }
+
+        if (cache == null) {
+            throw new CacheException(-1, "缓存初始化失败,请检查ehcache.xml是否已配置:" + cacheName);
         }
         return cache;
     }
@@ -167,15 +180,10 @@ public class EhcacheManagerImpl implements CacheManager {
         getCache().removeAll();
     }
 
-    private EhcacheConfigurer getCacheConfig() {
-        if (null == cacheConfig) {
-            cacheConfig = new EhcacheConfigurer();
-        }
-        return cacheConfig;
+    @Override
+    public String cacheType() {
+        return "ehcache";
     }
 
-    public void setCacheConfig(EhcacheConfigurer cacheConfig) {
-        this.cacheConfig = cacheConfig;
-    }
 
 }

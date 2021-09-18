@@ -12,7 +12,7 @@
 
     <description>Spring公共配置</description>
 
-    <bean id="dataSource" class="com.ijson.platform.database.db.DataSource" init-method="initdb"/>
+    <bean id="dataSource" class="com.ijson.platform.database.db.DataSource" p:configName="in-db"/>
 
     <!--  配置参与事务的类 -->
     <aop:config>

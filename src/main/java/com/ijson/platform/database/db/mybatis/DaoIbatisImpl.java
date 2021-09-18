@@ -1,13 +1,13 @@
 package com.ijson.platform.database.db.mybatis;
 
 import com.google.common.collect.Lists;
-import com.ijson.platform.cache.manager.CacheManager;
-import com.ijson.platform.cache.impl.LoadCacheFactory;
+import com.ijson.platform.cache.CacheManager;
 import com.ijson.platform.common.util.Validator;
 import com.ijson.platform.database.db.BaseDao;
 import com.ijson.platform.database.model.MethodParam;
 import com.ijson.platform.database.model.Page;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
@@ -17,18 +17,10 @@ import java.util.List;
  */
 public class DaoIbatisImpl implements BaseDao {
 
-    private CacheManager cache;
+    @Autowired
+    private CacheManager cacheManager;
     private SqlSessionFactory sqlSessionFactory;//需要注入
 
-    public DaoIbatisImpl() {
-        cache = LoadCacheFactory.getInstance().getCacheManager("");
-    }
-
-    public CacheManager getCache() {
-        return cache;
-    }
-
-    //	public void init(String className) {
     //		if (Validator.isEmpty(dao.get(className))) {
     //			DaoSession selectTemplate = new DaoSession(className, sqlSessionFactory);
     //			dao.put(className, selectTemplate);
@@ -150,7 +142,7 @@ public class DaoIbatisImpl implements BaseDao {
             }
             if (count > 0) {
                 if (Validator.isNotNull(param.getCacheId())) {
-                    cache.removeCacheObject(param.getCacheId());
+                    cacheManager.cacheHandler().removeCacheObject(param.getCacheId());
                 }
                 return true;
             }
@@ -181,9 +173,9 @@ public class DaoIbatisImpl implements BaseDao {
             if (count > 0) {
                 if (Validator.isNotNull(param.getCacheId())) {
                     if (Validator.isEmpty(param.getVaule())) {
-                        cache.removeCacheObject(param.getCacheId());
+                        cacheManager.cacheHandler().removeCacheObject(param.getCacheId());
                     } else {
-                        cache.createCacheObject(param.getCacheId(), param.getVaule());
+                        cacheManager.cacheHandler().createCacheObject(param.getCacheId(), param.getVaule());
                     }
                 }
                 return true;
@@ -206,7 +198,7 @@ public class DaoIbatisImpl implements BaseDao {
             int count = getSession().insert(param.getSpanceName(), param.getKey(), param.getVaule());
             if (count > 0) {
                 if (Validator.isNotNull(param.getCacheId())) {
-                    cache.createCacheObject(param.getCacheId(), param.getVaule());
+                    cacheManager.cacheHandler().createCacheObject(param.getCacheId(), param.getVaule());
                 }
                 return true;
             }
@@ -282,7 +274,7 @@ public class DaoIbatisImpl implements BaseDao {
         if (Validator.isNotNull(param.getSpanceName())) {
             //	init(param.getSpanceName());
             if (Validator.isNotNull(param.getCacheId())) {
-                obj = cache.getCacheCloneByKey(param.getCacheId());
+                obj = cacheManager.cacheHandler().getCacheCloneByKey(param.getCacheId());
             }
             if (Validator.isEmpty(obj)) {
                 //obj = dao.get(param.getSpanceName()).selectSingle(param.getKey(), param.getParams());
@@ -298,13 +290,13 @@ public class DaoIbatisImpl implements BaseDao {
         if (Validator.isNotNull(spanceName)) {
             //	init(spanceName);
             if (Validator.isNotNull(cacheId)) {
-                obj = cache.getCacheCloneByKey(cacheId);
+                obj = cacheManager.cacheHandler().getCacheCloneByKey(cacheId);
             }
             if (Validator.isEmpty(obj)) {
                 //obj = dao.get(spanceName).selectSingle(key, infoId);
                 obj = getSession().selectSingle(spanceName, key, infoId);
                 if (!Validator.isEmpty(obj) && Validator.isNotNull(cacheId)) {
-                    cache.createCacheObject(cacheId, obj);
+                    cacheManager.cacheHandler().createCacheObject(cacheId, obj);
                 }
             }
         }

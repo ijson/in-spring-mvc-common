@@ -1,4 +1,4 @@
-package com.ijson.platform.cache.manager.ehcache;
+package com.ijson.platform.cache.handler.ehcache;
 
 import java.io.IOException;
 import java.io.InputStream;

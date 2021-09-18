@@ -15,7 +15,7 @@
     />
 
     <!-- 不做数据同步时配置,框架所需,禁止删除-->
-    <cache name="ijsonCache" maxElementsInMemory="100000" eternal="true"
+    <cache name="in_cache" maxElementsInMemory="100000" eternal="true"
            overflowToDisk="true" timeToIdleSeconds="120" timeToLiveSeconds="120"
            diskPersistent="false" diskExpiryThreadIntervalSeconds="120" diskSpoolBufferSizeMB="1024"
            memoryStoreEvictionPolicy="LFU">

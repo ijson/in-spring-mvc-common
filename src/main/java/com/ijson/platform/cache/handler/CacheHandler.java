@@ -1,4 +1,4 @@
-package com.ijson.platform.cache.manager;
+package com.ijson.platform.cache.handler;
 
 import java.util.List;
 
@@ -7,7 +7,11 @@ import java.util.List;
  *
  * @author ijson.com 创建时间：Jan 24, 2015
  */
-public interface CacheManager extends BaseCache {
+public interface CacheHandler {
+
+
+    void setCacheName(String cacheName);
+
     /**
      * description: 创建单个缓存对象。
      *
@@ -115,4 +119,6 @@ public interface CacheManager extends BaseCache {
      * @author cuiyongxu
      */
     void removeAll();
+
+    String cacheType();
 }
