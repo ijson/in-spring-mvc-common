@@ -1,7 +1,7 @@
 package com.ijson.platform.database.db.hibernate;
 
 import com.google.common.collect.Lists;
-import com.ijson.platform.cache.CacheManager;
+import com.ijson.platform.cache.manager.CacheManager;
 import com.ijson.platform.cache.impl.LoadCacheFactory;
 import com.ijson.platform.common.exception.DBServiceException;
 import com.ijson.platform.common.util.ReflectDB;

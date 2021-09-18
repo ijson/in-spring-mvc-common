@@ -1,5 +1,6 @@
 package com.ijson.platform.cache;
 
+import com.ijson.platform.cache.manager.CacheManager;
 import com.ijson.platform.cache.manager.ehcache.impl.EhcacheManagerImpl;
 import org.junit.Test;
 

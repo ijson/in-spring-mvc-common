@@ -1,7 +1,7 @@
 package com.ijson.platform.cache.manager.ehcache.impl;
 
 import com.google.common.collect.Lists;
-import com.ijson.platform.cache.CacheManager;
+import com.ijson.platform.cache.manager.CacheManager;
 import com.ijson.platform.cache.manager.ehcache.EhcacheConfigurer;
 import com.ijson.platform.common.util.Validator;
 import net.sf.ehcache.Cache;
@@ -24,7 +24,7 @@ public class EhcacheManagerImpl implements CacheManager {
     private String cacheName = "ijsonCache";//做spring注入时需要注入
 
     @Override
-    public void setCacheName(String cacheName) {
+    public void cacheName(String cacheName) {
         this.cacheName = cacheName;
         cache = getCacheConfig().getCache(this.cacheName);
     }

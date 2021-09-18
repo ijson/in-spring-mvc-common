@@ -1,6 +1,6 @@
 package com.ijson.platform.cache.impl;
 
-import com.ijson.platform.cache.CacheManager;
+import com.ijson.platform.cache.manager.CacheManager;
 import com.ijson.platform.cache.CacheService;
 
 import java.util.List;

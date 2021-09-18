@@ -2,7 +2,7 @@ package com.ijson.platform.cache.impl;
 
 import com.google.common.collect.Maps;
 import com.ijson.config.ConfigFactory;
-import com.ijson.platform.cache.CacheManager;
+import com.ijson.platform.cache.manager.CacheManager;
 import com.ijson.platform.cache.manager.ehcache.impl.EhcacheManagerImpl;
 import com.ijson.platform.common.util.Validator;
 import lombok.Data;
@@ -63,7 +63,7 @@ public class LoadCacheFactory {
         }
         if (null == ehcaches.get(cacheName)) {
             CacheManager cacheManager = new EhcacheManagerImpl();
-            cacheManager.setCacheName(cacheName);
+            cacheManager.cacheName(cacheName);
             ehcaches.put(cacheName, cacheManager);
         }
         return ehcaches.get(cacheName);

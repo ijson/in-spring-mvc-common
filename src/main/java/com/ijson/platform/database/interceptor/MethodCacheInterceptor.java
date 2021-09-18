@@ -2,7 +2,7 @@ package com.ijson.platform.database.interceptor;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import com.ijson.platform.cache.CacheManager;
+import com.ijson.platform.cache.manager.CacheManager;
 import com.ijson.platform.cache.impl.LoadCacheFactory;
 import com.ijson.platform.common.util.Validator;
 import com.ijson.platform.database.model.MethodParam;

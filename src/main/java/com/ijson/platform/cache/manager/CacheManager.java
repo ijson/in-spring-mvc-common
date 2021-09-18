@@ -1,13 +1,13 @@
-package com.ijson.platform.cache;
+package com.ijson.platform.cache.manager;
 
 import java.util.List;
 
 /**
- * description:  系统缓存操作接口
+ * description:  系统缓存操作接口  最底层的
  *
  * @author ijson.com 创建时间：Jan 24, 2015
  */
-public interface CacheManager extends IBaseCache {
+public interface CacheManager extends BaseCache {
     /**
      * description: 创建单个缓存对象。
      *
