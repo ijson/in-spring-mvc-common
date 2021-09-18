@@ -2,6 +2,7 @@ package com.ijson.platform.api.model;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
+import com.ijson.platform.api.entity.BaseEntity;
 import lombok.Data;
 
 import java.util.List;
@@ -13,21 +14,20 @@ import java.util.Map;
  * @author cuiyongxu 创建时间：Oct 27, 2015
  */
 @Data
-public class ParamsVo<E> extends BaseEntity {
+public class ExtPv<E> extends BaseEntity {
 
-    private String key;
     /**
-     * 为插件提供的参数值
+     * 插件类型
      */
-    private String methodKey;
+    private String pluginKey;
     /**
-     * 当前操作用户ID
+     * 操作人
      */
-    private String userId;
+    private AuthContext context;
     /**
-     * 信息ID,多为主键ID
+     * 主键ID
      */
-    private Object infoId;
+    private Object primaryId;
     /**
      * 待操作的单对象,需要对当前对象增删改查等
      */
@@ -40,10 +40,7 @@ public class ParamsVo<E> extends BaseEntity {
      * 执行方法所需参数,在不同方法中需要的参数不同,可以存至map中,便于其他地方使用
      */
     private Map<String, Object> params = Maps.newHashMap();
-    /**
-     * 当前操作用户Ename
-     */
-    private String userEname;
+
 
     public Object getParams(String key) {
         return params.get(key);
@@ -54,15 +51,9 @@ public class ParamsVo<E> extends BaseEntity {
     }
 
 
-    public static <E> ParamsVo<E> of(String key) {
-        ParamsVo<E> vo = new ParamsVo();
-        vo.setKey(key);
-        return vo;
-    }
-
-    public static <E> ParamsVo<E> id(Object infoId) {
-        ParamsVo<E> vo = new ParamsVo();
-        vo.setInfoId(infoId);
+    public static <E> ExtPv<E> id(Object infoId) {
+        ExtPv<E> vo = new ExtPv();
+        vo.setPrimaryId(infoId);
         return vo;
     }
 

@@ -5,7 +5,7 @@ import com.google.common.base.Strings;
 import com.google.common.collect.Maps;
 import ${package_name}.entity.${tableName};
 import ${package_name}.manager.${tableName}Manager;
-import com.ijson.platform.api.model.ParamsVo;
+import com.ijson.platform.api.model.ExtPv;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;

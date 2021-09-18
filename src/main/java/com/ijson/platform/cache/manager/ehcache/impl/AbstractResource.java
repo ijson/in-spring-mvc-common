@@ -10,7 +10,7 @@ import java.net.URL;
 /**
  * description:  配置资源抽象类
  *
- * @author heppy1.com 创建时间：Jan 24, 2015
+ * @author ijson.com 创建时间：Jan 24, 2015
  */
 public abstract class AbstractResource implements CacheResource {
 

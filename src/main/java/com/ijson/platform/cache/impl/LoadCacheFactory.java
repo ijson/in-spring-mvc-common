@@ -13,7 +13,7 @@ import java.util.Map;
 /**
  * description:  创建缓存实例工厂
  *
- * @author heppy1.com 创建时间：Jan 24, 2015
+ * @author ijson.com 创建时间：Jan 24, 2015
  */
 @Data
 public class LoadCacheFactory {

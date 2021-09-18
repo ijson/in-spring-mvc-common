@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * 缓存服务
  *
- * @author heppy1.com 创建时间：Jan 24, 2015
+ * @author ijson.com 创建时间：Jan 24, 2015
  */
 public interface CacheService {
 

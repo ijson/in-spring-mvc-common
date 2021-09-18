@@ -1,7 +1,7 @@
 package com.ijson.platform.generator.template;
 
 import com.google.common.collect.Maps;
-import com.ijson.platform.api.model.ParamsVo;
+import com.ijson.platform.api.model.ExtPv;
 import com.ijson.platform.common.util.FileOperate;
 import com.ijson.platform.common.util.ToolsUtil;
 import com.ijson.platform.common.util.Validator;
@@ -16,7 +16,7 @@ public class TemplateManagerImplBuilder implements TemplateHanlder {
 
 
     @Override
-    public void execute(ParamsVo<TableEntity> vo, Map<String, String> config) {
+    public void execute(ExtPv<TableEntity> vo, Map<String, String> config) {
         List<TableEntity> tables = vo.getObjs();
         String prefix = Validator.getDefaultStr(String.valueOf(vo.getParams("prefix")), "src/main/");
         createdManager(prefix, tables, config);

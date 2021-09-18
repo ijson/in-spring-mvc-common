@@ -153,7 +153,7 @@ public class Validator {
      * description:  返回classes的绝对路径
      *
      * @return value
-     * @author heppy1.com
+     * @author ijson.com
      */
     public static String getClassLoaderPath() {
         String path = "";
@@ -181,7 +181,7 @@ public class Validator {
      * description:获取操作系统类型
      *
      * @return 返回操作系统类型
-     * @author heppy1.com
+     * @author ijson.com
      */
     public static String getSystemType() {
         String result = "windows";
@@ -198,7 +198,7 @@ public class Validator {
      *
      * @param o 待克隆对象
      * @return 返克隆后的新对象--由于common包升级,造成此方法暂时无法使用
-     * @author heppy1.com
+     * @author ijson.com
      */
     //@Deprecated
     public static Object clone(Object o) {

@@ -1,7 +1,7 @@
-package com.ijson.platform.api.action;
+package com.ijson.platform.api;
 
 
-import com.ijson.platform.api.model.BaseEntity;
+import com.ijson.platform.api.entity.BaseEntity;
 
 /**
  * description:  springmvc的基类，公共方法<br>所有的控制层.全部继承此类

@@ -3,7 +3,7 @@ package ${package_name}.manager;
 import org.junit.Test;
 import ${package_name}.BaseTest;
 import org.springframework.beans.factory.annotation.Autowired;;
-import com.ijson.platform.api.model.ParamsVo;
+import com.ijson.platform.api.model.ExtPv;
 import ${package_name}.entity.${tableName};
 
 

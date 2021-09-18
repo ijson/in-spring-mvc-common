@@ -1,6 +1,6 @@
-package com.ijson.platform.api.manager;
+package com.ijson.platform.api;
 
-import com.ijson.platform.api.model.ParamsVo;
+import com.ijson.platform.api.model.ExtPv;
 import com.ijson.platform.common.exception.DBServiceException;
 
 import java.util.List;
@@ -20,7 +20,7 @@ public interface BaseManager<E> {
      * @return 成功返回信息ID，失败返回空
      * @return id
      */
-    String saveInfo(ParamsVo<E> vo) throws DBServiceException;
+    String saveInfo(ExtPv<E> vo) throws DBServiceException;
 
     /**
      * description:  修改
@@ -28,7 +28,7 @@ public interface BaseManager<E> {
      * @param vo 方法参数
      * @return 成功返回true，失败返回false
      */
-    boolean editInfo(ParamsVo<E> vo) throws DBServiceException;
+    boolean editInfo(ExtPv<E> vo) throws DBServiceException;
 
     /**
      * description:  删除
@@ -36,7 +36,7 @@ public interface BaseManager<E> {
      * @param vo 方法参数
      * @return 成功返回true，失败返回false
      */
-    boolean deleteInfo(ParamsVo<E> vo) throws DBServiceException;
+    boolean deleteInfo(ExtPv<E> vo) throws DBServiceException;
 
     /**
      * description:  获取信息数据可执行方法
@@ -44,7 +44,7 @@ public interface BaseManager<E> {
      * @param vo 方法参数
      * @return 返回要获取的信息数据
      */
-    Object execute(ParamsVo<E> vo);
+    Object execute(ExtPv<E> vo);
 
     /**
      * description: 按信息ID获取信息对象
@@ -52,7 +52,7 @@ public interface BaseManager<E> {
      * @param vo 方法参数
      * @return 成功返回信息对象，失败返回空
      */
-    Object getInfoById(ParamsVo<E> vo);
+    Object getInfoById(ExtPv<E> vo);
 
     /**
      * description:  根据条件获取信息列表
@@ -60,7 +60,7 @@ public interface BaseManager<E> {
      * @param vo 方法参数
      * @return 成功返回信息列表，失败返回空
      */
-    List<E> getList(ParamsVo<E> vo);
+    List<E> getList(ExtPv<E> vo);
 
     /**
      * description:  根据条件获取信息数量
@@ -68,6 +68,6 @@ public interface BaseManager<E> {
      * @param vo 方法参数
      * @return 返回信息数量
      */
-    long countInfo(ParamsVo<E> vo);
+    long countInfo(ExtPv<E> vo);
 
 }

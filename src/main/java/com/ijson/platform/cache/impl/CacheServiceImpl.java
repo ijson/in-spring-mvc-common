@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * description:  缓存外部接品实现类
  *
- * @author heppy1.com 创建时间：Jan 24, 2015
+ * @author ijson.com 创建时间：Jan 24, 2015
  */
 public class CacheServiceImpl implements CacheService {
 

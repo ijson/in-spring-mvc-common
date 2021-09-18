@@ -11,7 +11,7 @@ import java.net.URL;
 /**
  * description:  加载缓存资源
  *
- * @author heppy1.com 创建时间：Jan 24, 2015
+ * @author ijson.com 创建时间：Jan 24, 2015
  */
 public class LoadCacheResource extends AbstractResource {
 

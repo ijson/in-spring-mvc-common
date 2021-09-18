@@ -6,7 +6,7 @@ import java.text.DecimalFormat;
 /**
  * description:  提供高精度的运算支持.所以函数以double为参数类型，兼容int与float.
  *
- * @author heppy1.com 创建时间：Jun 29, 2015
+ * @author ijson.com 创建时间：Jun 29, 2015
  */
 public class NumberUtils {
 

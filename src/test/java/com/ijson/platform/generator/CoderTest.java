@@ -2,7 +2,7 @@ package com.ijson.platform.generator;
 
 import com.google.common.collect.Maps;
 import com.ijson.config.ConfigFactory;
-import com.ijson.platform.api.model.ParamsVo;
+import com.ijson.platform.api.model.ExtPv;
 import com.ijson.platform.generator.dao.LoadDaoFactory;
 import com.ijson.platform.generator.manager.CodeGeneratorManager;
 import com.ijson.platform.generator.manager.LoadManagerFactory;
@@ -28,7 +28,7 @@ public class CoderTest {
             CodeGeneratorManager codeGeneratorManager = LoadManagerFactory.getInstance().getCodeGeneratorManager();
             String tableNames[] = config.get("builder_tables").split(",");
             List<TableEntity> result = LoadDaoFactory.getInstance().getDao("Mysql").getTables(tableNames, configMap);
-            ParamsVo<TableEntity> vo = new ParamsVo<>();
+            ExtPv<TableEntity> vo = new ExtPv<>();
             vo.setObjs(result);
             codeGeneratorManager.execute(vo, configMap);
         });

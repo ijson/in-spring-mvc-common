@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * description:  ehcache缓存实现类
  *
- * @author heppy1.com 创建时间：Jan 24, 2015
+ * @author ijson.com 创建时间：Jan 24, 2015
  */
 public class EhcacheManagerImpl implements CacheManager {
 

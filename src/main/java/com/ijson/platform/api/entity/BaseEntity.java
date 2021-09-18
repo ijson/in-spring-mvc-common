@@ -1,4 +1,4 @@
-package com.ijson.platform.api.model;
+package com.ijson.platform.api.entity;
 
 import java.io.Serializable;
 

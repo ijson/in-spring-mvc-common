@@ -1,6 +1,6 @@
 package com.ijson.platform.generator.manager.impl;
 
-import com.ijson.platform.api.model.ParamsVo;
+import com.ijson.platform.api.model.ExtPv;
 import com.ijson.platform.common.util.Validator;
 import com.ijson.platform.generator.manager.CodeGeneratorManager;
 import com.ijson.platform.generator.model.TableEntity;
@@ -20,7 +20,7 @@ public class CodeGeneratorManagerImpl implements CodeGeneratorManager {
      * @param config 配置文件
      */
     @Override
-    public void execute(ParamsVo<TableEntity> vo, Map<String, String> config) {
+    public void execute(ExtPv<TableEntity> vo, Map<String, String> config) {
         String prefix = "src/main/";
         vo.setParams("prefix", prefix);
         if (!Validator.isEmpty(hanlders)) {

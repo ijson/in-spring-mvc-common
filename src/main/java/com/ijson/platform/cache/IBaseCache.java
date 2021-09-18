@@ -3,7 +3,7 @@ package com.ijson.platform.cache;
 /**
  * description:  缓存主接口
  *
- * @author heppy1.com 创建时间：Jan 24, 2015
+ * @author ijson.com 创建时间：Jan 24, 2015
  */
 public interface IBaseCache {
     /**

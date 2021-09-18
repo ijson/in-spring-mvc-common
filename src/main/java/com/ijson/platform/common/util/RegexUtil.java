@@ -4,7 +4,7 @@ package com.ijson.platform.common.util;
  * description:  正则表达式工具，包含如下功能：
  * <p>判断一个字符串是否为：double型、int型、long型<p>
  *
- * @author heppy1.com 创建时间：Jun 29, 2015
+ * @author ijson.com 创建时间：Jun 29, 2015
  */
 public class RegexUtil {
 

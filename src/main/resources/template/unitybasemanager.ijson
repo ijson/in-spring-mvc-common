@@ -1,8 +1,8 @@
 package ${package_name}.manager;
 
 import com.ijson.platform.database.model.Page;
-import com.ijson.platform.api.manager.BaseManager;
-import com.ijson.platform.api.model.ParamsVo;
+import com.ijson.platform.api.BaseManager;
+import com.ijson.platform.api.model.ExtPv;
 
 
 /**

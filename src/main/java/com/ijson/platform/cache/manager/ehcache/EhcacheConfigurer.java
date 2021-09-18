@@ -11,7 +11,7 @@ import java.net.URL;
 /**
  * description:  ehcache资源配置类
  *
- * @author heppy1.com 创建时间：Jan 24, 2015
+ * @author ijson.com 创建时间：Jan 24, 2015
  */
 @Slf4j
 public class EhcacheConfigurer {

@@ -1,7 +1,7 @@
 package com.ijson.platform.generator.template;
 
 
-import com.ijson.platform.api.model.ParamsVo;
+import com.ijson.platform.api.model.ExtPv;
 import com.ijson.platform.common.util.FileOperate;
 import com.ijson.platform.generator.model.TableEntity;
 import com.ijson.platform.generator.util.TemplateUtil;
@@ -11,7 +11,7 @@ import java.util.Map;
 public class PomXMlBuilder implements TemplateHanlder {
 
     @Override
-    public void execute(ParamsVo<TableEntity> vo, Map<String, String> config) {
+    public void execute(ExtPv<TableEntity> vo, Map<String, String> config) {
         createdPomXml(config);
     }
 
