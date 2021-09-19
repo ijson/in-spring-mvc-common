@@ -64,13 +64,30 @@ public class ExtPv<E extends BaseEntity> {
         return extPv;
     }
 
+    public static <E extends BaseEntity> ExtPv<E> of(String id, Operator operator, Object value) {
+        ExtPv<E> extPv = new ExtPv<>();
+        extPv.setPrimaryId(id);
+        extPv.param(operator.name(), value);
+        return extPv;
+    }
+
 
     public Object getParams(String key) {
         return params.get(key);
     }
 
-    public void setParams(String key, Object value) {
+    public Boolean getBoolean(String key) {
+        Object o = params.get(key);
+        if (!(o instanceof Boolean)) {
+            return null;
+        }
+        return (boolean) o;
+    }
+
+
+    public ExtPv param(String key, Object value) {
         params.put(key, value);
+        return this;
     }
 
     public void setObj(E obj) {

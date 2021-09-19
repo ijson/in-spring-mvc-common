@@ -22,7 +22,7 @@ public class CodeGeneratorManagerImpl implements CodeGeneratorManager {
     @Override
     public void execute(ExtPv<TableEntity> vo, Map<String, String> config) {
         String prefix = "src/main/";
-        vo.setParams("prefix", prefix);
+        vo.param("prefix", prefix);
         if (!Validator.isEmpty(hanlders)) {
             for (TemplateHanlder hanlder : hanlders) {
                 hanlder.execute(vo, config);

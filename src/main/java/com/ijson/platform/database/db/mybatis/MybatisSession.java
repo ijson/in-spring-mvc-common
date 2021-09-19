@@ -245,7 +245,7 @@ public class MybatisSession<O> {
      */
     protected QueryPair buildQueryPair(String nameSpace, String type, String query, Object... args) {
         String id = nameSpace;
-        if (!query.equals("")) {
+        if (!"".equals(query)) {
             query = query.substring(0, 1).toUpperCase() + query.substring(1);
         }
         Object o;
