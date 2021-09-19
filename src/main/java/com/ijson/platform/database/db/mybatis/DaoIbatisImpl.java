@@ -1,7 +1,7 @@
 package com.ijson.platform.database.db.mybatis;
 
 import com.google.common.collect.Lists;
-import com.ijson.platform.cache.CacheManager;
+import com.ijson.platform.cache.Ehcache;
 import com.ijson.platform.common.util.Validator;
 import com.ijson.platform.database.db.BaseDao;
 import com.ijson.platform.database.model.MethodParam;
@@ -18,7 +18,6 @@ import java.util.List;
 public class DaoIbatisImpl implements BaseDao {
 
     @Autowired
-    private CacheManager cacheManager;
     private SqlSessionFactory sqlSessionFactory;//需要注入
 
     //		if (Validator.isEmpty(dao.get(className))) {
@@ -132,17 +131,17 @@ public class DaoIbatisImpl implements BaseDao {
             //init(param.getSpanceName());
             int count = 0;
             if (param.isDelete())
-                //count = dao.get(param.getSpanceName()).delete(param.getKey(), param.getParams());
+            //count = dao.get(param.getSpanceName()).delete(param.getKey(), param.getParams());
             {
                 count = getSession().delete(param.getSpanceName(), param.getKey(), param.getParams());
             } else
-                //count = dao.get(param.getSpanceName()).update(param.getKey(), param.getParams());
+            //count = dao.get(param.getSpanceName()).update(param.getKey(), param.getParams());
             {
                 count = getSession().update(param.getSpanceName(), param.getKey(), param.getParams());
             }
             if (count > 0) {
                 if (Validator.isNotNull(param.getCacheId())) {
-                    cacheManager.cacheHandler().removeCacheObject(param.getCacheId());
+                    Ehcache.ice.removeCacheObject(param.getCacheId());
                 }
                 return true;
             }
@@ -162,20 +161,20 @@ public class DaoIbatisImpl implements BaseDao {
             //	init(param.getSpanceName());
             int count = 0;
             if (Validator.isEmpty(param.getVaule()))
-                //count = dao.get(param.getSpanceName()).update(param.getKey(), param.getParams());
+            //count = dao.get(param.getSpanceName()).update(param.getKey(), param.getParams());
             {
                 count = getSession().update(param.getSpanceName(), param.getKey(), param.getParams());
             } else
-                //count = dao.get(param.getSpanceName()).update(param.getKey(), param.getVaule());
+            //count = dao.get(param.getSpanceName()).update(param.getKey(), param.getVaule());
             {
                 count = getSession().update(param.getSpanceName(), param.getKey(), param.getVaule());
             }
             if (count > 0) {
                 if (Validator.isNotNull(param.getCacheId())) {
                     if (Validator.isEmpty(param.getVaule())) {
-                        cacheManager.cacheHandler().removeCacheObject(param.getCacheId());
+                        Ehcache.ice.removeCacheObject(param.getCacheId());
                     } else {
-                        cacheManager.cacheHandler().createCacheObject(param.getCacheId(), param.getVaule());
+                        Ehcache.ice.createCacheObject(param.getCacheId(), param.getVaule());
                     }
                 }
                 return true;
@@ -198,7 +197,7 @@ public class DaoIbatisImpl implements BaseDao {
             int count = getSession().insert(param.getSpanceName(), param.getKey(), param.getVaule());
             if (count > 0) {
                 if (Validator.isNotNull(param.getCacheId())) {
-                    cacheManager.cacheHandler().createCacheObject(param.getCacheId(), param.getVaule());
+                    Ehcache.ice.createCacheObject(param.getCacheId(), param.getVaule());
                 }
                 return true;
             }
@@ -274,7 +273,7 @@ public class DaoIbatisImpl implements BaseDao {
         if (Validator.isNotNull(param.getSpanceName())) {
             //	init(param.getSpanceName());
             if (Validator.isNotNull(param.getCacheId())) {
-                obj = cacheManager.cacheHandler().getCacheCloneByKey(param.getCacheId());
+                obj = Ehcache.ice.getCacheCloneByKey(param.getCacheId());
             }
             if (Validator.isEmpty(obj)) {
                 //obj = dao.get(param.getSpanceName()).selectSingle(param.getKey(), param.getParams());
@@ -290,13 +289,13 @@ public class DaoIbatisImpl implements BaseDao {
         if (Validator.isNotNull(spanceName)) {
             //	init(spanceName);
             if (Validator.isNotNull(cacheId)) {
-                obj = cacheManager.cacheHandler().getCacheCloneByKey(cacheId);
+                obj = Ehcache.ice.getCacheCloneByKey(cacheId);
             }
             if (Validator.isEmpty(obj)) {
                 //obj = dao.get(spanceName).selectSingle(key, infoId);
                 obj = getSession().selectSingle(spanceName, key, infoId);
                 if (!Validator.isEmpty(obj) && Validator.isNotNull(cacheId)) {
-                    cacheManager.cacheHandler().createCacheObject(cacheId, obj);
+                    Ehcache.ice.createCacheObject(cacheId, obj);
                 }
             }
         }

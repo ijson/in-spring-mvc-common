@@ -2,13 +2,12 @@ package com.ijson.platform.database.interceptor;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import com.ijson.platform.cache.CacheManager;
+import com.ijson.platform.cache.Ehcache;
 import com.ijson.platform.common.util.Validator;
 import com.ijson.platform.database.model.MethodParam;
 import com.ijson.platform.database.model.Page;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.HashMap;
 import java.util.List;
@@ -22,8 +21,6 @@ import java.util.Map;
  */
 public class MethodCacheInterceptor implements MethodInterceptor {
 
-    @Autowired
-    private CacheManager cacheManager;
 
     /* (non-Javadoc)
      * @see org.springframework.beans.factory.InitializingBean#afterPropertiesSet()
@@ -51,7 +48,7 @@ public class MethodCacheInterceptor implements MethodInterceptor {
         boolean mark = "pageSelect".equalsIgnoreCase(methodName);
         if ("select".equalsIgnoreCase(methodName) || mark) {
             String cacheKey = getCacheKey(methodName, arguments);
-            result = cacheManager.cacheHandler().getCacheObjectByKey(cacheKey);
+            result = Ehcache.ice.getCacheObjectByKey(cacheKey);
             if (null == result) {
                 result = invocation.proceed();
                 if (!Validator.isEmpty(result)) {
@@ -62,9 +59,9 @@ public class MethodCacheInterceptor implements MethodInterceptor {
                         hm.put("pageIndex", page.getPageNeeded());
                         hm.put("pageSize", page.getPageSize());
                         hm.put("count", page.getCount());
-                        cacheManager.cacheHandler().createCacheObject(cacheKey, hm);
+                        Ehcache.ice.createCacheObject(cacheKey, hm);
                     } else {
-                        cacheManager.cacheHandler().createCacheObject(cacheKey, result);
+                        Ehcache.ice.createCacheObject(cacheKey, result);
                     }
                 }
             } else {
@@ -90,22 +87,22 @@ public class MethodCacheInterceptor implements MethodInterceptor {
 
     @SuppressWarnings("unchecked")
     private void writeCache(String key, String targetName, boolean iswrite) {
-        List<String> list = (List<String>) cacheManager.cacheHandler().getCacheObjectByKey(targetName);
+        List<String> list = (List<String>) Ehcache.ice.getCacheObjectByKey(targetName);
         if (iswrite) {
             if (Validator.isEmpty(list)) {
                 list = Lists.newArrayList();
             }
             if (!list.contains(key)) {
                 list.add(key);
-                cacheManager.cacheHandler().createCacheObject(targetName, list);
+                Ehcache.ice.createCacheObject(targetName, list);
             }
         } else {
             if (!Validator.isEmpty(list)) {
                 int count = list.size();
                 for (String aList : list) {
-                    cacheManager.cacheHandler().removeCacheObject(aList);
+                    Ehcache.ice.removeCacheObject(aList);
                 }
-                cacheManager.cacheHandler().removeCacheObject(targetName);
+                Ehcache.ice.removeCacheObject(targetName);
             }
         }
     }

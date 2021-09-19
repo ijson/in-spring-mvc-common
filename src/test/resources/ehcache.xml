@@ -21,6 +21,18 @@
            memoryStoreEvictionPolicy="LFU">
     </cache>
 
+    <cache name="aaa" maxElementsInMemory="100000" eternal="true"
+           overflowToDisk="true" timeToIdleSeconds="120" timeToLiveSeconds="120"
+           diskPersistent="false" diskExpiryThreadIntervalSeconds="120" diskSpoolBufferSizeMB="1024"
+           memoryStoreEvictionPolicy="LFU">
+    </cache>
+
+    <cache name="bbb" maxElementsInMemory="100000" eternal="true"
+           overflowToDisk="true" timeToIdleSeconds="120" timeToLiveSeconds="120"
+           diskPersistent="false" diskExpiryThreadIntervalSeconds="120" diskSpoolBufferSizeMB="1024"
+           memoryStoreEvictionPolicy="LFU">
+    </cache>
+
 
     <!-- 注释内容 -->
     <cache
