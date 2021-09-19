@@ -2,13 +2,15 @@ package com.ijson.platform.cache.handler.ehcache;
 
 import com.google.common.collect.Lists;
 import com.ijson.platform.cache.handler.CacheHandler;
-import com.ijson.platform.common.exception.CacheException;
 import com.ijson.platform.common.util.Validator;
+import lombok.extern.slf4j.Slf4j;
 import net.sf.ehcache.Cache;
+import net.sf.ehcache.CacheManager;
 import net.sf.ehcache.Element;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import java.net.URL;
 import java.util.List;
 
 
@@ -17,88 +19,75 @@ import java.util.List;
  *
  * @author ijson.com 创建时间：Jan 24, 2015
  */
+@Slf4j
 @Component
 public class EhcacheHandler implements CacheHandler {
 
+    private static final String EHCACHE_XML = "/ehcache.xml";
+
+    private URL url;
+
+    private CacheManager manager;
+
+
     //读取ehcache.xml映射文件
-    private Cache cache;
 
     private volatile EhcacheConfigurer cacheConfig;//做spring注入时可以注入
     private String cacheName = "ijson-cache";//做spring注入时需要注入
 
     @PostConstruct
     public void init() {
-        cacheConfig = new EhcacheConfigurer();
+        url = getClass().getResource(EHCACHE_XML);
+        manager = CacheManager.create(url);
     }
 
     @Override
-    public void setCacheName(String cacheName) {
+    public synchronized CacheHandler setCacheName(String cacheName) {
         this.cacheName = cacheName;
-        cache = cacheConfig.getCache(this.cacheName);
+        return this;
     }
 
-
-    private Cache getCache() {
-        if (null == cache) {
-            cache = cacheConfig.getCache(this.cacheName);
-        }
-
-        if (cache == null) {
-            throw new CacheException(-1, "缓存初始化失败,请检查ehcache.xml是否已配置:" + cacheName);
-        }
-        return cache;
-    }
 
     @Override
     public boolean createCacheObject(String key, Object object) {
-        boolean flag = false;
-        if (Validator.isNotNull(key) && object != null) {
-            getCache().remove(key);
-            Element element = new Element(key, object);
-            getCache().put(element);
-            flag = true;
-        }
-        return flag;
+        Cache cache = manager.getCache(cacheName);
+        Element element = new Element(key, object);
+        cache.put(element);
+        return true;
     }
 
     @Override
     public boolean checkCacheObject(String key) {
         boolean flag = false;
-        if (Validator.isNotNull(key)) {
-            Element element = getCache().get(key);
-            if (element != null) {
-                flag = true;
-            }
-        }
+//        if (Validator.isNotNull(key)) {
+//            Element element = getCache().get(key);
+//            if (element != null) {
+//                flag = true;
+//            }
+//        }
         return flag;
     }
 
     @Override
     public Object getCacheObjectByKey(String key) {
-        if (Validator.isNotNull(key)) {
-            Element element = getCache().get(key);
-            if (element == null) {
-                return null;
-            } else {
-                return element.getObjectValue();
-            }
-        } else {
-            return null;
-        }
+//        if (Validator.isNotNull(key)) {
+//            Element element = getCache().get(key);
+//            if (element == null) {
+//                return null;
+//            } else {
+//                return element.getObjectValue();
+//            }
+//        } else {
+        return null;
+//        }
     }
 
     @Override
     public Object getCacheCloneByKey(String key) {
-        if (Validator.isNotNull(key)) {
-            Element element = getCache().get(key);
-            if (element == null) {
-                return null;
-            } else {
-                return Validator.clone(element.getObjectValue());
-            }
-        } else {
-            return null;
-        }
+        Cache cache = manager.getCache(cacheName);
+
+        log.info("{},{}", cacheName, key);
+        return cache.get(key);
     }
 
     @Override
@@ -152,16 +141,16 @@ public class EhcacheHandler implements CacheHandler {
 
     @Override
     public List getAllKeys() {
-        return getCache().getKeys();
+        return null;
     }
 
     @Override
     public boolean removeCacheObject(String key) {
         boolean flag = false;
-        if (Validator.isNotNull(key)) {
-            getCache().remove(key);
-            flag = true;
-        }
+//        if (Validator.isNotNull(key)) {
+//            getCache().remove(key);
+//            flag = true;
+//        }
         return flag;
     }
 
@@ -177,7 +166,7 @@ public class EhcacheHandler implements CacheHandler {
 
     @Override
     public void removeAll() {
-        getCache().removeAll();
+//        getCache().removeAll();
     }
 
     @Override

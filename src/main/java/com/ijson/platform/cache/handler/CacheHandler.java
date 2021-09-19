@@ -10,7 +10,7 @@ import java.util.List;
 public interface CacheHandler {
 
 
-    void setCacheName(String cacheName);
+    CacheHandler setCacheName(String cacheName);
 
     /**
      * description: 创建单个缓存对象。

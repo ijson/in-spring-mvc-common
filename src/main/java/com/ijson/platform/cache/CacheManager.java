@@ -36,12 +36,10 @@ public class CacheManager extends ApplicationObjectSupport {
     public CacheHandler cacheHandler(String cacheName) {
         switch (cacheType) {
             case "ehcache":
-                getEhcacheManager(cacheName);
-                break;
+                return getEhcacheManager(cacheName);
             default:
                 throw new IllegalStateException("Unexpected value: " + cacheType);
         }
-        return cache;
     }
 
     public CacheHandler cacheHandler() {
@@ -49,11 +47,11 @@ public class CacheManager extends ApplicationObjectSupport {
     }
 
 
-    private void getEhcacheManager(String cacheName) {
+    private CacheHandler getEhcacheManager(String cacheName) {
         if (Strings.isNullOrEmpty((cacheName))) {
             cacheName = "in_cache";
         }
-        cache.setCacheName(cacheName);
+        return cache.setCacheName(cacheName);
     }
 
 

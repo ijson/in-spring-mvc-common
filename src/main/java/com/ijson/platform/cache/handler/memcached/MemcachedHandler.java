@@ -13,8 +13,8 @@ import java.util.List;
 @Component
 public class MemcachedHandler implements CacheHandler {
     @Override
-    public void setCacheName(String cacheName) {
-
+    public CacheHandler setCacheName(String cacheName) {
+return this;
     }
 
     @Override
