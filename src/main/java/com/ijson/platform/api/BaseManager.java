@@ -1,5 +1,6 @@
 package com.ijson.platform.api;
 
+import com.ijson.platform.api.entity.BaseEntity;
 import com.ijson.platform.api.model.ExtPv;
 import com.ijson.platform.common.exception.DBServiceException;
 
@@ -12,7 +13,7 @@ import java.util.List;
  *
  * @author cuiyongxu 创建时间：Oct 27, 2015
  */
-public interface BaseManager<E> {
+public interface BaseManager<E extends BaseEntity> {
     /**
      * description:  保存
      *
@@ -31,6 +32,14 @@ public interface BaseManager<E> {
     boolean editInfo(ExtPv<E> vo) throws DBServiceException;
 
     /**
+     * description: 按信息ID获取信息对象
+     *
+     * @param vo 方法参数
+     * @return 成功返回信息对象，失败返回空
+     */
+    Object getInfoById(ExtPv<E> vo);
+
+    /**
      * description:  删除
      *
      * @param vo 方法参数
@@ -46,13 +55,6 @@ public interface BaseManager<E> {
      */
     Object execute(ExtPv<E> vo);
 
-    /**
-     * description: 按信息ID获取信息对象
-     *
-     * @param vo 方法参数
-     * @return 成功返回信息对象，失败返回空
-     */
-    Object getInfoById(ExtPv<E> vo);
 
     /**
      * description:  根据条件获取信息列表

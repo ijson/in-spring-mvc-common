@@ -1,8 +1,10 @@
 package com.ijson.platform.api.model;
 
+import com.google.common.base.Strings;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.ijson.platform.api.entity.BaseEntity;
+import com.ijson.platform.common.util.ObjectId;
 import lombok.Data;
 
 import java.util.List;
@@ -14,7 +16,7 @@ import java.util.Map;
  * @author cuiyongxu 创建时间：Oct 27, 2015
  */
 @Data
-public class ExtPv<E> extends BaseEntity {
+public class ExtPv<E extends BaseEntity> {
 
     /**
      * 插件类型
@@ -27,7 +29,7 @@ public class ExtPv<E> extends BaseEntity {
     /**
      * 主键ID
      */
-    private Object primaryId;
+    private String primaryId;
     /**
      * 待操作的单对象,需要对当前对象增删改查等
      */
@@ -41,6 +43,27 @@ public class ExtPv<E> extends BaseEntity {
      */
     private Map<String, Object> params = Maps.newHashMap();
 
+    public static <E extends BaseEntity> ExtPv<E> of(E obj) {
+        ExtPv<E> extPv = new ExtPv<>();
+        if (obj != null) {
+            String id = obj.getId();
+            if (Strings.isNullOrEmpty(id)) {
+                id = ObjectId.getId();
+                obj.setId(id);
+            }
+            extPv.setPrimaryId(id);
+            extPv.setObj(obj);
+        }
+        return extPv;
+    }
+
+
+    public static <E extends BaseEntity> ExtPv<E> of(String id) {
+        ExtPv<E> extPv = new ExtPv<>();
+        extPv.setPrimaryId(id);
+        return extPv;
+    }
+
 
     public Object getParams(String key) {
         return params.get(key);
@@ -50,11 +73,9 @@ public class ExtPv<E> extends BaseEntity {
         params.put(key, value);
     }
 
-
-    public static <E> ExtPv<E> id(Object infoId) {
-        ExtPv<E> vo = new ExtPv();
-        vo.setPrimaryId(infoId);
-        return vo;
+    public void setObj(E obj) {
+        this.primaryId = ObjectId.getId();
+        this.obj = obj;
     }
 
 }

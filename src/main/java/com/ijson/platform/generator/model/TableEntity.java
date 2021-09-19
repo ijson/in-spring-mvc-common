@@ -1,12 +1,13 @@
 package com.ijson.platform.generator.model;
 
 import com.google.common.collect.Lists;
+import com.ijson.platform.api.entity.BaseEntity;
 import lombok.Data;
 
 import java.util.List;
 
 @Data
-public class TableEntity {
+public class TableEntity extends BaseEntity {
 
     private String tableName;//表名
 

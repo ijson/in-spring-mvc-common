@@ -1,6 +1,5 @@
 package com.ijson.platform.api.model;
 
-import com.ijson.platform.api.entity.BaseEntity;
 import lombok.Data;
 
 /**
@@ -9,7 +8,7 @@ import lombok.Data;
  * @author cuiyongxu 创建时间：2016年1月4日
  */
 @Data
-public class Result<T> extends BaseEntity {
+public class Result<T> {
     private int code;
     private String message;
     private T result;
