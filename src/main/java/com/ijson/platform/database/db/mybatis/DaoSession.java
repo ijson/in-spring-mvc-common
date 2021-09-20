@@ -211,7 +211,7 @@ public class DaoSession<O> {
         }
         pagingData.setCount(totalRows);
         try {
-            param.setParams("Qrder-By", param.getOrderby());
+            param.param("Qrder-By", param.getOrderby());
             QueryPair qp = buildQueryPair("select", query, param.getParams());
             session = getSqlSession();
             list = (List<O>) session.selectList(qp.getId(), qp.getO(), new RowBounds(pagingData.getStartRow(),

@@ -84,6 +84,31 @@ public class ExtPv<E extends BaseEntity> {
         return (boolean) o;
     }
 
+    public Integer getInteger(String key) {
+        Object o = params.get(key);
+        if (!(o instanceof Integer)) {
+            return null;
+        }
+        return (Integer) o;
+    }
+
+
+    public Integer getPageSize() {
+        Object o = params.get("pageSize");
+        if (!(o instanceof Integer)) {
+            return 20;
+        }
+        return (Integer) o;
+    }
+
+    public Integer getPageIndex() {
+        Object o = params.get("pageIndex");
+        if (!(o instanceof Integer)) {
+            return 1;
+        }
+        return (Integer) o;
+    }
+
 
     public ExtPv param(String key, Object value) {
         params.put(key, value);

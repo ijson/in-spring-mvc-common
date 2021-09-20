@@ -12,6 +12,14 @@ import java.util.List;
  * @author cuiyongxu 创建时间：Oct 27, 2015
  */
 public interface IDao {
+
+    interface SQLType {
+        String COUNT = "count";
+        String FROM = "from";
+    }
+
+
+
     /**
      * description: 新增单个对象
      *
@@ -106,7 +114,7 @@ public interface IDao {
      * @param type 标记
      * @return sql
      */
-    String getSql(int type);
+    String getSql(String type);
 
     /***
      * description: 系统启动是初始缓存

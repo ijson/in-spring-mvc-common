@@ -50,7 +50,7 @@ public class MethodParam {
     /**
      * 以下参数为分页查询时使用
      */
-    private int PageIndex = 1;//当前页
+    private int pageIndex = 1;//当前页
     private int pageSize = 20;//每页行数
     private long pageCount = 0;//总记录数
     private String orderby = "";//排序条件
@@ -75,7 +75,7 @@ public class MethodParam {
         this.sqlStr = sqlStr;
     }
 
-    public void setParams(String key, Object value) {
+    public void param(String key, Object value) {
         this.params.put(key, value);
     }
 }
