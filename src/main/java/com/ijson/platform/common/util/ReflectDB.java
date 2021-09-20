@@ -48,35 +48,35 @@ public class ReflectDB {
                 String name = field[j].getName();
                 name = name.substring(0, 1).toUpperCase() + name.substring(1);
                 String type = field[j].getGenericType().toString();
-                if (type.equals("class java.lang.String")) {
+                if ("class java.lang.String".equals(type)) {
                     Method m = obj2.getClass().getMethod("set" + name, String.class);
                     String value = (String) obn[j];
                     m.invoke(obj2, value);
-                } else if (type.equals("class java.lang.Integer") || type.equals("int")) {
+                } else if ("class java.lang.Integer".equals(type) || "int".equals(type)) {
                     Method m = obj2.getClass().getMethod("set" + name, Integer.class);
                     Integer value = (Integer) obn[j];
                     m.invoke(obj2, value);
-                } else if (type.equals("class java.util.Date")) {
+                } else if ("class java.util.Date".equals(type)) {
                     Method m = obj2.getClass().getMethod("set" + name, Date.class);
                     Date value = (Date) obn[j];
                     m.invoke(obj2, value);
-                } else if (type.equals("class java.lang.Boolean") || type.equals("boolean")) {
+                } else if ("class java.lang.Boolean".equals(type) || "boolean".equals(type)) {
                     Method m = obj2.getClass().getMethod("set" + name, Boolean.class);
                     Boolean value = (Boolean) obn[j];
                     m.invoke(obj2, value);
-                } else if (type.equals("class java.lang.Character") || type.equals("char")) {
+                } else if ("class java.lang.Character".equals(type) || "char".equals(type)) {
                     Method m = obj2.getClass().getMethod("set" + name, Character.class);
                     Character value = (Character) obn[j];
                     m.invoke(obj2, value);
-                } else if (type.equals("class java.lang.Long") || type.equals("long")) {
+                } else if ("class java.lang.Long".equals(type) || "long".equals(type)) {
                     Method m = obj2.getClass().getMethod("set" + name, Long.class);
                     Long value = (Long) obn[j];
                     m.invoke(obj2, value);
-                } else if (type.equals("class java.lang.Float") || type.equals("float")) {
+                } else if ("class java.lang.Float".equals(type) || "float".equals(type)) {
                     Method m = obj2.getClass().getMethod("set" + name, Float.class);
                     Float value = (Float) obn[j];
                     m.invoke(obj2, value);
-                } else if (type.equals("class java.lang.Double") || type.equals("double")) {
+                } else if ("class java.lang.Double".equals(type) || "double".equals(type)) {
                     Method m = obj2.getClass().getMethod("set" + name, Double.class);
                     Double value = (Double) obn[j];
                     m.invoke(obj2, value);

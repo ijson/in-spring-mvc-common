@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author cuiyongxu 创建时间：Oct 27, 2015
  */
-public interface IDao {
+public interface IDao<T> {
 
     interface SQLType {
         String COUNT = "count";
@@ -82,7 +82,7 @@ public interface IDao {
      * @param param 方法参数模型
      * @return 返回sql执行后的数据对象
      */
-    Object selectSingle(MethodParam param);
+    T selectSingle(MethodParam param);
 
     /**
      * description: 按信息ID获取唯一对象实例
@@ -90,7 +90,7 @@ public interface IDao {
      * @param param 方法参数模型
      * @return 返回sql执行后的数据对象
      */
-    Object selectById(MethodParam param);
+    T selectById(MethodParam param);
 
     /**
      * description: 分页查询
@@ -106,7 +106,7 @@ public interface IDao {
      * @param param 方法参数模型
      * @return 返回sql执行的结果集
      */
-    List select(MethodParam param);
+    List<T> select(MethodParam param);
 
     /**
      * description:获取要执行的sql
@@ -128,7 +128,7 @@ public interface IDao {
      * @return list
      * @author cuiyongxu
      */
-    List selectByObject(MethodParam param);
+    List<T> selectByObject(MethodParam param);
 
     /**
      * description:  获取唯一对象实例,主要转为vo等
@@ -137,5 +137,5 @@ public interface IDao {
      * @return object
      * @author cuiyongxu
      */
-    Object selectSingleByObject(MethodParam param);
+    T selectSingleByObject(MethodParam param);
 }

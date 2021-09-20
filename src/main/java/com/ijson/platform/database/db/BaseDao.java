@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author cuiyongxu 创建时间：Oct 27, 2015
  */
-public interface BaseDao {
+public interface BaseDao<T> {
 
     /**
      * description: 新增单个对象
@@ -75,7 +75,7 @@ public interface BaseDao {
      * @param param 方法参数模型
      * @return 返回sql执行后的数据对象
      */
-    Object selectSingle(MethodParam param);
+    T selectSingle(MethodParam param);
 
     /**
      * description: 获取唯一对象实例
@@ -86,7 +86,7 @@ public interface BaseDao {
      * @param cacheId    缓存ID
      * @return 返回执行后的数据对象
      */
-    Object selectById(String spanceName, String key, Object infoId, String cacheId);
+    T selectById(String spanceName, String key, Object infoId, String cacheId);
 
     /**
      * description: 分页查询
@@ -102,7 +102,7 @@ public interface BaseDao {
      * @param param 方法参数模型
      * @return 返回sql执行的结果集
      */
-    List select(MethodParam param);
+    List<T> select(MethodParam param);
 
     /**
      * description:  列表查询,并转型为object
@@ -111,7 +111,7 @@ public interface BaseDao {
      * @author cuiyongxu
      * @return value
      */
-    List selectByObject(MethodParam param);
+    List<T> selectByObject(MethodParam param);
 
     /**
      * description:  获取唯一对象实例,主要转为vo等
@@ -120,5 +120,5 @@ public interface BaseDao {
      * @author cuiyongxu
      * @return value
      */
-    Object selectSingleByObject(MethodParam param);
+    T selectSingleByObject(MethodParam param);
 }

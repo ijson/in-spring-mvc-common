@@ -13,12 +13,12 @@ import java.util.Map;
  */
 @Getter
 @Setter
-public class MethodParam {
+public class MethodParam<T> {
 
     /**
      * 待操作对象
      */
-    private Object vaule;
+    private T vaule;
 
     /**
      * 执行KEY,只要集中在manager

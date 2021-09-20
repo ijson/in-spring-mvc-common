@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * description: ibatis 持久层的实现
  */
-public class DaoIbatisImpl implements BaseDao {
+public class DaoIbatisImpl<T> implements BaseDao<T> {
 
     @Autowired
     private SqlSessionFactory sqlSessionFactory;//需要注入
@@ -27,8 +27,8 @@ public class DaoIbatisImpl implements BaseDao {
     //	}
 
     @SuppressWarnings("rawtypes")
-    public MybatisSession getSession() {
-        return new MybatisSession(sqlSessionFactory);
+    public MybatisSession<T> getSession() {
+        return (MybatisSession<T>) new MybatisSession(sqlSessionFactory);
     }
 
     //	public DaoSession getSession(String className) {
@@ -244,7 +244,7 @@ public class DaoIbatisImpl implements BaseDao {
      * @author cuiyongxu
      */
     @Override
-    public List selectByObject(MethodParam param) {
+    public List<T> selectByObject(MethodParam param) {
         //TODO
         return null;
     }
@@ -256,7 +256,7 @@ public class DaoIbatisImpl implements BaseDao {
      * @author cuiyongxu
      */
     @Override
-    public Object selectSingleByObject(MethodParam param) {
+    public T selectSingleByObject(MethodParam param) {
         //TODO
         return null;
     }
@@ -268,12 +268,12 @@ public class DaoIbatisImpl implements BaseDao {
      * @return 返回sql执行后的数据对象
      */
     @Override
-    public Object selectSingle(MethodParam param) {
-        Object obj = null;
+    public T selectSingle(MethodParam param) {
+        T obj = null;
         if (Validator.isNotNull(param.getSpanceName())) {
             //	init(param.getSpanceName());
             if (Validator.isNotNull(param.getCacheId())) {
-                obj = Ehcache.ice.getCacheCloneByKey(param.getCacheId());
+                obj = Ehcache.ice.getCacheCloneAnnByKey(param.getCacheId());
             }
             if (Validator.isEmpty(obj)) {
                 //obj = dao.get(param.getSpanceName()).selectSingle(param.getKey(), param.getParams());
@@ -284,12 +284,12 @@ public class DaoIbatisImpl implements BaseDao {
     }
 
     @Override
-    public Object selectById(String spanceName, String key, Object infoId, String cacheId) {
-        Object obj = null;
+    public T selectById(String spanceName, String key, Object infoId, String cacheId) {
+        T obj = null;
         if (Validator.isNotNull(spanceName)) {
             //	init(spanceName);
             if (Validator.isNotNull(cacheId)) {
-                obj = Ehcache.ice.getCacheCloneByKey(cacheId);
+                obj = Ehcache.ice.getCacheCloneAnnByKey(cacheId);
             }
             if (Validator.isEmpty(obj)) {
                 //obj = dao.get(spanceName).selectSingle(key, infoId);

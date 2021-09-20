@@ -102,6 +102,10 @@ public final class Ehcache {
         return getCacheCloneByKey(DEFAULT_CACHE_NAMESPACE, key);
     }
 
+    public <T> T getCacheCloneAnnByKey(String key) {
+        return (T) getCacheCloneByKey(DEFAULT_CACHE_NAMESPACE, key);
+    }
+
     public List<Object> getObjects(String nameSpace, List<String> keys) {
         if (Validator.isEmpty(keys)) {
             return null;
