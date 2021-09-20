@@ -37,7 +37,7 @@ public interface BaseManager<E extends BaseEntity> {
      * @param vo 方法参数
      * @return 成功返回信息对象，失败返回空
      */
-    Object getInfoById(ExtPv<E> vo);
+    E getInfoById(ExtPv<E> vo);
 
     /**
      * description:  删除
