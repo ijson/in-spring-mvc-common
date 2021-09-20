@@ -108,14 +108,6 @@ public interface IDao<T> {
      */
     List<T> select(MethodParam param);
 
-    /**
-     * description:获取要执行的sql
-     *
-     * @param type 标记
-     * @return sql
-     */
-    String getSql(String type);
-
     /***
      * description: 系统启动是初始缓存
      */
