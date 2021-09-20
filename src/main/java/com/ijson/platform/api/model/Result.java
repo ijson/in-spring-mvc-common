@@ -39,6 +39,10 @@ public class Result<T> {
         return new Result(0, "");
     }
 
+    public static Result okObject(Object object) {
+        return new Result(0, "", object);
+    }
+
 
     public static Result ok(Object result) {
         return new Result(0, "", result);
