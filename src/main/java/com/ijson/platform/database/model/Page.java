@@ -13,14 +13,14 @@ import java.util.List;
  */
 @Setter
 @Getter
-public class Page implements Serializable {
+public final class Page implements Serializable {
 
     private int count = 0; // 记录总数
     private int pageSize = -1; // 每页记录数
     private int pageCount = 0; // 总页数
     private int pageNeeded = 1; // 当前页码
     private int startRow = 1; // 记录开始数
-    private int endRow = 15; // 记录结束数
+    private int endRow = 20; // 记录结束数
     private String sortFieldName; // 排序字段
     private String sortByAD; // 排序方式
     private String isNeedCount = "true"; // 是否需要重新从数据库中获取记录总数

@@ -13,7 +13,7 @@ import java.util.Map;
  */
 @Getter
 @Setter
-public class MethodParam<T> {
+public final class MethodParam<T> {
 
     /**
      * 待操作对象
