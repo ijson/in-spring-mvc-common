@@ -1,4 +1,3 @@
-
 ## 因github国内无法正常使用 本项目废弃,该项目被迁移至:https://gitee.com/ijson/in-spring-mvc-common, 感谢各位支持
 
 ### in-spring-mvc 业务代码生成器
